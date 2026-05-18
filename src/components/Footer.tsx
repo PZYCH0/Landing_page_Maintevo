@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Settings, Linkedin, Twitter, Youtube } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import logo from '../MAINTevo_logo.png';
 
 const translations = {
   fr: {
@@ -79,12 +80,25 @@ export function Footer() {
         }}>
           {/* Col 1 */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', textAlign: language === 'ar' ? 'right' : 'left' }}>
-            <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: '800', fontSize: '1.5rem', fontFamily: 'var(--font-display)', color: 'var(--color-text)', justifyContent: language === 'ar' ? 'flex-start' : 'flex-start' }}>
-              <Settings size={30} color="var(--color-primary)" />
-              <span>
-                <span style={{ color: 'var(--color-primary)' }}>MAINT</span>
-                <span>evo</span>
-              </span>
+            <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', justifyContent: language === 'ar' ? 'flex-start' : 'flex-start' }}>
+              <img 
+                src={logo} 
+                alt="MAINTevo Logo" 
+                style={{ height: '40px', width: 'auto', objectFit: 'contain' }} 
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = 'none';
+                  if (e.target && (e.target as HTMLImageElement).nextElementSibling) {
+                     ((e.target as HTMLImageElement).nextElementSibling as HTMLElement).style.display = 'flex';
+                  }
+                }}
+              />
+              <div style={{ display: 'none', alignItems: 'center', gap: '0.5rem', fontWeight: '800', fontSize: '1.5rem', fontFamily: 'var(--font-display)', color: 'var(--color-text)' }}>
+                <Settings size={30} color="var(--color-primary)" />
+                <span>
+                  <span style={{ color: 'var(--color-primary)' }}>MAINT</span>
+                  <span>evo</span>
+                </span>
+              </div>
             </Link>
             <p style={{ color: 'var(--color-muted)', fontSize: '0.95rem', lineHeight: 1.6 }}>
               {t.desc}

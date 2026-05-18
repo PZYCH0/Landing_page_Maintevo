@@ -4,6 +4,7 @@ import { Settings, Menu, X, ChevronDown, Sun, Moon, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Button } from './ui/Button';
 import { useLanguage } from '../context/LanguageContext';
+import logo from '../MAINTevo_logo.png';
 
 const navLabels = {
   features:     { fr: 'Fonctionnalités', ar: 'الميزات',   en: 'Features' },
@@ -105,14 +106,29 @@ export function Navbar() {
         }}
       >
         <div className="container flex items-center justify-between">
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: '800', fontSize: '1.2rem', fontFamily: 'var(--font-display)', letterSpacing: '-0.02em' }}>
-            <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <Settings size={22} color="var(--color-primary)" />
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <img 
+              src={logo} 
+              alt="MAINTevo Logo" 
+              style={{ height: '36px', width: 'auto', objectFit: 'contain' }} 
+              onError={(e) => {
+                // Fallback to text if image fails to load
+                (e.target as HTMLImageElement).style.display = 'none';
+                if (e.target && (e.target as HTMLImageElement).nextElementSibling) {
+                   ((e.target as HTMLImageElement).nextElementSibling as HTMLElement).style.display = 'flex';
+                }
+              }}
+            />
+            {/* Fallback text logo (hidden by default, shown if image fails to load) */}
+            <div style={{ display: 'none', alignItems: 'center', gap: '0.5rem', fontWeight: '800', fontSize: '1.2rem', fontFamily: 'var(--font-display)', letterSpacing: '-0.02em' }}>
+              <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Settings size={22} color="var(--color-primary)" />
+              </div>
+              <span>
+                <span style={{ color: 'var(--color-primary)' }}>MAINT</span>
+                <span style={{ color: 'var(--color-text)' }}>evo</span>
+              </span>
             </div>
-            <span>
-              <span style={{ color: 'var(--color-primary)' }}>MAINT</span>
-              <span style={{ color: 'var(--color-text)' }}>evo</span>
-            </span>
           </Link>
 
           {/* Desktop Nav */}
