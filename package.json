@@ -1,14 +1,11 @@
 {
   "name": "react-example",
-  "homepage": "https://PZYCH0.github.io/LandingpageGMAO",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
