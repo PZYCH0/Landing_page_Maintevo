@@ -1,0 +1,8 @@
+{
+  "name": "MAINTevo",
+  "description": "Professional CMMS for Moroccan Industrial SMEs. Manage your maintenance from paper to digital.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
