@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>if(localStorage.getItem('color-theme')=='dark'||(!("color-theme" in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark")}</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Cascad CMMS</title>
+    <meta name="description" content="Get in touch with the Cascad team. Start your free trial, request a demo, or just ask us anything.">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+    <header class="fixed w-full z-50">
+        <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
+            <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+                <a href="./index.html" class="flex items-center">
+                    <img src="./images/logo-maintevo.png" style="width:50px;height:50px;object-fit:contain;" class="mr-3" alt="Cascad Logo" />
+                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Cascad</span>
+                </a>
+                <div class="flex items-center lg:order-2">
+                    <a href="tel:8884515787" class="hidden sm:inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-700 dark:text-gray-300 dark:hover:text-white mr-4">
+                        <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+                        Contact sales: (888) 451-5787
+                    </a>                    <!-- Language switcher -->
+                    <div class="relative mr-1">
+                        <button id="lang-toggle" type="button" class="inline-flex items-center gap-1 px-2 py-2 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 focus:outline-none">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                            <span id="current-lang">🇫🇷</span>
+                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                        </button>
+                        <div id="lang-dropdown" class="hidden absolute right-0 mt-1 w-36 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-100 dark:border-gray-700 z-50">
+                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-300">
+                                <li><button onclick="setLang('🇫🇷')" class="flex items-center gap-2 w-full px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-700">🇫🇷 Français</button></li>
+                                <li><button onclick="setLang('🇬🇧')" class="flex items-center gap-2 w-full px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-700">🇬🇧 English</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button id="theme-toggle" type="button" title="Basculer le thème" class="p-2 mr-1 text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700">
+                        <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+                        <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
+                    </button>
+                    <a href="./contact.html" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Get Started</a>
+                    <button data-collapse-toggle="mobile-menu-contact" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-contact" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+                                <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                    <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                        <li>
+                            <a href="./index.html" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Product</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Industries</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Enterprise</a>
+                        </li>
+                        <li>
+                            <a href="./pricing.html" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Resources</a>
+                        </li>
+                    </ul>
+                </div></div>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="bg-white dark:bg-gray-900 pt-28 pb-16 lg:pb-24">
+        <div class="max-w-screen-xl px-4 mx-auto">
+            <div class="max-w-screen-md mx-auto mb-12 text-center">
+                <h1 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 md:text-5xl dark:text-white">Get in touch</h1>
+                <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">Start your free trial, request a demo, or just ask us anything. We'll get back to you within one business day.</p>
+            </div>
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16">
+
+                <!-- Form -->
+                <div>
+                    <form id="contact-form" action="#" onsubmit="handleSubmit(event)">
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 mb-6">
+                            <div>
+                                <label for="first-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First name</label>
+                                <input type="text" id="first-name" name="first-name" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John">
+                            </div>
+                            <div>
+                                <label for="last-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last name</label>
+                                <input type="text" id="last-name" name="last-name" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Smith">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Work email</label>
+                            <input type="email" id="email" name="email" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="john@company.com">
+                        </div>
+                        <div class="mb-6">
+                            <label for="company" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Company</label>
+                            <input type="text" id="company" name="company" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Acme Inc.">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Message</label>
+                            <textarea id="message" name="message" rows="5" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Tell us what you're looking for..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-3 text-center dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Send message</button>
+                    </form>
+                    <!-- Success message -->
+                    <div id="success-message" class="hidden mt-6 p-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800" role="alert">
+                        <span class="font-medium">Message sent!</span> Thanks for reaching out — we'll get back to you within one business day.
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="mt-10 lg:mt-0 space-y-8">
+                    <div>
+                        <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Email us</h3>
+                        <p class="text-gray-500 dark:text-gray-400 mb-1">For general enquiries and demos:</p>
+                        <a href="mailto:hello@cascad.io" class="text-blue-600 hover:underline dark:text-blue-500">hello@cascad.io</a>
+                    </div>
+                    <div>
+                        <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Call us</h3>
+                        <p class="text-gray-500 dark:text-gray-400 mb-1">Mon–Fri, 9am–6pm EST</p>
+                        <a href="tel:+18001234567" class="text-blue-600 hover:underline dark:text-blue-500">+1 (800) 123-4567</a>
+                    </div>
+                    <div>
+                        <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Office</h3>
+                        <p class="text-gray-500 dark:text-gray-400">123 Maintenance Ave, Suite 400<br>Detroit, MI 48201<br>United States</p>
+                    </div>
+                    <div class="p-6 bg-blue-50 dark:bg-gray-800 rounded-xl">
+                        <h3 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Start your free trial</h3>
+                        <p class="text-gray-500 dark:text-gray-400 mb-4">No credit card needed. Full access for 30 days. Set up in under 10 minutes.</p>
+                        <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                            <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Unlimited work orders during trial</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Import your assets from Excel</li>
+                            <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Onboarding call included</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800">
+        <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
+            <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
+                <div>
+                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Product</h3>
+                    <ul class="text-gray-500 dark:text-gray-400">
+                        <li class="mb-4"><a href="#" class="hover:underline">Industries</a></li>
+                        <li class="mb-4"><a href="./pricing.html" class="hover:underline">Pricing</a></li>
+                        <li class="mb-4"><a href="#" class="hover:underline">Integrations</a></li>
+                        <li class="mb-4"><a href="#" class="hover:underline">Changelog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Company</h3>
+                    <ul class="text-gray-500 dark:text-gray-400">
+                        <li class="mb-4"><a href="#" class="hover:underline">Enterprise</a></li>
+                        <li class="mb-4"><a href="#" class="hover:underline">Careers</a></li>
+                        <li class="mb-4"><a href="#" class="hover:underline">Blog</a></li>
+                        <li class="mb-4"><a href="#" class="hover:underline">Resources</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Support</h3>
+                    <ul class="text-gray-500 dark:text-gray-400">
+                        <li class="mb-4"><a href="#" class="hover:underline">Documentation</a></li>
+                        <li class="mb-4"><a href="#" class="hover:underline">Help Center</a></li>
+                        <li class="mb-4"><a href="#" class="hover:underline">Status</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h3>
+                    <ul class="text-gray-500 dark:text-gray-400">
+                        <li class="mb-4"><a href="#" class="hover:underline">Privacy Policy</a></li>
+                        <li class="mb-4"><a href="#" class="hover:underline">Terms of Service</a></li>
+                        <li class="mb-4"><a href="#" class="hover:underline">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
+            <div class="text-center">
+                <a href="./index.html" class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white">
+                    <img src="./images/logo-maintevo.png" style="width:50px;height:50px;object-fit:contain;" class="mr-3" alt="Cascad Logo" />
+                    Cascad
+                </a>
+                <span class="block text-sm text-center text-gray-500 dark:text-gray-400">© 2024-2025 Cascad™. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            document.getElementById('contact-form').classList.add('hidden');
+            document.getElementById('success-message').classList.remove('hidden');
+        }
+    </script>    <script>
+        // Language switcher
+        var langToggle = document.getElementById('lang-toggle');
+        var langDropdown = document.getElementById('lang-dropdown');
+        var savedLang = localStorage.getItem('site-lang');
+        if (savedLang) document.getElementById('current-lang').textContent = savedLang;
+        langToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            langDropdown.classList.toggle('hidden');
+        });
+        document.addEventListener('click', function() {
+            langDropdown.classList.add('hidden');
+        });
+        function setLang(lang) {
+            document.getElementById('current-lang').textContent = lang;
+            langDropdown.classList.add('hidden');
+            localStorage.setItem('site-lang', lang);
+        }
+    </script>
+    <script>
+        var themeToggleBtn = document.getElementById('theme-toggle');
+        var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        if (document.documentElement.classList.contains('dark')) {
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
