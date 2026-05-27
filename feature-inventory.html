@@ -26,6 +26,9 @@
         .benefit-card:hover{border-color:rgba(59,130,246,.3)}
         .hero-badge{background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25);color:#60a5fa;border-radius:100px;padding:6px 16px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
         .grad-text{background:linear-gradient(135deg,#60a5fa,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .btn-s{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:#e2e8f0;border-radius:10px;padding:13px 28px;font-weight:600;font-size:14px;text-decoration:none;transition:all .3s}
+        .btn-s:hover{background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.20)}
+        @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
     </style>
     <link rel="stylesheet" href="./theme.css">
 </head>
@@ -76,20 +79,57 @@
   </nav>
 </header>
 
-<section style="background:#050b16;padding:140px 0 80px">
-  <div class="max-w-4xl mx-auto px-6 text-center">
-    <a href="./index.html#features" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#60a5fa;text-decoration:none;margin-bottom:24px;font-weight:500">
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-      Back to all features
-    </a>
-    <div class="hero-badge inline-flex mb-6">Inventory & Purchasing</div>
-    <h1 style="font-size:clamp(2.2rem,5vw,3.4rem);font-weight:900;letter-spacing:-.03em;color:#fff;line-height:1.1;margin-bottom:24px">
-      Always know what you have<br><span class="grad-text">— and what you need.</span>
-    </h1>
-    <p style="font-size:1.1rem;color:#94a3b8;line-height:1.8;max-width:600px;margin:0 auto 36px">
-      Spare parts management that's connected directly to your jobs. When a technician uses a part, inventory updates. When stock runs low, you create a purchase order — without leaving the platform.
-    </p>
-    <a href="./contact.html" class="btn-p" style="padding:14px 32px;font-size:15px">Get started free</a>
+<section class="hero-section" style="height:100vh;display:flex;flex-direction:column;background:#020617;position:relative;overflow:hidden;padding-top:72px">
+  <!-- Subtle grid -->
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(59,130,246,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,.025) 1px,transparent 1px);background-size:60px 60px;pointer-events:none"></div>
+  <!-- Blue floor glow — bottom left -->
+  <div style="position:absolute;bottom:-80px;left:-60px;width:560px;height:360px;background:radial-gradient(ellipse,rgba(37,99,235,.22) 0%,transparent 65%);filter:blur(50px);pointer-events:none"></div>
+  <!-- Blue accent glow — bottom right -->
+  <div style="position:absolute;bottom:80px;right:8%;width:420px;height:280px;background:radial-gradient(ellipse,rgba(59,130,246,.1) 0%,transparent 65%);filter:blur(60px);pointer-events:none"></div>
+  <!-- Top right glow -->
+  <div style="position:absolute;top:8%;right:10%;width:260px;height:260px;background:radial-gradient(circle,rgba(59,130,246,.07) 0%,transparent 65%);filter:blur(40px);pointer-events:none"></div>
+  <!-- MAIN CONTENT ROW -->
+  <div style="flex:1;display:flex;align-items:center;position:relative;z-index:3;padding:0">
+    <div style="width:100%;max-width:1280px;margin:0 auto;padding:0 60px;position:relative;display:flex;align-items:center">
+      <!-- LEFT BLOCK -->
+      <div style="width:38%;flex-shrink:0;animation:fadeUp .8s ease forwards;position:relative;z-index:2">
+        <a href="./index.html#features" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#60a5fa;text-decoration:none;margin-bottom:20px;font-weight:500;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.18);border-radius:100px;padding:5px 14px">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Back to all features
+        </a>
+        <div class="hero-badge inline-flex" style="margin-bottom:18px;display:flex">Inventory & Purchasing</div>
+        <h1 style="font-size:clamp(2rem,3.6vw,3.2rem);font-weight:900;line-height:1.06;letter-spacing:-0.03em;margin-bottom:14px;color:#fff">
+          Always know<br>what you have.<br><span class="grad-text">Order what you need.</span>
+        </h1>
+        <p style="font-size:.88rem;color:#64748b;line-height:1.6;max-width:380px;margin-bottom:18px">
+          Spare parts management connected directly to your jobs. When a technician uses a part, inventory updates. When stock runs low, create a purchase order — without leaving the platform.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px">
+          <a href="./contact.html" class="btn-p" style="padding:11px 24px;font-size:13.5px">Get started free</a>
+          <a href="./features.html" class="btn-s" style="padding:11px 22px;font-size:13.5px">See all features</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#94a3b8">
+            <div style="width:18px;height:18px;border-radius:5px;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="10" height="10" fill="none" stroke="#60a5fa" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+            </div>
+            Real-time stock tracking across all warehouses
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:12px;color:#94a3b8">
+            <div style="width:18px;height:18px;border-radius:5px;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="10" height="10" fill="none" stroke="#60a5fa" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+            </div>
+            Purchase orders linked to minimum stock thresholds
+          </div>
+        </div>
+      </div>
+      <!-- RIGHT BLOCK -->
+      <div style="position:absolute;right:-50px;top:50%;transform:translateY(-54%);width:74%;pointer-events:none;z-index:1;-webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.5) 14%,black 26%);mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.5) 14%,black 26%)">
+        <div style="border-radius:16px;overflow:hidden;transform:perspective(1400px) rotateY(-8deg) rotateX(4deg);box-shadow:0 0 0 1px rgba(59,130,246,.5),0 0 50px rgba(59,130,246,.28),0 0 120px rgba(59,130,246,.1),0 60px 120px rgba(0,0,0,.75)">
+          <img src="./stockandbillingHero.png" style="width:100%;display:block" alt="Inventory and purchasing dashboard">
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
