@@ -1,174 +1,96 @@
-import React from 'react';
-import { motion } from 'motion/react';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { PageMeta } from '../components/PageMeta';
-import { useLanguage } from '../context/LanguageContext';
-
-const translations = {
-  fr: {
-    meta: { title: "À propos | MAINTevo", description: "L'histoire et la mission derrière MAINTevo." },
-    hero: {
-      title: "Redonner le pouvoir ",
-      titleLine2: "aux ",
-      titleAccent: "équipes terrain.",
-      desc: "Nous avons créé MAINTevo parce que nous en avions assez de voir d'excellents techniciens perdre des heures sur des logiciels dépassés ou des fichiers Excel à n'en plus finir."
-    },
-    story: {
-      title: "Notre histoire",
-      p1: "L'histoire de MAINTevo commence par un paradoxe. Notre fondateur, ancien professeur d'anglais devenu développeur par passion, a passé des années à observer les défis du terrain industriel marocain.",
-      p2: "En visitant des usines à Casablanca et Tanger, il a fait un constat frappant : alors que le Maroc devenait un hub automobile mondial, les techniciens utilisaient encore des cahiers papier et des fichiers Excel pour maintenir des lignes de production high-tech.",
-      p3: "MAINTevo a été conçu pour combler ce fossé.",
-      p3Post: " En combinant une connaissance approfondie des processus de maintenance (AMDEC, préventif) avec une obsession de la simplicité, nous avons créé la première GMAO réellement adaptée au contexte local.",
-      quote: "\"Un outil conçu par des gens du terrain, pour les gens du terrain.\""
-    },
-    values: {
-      title: "Nos valeurs fondamentales",
-      items: [
-        { title: "Simplicité radicale", desc: "Si une fonctionnalité demande 3 heures de formation, c'est qu'elle est mal conçue. Nous visons l'immédiateté." },
-        { title: "Mobile d'abord", desc: "La maintenance se fait au pied de la machine, pas derrière un bureau. L'expérience mobile doit être irréprochable." },
-        { title: "Obsession client", desc: "Votre production ne s'arrête jamais, notre support non plus. Nous construisons avec vos retours." }
-      ]
-    }
-  },
-  ar: {
-    meta: { title: "حولنا | MAINTevo", description: "القصة والمهمة وراء MAINTevo." },
-    hero: {
-      title: "إعادة القوة ",
-      titleLine2: "إلى ",
-      titleAccent: "الفرق الميدانية.",
-      desc: "لقد بنينا MAINTevo لأننا تعبنا من رؤية فنيين ممتازين يضيعون ساعات على برامج قديمة أو ملفات إكسيل لا نهاية لها."
-    },
-    story: {
-      title: "قصتنا",
-      p1: "تبدأ قصة MAINTevo بمفارقة. مؤسسنا، الذي كان مدرس لغة إنجليزية وأصبح مطوراً بشغف، قضى سنوات في مراقبة تحديات الميدان الصناعي المغربي.",
-      p2: "أثناء زيارته للمصانع في الدار البيضاء وطنجة، لاحظ شيئاً لافتاً: بينما كان المغرب يصبح مركزاً عالمياً لصناعة السيارات، كان الفنيون لا يزالون يستخدمون الدفاتر الورقية وملفات إكسيل لصيانة خطوط إنتاج عالية التكنولوجيا.",
-      p3: "تم تصميم MAINTevo لسد هذه الفجوة.",
-      p3Post: " من خلال الجمع بين المعرفة العميقة لعمليات الصيانة (AMDEC، الوقائية) والهاجس بالبساطة، أنشأنا أول نظام GMAO مكيف حقاً مع السياق المحلي.",
-      quote: "\"أداة صممها أهل الميدان، من أجل أهل الميدان.\""
-    },
-    values: {
-      title: "قيمنا الأساسية",
-      items: [
-        { title: "بساطة جذريّة", desc: "إذا كانت الميزة تتطلب 3 ساعات من التدريب، فهذا يعني أنها سيئة التصميم. نحن نهدف إلى الفورية." },
-        { title: "الهاتف أولاً", desc: "تتم الصيانة عند قدم الماكينة، وليس خلف المكتب. يجب أن تكون تجربة الهاتف مثالية." },
-        { title: "هوس العملاء", desc: "إنتاجكم لا يتوقف أبداً، ولا يتوقف دعمنا أيضاً. نحن نبني بناءً على ملاحظاتكم." }
-      ]
-    }
-  },
-  en: {
-    meta: { title: "About | MAINTevo", description: "The story and mission behind MAINTevo." },
-    hero: {
-      title: "Giving power back ",
-      titleLine2: "to ",
-      titleAccent: "field teams.",
-      desc: "We built MAINTevo because we were tired of seeing excellent technicians wasting hours on outdated software or endless Excel files."
-    },
-    story: {
-      title: "Our Story",
-      p1: "The MAINTevo story begins with a paradox. Our founder, once an English teacher turned developer by passion, spent years observing the challenges of the Moroccan industrial field.",
-      p2: "While visiting factories in Casablanca and Tangier, he made a striking observation: as Morocco was becoming a global automotive hub, technicians were still using paper notebooks and Excel files to maintain high-tech production lines.",
-      p3: "MAINTevo was designed to bridge this gap.",
-      p3Post: " By combining deep knowledge of maintenance processes (FMEA, preventive) with an obsession for simplicity, we created the first CMMS truly adapted to the local context.",
-      quote: "\"A tool designed by people from the field, for the people in the field.\""
-    },
-    values: {
-      title: "Our Core Values",
-      items: [
-        { title: "Radical Simplicity", desc: "If a feature requires 3 hours of training, it's poorly designed. We aim for immediacy." },
-        { title: "Mobile First", desc: "Maintenance happens at the machine, not behind a desk. The mobile experience must be irreproachable." },
-        { title: "Customer Obsession", desc: "Your production never stops, and neither does our support. We build with your feedback." }
-      ]
-    }
-  }
-};
+import { useReveal } from '../hooks/useReveal';
 
 export default function About() {
-  const scrollAnim = useScrollAnimation();
-  const { language } = useLanguage();
-  const t = translations[language];
-
+  useReveal();
   return (
-    <div style={{ background: 'var(--color-bg)', paddingTop: '52px' }}>
-      <PageMeta title={t.meta.title} description={t.meta.description} />
-      {/* HERO */}
-      <section className="section" style={{
-        padding: '8rem 0 6rem 0',
-        textAlign: 'center',
-        background: 'radial-gradient(ellipse at top, rgba(18, 121, 223, 0.15), var(--color-bg))',
-      }}>
-        <div className="container" style={{ maxWidth: '800px', direction: language === 'ar' ? 'rtl' : 'ltr' }}>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 style={{ fontSize: 'clamp(2.5rem, 4vw, 4rem)', marginBottom: '1.5rem', color: 'var(--color-text)', fontFamily: 'var(--font-display)', fontWeight: 700, letterSpacing: '-0.02em' }}>
-              {t.hero.title} <br/>{t.hero.titleLine2} <span style={{ color: 'var(--color-primary)' }}>{t.hero.titleAccent}</span>
-            </h1>
-            <p style={{ color: 'var(--color-muted)', fontSize: '1.25rem', lineHeight: 1.6 }}>
-              {t.hero.desc}
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* STORY */}
-      <section className="section" style={{ background: 'var(--color-surface)', borderTop: '1px solid var(--color-border)' }}>
-        <div className="container" style={{ direction: language === 'ar' ? 'rtl' : 'ltr' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '5rem', alignItems: 'center' }}>
-            <motion.div {...scrollAnim}>
-              <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: 'var(--color-text)', fontFamily: 'var(--font-display)', fontWeight: 700 }}>
-                {t.story.title}
-              </h2>
-              <div style={{ color: 'var(--color-muted)', fontSize: '1.125rem', lineHeight: 1.7, display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                <p>
-                  {t.story.p1}
-                </p>
-                <p>
-                  {t.story.p2}
-                </p>
-                <p>
-                  <strong style={{ color: 'var(--color-text)' }}>{t.story.p3}</strong>{t.story.p3Post}
-                </p>
-              </div>
-            </motion.div>
-            
-            <motion.div {...scrollAnim} transition={{ delay: 0.2 }} style={{ position: 'relative' }}>
-               <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=800" alt="Engineers working" loading="lazy" width={800} height={534} style={{ width: '100%', borderRadius: '24px', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)', border: '1px solid var(--color-border)' }} />
-               <div style={{ 
-                  position: 'absolute', 
-                  bottom: '-2rem', 
-                  [language === 'ar' ? 'right' : 'left']: '-2rem', 
-                  background: 'var(--color-surface-2)', 
-                  padding: '2rem', 
-                  borderRadius: '16px', 
-                  boxShadow: '0 20px 40px rgba(0,0,0,0.5)', 
-                  border: '1px solid var(--color-border)', 
-                  maxWidth: '300px' 
-               }}>
-                 <p style={{ color: 'var(--color-text)', fontStyle: 'italic', fontWeight: 500, lineHeight: 1.5 }}>{t.story.quote}</p>
-               </div>
-            </motion.div>
+    <>
+      {/* Mission */}
+      <section style={{background:'#050b16',paddingTop:'112px',paddingBottom:'64px'}}>
+        <div className="max-w-screen-xl px-6 mx-auto lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+          <div>
+            <p style={{fontSize:'.9rem',fontWeight:600,color:'#3b82f6',marginBottom:'10px',letterSpacing:'.06em',textTransform:'uppercase'}}>Our Mission</p>
+            <h1 style={{fontSize:'clamp(2rem,4vw,3rem)',fontWeight:900,letterSpacing:'-.03em',color:'#fff',marginBottom:'24px',lineHeight:1.1}}>Every maintenance team deserves modern tools.</h1>
+            <p style={{marginBottom:'16px',color:'#94a3b8',fontSize:'1.05rem',lineHeight:1.8}}>We started MaintEvo because we watched skilled maintenance professionals waste hours fighting spreadsheets, whiteboards, and paper work orders — instead of doing the work they're great at.</p>
+            <p style={{color:'#94a3b8',fontSize:'1.05rem',lineHeight:1.8}}>Our goal is simple: give every maintenance team — from a 3-person shop to a 500-person plant — the same quality of tooling that Fortune 500 companies pay millions for.</p>
+          </div>
+          <div className="hidden lg:flex items-center justify-center mt-8 lg:mt-0">
+            <div style={{width:'100%',height:'320px',background:'rgba(59,130,246,.05)',border:'1px solid rgba(59,130,246,.15)',borderRadius:'20px',display:'flex',alignItems:'center',justifyContent:'center'}}>
+              <svg style={{width:'120px',height:'120px',color:'rgba(59,130,246,.25)'}} fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" /></svg>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* VALUES */}
-      <section className="section" style={{ background: 'var(--color-bg)' }}>
-        <div className="container" style={{ direction: language === 'ar' ? 'rtl' : 'ltr' }}>
-          <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '4rem', color: 'var(--color-text)', fontFamily: 'var(--font-display)', fontWeight: 700 }}>
-            {t.values.title}
-          </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem' }}>
-            {t.values.items.map((v, i) => (
-              <motion.div key={i} {...scrollAnim} transition={{ delay: i * 0.1 }} className="glass-card" style={{ padding: '2.5rem', textAlign: language === 'ar' ? 'right' : 'left' }}>
-                <span style={{ fontSize: '3rem', color: 'var(--color-primary)', fontFamily: 'var(--font-display)', fontWeight: '800', opacity: 0.3, lineHeight: 1, display: 'block', marginBottom: '1rem' }}>
-                  0{i + 1}.
-                </span>
-                <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-text)', marginBottom: '1rem' }}>{v.title}</h3>
-                <p style={{ color: 'var(--color-muted)', lineHeight: 1.6 }}>{v.desc}</p>
-              </motion.div>
+      {/* Values */}
+      <section style={{background:'#080f1e',padding:'80px 0'}}>
+        <div className="max-w-screen-xl px-6 mx-auto">
+          <h2 style={{fontSize:'clamp(1.8rem,3vw,2.4rem)',fontWeight:900,textAlign:'center',color:'#fff',marginBottom:'48px',letterSpacing:'-.03em'}}>What we stand for</h2>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {/* Reliability */}
+            <div style={{padding:'28px',background:'rgba(255,255,255,.03)',border:'1px solid rgba(255,255,255,.07)',borderRadius:'16px',textAlign:'center'}}>
+              <div style={{display:'flex',justifyContent:'center',marginBottom:'20px'}}>
+                <div style={{padding:'14px',background:'rgba(59,130,246,.1)',border:'1px solid rgba(59,130,246,.2)',borderRadius:'50%'}}>
+                  <svg style={{width:'28px',height:'28px',color:'#60a5fa'}} fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                </div>
+              </div>
+              <h3 style={{fontSize:'1.2rem',fontWeight:700,color:'#fff',marginBottom:'10px'}}>Reliability</h3>
+              <p style={{color:'#94a3b8',lineHeight:1.7}}>We build software that works when your equipment can't afford not to. 99.9% uptime, enterprise-grade security, and data you can always trust.</p>
+            </div>
+            {/* Simplicity */}
+            <div style={{padding:'28px',background:'rgba(255,255,255,.03)',border:'1px solid rgba(255,255,255,.07)',borderRadius:'16px',textAlign:'center'}}>
+              <div style={{display:'flex',justifyContent:'center',marginBottom:'20px'}}>
+                <div style={{padding:'14px',background:'rgba(59,130,246,.1)',border:'1px solid rgba(59,130,246,.2)',borderRadius:'50%'}}>
+                  <svg style={{width:'28px',height:'28px',color:'#60a5fa'}} fill="currentColor" viewBox="0 0 20 20"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" /></svg>
+                </div>
+              </div>
+              <h3 style={{fontSize:'1.2rem',fontWeight:700,color:'#fff',marginBottom:'10px'}}>Simplicity</h3>
+              <p style={{color:'#94a3b8',lineHeight:1.7}}>Powerful software shouldn't require a consultant to set up. MaintEvo is designed so any technician can learn it in an afternoon — and actually enjoy using it.</p>
+            </div>
+            {/* Partnership */}
+            <div style={{padding:'28px',background:'rgba(255,255,255,.03)',border:'1px solid rgba(255,255,255,.07)',borderRadius:'16px',textAlign:'center'}}>
+              <div style={{display:'flex',justifyContent:'center',marginBottom:'20px'}}>
+                <div style={{padding:'14px',background:'rgba(59,130,246,.1)',border:'1px solid rgba(59,130,246,.2)',borderRadius:'50%'}}>
+                  <svg style={{width:'28px',height:'28px',color:'#60a5fa'}} fill="currentColor" viewBox="0 0 20 20"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" /></svg>
+                </div>
+              </div>
+              <h3 style={{fontSize:'1.2rem',fontWeight:700,color:'#fff',marginBottom:'10px'}}>Partnership</h3>
+              <p style={{color:'#94a3b8',lineHeight:1.7}}>We treat our customers as partners. Your feedback shapes the roadmap, our support team knows your name, and we succeed only when you do.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section style={{background:'#050b16',padding:'80px 0'}}>
+        <div className="max-w-screen-xl px-6 mx-auto">
+          <h2 style={{fontSize:'clamp(1.8rem,3vw,2.4rem)',fontWeight:900,textAlign:'center',color:'#fff',marginBottom:'48px',letterSpacing:'-.03em'}}>Meet the team</h2>
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { name: 'Alex Rivera', role: 'CEO & Co-Founder', bio: '10+ years in industrial operations. Former maintenance manager at a Tier 1 automotive supplier.' },
+              { name: 'Jamie Chen', role: 'CTO & Co-Founder', bio: 'Previously led engineering at two enterprise SaaS companies. Passionate about building tools for the physical world.' },
+              { name: 'Morgan Osei', role: 'Head of Customer Success', bio: 'Certified reliability engineer. Helps customers get measurable ROI from their MaintEvo deployment in the first 90 days.' },
+            ].map((member) => (
+              <div key={member.name} style={{textAlign:'center'}}>
+                <div style={{width:'88px',height:'88px',margin:'0 auto 16px',background:'rgba(59,130,246,.1)',border:'1px solid rgba(59,130,246,.2)',borderRadius:'50%',display:'flex',alignItems:'center',justifyContent:'center'}}>
+                  <svg style={{width:'44px',height:'44px',color:'rgba(96,165,250,.4)'}} fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" /></svg>
+                </div>
+                <h3 style={{fontSize:'1.05rem',fontWeight:700,color:'#fff',marginBottom:'4px'}}>{member.name}</h3>
+                <p style={{fontSize:'.875rem',color:'#3b82f6',marginBottom:'8px'}}>{member.role}</p>
+                <p style={{fontSize:'.875rem',color:'#94a3b8',lineHeight:1.6}}>{member.bio}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-    </div>
+      {/* CTA */}
+      <section style={{background:'rgba(59,130,246,.08)',borderTop:'1px solid rgba(59,130,246,.15)',borderBottom:'1px solid rgba(59,130,246,.15)',padding:'80px 0'}}>
+        <div className="max-w-screen-xl px-6 mx-auto text-center">
+          <h2 style={{fontSize:'clamp(1.8rem,3vw,2.4rem)',fontWeight:900,color:'#fff',marginBottom:'16px',letterSpacing:'-.03em'}}>Join 5,000+ teams using MaintEvo</h2>
+          <p style={{marginBottom:'28px',color:'#94a3b8',fontSize:'1.05rem'}}>Start your free trial today — no credit card required.</p>
+          <a href="/contact" style={{display:'inline-flex',alignItems:'center',gap:'8px',background:'linear-gradient(135deg,#3b82f6,#2563eb)',color:'#fff',borderRadius:'10px',padding:'14px 36px',fontWeight:600,fontSize:'15px',textDecoration:'none',boxShadow:'0 4px 20px rgba(59,130,246,.4)'}}>Get started free</a>
+        </div>
+      </section>
+    </>
   );
 }

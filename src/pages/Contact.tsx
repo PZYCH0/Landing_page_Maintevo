@@ -1,235 +1,93 @@
-import React, { useState } from 'react';
-import { motion } from 'motion/react';
-import { Button } from '../components/ui/Button';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { MapPin, Phone, Mail, MessageSquare } from 'lucide-react';
-import { PageMeta } from '../components/PageMeta';
-import { useLanguage } from '../context/LanguageContext';
-
-const translations = {
-  fr: {
-    meta: { title: "Contact | MAINTevo", description: "Contactez notre équipe support et commerciale." },
-    hero: {
-      title: "Contactez-nous",
-      desc: "Nos équipes sont basées au Maroc et disponibles pour répondre à toutes vos questions sur MAINTevo."
-    },
-    info: {
-      title: "Informations directes",
-      support: { title: "Support technique", desc: "Pour nos clients, réponse en moins de 2 heures." },
-      sales: { title: "Commercial & Déploiements", desc: "Demandes de devis et appels d'offres." },
-      hq: { title: "Bureaux", desc: "Technopark Casablanca\nRoute de Nouaceur, BP 16447\nCasablanca, Maroc" }
-    },
-    form: {
-      title: "Envoyer un message",
-      success: { title: "Message envoyé", desc: "Nous reviendrons vers vous dès que possible.", redo: "Nouveau message" },
-      fields: {
-        firstName: "Prénom",
-        lastName: "Nom",
-        email: "E-mail professionnel",
-        subject: { label: "Sujet", placeholder: "Choisissez un sujet…", options: ["Question commerciale", "Aide technique", "Presse & Partenariats", "Autre"] },
-        message: "Message",
-        submit: "Envoyer le message",
-        submitting: "Envoi en cours…"
-      }
-    }
-  },
-  ar: {
-    meta: { title: "اتصل بنا | MAINTevo", description: "اتصل بفريق الدعم والمبيعات لدينا." },
-    hero: {
-      title: "اتصل بنا",
-      desc: "فرقنا متواجدة في المغرب ومتاحة للإجابة على جميع أسئلتكم حول MAINTevo."
-    },
-    info: {
-      title: "معلومات مباشرة",
-      support: { title: "الدعم الفني", desc: "لعملائنا، الرد في أقل من ساعتين." },
-      sales: { title: "المبيعات والانتشار", desc: "طلبات عروض الأسعار والمناقصات." },
-      hq: { title: "المكاتب", desc: "تكنوبارك الدار البيضاء\nطريق النواصر، ص.ب 16447\nالدار البيضاء، المغرب" }
-    },
-    form: {
-      title: "أرسل رسالة",
-      success: { title: "تم إرسال الرسالة", desc: "سنرد عليك في أقرب وقت ممكن.", redo: "رسالة جديدة" },
-      fields: {
-        firstName: "الاسم الشخصي",
-        lastName: "الاسم العائلي",
-        email: "البريد الإلكتروني المهني",
-        subject: { label: "الموضوع", placeholder: "اختر موضوعاً...", options: ["سؤال تجاري", "حاجة لمساعدة تقنية", "الصحافة والشراكات", "آخر"] },
-        message: "الرسالة",
-        submit: "إرسال الرسالة",
-        submitting: "جاري الإرسال..."
-      }
-    }
-  },
-  en: {
-    meta: { title: "Contact | MAINTevo", description: "Contact our support and sales team." },
-    hero: {
-      title: "Contact Us",
-      desc: "Our teams are based in Morocco and available to answer all your questions about MAINTevo."
-    },
-    info: {
-      title: "Direct Information",
-      support: { title: "Technical Support", desc: "For our customers, response in under 2 hours." },
-      sales: { title: "Sales & Deployments", desc: "Quote requests and tenders." },
-      hq: { title: "Offices", desc: "Technopark Casablanca\nRoute de Nouaceur, BP 16447\nCasablanca, Morocco" }
-    },
-    form: {
-      title: "Send a Message",
-      success: { title: "Message sent", desc: "We will get back to you as soon as possible.", redo: "New message" },
-      fields: {
-        firstName: "First Name",
-        lastName: "Last Name",
-        email: "Professional Email",
-        subject: { label: "Subject", placeholder: "Select a subject...", options: ["Sales question", "Technical help", "Press & Partnerships", "Other"] },
-        message: "Message",
-        submit: "Send Message",
-        submitting: "Sending..."
-      }
-    }
-  }
-};
+import { useState } from 'react';
 
 export default function Contact() {
-  const scrollAnim = useScrollAnimation();
-  const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
-  const { language } = useLanguage();
-  const t = translations[language];
+  const [submitted, setSubmitted] = useState(false);
+  const [form, setForm] = useState({ firstName: '', lastName: '', email: '', company: '', message: '' });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setFormStatus('submitting');
-    setTimeout(() => setFormStatus('success'), 1500);
+    setSubmitted(true);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   return (
-    <div style={{ background: 'var(--color-bg)', paddingTop: '52px' }}>
-      <PageMeta title={t.meta.title} description={t.meta.description} />
-      <section className="section" style={{ padding: '8rem 0', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
-        <div className="container" style={{ direction: language === 'ar' ? 'rtl' : 'ltr' }}>
-          <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <h1 style={{ fontSize: 'clamp(2.5rem, 4vw, 3.5rem)', color: 'var(--color-text)', marginBottom: '1rem', fontFamily: 'var(--font-display)', fontWeight: 700 }}>
-              {t.hero.title}
-            </h1>
-            <p style={{ color: 'var(--color-muted)', fontSize: '1.25rem', maxWidth: '600px', margin: '0 auto' }}>
-              {t.hero.desc}
-            </p>
+    <section style={{background:'#050b16',paddingTop:'112px',paddingBottom:'80px'}}>
+      <div className="max-w-screen-xl px-6 mx-auto">
+        <div style={{maxWidth:'640px',margin:'0 auto 56px',textAlign:'center'}}>
+          <h1 style={{fontSize:'clamp(2rem,4vw,3rem)',fontWeight:900,letterSpacing:'-.03em',color:'#fff',marginBottom:'16px'}}>Get in touch</h1>
+          <p style={{color:'#94a3b8',fontSize:'1.05rem',lineHeight:1.7}}>Start your free trial, request a demo, or just ask us anything. We'll get back to you within one business day.</p>
+        </div>
+        <div className="lg:grid lg:grid-cols-2 lg:gap-16">
+
+          {/* Form */}
+          <div>
+            {!submitted ? (
+              <form onSubmit={handleSubmit}>
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 mb-5">
+                  <div>
+                    <label htmlFor="firstName" className="form-label">First name</label>
+                    <input type="text" id="firstName" name="firstName" required className="form-input" placeholder="John" value={form.firstName} onChange={handleChange} />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName" className="form-label">Last name</label>
+                    <input type="text" id="lastName" name="lastName" required className="form-input" placeholder="Smith" value={form.lastName} onChange={handleChange} />
+                  </div>
+                </div>
+                <div className="mb-5">
+                  <label htmlFor="email" className="form-label">Work email</label>
+                  <input type="email" id="email" name="email" required className="form-input" placeholder="john@company.com" value={form.email} onChange={handleChange} />
+                </div>
+                <div className="mb-5">
+                  <label htmlFor="company" className="form-label">Company</label>
+                  <input type="text" id="company" name="company" className="form-input" placeholder="Acme Inc." value={form.company} onChange={handleChange} />
+                </div>
+                <div className="mb-6">
+                  <label htmlFor="message" className="form-label">Message</label>
+                  <textarea id="message" name="message" rows={5} className="form-input" placeholder="Tell us what you're looking for..." value={form.message} onChange={handleChange} />
+                </div>
+                <button type="submit" className="btn-p" style={{width:'100%',justifyContent:'center',padding:'14px',fontSize:'15px'}}>Send message</button>
+              </form>
+            ) : (
+              <div style={{padding:'16px',background:'rgba(34,197,94,.08)',border:'1px solid rgba(34,197,94,.2)',borderRadius:'10px'}} role="alert">
+                <span style={{fontWeight:600,color:'#4ade80'}}>Message sent!</span> <span style={{color:'#94a3b8'}}>Thanks for reaching out — we'll get back to you within one business day.</span>
+              </div>
+            )}
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem' }}>
-            
-            {/* Information */}
-            <motion.div {...scrollAnim}>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem', fontFamily: 'var(--font-display)', fontWeight: 600, color: 'var(--color-text)' }}>
-                {t.info.title}
-              </h3>
-              
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-                <div style={{ display: 'flex', gap: '1.5rem' }}>
-                  <div style={{ background: 'var(--color-primary-glow)', width: 48, height: 48, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)', flexShrink: 0 }}>
-                    <MessageSquare size={24} />
-                  </div>
-                  <div>
-                    <h4 style={{ fontWeight: 600, color: 'var(--color-text)', marginBottom: '0.25rem', fontSize: '1.125rem' }}>{t.info.support.title}</h4>
-                    <p style={{ color: 'var(--color-muted)', marginBottom: '0.5rem' }}>{t.info.support.desc}</p>
-                    <a href="mailto:support@maintevo.com" style={{ color: 'var(--color-primary)', fontWeight: 500 }}>support@maintevo.com</a>
-                  </div>
-                </div>
-
-                <div style={{ display: 'flex', gap: '1.5rem' }}>
-                  <div style={{ background: 'var(--color-primary-glow)', width: 48, height: 48, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)', flexShrink: 0 }}>
-                    <Mail size={24} />
-                  </div>
-                  <div>
-                    <h4 style={{ fontWeight: 600, color: 'var(--color-text)', marginBottom: '0.25rem', fontSize: '1.125rem' }}>{t.info.sales.title}</h4>
-                    <p style={{ color: 'var(--color-muted)', marginBottom: '0.5rem' }}>{t.info.sales.desc}</p>
-                    <a href="mailto:sales@maintevo.com" style={{ color: 'var(--color-primary)', fontWeight: 500 }}>sales@maintevo.com</a>
-                  </div>
-                </div>
-
-                <div style={{ display: 'flex', gap: '1.5rem' }}>
-                  <div style={{ background: 'var(--color-primary-glow)', width: 48, height: 48, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--color-primary)', flexShrink: 0 }}>
-                    <MapPin size={24} />
-                  </div>
-                  <div>
-                    <h4 style={{ fontWeight: 600, color: 'var(--color-text)', marginBottom: '0.25rem', fontSize: '1.125rem' }}>{t.info.hq.title}</h4>
-                    <pre style={{ color: 'var(--color-muted)', lineHeight: 1.6, fontFamily: 'inherit', whiteSpace: 'pre-line' }}>
-                      {t.info.hq.desc}
-                    </pre>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Form */}
-            <motion.div {...scrollAnim} transition={{ delay: 0.2 }}>
-              <div className="glass-card" style={{ padding: '3rem' }}>
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '2rem', fontFamily: 'var(--font-display)', fontWeight: 600, color: 'var(--color-text)' }}>
-                  {t.form.title}
-                </h3>
-                
-                {formStatus === 'success' ? (
-                  <div style={{ textAlign: 'center', padding: '3rem 0' }}>
-                    <div style={{ width: 64, height: 64, background: '#D1FAE5', color: '#10B981', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem auto' }}>
-                      ✓
-                    </div>
-                    <h4 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--color-text)', marginBottom: '0.5rem' }}>{t.form.success.title}</h4>
-                    <p style={{ color: 'var(--color-muted)' }}>{t.form.success.desc}</p>
-                    <Button onClick={() => setFormStatus('idle')} variant="outline" style={{ marginTop: '2rem' }}>{t.form.success.redo}</Button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                        <label style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--color-text)' }}>{t.form.fields.firstName}</label>
-                        <input type="text" required style={inputStyle} />
-                      </div>
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                        <label style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--color-text)' }}>{t.form.fields.lastName}</label>
-                        <input type="text" required style={inputStyle} />
-                      </div>
-                    </div>
-
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                      <label style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--color-text)' }}>{t.form.fields.email}</label>
-                      <input type="email" required style={inputStyle} />
-                    </div>
-
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                      <label style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--color-text)' }}>{t.form.fields.subject.label}</label>
-                      <select style={inputStyle} required>
-                        <option value="">{t.form.fields.subject.placeholder}</option>
-                        {t.form.fields.subject.options.map((opt, i) => (
-                           <option key={i} value={i}>{opt}</option>
-                        ))}
-                      </select>
-                    </div>
-
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                      <label style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--color-text)' }}>{t.form.fields.message}</label>
-                      <textarea rows={5} required style={{...inputStyle, resize: 'vertical'}}></textarea>
-                    </div>
-
-                    <Button type="submit" size="lg" disabled={formStatus === 'submitting'} style={{ width: '100%' }}>
-                      {formStatus === 'submitting' ? t.form.fields.submitting : t.form.fields.submit}
-                    </Button>
-                  </form>
-                )}
-              </div>
-            </motion.div>
-
+          {/* Contact Info */}
+          <div style={{marginTop:'40px'}} className="lg:mt-0 space-y-8">
+            <div>
+              <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'8px'}}>Email us</h3>
+              <p style={{color:'#94a3b8',marginBottom:'6px'}}>For general enquiries and demos:</p>
+              <a href="mailto:hello@maintevo.io" style={{color:'#60a5fa',textDecoration:'none'}} className="hover:underline">hello@maintevo.io</a>
+            </div>
+            <div>
+              <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'8px'}}>Call us</h3>
+              <p style={{color:'#94a3b8',marginBottom:'6px'}}>Mon–Fri, 9am–6pm EST</p>
+              <a href="tel:+18001234567" style={{color:'#60a5fa',textDecoration:'none'}} className="hover:underline">+1 (800) 123-4567</a>
+            </div>
+            <div>
+              <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'8px'}}>Office</h3>
+              <p style={{color:'#94a3b8',lineHeight:1.7}}>123 Maintenance Ave, Suite 400<br />Detroit, MI 48201<br />United States</p>
+            </div>
+            <div style={{padding:'24px',background:'rgba(59,130,246,.06)',border:'1px solid rgba(59,130,246,.15)',borderRadius:'14px'}}>
+              <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'8px'}}>Start your free trial</h3>
+              <p style={{color:'#94a3b8',marginBottom:'16px',lineHeight:1.6}}>No credit card needed. Full access for 30 days. Set up in under 10 minutes.</p>
+              <ul style={{display:'flex',flexDirection:'column',gap:'8px'}}>
+                {['Unlimited work orders during trial','Import your assets from Excel','Onboarding call included'].map(item => (
+                  <li key={item} style={{display:'flex',alignItems:'center',gap:'8px',fontSize:'.875rem',color:'#94a3b8'}}>
+                    <svg style={{width:'16px',height:'16px',color:'#3b82f6',flexShrink:0}} fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
-
-const inputStyle = {
-  width: '100%',
-  padding: '0.75rem 1rem',
-  borderRadius: '8px',
-  border: '1px solid var(--color-border)',
-  background: 'var(--color-bg)',
-  fontSize: '1rem',
-  color: 'var(--color-text)',
-  outline: 'none',
-  transition: 'all 0.2s'
-};
