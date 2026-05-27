@@ -2,6 +2,7 @@
 <html lang="en" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
+    <script src="./theme.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Features — MaintEvo</title>
@@ -24,6 +25,7 @@
         .feat-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;transition:all .3s}
         .feat-card:hover{background:rgba(59,130,246,.06);border-color:rgba(59,130,246,.25);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.3)}
     </style>
+    <link rel="stylesheet" href="./theme.css">
 </head>
 <body>
 
@@ -52,6 +54,7 @@
             </ul>
           </div>
         </div>
+        <button onclick="toggleTheme()" type="button" id="theme-toggle" class="inline-flex items-center p-2 text-white/70 rounded-lg hover:bg-white/10 hover:text-white focus:outline-none transition-colors" aria-label="Toggle theme"><svg class="theme-sun-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><svg class="theme-moon-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg></button>
         <a href="./contact.html" class="btn-p" style="padding:9px 20px;font-size:13px">Get Started</a>
         <button id="hamburger" type="button" class="inline-flex items-center p-2 ml-1 text-white/70 rounded-lg lg:hidden hover:bg-white/10 hover:text-white focus:outline-none transition-colors" aria-label="Menu">
           <svg id="ham-icon" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/></svg>
