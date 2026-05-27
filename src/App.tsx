@@ -31,6 +31,16 @@ const Blog = React.lazy(() => import('./pages/Blog'));
 const Help = React.lazy(() => import('./pages/Help'));
 const Industries = React.lazy(() => import('./pages/Industries'));
 
+// Feature detail pages
+const WorkOrders = React.lazy(() => import('./pages/features/WorkOrders'));
+const Equipment = React.lazy(() => import('./pages/features/Equipment'));
+const PreventiveMaintenance = React.lazy(() => import('./pages/features/PreventiveMaintenance'));
+const Inventory = React.lazy(() => import('./pages/features/Inventory'));
+const KpiDashboard = React.lazy(() => import('./pages/features/KpiDashboard'));
+const MaintenanceCalendar = React.lazy(() => import('./pages/features/MaintenanceCalendar'));
+const Reporting = React.lazy(() => import('./pages/features/Reporting'));
+const Roles = React.lazy(() => import('./pages/features/Roles'));
+
 // Industries
 const Fabrication = React.lazy(() => import('./pages/industries/Fabrication'));
 const Energie = React.lazy(() => import('./pages/industries/Energie'));
@@ -72,6 +82,16 @@ export default function App() {
                    <Route path="/blog" element={<Blog />} />
                    <Route path="/aide" element={<Help />} />
                    
+                   {/* Feature detail pages */}
+                   <Route path="/features/work-orders" element={<WorkOrders />} />
+                   <Route path="/features/equipment" element={<Equipment />} />
+                   <Route path="/features/preventive-maintenance" element={<PreventiveMaintenance />} />
+                   <Route path="/features/inventory" element={<Inventory />} />
+                   <Route path="/features/kpi-dashboard" element={<KpiDashboard />} />
+                   <Route path="/features/maintenance-calendar" element={<MaintenanceCalendar />} />
+                   <Route path="/features/reporting" element={<Reporting />} />
+                   <Route path="/features/roles" element={<Roles />} />
+
                    <Route path="/industries" element={<Industries />} />
                    <Route path="/industries/fabrication" element={<Fabrication />} />
                    <Route path="/industries/energie" element={<Energie />} />

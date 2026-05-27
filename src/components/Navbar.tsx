@@ -140,13 +140,15 @@ export function Navbar() {
                   {n('features')} <ChevronDown size={14} />
                 </button>
                 <div className="mega-menu glass-card" role="menu">
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '0.5rem', padding: '1rem', textAlign: language === 'ar' ? 'right' : 'left' }}>
-                    <Link to="/features#bons-de-travail" className="mega-link" role="menuitem">{language === 'ar' ? 'تدبير أوامر العمل' : language === 'fr' ? 'Bons de travail' : 'Work Orders'}</Link>
-                    <Link to="/features#preventive" className="mega-link" role="menuitem">{language === 'ar' ? 'الصيانة الوقائية' : language === 'fr' ? 'Maintenance préventive' : 'Preventive Maintenance'}</Link>
-                    <Link to="/features#stocks" className="mega-link" role="menuitem">{language === 'ar' ? 'المخزون والقطع' : language === 'fr' ? 'Stocks & Pièces' : 'Stocks & Parts'}</Link>
-                    <Link to="/features#rapports" className="mega-link" role="menuitem">{language === 'ar' ? 'التقارير والمؤشرات' : language === 'fr' ? 'Rapports & KPIs' : 'Reports & KPIs'}</Link>
-                    <Link to="/features#mobile" className="mega-link" role="menuitem">{language === 'ar' ? 'تطبيق الهاتف' : language === 'fr' ? 'Application mobile' : 'Mobile App'}</Link>
-                    <Link to="/integrations" className="mega-link" role="menuitem">{n('integrations')}</Link>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem', padding: '1rem', textAlign: language === 'ar' ? 'right' : 'left' }}>
+                    <Link to="/features/work-orders" className="mega-link" role="menuitem">{language === 'ar' ? 'أوامر العمل' : language === 'fr' ? 'Bons de travail' : 'Work Orders'}</Link>
+                    <Link to="/features/equipment" className="mega-link" role="menuitem">{language === 'ar' ? 'إدارة المعدات' : language === 'fr' ? 'Équipements' : 'Equipment'}</Link>
+                    <Link to="/features/preventive-maintenance" className="mega-link" role="menuitem">{language === 'ar' ? 'الصيانة الوقائية' : language === 'fr' ? 'Maintenance préventive' : 'Preventive Maintenance'}</Link>
+                    <Link to="/features/inventory" className="mega-link" role="menuitem">{language === 'ar' ? 'إدارة المخزون' : language === 'fr' ? 'Gestion des stocks' : 'Inventory'}</Link>
+                    <Link to="/features/kpi-dashboard" className="mega-link" role="menuitem">{language === 'ar' ? 'لوحة المؤشرات' : language === 'fr' ? 'Tableau de bord KPI' : 'KPI Dashboard'}</Link>
+                    <Link to="/features/maintenance-calendar" className="mega-link" role="menuitem">{language === 'ar' ? 'تقويم الصيانة' : language === 'fr' ? 'Calendrier' : 'Calendar'}</Link>
+                    <Link to="/features/reporting" className="mega-link" role="menuitem">{language === 'ar' ? 'التقارير والتدقيق' : language === 'fr' ? 'Rapports & Audit' : 'Reports & Audit'}</Link>
+                    <Link to="/features/roles" className="mega-link" role="menuitem">{language === 'ar' ? 'الأدوار والصلاحيات' : language === 'fr' ? 'Rôles & Permissions' : 'Roles & Permissions'}</Link>
                   </div>
                 </div>
               </li>

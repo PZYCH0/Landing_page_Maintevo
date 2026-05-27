@@ -186,6 +186,8 @@ img, svg {
 .gap-6 { gap: 1.5rem; }
 .gap-8 { gap: 2rem; }
 .grid { display: grid; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
