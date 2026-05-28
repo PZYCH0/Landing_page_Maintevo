@@ -1,9 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useReveal } from '../hooks/useReveal';
+import { useTheme } from '../context/ThemeContext';
 
 export default function Home() {
   useReveal();
+  const { dark } = useTheme();
 
   // Animated counters
   useEffect(() => {
@@ -83,37 +85,19 @@ export default function Home() {
                   Watch the video
                 </a>
               </div>
-              <div style={{display:'flex',gap:'24px',flexWrap:'wrap',marginBottom:'20px'}}>
-                <div style={{display:'flex',alignItems:'flex-start',gap:'8px'}}>
-                  <div style={{width:'28px',height:'28px',borderRadius:'8px',background:'rgba(59,130,246,.1)',border:'1px solid rgba(59,130,246,.2)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
-                    <svg width="13" height="13" fill="none" stroke="#60a5fa" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  </div>
-                  <div style={{fontSize:'12px',lineHeight:1.4}}>
-                    <div style={{color:'#e2e8f0',fontWeight:600}}>Increase equipment</div>
-                    <div style={{color:'#475569'}}>availability</div>
-                  </div>
-                </div>
-                <div style={{display:'flex',alignItems:'flex-start',gap:'8px'}}>
-                  <div style={{width:'28px',height:'28px',borderRadius:'8px',background:'rgba(59,130,246,.1)',border:'1px solid rgba(59,130,246,.2)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
-                    <svg width="13" height="13" fill="none" stroke="#60a5fa" strokeWidth="2" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-                  </div>
-                  <div style={{fontSize:'12px',lineHeight:1.4}}>
-                    <div style={{color:'#e2e8f0',fontWeight:600}}>Reduce maintenance</div>
-                    <div style={{color:'#475569'}}>costs</div>
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Right — dashboard */}
             <div style={{position:'absolute',right:'-50px',top:'50%',transform:'translateY(-54%)',width:'74%',pointerEvents:'none',zIndex:1,WebkitMaskImage:'linear-gradient(to right,transparent 0%,rgba(0,0,0,.5) 14%,black 26%)',maskImage:'linear-gradient(to right,transparent 0%,rgba(0,0,0,.5) 14%,black 26%)'}}>
               <div style={{borderRadius:'16px',overflow:'hidden',transform:'perspective(1400px) rotateY(-8deg) rotateX(4deg)',boxShadow:'0 0 0 1px rgba(59,130,246,.5),0 0 50px rgba(59,130,246,.28),0 0 120px rgba(59,130,246,.1),0 60px 120px rgba(0,0,0,.75)'}}>
-                <img src="/images/hero-dashboard.png" style={{width:'100%',display:'block'}} alt="MaintEvo Dashboard" />
+                <img src={dark ? '/images/hero-dashboard.png' : '/images/hero-dashboardLightMode.png'} style={{width:'100%',display:'block'}} alt="MaintEvo Dashboard" />
               </div>
             </div>
 
           </div>
         </div>
+
+        <div className="hero-fade" style={{position:'absolute',bottom:0,left:0,right:0,zIndex:10,pointerEvents:'none'}} />
       </section>
 
       {/* ── FEATURES ── */}

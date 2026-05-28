@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useTheme } from '../../context/ThemeContext';
 
 const BenefitCard = ({ iconPath, title, body }: { iconPath: React.ReactNode; title: string; body: string }) => (
   <div className="benefit-card">
@@ -11,10 +12,11 @@ const BenefitCard = ({ iconPath, title, body }: { iconPath: React.ReactNode; tit
 );
 
 export default function WorkOrders() {
+  const { dark } = useTheme();
   return (
     <>
       {/* Hero */}
-      <section style={{height:'100vh',display:'flex',flexDirection:'column',background:'#020617',position:'relative',overflow:'hidden',paddingTop:'72px'}}>
+      <section className="hero-section" style={{height:'100vh',display:'flex',flexDirection:'column',background:'#020617',position:'relative',overflow:'hidden',paddingTop:'72px'}}>
         {/* Grid overlay */}
         <div style={{position:'absolute',inset:0,backgroundImage:'linear-gradient(rgba(59,130,246,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,.025) 1px,transparent 1px)',backgroundSize:'60px 60px',pointerEvents:'none'}} />
         {/* Glows */}
@@ -70,12 +72,13 @@ export default function WorkOrders() {
             {/* Right */}
             <div style={{position:'absolute',right:'-50px',top:'50%',transform:'translateY(-54%)',width:'74%',pointerEvents:'none',zIndex:1,WebkitMaskImage:'linear-gradient(to right,transparent 0%,rgba(0,0,0,.5) 14%,black 26%)',maskImage:'linear-gradient(to right,transparent 0%,rgba(0,0,0,.5) 14%,black 26%)'}}>
               <div style={{borderRadius:'16px',overflow:'hidden',transform:'perspective(1400px) rotateY(-8deg) rotateX(4deg)',boxShadow:'0 0 0 1px rgba(59,130,246,.5),0 0 50px rgba(59,130,246,.28),0 0 120px rgba(59,130,246,.1),0 60px 120px rgba(0,0,0,.75)'}}>
-                <img src="/images/work-orders-hero.jpg" style={{width:'100%',display:'block'}} alt="Work Orders — MaintEvo" />
+                <img src={dark ? '/images/work-orders-hero.jpg' : '/WorkOrderHeroLightMode.png'} style={{width:'100%',display:'block'}} alt="Work Orders — MaintEvo" />
               </div>
             </div>
 
           </div>
         </div>
+        <div className="hero-fade" style={{position:'absolute',bottom:0,left:0,right:0,zIndex:10,pointerEvents:'none'}} />
       </section>
 
       {/* Benefits */}

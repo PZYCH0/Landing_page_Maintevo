@@ -10,7 +10,7 @@ export default function Roles() {
   return (
     <>
       {/* Hero */}
-      <section style={{background:'#050b16',padding:'140px 0 80px'}}>
+      <section className="hero-section" style={{background:'#050b16',padding:'140px 0 140px',position:'relative',overflow:'hidden'}}>
         <div className="max-w-4xl mx-auto px-6 text-center">
           <Link to="/" style={{display:'inline-flex',alignItems:'center',gap:'6px',fontSize:'13px',color:'#60a5fa',textDecoration:'none',marginBottom:'24px',fontWeight:500}}>
             <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
@@ -25,6 +25,7 @@ export default function Roles() {
           </p>
           <Link to="/contact" className="btn-p" style={{padding:'14px 32px',fontSize:'15px'}}>Get started free</Link>
         </div>
+        <div className="hero-fade" style={{position:'absolute',bottom:0,left:0,right:0,zIndex:10,pointerEvents:'none'}} />
       </section>
 
       {/* Role cards */}

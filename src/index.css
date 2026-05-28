@@ -61,7 +61,7 @@
 .anim-marquee{animation:marquee 38s linear infinite}
 
 /* ── Navbar ── */
-.navbar{background:rgba(2,6,23,.35);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07);transition:all .3s}
+.navbar{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:1px solid transparent;transition:all .3s}
 .navbar.scrolled{background:rgba(2,6,23,.75);border-bottom-color:rgba(59,130,246,.18);box-shadow:0 4px 40px rgba(0,0,0,.6)}
 
 /* ── Buttons ── */
@@ -267,16 +267,16 @@ html:not(.dark) [style*="background: #0d1628"] { background: #e2e8f0 !important;
 
 html:not(.dark) .navbar {
   background: rgba(248,250,252,.92) !important;
-  border-bottom-color: rgba(0,0,0,.08) !important;
+  border-bottom-color: rgba(59,130,246,.12) !important;
 }
 html:not(.dark) .navbar.scrolled {
   background: rgba(248,250,252,.97) !important;
-  border-bottom-color: rgba(59,130,246,.18) !important;
-  box-shadow: 0 4px 24px rgba(0,0,0,.08) !important;
+  border-bottom-color: rgba(59,130,246,.2) !important;
+  box-shadow: 0 4px 24px rgba(59,130,246,.08) !important;
 }
 html:not(.dark) #desktop-nav.open {
   background: rgba(248,250,252,.98) !important;
-  border-bottom-color: rgba(0,0,0,.08) !important;
+  border-bottom-color: rgba(59,130,246,.12) !important;
 }
 
 html:not(.dark) nav a,
@@ -293,7 +293,7 @@ html:not(.dark) #theme-toggle:hover   { color: #0f172a !important; background: r
 
 html:not(.dark) #lang-dropdown {
   background: rgba(248,250,252,.98) !important;
-  border-color: rgba(0,0,0,.1) !important;
+  border-color: rgba(59,130,246,.15) !important;
 }
 html:not(.dark) #lang-dropdown button         { color: #475569 !important; }
 html:not(.dark) #lang-dropdown button:hover   { background: rgba(0,0,0,.05) !important; color: #0f172a !important; }
@@ -357,14 +357,14 @@ html:not(.dark) .glass {
 }
 
 html:not(.dark) .feat-card {
-  background: rgba(255,255,255,.85) !important;
-  border-color: rgba(0,0,0,.08) !important;
-  box-shadow: 0 2px 12px rgba(0,0,0,.04);
+  background: rgba(255,255,255,.7) !important;
+  border-color: rgba(59,130,246,.15) !important;
+  box-shadow: 0 2px 12px rgba(59,130,246,.06);
 }
 html:not(.dark) .feat-card:hover {
-  background: rgba(59,130,246,.05) !important;
-  border-color: rgba(59,130,246,.25) !important;
-  box-shadow: 0 12px 40px rgba(0,0,0,.08), 0 0 20px rgba(59,130,246,.07) !important;
+  background: rgba(255,255,255,.95) !important;
+  border-color: rgba(59,130,246,.3) !important;
+  box-shadow: 0 12px 40px rgba(59,130,246,.12), 0 0 20px rgba(59,130,246,.08) !important;
 }
 html:not(.dark) .feat-card .icon {
   background: rgba(59,130,246,.08) !important;
@@ -372,34 +372,34 @@ html:not(.dark) .feat-card .icon {
 }
 
 html:not(.dark) .testi-card {
-  background: rgba(255,255,255,.85) !important;
-  border-color: rgba(0,0,0,.08) !important;
+  background: rgba(255,255,255,.7) !important;
+  border-color: rgba(59,130,246,.15) !important;
 }
 html:not(.dark) .testi-card:hover {
-  border-color: rgba(59,130,246,.2) !important;
-  box-shadow: 0 12px 40px rgba(0,0,0,.06) !important;
+  border-color: rgba(59,130,246,.3) !important;
+  box-shadow: 0 12px 40px rgba(59,130,246,.1) !important;
 }
 html:not(.dark) .step-card {
-  background: rgba(255,255,255,.85) !important;
-  border-color: rgba(0,0,0,.08) !important;
+  background: rgba(255,255,255,.7) !important;
+  border-color: rgba(59,130,246,.15) !important;
 }
-html:not(.dark) .step-card:hover { border-color: rgba(59,130,246,.25) !important; }
+html:not(.dark) .step-card:hover { border-color: rgba(59,130,246,.3) !important; }
 
 html:not(.dark) .dash-wrap {
   background: #ffffff !important;
-  border-color: rgba(59,130,246,.18) !important;
-  box-shadow: 0 0 0 1px rgba(59,130,246,.06), 0 24px 60px rgba(0,0,0,.08), 0 0 40px rgba(59,130,246,.04) !important;
+  border-color: rgba(59,130,246,.25) !important;
+  box-shadow: 0 0 0 1px rgba(59,130,246,.1), 0 24px 60px rgba(59,130,246,.1), 0 0 40px rgba(59,130,246,.06) !important;
 }
 
 html:not(.dark) .m-card {
   background: rgba(255,255,255,.95) !important;
-  border-color: rgba(59,130,246,.15) !important;
-  box-shadow: 0 4px 16px rgba(0,0,0,.07) !important;
+  border-color: rgba(59,130,246,.2) !important;
+  box-shadow: 0 4px 16px rgba(59,130,246,.1) !important;
 }
 
 html:not(.dark) .neon-border {
   background:
-    linear-gradient(#fff,#fff) padding-box,
+    linear-gradient(#f1f5f9,#f1f5f9) padding-box,
     linear-gradient(135deg,rgba(59,130,246,.4),rgba(34,211,238,.2),rgba(59,130,246,.1)) border-box !important;
 }
 
@@ -413,8 +413,8 @@ html:not(.dark) .s-bar { background: rgba(0,0,0,.08) !important; }
 
 html:not(.dark) .cta-bg {
   background:
-    radial-gradient(ellipse 80% 60% at 50% 50%,rgba(59,130,246,.07) 0%,transparent 70%),
-    linear-gradient(180deg,#f1f5f9 0%,#e8eef6 50%,#f1f5f9 100%) !important;
+    radial-gradient(ellipse 80% 60% at 50% 50%,rgba(59,130,246,.12) 0%,transparent 70%),
+    linear-gradient(180deg,#f1f5f9 0%,#ffffff 50%,#f1f5f9 100%) !important;
 }
 
 html:not(.dark) .bg-grid {
@@ -443,8 +443,8 @@ html:not(.dark) .btn-s:hover {
 html:not(.dark) [style*="background:rgba(255,255,255,.03)"],
 html:not(.dark) [style*="background:rgba(255,255,255, .03)"],
 html:not(.dark) [style*="background:rgba(255,255,255,0.03)"] {
-  background: rgba(255,255,255,.85) !important;
-  border-color: rgba(0,0,0,.07) !important;
+  background: rgba(255,255,255,.7) !important;
+  border-color: rgba(59,130,246,.12) !important;
 }
 html:not(.dark) [style*="background:rgba(255,255,255,.04)"],
 html:not(.dark) [style*="background:rgba(255,255,255,.05)"],
@@ -453,7 +453,7 @@ html:not(.dark) [style*="background:rgba(255,255,255,.07)"],
 html:not(.dark) [style*="background:rgba(255,255,255,.08)"],
 html:not(.dark) [style*="background:rgba(255,255,255,.10)"],
 html:not(.dark) [style*="background:rgba(255,255,255,.12)"] {
-  background: rgba(0,0,0,.04) !important;
+  background: rgba(59,130,246,.06) !important;
 }
 
 html:not(.dark) .ai-node {
@@ -466,36 +466,12 @@ html:not(.dark) .hover\:bg-white\/10:hover { background: rgba(0,0,0,.06) !import
 html:not(.dark) [style*="border:1px solid rgba(255,255,255,"] { border-color: rgba(0,0,0,.08) !important; }
 html:not(.dark) [style*="border-color:rgba(255,255,255,"]    { border-color: rgba(0,0,0,.08) !important; }
 
-/* ═══════════════════════════════════════════════════════════════
-   HERO SECTION — stays dark in light mode
-   ═══════════════════════════════════════════════════════════════ */
-html:not(.dark) .hero-section {
-  background: #020617 !important;
-  color: #f8fafc !important;
+/* ── Hero fade ── */
+.hero-fade {
+  height: 60px;
+  background: linear-gradient(to bottom, transparent 0%, #050b16 100%);
 }
-html:not(.dark) .hero-section h1,
-html:not(.dark) .hero-section h2,
-html:not(.dark) .hero-section h3 { color: #f8fafc !important; }
-html:not(.dark) .hero-section p   { color: #94a3b8 !important; }
-
-html:not(.dark) .hero-section [style*="color:#fff"],
-html:not(.dark) .hero-section [style*="color: #fff"],
-html:not(.dark) .hero-section [style*="color:#ffffff"],
-html:not(.dark) .hero-section [style*="color:#f8fafc"],
-html:not(.dark) .hero-section [style*="color:#e2e8f0"]  { color: #f8fafc !important; }
-html:not(.dark) .hero-section [style*="color:#94a3b8"]  { color: #94a3b8 !important; }
-html:not(.dark) .hero-section [style*="color:#64748b"]  { color: #64748b !important; }
-html:not(.dark) .hero-section [style*="color:#475569"]  { color: #475569 !important; }
-
-html:not(.dark) .hero-section [style*="background:#020617"] { background: #020617 !important; }
-html:not(.dark) .hero-section [style*="background:#050b16"] { background: #050b16 !important; }
-
-html:not(.dark) .hero-section .btn-s {
-  background: rgba(255,255,255,.06) !important;
-  border-color: rgba(255,255,255,.12) !important;
-  color: #e2e8f0 !important;
+html:not(.dark) .hero-fade {
+  background: linear-gradient(to bottom, transparent 0%, #f1f5f9 100%) !important;
 }
-html:not(.dark) .hero-section .btn-s:hover {
-  background: rgba(255,255,255,.10) !important;
-  border-color: rgba(255,255,255,.20) !important;
-}
+
