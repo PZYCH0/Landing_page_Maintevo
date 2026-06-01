@@ -4,7 +4,7 @@ export default function Reporting() {
   return (
     <>
       {/* Hero */}
-      <section className="hero-section" style={{background:'#050b16',padding:'140px 0 140px',position:'relative',overflow:'hidden'}}>
+      <section className="hero-section hero-centered" style={{background:'#050b16',padding:'140px 0 140px',position:'relative',overflow:'hidden'}}>
         <div className="max-w-4xl mx-auto px-6 text-center">
           <Link to="/" style={{display:'inline-flex',alignItems:'center',gap:'6px',fontSize:'13px',color:'#60a5fa',textDecoration:'none',marginBottom:'24px',fontWeight:500}}>
             <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
@@ -70,7 +70,7 @@ export default function Reporting() {
             <h2 style={{fontSize:'clamp(1.6rem,3vw,2.2rem)',fontWeight:900,color:'#fff',letterSpacing:'-.03em',marginBottom:'12px'}}>What gets recorded — automatically</h2>
             <p style={{color:'#94a3b8',fontSize:'1rem',maxWidth:'520px',margin:'0 auto'}}>You don't have to log anything manually. MaintEvo captures every event as your team works.</p>
           </div>
-          <div style={{background:'rgba(255,255,255,.03)',border:'1px solid rgba(255,255,255,.07)',borderRadius:'16px',padding:'8px 32px'}}>
+          <div className="audit-wrap" style={{background:'rgba(255,255,255,.03)',border:'1px solid rgba(255,255,255,.07)',borderRadius:'16px',padding:'8px 32px'}}>
             {[
               { bg:'rgba(59,130,246,.12)',border:'rgba(59,130,246,.2)',stroke:'#60a5fa', icon:<path d="M12 4v16m8-8H4"/>, title:'Work order created', sub:'Who submitted it, which asset, what the problem was, and when it came in.' },
               { bg:'rgba(34,197,94,.08)',border:'rgba(34,197,94,.16)',stroke:'#4ade80', icon:<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>, title:'Assigned to a technician', sub:'Which manager assigned it, to whom, and at what time.' },

@@ -52,7 +52,7 @@ export default function Navbar() {
   return (
     <header className="fixed w-full z-50">
       <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
-        <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-6 py-3 mx-auto">
+        <div className="flex flex-wrap items-center justify-between max-w-screen-xl px-4 sm:px-6 py-3 mx-auto">
 
           {/* Logo */}
           <Link to="/" className="flex items-center">
@@ -62,14 +62,6 @@ export default function Navbar() {
 
           {/* Right controls */}
           <div className="flex items-center lg:order-2 gap-1">
-
-            {/* Phone */}
-            <a href="tel:8884515787" className="hidden sm:inline-flex items-center text-sm font-medium text-white/70 hover:text-white mr-3 transition-colors">
-              <svg className="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-              </svg>
-              Contact sales: (888) 451-5787
-            </a>
 
             {/* Language switcher */}
             <div className="relative mr-1" ref={langRef}>
@@ -111,8 +103,20 @@ export default function Navbar() {
               </svg>
             </button>
 
+            {/* Log In */}
+            <a
+              href="#"
+              className="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-white/80 hover:text-white transition-colors px-4 py-2 rounded-lg border border-white/20 hover:border-white/40 hover:bg-white/5"
+              style={{fontSize:'13px'}}
+            >
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/>
+              </svg>
+              Log In
+            </a>
+
             {/* Get Started */}
-            <Link to="/contact" className="btn-p" style={{padding:'9px 20px',fontSize:'13px'}}>Get Started</Link>
+            <Link to="/contact" className="btn-p hidden sm:inline-flex" style={{padding:'9px 20px',fontSize:'13px'}}>Get Started</Link>
 
             {/* Mobile hamburger */}
             <button
@@ -191,6 +195,14 @@ export default function Navbar() {
               <li><Link to="/enterprise" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">Enterprise</Link></li>
               <li><Link to="/pricing" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">Pricing</Link></li>
               <li><Link to="/resources" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">Resources</Link></li>
+              <li className="lg:hidden pt-1">
+                <a href="#" className="flex items-center gap-1.5 text-sm font-medium text-white/80 hover:text-white transition-colors py-2">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/>
+                  </svg>
+                  Log In
+                </a>
+              </li>
             </ul>
           </div>
 

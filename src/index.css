@@ -176,6 +176,20 @@
 /* ── Mobile menu ── */
 #desktop-nav.open{display:flex!important;position:fixed;top:65px;left:0;right:0;background:rgba(5,11,22,.98);border-bottom:1px solid rgba(255,255,255,.08);padding:20px 24px;z-index:48;flex-direction:column;gap:4px}
 
+/* Ensure navbar background when mobile menu is open (so links are readable) */
+@media (max-width: 1023px) {
+  nav.navbar:has(div.flex-col) {
+    background: rgba(2, 6, 23, .92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom-color: rgba(59,130,246,.18);
+  }
+  html:not(.dark) nav.navbar:has(div.flex-col) {
+    background: rgba(248,250,252,.97) !important;
+    border-bottom-color: rgba(59,130,246,.18) !important;
+  }
+}
+
 /* bar chart bars */
 .bar{border-radius:3px 3px 0 0;transform-origin:bottom;animation:barGrow .8s ease forwards}
 
@@ -473,5 +487,131 @@ html:not(.dark) [style*="border-color:rgba(255,255,255,"]    { border-color: rgb
 }
 html:not(.dark) .hero-fade {
   background: linear-gradient(to bottom, transparent 0%, #f1f5f9 100%) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE / MOBILE OVERRIDES
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Mobile + tablet (< 1024px): collapse two-column hero into single column */
+@media (max-width: 1023px) {
+  /* Two-column hero (Home + feature pages with left text + right image) */
+  .hero-section { height: auto !important; min-height: auto !important; padding-bottom: 60px; }
+  .hero-content-row {
+    flex-direction: column !important;
+    padding: 0 20px !important;
+    align-items: flex-start !important;
+  }
+  .hero-left-block {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: left;
+  }
+  .hero-left-block p { max-width: 100% !important; }
+  /* Hide the perspective dashboard image on mobile/tablet — improves readability */
+  .hero-right-block { display: none !important; }
+
+  /* Centered hero sections (MaintenanceCalendar, Reporting, Roles) */
+  .hero-section.hero-centered { padding: 100px 0 80px !important; }
+
+  /* Buttons inside hero feature lists — wrap better */
+  .hero-left-block .btn-p,
+  .hero-left-block .btn-s { flex-shrink: 0; }
+}
+
+/* Phone (< 640px): tighter spacing, full-width CTA buttons in hero */
+@media (max-width: 639px) {
+  .hero-section { padding-top: 80px !important; padding-bottom: 48px !important; }
+  .hero-content-row { padding: 0 16px !important; }
+
+  /* Make hero CTA buttons full-width and stack */
+  .hero-left-block .btn-p,
+  .hero-left-block .btn-s {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Section padding compresses on phones */
+  section[style*="padding:'120px 0'"],
+  section[style*="padding: 120px 0"],
+  section[style*="padding:120px 0"] { padding: 64px 0 !important; }
+
+  section[style*="padding:'140px 0'"],
+  section[style*="padding: 140px 0"],
+  section[style*="padding:140px 0"] { padding: 72px 0 !important; }
+
+  section[style*="padding:'80px 0'"],
+  section[style*="padding: 80px 0"],
+  section[style*="padding:80px 0"] { padding: 56px 0 !important; }
+
+  section[style*="padding:'64px 0'"],
+  section[style*="padding: 64px 0"],
+  section[style*="padding:64px 0"] { padding: 48px 0 !important; }
+
+  /* Centered hero specifically */
+  .hero-section.hero-centered { padding: 96px 0 64px !important; }
+
+  /* CTA buttons in CTA sections wrap and become full-width */
+  .cta-bg .btn-p,
+  .cta-bg .btn-s {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Reduce huge AI section gap on mobile */
+  .ai-grid { gap: 2.5rem !important; }
+
+  /* Equipment criticality grid — 2 columns on phones */
+  .criticality-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Audit trail / KPI box wrapper padding shrinks */
+  .audit-wrap { padding: 8px 18px !important; }
+  .kpi-card { padding: 18px 16px !important; }
+
+  /* Step cards padding */
+  .step-card { padding: 28px 20px !important; }
+
+  /* Benefit cards a touch tighter */
+  .benefit-card { padding: 24px !important; }
+
+  /* Price cards tighter */
+  .price-card { padding: 24px !important; }
+
+  /* Role card tighter */
+  .role-card { padding: 24px !important; }
+
+  /* Feature cards a touch tighter */
+  .feat-card { padding: 22px !important; }
+
+  /* Neon-bordered metric cards a touch tighter */
+  .metric-card { padding: 24px !important; }
+
+  /* Comparison table — keep horizontal scroll but tighten cells */
+  table th, table td {
+    padding: 10px 12px !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* Footer adjustments */
+  footer { padding: 48px 0 32px !important; }
+}
+
+/* Make horizontal-scrollable comparison table feel native on mobile */
+@media (max-width: 767px) {
+  .table-scroll {
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -16px;
+    padding: 0 16px;
+  }
+}
+
+/* AI section visual — scale down on smaller screens */
+@media (max-width: 639px) {
+  .ai-visual { height: 340px !important; }
+}
+@media (max-width: 380px) {
+  .ai-visual { height: 300px !important; }
 }
 

@@ -23,9 +23,9 @@ export default function Equipment() {
         <div style={{position:'absolute',top:'8%',right:'10%',width:'260px',height:'260px',background:'radial-gradient(circle,rgba(59,130,246,.07) 0%,transparent 65%)',filter:'blur(40px)',pointerEvents:'none'}} />
 
         <div style={{flex:1,display:'flex',alignItems:'center',position:'relative',zIndex:3,padding:0}}>
-          <div style={{width:'100%',maxWidth:'1280px',margin:'0 auto',padding:'0 60px',position:'relative',display:'flex',alignItems:'center'}}>
+          <div className="hero-content-row" style={{width:'100%',maxWidth:'1280px',margin:'0 auto',padding:'0 60px',position:'relative',display:'flex',alignItems:'center'}}>
 
-            <div style={{width:'38%',flexShrink:0,position:'relative',zIndex:2}}>
+            <div className="hero-left-block" style={{width:'38%',flexShrink:0,position:'relative',zIndex:2}}>
               <Link to="/" style={{display:'inline-flex',alignItems:'center',gap:'6px',fontSize:'13px',color:'#60a5fa',textDecoration:'none',marginBottom:'20px',fontWeight:500}}>
                 <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                 Back to all features
@@ -69,7 +69,7 @@ export default function Equipment() {
               </div>
             </div>
 
-            <div style={{position:'absolute',right:'-50px',top:'50%',transform:'translateY(-54%)',width:'74%',pointerEvents:'none',zIndex:1,WebkitMaskImage:'linear-gradient(to right,transparent 0%,rgba(0,0,0,.5) 14%,black 26%)',maskImage:'linear-gradient(to right,transparent 0%,rgba(0,0,0,.5) 14%,black 26%)'}}>
+            <div className="hero-right-block" style={{position:'absolute',right:'-50px',top:'50%',transform:'translateY(-54%)',width:'74%',pointerEvents:'none',zIndex:1,WebkitMaskImage:'linear-gradient(to right,transparent 0%,rgba(0,0,0,.5) 14%,black 26%)',maskImage:'linear-gradient(to right,transparent 0%,rgba(0,0,0,.5) 14%,black 26%)'}}>
               <div style={{borderRadius:'16px',overflow:'hidden',transform:'perspective(1400px) rotateY(-8deg) rotateX(4deg)',boxShadow:'0 0 0 1px rgba(59,130,246,.5),0 0 50px rgba(59,130,246,.28),0 0 120px rgba(59,130,246,.1),0 60px 120px rgba(0,0,0,.75)'}}>
                 <img src={dark ? '/AssestsHero.png' : '/AssetsHeroLightMode.jpg'} style={{width:'100%',display:'block'}} alt="MaintEvo Equipment Hierarchy" />
               </div>
@@ -84,7 +84,7 @@ export default function Equipment() {
       <section style={{background:'#080f1e',padding:'60px 0'}}>
         <div className="max-w-3xl mx-auto px-6">
           <p style={{textAlign:'center',fontSize:'13px',fontWeight:600,color:'#60a5fa',letterSpacing:'.06em',textTransform:'uppercase',marginBottom:'24px'}}>4 criticality levels</p>
-          <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:'12px'}}>
+          <div className="criticality-grid" style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:'12px'}}>
             {[
               { level:'LEVEL 1', name:'Low', desc:'Routine maintenance, no urgency', bg:'rgba(34,197,94,.08)', border:'rgba(34,197,94,.2)', color:'#22c55e' },
               { level:'LEVEL 2', name:'Medium', desc:'Monitored closely, scheduled regularly', bg:'rgba(234,179,8,.08)', border:'rgba(234,179,8,.2)', color:'#eab308' },

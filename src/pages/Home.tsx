@@ -64,10 +64,10 @@ export default function Home() {
         <div style={{position:'absolute',top:'8%',right:'10%',width:'260px',height:'260px',background:'radial-gradient(circle,rgba(59,130,246,.07) 0%,transparent 65%)',filter:'blur(40px)',pointerEvents:'none'}}></div>
 
         <div style={{flex:1,display:'flex',alignItems:'center',position:'relative',zIndex:3,padding:0}}>
-          <div style={{width:'100%',maxWidth:'1280px',margin:'0 auto',padding:'0 60px',position:'relative',display:'flex',alignItems:'center'}}>
+          <div className="hero-content-row" style={{width:'100%',maxWidth:'1280px',margin:'0 auto',padding:'0 60px',position:'relative',display:'flex',alignItems:'center'}}>
 
             {/* Left */}
-            <div style={{width:'38%',flexShrink:0,animation:'fadeUp .8s ease forwards',position:'relative',zIndex:2}}>
+            <div className="hero-left-block" style={{width:'38%',flexShrink:0,animation:'fadeUp .8s ease forwards',position:'relative',zIndex:2}}>
               <h1 style={{fontSize:'clamp(2rem,3.6vw,3.2rem)',fontWeight:900,lineHeight:1.06,letterSpacing:'-0.03em',marginBottom:'14px',color:'#fff'}}>
                 Pilot maintenance.<br />
                 Maximize <span style={{color:'#3b82f6'}}>performance.</span>
@@ -88,7 +88,7 @@ export default function Home() {
             </div>
 
             {/* Right — dashboard */}
-            <div style={{position:'absolute',right:'-50px',top:'50%',transform:'translateY(-54%)',width:'74%',pointerEvents:'none',zIndex:1,WebkitMaskImage:'linear-gradient(to right,transparent 0%,rgba(0,0,0,.5) 14%,black 26%)',maskImage:'linear-gradient(to right,transparent 0%,rgba(0,0,0,.5) 14%,black 26%)'}}>
+            <div className="hero-right-block" style={{position:'absolute',right:'-50px',top:'50%',transform:'translateY(-54%)',width:'74%',pointerEvents:'none',zIndex:1,WebkitMaskImage:'linear-gradient(to right,transparent 0%,rgba(0,0,0,.5) 14%,black 26%)',maskImage:'linear-gradient(to right,transparent 0%,rgba(0,0,0,.5) 14%,black 26%)'}}>
               <div style={{borderRadius:'16px',overflow:'hidden',transform:'perspective(1400px) rotateY(-8deg) rotateX(4deg)',boxShadow:'0 0 0 1px rgba(59,130,246,.5),0 0 50px rgba(59,130,246,.28),0 0 120px rgba(59,130,246,.1),0 60px 120px rgba(0,0,0,.75)'}}>
                 <img src={dark ? '/images/hero-dashboard.png' : '/images/hero-dashboardLightMode.png'} style={{width:'100%',display:'block'}} alt="MaintEvo Dashboard" />
               </div>
@@ -168,75 +168,31 @@ export default function Home() {
       {/* ── AI / AUTOMATION ── */}
       <section id="ai" style={{padding:'120px 0',background:'#080f1e',position:'relative',overflow:'hidden'}}>
         <div className="orb orb1" style={{top:'-200px',right:'-200px',opacity:.7}}></div>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-
-            {/* AI Visual */}
-            <div className="relative reveal" style={{height:'440px'}}>
-              <div style={{position:'absolute',inset:0,display:'flex',alignItems:'center',justifyContent:'center'}}>
-                <div style={{width:'300px',height:'300px',background:'radial-gradient(circle,rgba(59,130,246,.15) 0%,transparent 70%)',filter:'blur(40px)'}}></div>
-              </div>
-              <svg viewBox="0 0 440 440" style={{position:'absolute',inset:0,width:'100%',height:'100%'}}>
-                <line x1="220" y1="220" x2="120" y2="120" stroke="rgba(59,130,246,.2)" strokeWidth="1"/>
-                <line x1="220" y1="220" x2="320" y2="120" stroke="rgba(59,130,246,.2)" strokeWidth="1"/>
-                <line x1="220" y1="220" x2="80" y2="220" stroke="rgba(34,211,238,.2)" strokeWidth="1"/>
-                <line x1="220" y1="220" x2="360" y2="220" stroke="rgba(34,211,238,.2)" strokeWidth="1"/>
-                <line x1="220" y1="220" x2="120" y2="320" stroke="rgba(59,130,246,.2)" strokeWidth="1"/>
-                <line x1="220" y1="220" x2="320" y2="320" stroke="rgba(59,130,246,.2)" strokeWidth="1"/>
-                <line x1="220" y1="220" x2="220" y2="80" stroke="rgba(147,197,253,.2)" strokeWidth="1"/>
-                <line x1="220" y1="220" x2="220" y2="360" stroke="rgba(147,197,253,.2)" strokeWidth="1"/>
-                <circle r="4" fill="#3b82f6" opacity=".8"><animateMotion dur="2s" repeatCount="indefinite" path="M220,220 L120,120"/><animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/></circle>
-                <circle r="4" fill="#22d3ee" opacity=".8"><animateMotion dur="2.4s" repeatCount="indefinite" path="M220,220 L360,220"/><animate attributeName="opacity" values="0;1;0" dur="2.4s" repeatCount="indefinite"/></circle>
-                <circle r="4" fill="#3b82f6" opacity=".8"><animateMotion dur="1.8s" repeatCount="indefinite" path="M220,220 L320,320"/><animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite"/></circle>
-                <circle r="4" fill="#93c5fd" opacity=".8"><animateMotion dur="2.2s" repeatCount="indefinite" path="M220,220 L220,80"/><animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite"/></circle>
-                <circle cx="120" cy="120" r="22" fill="rgba(59,130,246,.08)" stroke="rgba(59,130,246,.3)" strokeWidth="1"/>
-                <circle cx="320" cy="120" r="22" fill="rgba(59,130,246,.08)" stroke="rgba(59,130,246,.3)" strokeWidth="1"/>
-                <circle cx="80" cy="220" r="18" fill="rgba(34,211,238,.06)" stroke="rgba(34,211,238,.25)" strokeWidth="1"/>
-                <circle cx="360" cy="220" r="18" fill="rgba(34,211,238,.06)" stroke="rgba(34,211,238,.25)" strokeWidth="1"/>
-                <circle cx="120" cy="320" r="22" fill="rgba(59,130,246,.08)" stroke="rgba(59,130,246,.3)" strokeWidth="1"/>
-                <circle cx="320" cy="320" r="22" fill="rgba(59,130,246,.08)" stroke="rgba(59,130,246,.3)" strokeWidth="1"/>
-                <circle cx="220" cy="80" r="16" fill="rgba(147,197,253,.06)" stroke="rgba(147,197,253,.25)" strokeWidth="1"/>
-                <circle cx="220" cy="360" r="16" fill="rgba(147,197,253,.06)" stroke="rgba(147,197,253,.25)" strokeWidth="1"/>
-                <circle cx="220" cy="220" r="50" fill="rgba(59,130,246,.05)" stroke="rgba(59,130,246,.2)" strokeWidth="1"/>
-                <circle cx="220" cy="220" r="36" fill="rgba(59,130,246,.1)" stroke="rgba(59,130,246,.3)" strokeWidth="1"><animate attributeName="r" values="34;38;34" dur="3s" repeatCount="indefinite"/></circle>
-                <text x="220" y="225" textAnchor="middle" dominantBaseline="middle" fill="#60a5fa" fontSize="12" fontWeight="700" fontFamily="Inter,sans-serif">AUTO</text>
-              </svg>
-              <div style={{position:'absolute',top:'76px',left:'62px',fontSize:'10px',color:'#60a5fa',fontWeight:500,textAlign:'center',lineHeight:1.3}}>PM<br/>Plans</div>
-              <div style={{position:'absolute',top:'76px',right:'54px',fontSize:'10px',color:'#60a5fa',fontWeight:500,textAlign:'center',lineHeight:1.3}}>Asset<br/>History</div>
-              <div style={{position:'absolute',top:'50%',left:'4px',transform:'translateY(-50%)',fontSize:'10px',color:'#22d3ee',fontWeight:500,textAlign:'center',lineHeight:1.3}}>Usage<br/>Patterns</div>
-              <div style={{position:'absolute',top:'50%',right:0,transform:'translateY(-50%)',fontSize:'10px',color:'#22d3ee',fontWeight:500,textAlign:'center',lineHeight:1.3}}>KPI<br/>Updates</div>
-              <div style={{position:'absolute',bottom:'80px',left:'62px',fontSize:'10px',color:'#60a5fa',fontWeight:500,textAlign:'center',lineHeight:1.3}}>Work<br/>Orders</div>
-              <div style={{position:'absolute',bottom:'80px',right:'54px',fontSize:'10px',color:'#60a5fa',fontWeight:500,textAlign:'center',lineHeight:1.3}}>Failure<br/>Logs</div>
-              <div style={{position:'absolute',top:'16px',left:'50%',transform:'translateX(-50%)',fontSize:'10px',color:'#93c5fd',fontWeight:500}}>Live Data</div>
-              <div style={{position:'absolute',bottom:'16px',left:'50%',transform:'translateX(-50%)',fontSize:'10px',color:'#93c5fd',fontWeight:500}}>PM Plans</div>
-            </div>
-
-            {/* Text */}
-            <div className="reveal d2">
-              <div className="hero-badge inline-flex mb-5">Smart Automation</div>
-              <h2 className="font-black text-white mb-6" style={{fontSize:'clamp(1.8rem,3.5vw,2.6rem)',letterSpacing:'-.03em',lineHeight:1.1}}>
-                Eliminate the admin.<br />
-                <span className="grad-text">Focus on the fix.</span>
-              </h2>
-              <p className="text-slate-400 mb-8 leading-relaxed">MaintEvo handles the operational overhead — scheduling jobs, updating KPIs, routing requests — so your team spends time on actual maintenance, not on paperwork.</p>
-              <div style={{display:'flex',flexDirection:'column',gap:'20px'}}>
-                {[
-                  {color:'rgba(59,130,246,.1)',borderColor:'rgba(59,130,246,.2)',stroke:'#60a5fa',icon:'M13 10V3L4 14h7v7l9-11h-7z',title:'Auto-Generated Work Orders',text:'Preventive maintenance plans create work orders on schedule, automatically. No one has to remember — and no jobs slip through the cracks.'},
-                  {color:'rgba(34,211,238,.08)',borderColor:'rgba(34,211,238,.2)',stroke:'#22d3ee',icon:'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',title:'Live KPI Calculations',text:'Every time a job opens or closes, MTTR, MTBF, and availability rate update in real time. Your dashboard is always current — no manual entry required.'},
-                  {color:'rgba(59,130,246,.1)',borderColor:'rgba(59,130,246,.2)',stroke:'#60a5fa',icon:'M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z',title:'Priority-Driven Scheduling',text:'Asset criticality and maintenance history guide what gets done first. Your team always works on the right jobs, in the right order.'},
-                  {color:'rgba(34,211,238,.08)',borderColor:'rgba(34,211,238,.2)',stroke:'#22d3ee',icon:'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2',title:'Full Audit Trail',text:'Every action is timestamped and attributed — who did what, on which asset, and when. Compliance reviews and incident investigations take minutes, not days.'},
-                ].map((item, i) => (
-                  <div key={i} style={{display:'flex',gap:'16px',alignItems:'flex-start'}}>
-                    <div style={{width:'40px',height:'40px',borderRadius:'10px',background:item.color,border:`1px solid ${item.borderColor}`,display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
-                      <svg width="18" height="18" fill="none" stroke={item.stroke} strokeWidth="2" viewBox="0 0 24 24"><path d={item.icon}/></svg>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white mb-1" style={{fontSize:'14px'}}>{item.title}</div>
-                      <div className="text-slate-500" style={{fontSize:'13px'}}>{item.text}</div>
-                    </div>
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="reveal d2 text-center">
+            <div className="hero-badge inline-flex mb-5">Smart Automation</div>
+            <h2 className="font-black text-white mb-6" style={{fontSize:'clamp(1.8rem,3.5vw,2.6rem)',letterSpacing:'-.03em',lineHeight:1.1}}>
+              Eliminate the admin.<br />
+              <span className="grad-text">Focus on the fix.</span>
+            </h2>
+            <p className="text-slate-400 mb-12 leading-relaxed" style={{maxWidth:'600px',margin:'0 auto 48px'}}>MaintEvo handles the operational overhead — scheduling jobs, updating KPIs, routing requests — so your team spends time on actual maintenance, not on paperwork.</p>
+            <div className="grid sm:grid-cols-2 gap-6 text-left">
+              {[
+                {color:'rgba(59,130,246,.1)',borderColor:'rgba(59,130,246,.2)',stroke:'#60a5fa',icon:'M13 10V3L4 14h7v7l9-11h-7z',title:'Auto-Generated Work Orders',text:'Preventive maintenance plans create work orders on schedule, automatically. No one has to remember — and no jobs slip through the cracks.'},
+                {color:'rgba(34,211,238,.08)',borderColor:'rgba(34,211,238,.2)',stroke:'#22d3ee',icon:'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z',title:'Live KPI Calculations',text:'Every time a job opens or closes, MTTR, MTBF, and availability rate update in real time. Your dashboard is always current — no manual entry required.'},
+                {color:'rgba(59,130,246,.1)',borderColor:'rgba(59,130,246,.2)',stroke:'#60a5fa',icon:'M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z',title:'Priority-Driven Scheduling',text:'Asset criticality and maintenance history guide what gets done first. Your team always works on the right jobs, in the right order.'},
+                {color:'rgba(34,211,238,.08)',borderColor:'rgba(34,211,238,.2)',stroke:'#22d3ee',icon:'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2',title:'Full Audit Trail',text:'Every action is timestamped and attributed — who did what, on which asset, and when. Compliance reviews and incident investigations take minutes, not days.'},
+              ].map((item, i) => (
+                <div key={i} style={{display:'flex',gap:'16px',alignItems:'flex-start',padding:'24px',background:'rgba(255,255,255,.03)',border:'1px solid rgba(255,255,255,.07)',borderRadius:'16px'}}>
+                  <div style={{width:'40px',height:'40px',borderRadius:'10px',background:item.color,border:`1px solid ${item.borderColor}`,display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0}}>
+                    <svg width="18" height="18" fill="none" stroke={item.stroke} strokeWidth="2" viewBox="0 0 24 24"><path d={item.icon}/></svg>
                   </div>
-                ))}
-              </div>
+                  <div>
+                    <div className="font-semibold text-white mb-1" style={{fontSize:'14px'}}>{item.title}</div>
+                    <div className="text-slate-500" style={{fontSize:'13px',lineHeight:1.7}}>{item.text}</div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -262,7 +218,7 @@ export default function Home() {
               {count:'4',suffix:'',w:0.4,title:'Priority levels',text:'Label every asset from low-risk to business-critical. When something breaks, your team already knows how urgent it is and what to do next.'},
               {count:'100',suffix:'%',w:0.5,title:'Automated reporting',text:'Every time a job closes, the numbers update on their own. No one needs to fill in a report or send an update at the end of the shift.'},
             ].map((item, i) => (
-              <div key={i} className={`reveal d${i+1} text-center neon-border rounded-2xl p-8`}>
+              <div key={i} className={`metric-card reveal d${i+1} text-center neon-border rounded-2xl p-8`}>
                 <div className="text-5xl font-black grad-text mb-2" data-count={item.count} data-suffix={item.suffix}>{item.count}{item.suffix}</div>
                 <div className="font-semibold text-white mb-2" style={{fontSize:'15px'}}>{item.title}</div>
                 <div className="text-slate-500" style={{fontSize:'13px'}}>{item.text}</div>
@@ -285,21 +241,28 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 relative">
-            <div className="hidden md:block absolute" style={{top:'44px',left:'calc(33.33% + 20px)',width:'calc(33.33% - 40px)',height:'2px',background:'linear-gradient(90deg,rgba(59,130,246,.4),rgba(34,211,238,.4))'}}></div>
-            <div className="hidden md:block absolute" style={{top:'44px',left:'calc(66.66% + 20px)',width:'calc(33.33% - 40px)',height:'2px',background:'linear-gradient(90deg,rgba(34,211,238,.4),rgba(59,130,246,.2))'}}></div>
+            {/* Single continuous connector */}
+            <div className="hidden md:block absolute" style={{top:'43px',left:'calc(16.66% + 12px)',right:'calc(16.66% + 12px)',height:'1px',background:'linear-gradient(90deg,#3b82f6,#22d3ee,#6366f1)',opacity:.45}}></div>
 
             {[
-              {bg:'linear-gradient(135deg,#3b82f6,#2563eb)',shadow:'0 0 30px rgba(59,130,246,.4)',num:'01',title:'Report',text:"Someone spots a problem and submits it in the app — it takes under a minute. The issue is linked to the right equipment, given a priority, and the manager sees it immediately. Nothing gets lost in a chat thread or an email.",icon:'M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9'},
-              {bg:'linear-gradient(135deg,#22d3ee,#0891b2)',shadow:'0 0 30px rgba(34,211,238,.35)',num:'02',title:'Assign',text:'The manager reviews the issue, creates a job, lists what needs to be done, notes the parts required, and assigns it to the right technician. Everything is defined before anyone picks up a tool.',icon:'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01'},
-              {bg:'linear-gradient(135deg,#6366f1,#4f46e5)',shadow:'0 0 30px rgba(99,102,241,.35)',num:'03',title:'Close & Track',text:'The technician works through the task list on-site. Time is tracked automatically in the background. When the job is closed, the dashboard updates — no report to write, no data to enter by hand.',icon:'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z'},
+              {bg:'linear-gradient(135deg,#3b82f6,#2563eb)',shadow:'0 0 20px rgba(59,130,246,.35)',borderColor:'rgba(59,130,246,.45)',accentColor:'#60a5fa',num:'01',title:'Report',text:"Someone spots a problem and submits it in the app — it takes under a minute. The issue is linked to the right equipment, given a priority, and the manager sees it immediately. Nothing gets lost in a chat thread or an email.",icon:'M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9'},
+              {bg:'linear-gradient(135deg,#22d3ee,#0891b2)',shadow:'0 0 20px rgba(34,211,238,.3)',borderColor:'rgba(34,211,238,.4)',accentColor:'#22d3ee',num:'02',title:'Assign',text:'The manager reviews the issue, creates a job, lists what needs to be done, notes the parts required, and assigns it to the right technician. Everything is defined before anyone picks up a tool.',icon:'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01'},
+              {bg:'linear-gradient(135deg,#6366f1,#4f46e5)',shadow:'0 0 20px rgba(99,102,241,.3)',borderColor:'rgba(99,102,241,.4)',accentColor:'#818cf8',num:'03',title:'Close & Track',text:'The technician works through the task list on-site. Time is tracked automatically in the background. When the job is closed, the dashboard updates — no report to write, no data to enter by hand.',icon:'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z'},
             ].map((step, i) => (
-              <div key={i} className={`step-card reveal d${i+1}`}>
-                <div style={{width:'54px',height:'54px',borderRadius:'50%',background:step.bg,display:'flex',alignItems:'center',justifyContent:'center',margin:'0 auto 24px',boxShadow:step.shadow}}>
-                  <svg width="24" height="24" fill="none" stroke="white" strokeWidth="2" viewBox="0 0 24 24"><path d={step.icon}/></svg>
+              <div key={i} className={`step-card reveal d${i+1}`} style={{borderTop:`2px solid ${step.borderColor}`,overflow:'hidden',textAlign:'left'}}>
+                {/* Ghost number */}
+                <div aria-hidden="true" style={{position:'absolute',top:'-8px',right:'12px',fontSize:'96px',fontWeight:900,lineHeight:1,color:'rgba(255,255,255,.04)',pointerEvents:'none',userSelect:'none',letterSpacing:'-.05em'}}>{step.num}</div>
+
+                {/* Icon */}
+                <div style={{width:'52px',height:'52px',borderRadius:'14px',background:step.bg,display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px',boxShadow:step.shadow}}>
+                  <svg width="22" height="22" fill="none" stroke="white" strokeWidth="2" viewBox="0 0 24 24"><path d={step.icon}/></svg>
                 </div>
-                <div className="font-black text-slate-600 mb-3" style={{fontSize:'42px',lineHeight:1}}>{step.num}</div>
-                <h3 className="font-bold text-white mb-3" style={{fontSize:'17px'}}>{step.title}</h3>
-                <p className="text-slate-500" style={{fontSize:'13px',lineHeight:1.7}}>{step.text}</p>
+
+                {/* Step label */}
+                <div style={{fontSize:'11px',fontWeight:700,color:step.accentColor,letterSpacing:'.12em',textTransform:'uppercase',marginBottom:'10px'}}>Step {step.num}</div>
+
+                <h3 className="font-bold text-white" style={{fontSize:'18px',marginBottom:'12px'}}>{step.title}</h3>
+                <p className="text-slate-400" style={{fontSize:'14px',lineHeight:1.75}}>{step.text}</p>
               </div>
             ))}
           </div>

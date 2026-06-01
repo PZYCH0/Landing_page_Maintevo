@@ -114,8 +114,8 @@ export default function Pricing() {
       <section style={{background:'#080f1e',padding:'64px 0'}}>
         <div className="max-w-screen-xl px-6 mx-auto">
           <h2 style={{fontSize:'clamp(1.5rem,2.5vw,2rem)',fontWeight:900,textAlign:'center',color:'#fff',marginBottom:'32px',letterSpacing:'-.03em'}}>Compare plans</h2>
-          <div style={{overflowX:'auto'}}>
-            <table style={{width:'100%',borderCollapse:'collapse',fontSize:'.9rem'}}>
+          <div className="table-scroll" style={{overflowX:'auto'}}>
+            <table style={{width:'100%',borderCollapse:'collapse',fontSize:'.9rem',minWidth:'520px'}}>
               <thead>
                 <tr style={{borderBottom:'1px solid rgba(255,255,255,.08)'}}>
                   <th style={{padding:'14px 16px',textAlign:'left',color:'#94a3b8',fontWeight:600,fontSize:'.8rem',textTransform:'uppercase',letterSpacing:'.06em'}}>Feature</th>
