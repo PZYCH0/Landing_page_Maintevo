@@ -1,0 +1,581 @@
+{
+  "nav": {
+    "product": "Produit",
+    "industries": "Industries",
+    "enterprise": "Entreprise",
+    "pricing": "Tarifs",
+    "resources": "Ressources",
+    "login": "Connexion",
+    "getStarted": "Commencer",
+    "viewAll": "Voir toutes les fonctionnalités",
+    "features": {
+      "workOrders": "Bons de travail",
+      "equipment": "Hiérarchie des équipements",
+      "preventive": "Maintenance préventive",
+      "inventory": "Inventaire & Achats",
+      "kpi": "Tableau de bord KPI",
+      "calendar": "Calendrier de maintenance",
+      "roles": "Accès basé sur les rôles",
+      "reporting": "Rapports & Audits"
+    }
+  },
+  "common": {
+    "back": "Retour aux fonctionnalités",
+    "getStartedFree": "Commencer gratuitement",
+    "requestDemo": "Demander une démo",
+    "seeHowItWorks": "Voir comment ça fonctionne",
+    "seeAllFeatures": "Voir toutes les fonctionnalités",
+    "noCard": "Commencez avec MaintEvo — aucune carte bancaire requise.",
+    "learnMore": "En savoir plus",
+    "metricsTracked": "indicateurs suivis automatiquement",
+    "step": "Étape"
+  },
+  "home": {
+    "hero": {
+      "h1_1": "Pilotez la maintenance.",
+      "h1_2": "Maximisez la",
+      "h1_accent": "performance.",
+      "desc": "MaintEvo centralise vos opérations, anticipe les pannes et optimise vos actifs pour une fiabilité maximale et des coûts maîtrisés.",
+      "watchVideo": "Voir la vidéo"
+    },
+    "features": {
+      "badge": "Capacités de la plateforme",
+      "h2_1": "Tout ce dont vos opérations ont besoin.",
+      "h2_2": "Rien de superflu.",
+      "desc": "Six modules conçus sur mesure, une plateforme connectée — couvrant chaque étape de la maintenance industrielle, de la demande à la résolution.",
+      "workOrders_title": "Bons de travail",
+      "workOrders_desc": "Créez une tâche, affectez-la, suivez le temps sur site, consommez des pièces et clôturez avec un rapport PDF signé — de bout en bout sans quitter la plateforme.",
+      "equipment_title": "Hiérarchie des équipements",
+      "equipment_desc": "Classez chaque actif par criticité (Faible à Critique), suivez son emplacement et département, et conservez un historique complet de maintenance — le tout en un seul endroit.",
+      "preventive_title": "Maintenance préventive",
+      "preventive_desc": "Définissez des plans de maintenance par date ou par seuil d'utilisation. Ils génèrent automatiquement des bons de travail selon le calendrier — et la plateforme suit si votre équipe atteint ses objectifs.",
+      "inventory_title": "Inventaire & Achats",
+      "inventory_desc": "Gestion de pièces détachées multi-entrepôts avec mouvements de stock, bons de commande et suivi des fournisseurs — tout lié aux bons de travail.",
+      "kpi_title": "Tableau de bord KPI",
+      "kpi_desc": "Temps de réparation, disponibilité des machines, conformité de maintenance et tendances de pannes — tout calculé automatiquement au fil du travail de votre équipe. Aucune formule, aucun tableur.",
+      "calendar_title": "Calendrier de maintenance",
+      "calendar_desc": "Visualisez chaque tâche planifiée et active dans un seul calendrier. Détectez les conflits de planning, organisez les charges de travail et ne manquez plus rien.",
+      "roles_title": "Accès basé sur les rôles",
+      "roles_desc": "Espaces dédiés pour les responsables, techniciens et demandeurs — chacun avec exactement les droits et vues dont il a besoin.",
+      "reporting_title": "Rapports & Audits",
+      "reporting_desc": "Rapports de performance générés automatiquement, exports d'historique des tâches et pistes d'audit de conformité — toujours prêts à être consultés."
+    },
+    "ai": {
+      "badge": "Automatisation intelligente",
+      "h2_1": "Supprimez l'administratif.",
+      "h2_2": "Concentrez-vous sur la réparation.",
+      "desc": "MaintEvo gère la surcharge opérationnelle — planification des tâches, mise à jour des KPI, acheminement des demandes — pour que votre équipe passe son temps sur la vraie maintenance, pas sur la paperasse.",
+      "autoWO_title": "Bons de travail générés automatiquement",
+      "autoWO_text": "Les plans de maintenance préventive créent des bons de travail selon le calendrier, automatiquement. Personne n'a besoin de se souvenir — et aucune tâche ne passe entre les mailles.",
+      "liveKpi_title": "Calculs KPI en temps réel",
+      "liveKpi_text": "Chaque fois qu'une tâche s'ouvre ou se ferme, le MTTR, le MTBF et le taux de disponibilité se mettent à jour en temps réel. Votre tableau de bord est toujours à jour — aucune saisie manuelle requise.",
+      "priority_title": "Planification pilotée par les priorités",
+      "priority_text": "La criticité des actifs et l'historique de maintenance guident ce qui doit être fait en premier. Votre équipe travaille toujours sur les bonnes tâches, dans le bon ordre.",
+      "audit_title": "Piste d'audit complète",
+      "audit_text": "Chaque action est horodatée et attribuée — qui a fait quoi, sur quel actif et quand. Les revues de conformité et les enquêtes sur les incidents prennent des minutes, pas des jours."
+    },
+    "metrics": {
+      "badge": "En chiffres",
+      "h2_1": "Une plateforme conçue autour",
+      "h2_2": "de la façon dont votre équipe travaille réellement.",
+      "desc": "Chaque chiffre ici reflète ce qui est dans la plateforme — pas des projections, pas des références.",
+      "m1_title": "Indicateurs suivis pour vous",
+      "m1_text": "Temps de réparation, disponibilité des machines, conformité de maintenance, fréquence des pannes et plus — sept chiffres qui vous indiquent comment vos opérations fonctionnent vraiment, mis à jour automatiquement.",
+      "m2_title": "Types d'utilisateurs, un seul système",
+      "m2_text": "Votre responsable examine et approuve les tâches. Votre technicien les exécute. N'importe qui dans l'équipe peut signaler un problème. Chaque personne voit exactement ce dont elle a besoin — rien de plus.",
+      "m3_title": "Niveaux de priorité",
+      "m3_text": "Étiquetez chaque actif du faible risque au critique pour l'activité. Quand quelque chose tombe en panne, votre équipe sait déjà à quel point c'est urgent et quoi faire ensuite.",
+      "m4_title": "Rapports automatisés",
+      "m4_text": "Chaque fois qu'une tâche se ferme, les chiffres se mettent à jour d'eux-mêmes. Personne n'a besoin de remplir un rapport ou d'envoyer une mise à jour en fin de poste."
+    },
+    "how": {
+      "badge": "Comment ça fonctionne",
+      "h2_1": "De la demande à la résolution.",
+      "h2_2": "Chaque étape tracée.",
+      "report_title": "Signaler",
+      "report_text": "Quelqu'un repère un problème et le soumet dans l'application — cela prend moins d'une minute. Le problème est lié au bon équipement, une priorité lui est attribuée, et le responsable le voit immédiatement. Rien ne se perd dans un fil de discussion ou un e-mail.",
+      "assign_title": "Affecter",
+      "assign_text": "Le responsable examine le problème, crée une tâche, liste ce qui doit être fait, note les pièces nécessaires et l'affecte au bon technicien. Tout est défini avant que quiconque prenne un outil.",
+      "close_title": "Clôturer & Suivre",
+      "close_text": "Le technicien travaille sur la liste de tâches sur site. Le temps est suivi automatiquement en arrière-plan. Quand la tâche est clôturée, le tableau de bord se met à jour — aucun rapport à rédiger, aucune donnée à saisir à la main."
+    },
+    "testimonials": {
+      "badge": "Témoignages clients",
+      "h2_1": "Fait confiance par les responsables",
+      "h2_2": "de maintenance dans le monde entier.",
+      "q1": "\"L'IA de MaintEvo a détecté une défaillance de roulement sur notre compresseur principal 18 jours avant qu'elle ne provoque un arrêt complet de la production. Le retour sur investissement était immédiat et indéniable.\"",
+      "q1_name": "Marcus R.",
+      "q1_role": "VP Opérations · Precision Manufacturing AG",
+      "q2": "\"Nous avons remplacé trois outils distincts par MaintEvo. Nos techniciens adorent l'application mobile, et nos directeurs ont enfin la visibilité en temps réel qu'ils demandaient depuis des années.\"",
+      "q2_name": "Sophie L.",
+      "q2_role": "Directrice Maintenance · EuroPharma Group",
+      "q3": "\"L'intégration de 200 techniciens sur 4 sites a pris moins d'une semaine. Le calcul du ROI était simple : nous avons économisé plus le premier mois que ce que coûte l'abonnement annuel.\"",
+      "q3_name": "James K.",
+      "q3_role": "Responsable Fiabilité · Atlas Energy Corp"
+    },
+    "cta": {
+      "badge": "Transformez vos opérations",
+      "h2_1": "Arrêtez de perdre de l'argent",
+      "h2_2": "à cause des arrêts imprévus.",
+      "desc": "Rejoignez plus de 500 entreprises industrielles qui ont transformé leurs opérations de maintenance avec MaintEvo. La mise en place prend 15 minutes. Les résultats commencent dès le premier jour.",
+      "primary": "Essai gratuit — Sans carte bancaire",
+      "secondary": "Parler à l'équipe commerciale",
+      "fine": "Sans engagement · Annulation à tout moment · Certifié SOC 2 Type II"
+    }
+  },
+  "about": {
+    "mission": {
+      "eyebrow": "Notre mission",
+      "title": "Chaque équipe de maintenance mérite des outils modernes.",
+      "p1": "Nous avons créé MaintEvo parce que nous avons vu des professionnels de maintenance qualifiés gaspiller des heures à se battre avec des tableurs, des tableaux blancs et des bons de travail papier — au lieu de faire le travail pour lequel ils sont excellents.",
+      "p2": "Notre objectif est simple : donner à chaque équipe de maintenance — d'un atelier de 3 personnes à une usine de 500 personnes — la même qualité d'outils que les entreprises du Fortune 500 paient des millions pour obtenir."
+    },
+    "values": {
+      "title": "Ce en quoi nous croyons",
+      "reliability_title": "Fiabilité",
+      "reliability_desc": "Nous construisons des logiciels qui fonctionnent quand votre équipement ne peut pas se permettre de tomber en panne. 99,9 % de disponibilité, sécurité de niveau entreprise et des données en lesquelles vous pouvez toujours avoir confiance.",
+      "simplicity_title": "Simplicité",
+      "simplicity_desc": "Un logiciel puissant ne devrait pas nécessiter un consultant pour être configuré. MaintEvo est conçu pour que n'importe quel technicien puisse l'apprendre en une après-midi — et l'apprécier vraiment.",
+      "partnership_title": "Partenariat",
+      "partnership_desc": "Nous traitons nos clients comme des partenaires. Vos retours façonnent la feuille de route, notre équipe de support connaît votre nom, et nous réussissons seulement quand vous réussissez."
+    },
+    "team": {
+      "title": "Rencontrez l'équipe",
+      "m1_name": "Alex Rivera",
+      "m1_role": "PDG & Co-Fondateur",
+      "m1_bio": "Plus de 10 ans dans les opérations industrielles. Ancien responsable de maintenance chez un équipementier automobile de Tier 1.",
+      "m2_name": "Jamie Chen",
+      "m2_role": "CTO & Co-Fondateur",
+      "m2_bio": "A précédemment dirigé l'ingénierie dans deux entreprises SaaS d'entreprise. Passionné par la construction d'outils pour le monde physique.",
+      "m3_name": "Morgan Osei",
+      "m3_role": "Responsable Succès Client",
+      "m3_bio": "Ingénieur fiabilité certifié. Aide les clients à obtenir un ROI mesurable de leur déploiement MaintEvo dans les 90 premiers jours."
+    },
+    "cta": {
+      "title": "Rejoignez plus de 5 000 équipes utilisant MaintEvo",
+      "desc": "Démarrez votre essai gratuit aujourd'hui — aucune carte bancaire requise.",
+      "button": "Commencer gratuitement"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Tarification simple et transparente",
+      "desc": "Aucun frais caché. Aucune surprise. Annulation à tout moment."
+    },
+    "starter": {
+      "title": "Démarrage",
+      "desc": "Idéal pour les petites installations et les opérations sur un seul site.",
+      "price": "$49",
+      "per": "/mois",
+      "f1": "Jusqu'à",
+      "f1_val": "3 utilisateurs",
+      "f2_val": "50 actifs",
+      "f3": "Gestion des bons de travail",
+      "f4": "Accès application mobile",
+      "f5": "Support par e-mail",
+      "cta": "Commencer"
+    },
+    "professional": {
+      "badge": "Le plus populaire",
+      "title": "Professionnel",
+      "desc": "Idéal pour les équipes en croissance gérant plusieurs actifs et sites.",
+      "price": "$149",
+      "per": "/mois",
+      "f1_val": "25 utilisateurs",
+      "f2_val": "500 actifs",
+      "f3": "Planification de la maintenance préventive",
+      "f4": "Suivi inventaire & pièces",
+      "f5": "Support prioritaire",
+      "cta": "Commencer"
+    },
+    "enterprise": {
+      "title": "Entreprise",
+      "desc": "Pour les opérations à grande échelle avec des besoins multi-sites et d'intégration personnalisée.",
+      "price": "$499",
+      "per": "/mois",
+      "f1": "Illimité",
+      "f1_label": "utilisateurs",
+      "f2_label": "actifs & sites",
+      "f3": "Intégrations ERP & tierces personnalisées",
+      "f4": "Gestionnaire de compte dédié",
+      "f5": "SLA & support premium 24/7",
+      "cta": "Contacter les ventes"
+    },
+    "compare": {
+      "title": "Comparer les plans",
+      "col_feature": "Fonctionnalité",
+      "col_starter": "Démarrage",
+      "col_pro": "Professionnel",
+      "col_ent": "Entreprise",
+      "r_users": "Utilisateurs",
+      "r_assets": "Actifs",
+      "r_wo": "Bons de travail",
+      "r_pm": "Maintenance préventive",
+      "r_inv": "Gestion des stocks",
+      "r_int": "Intégrations personnalisées",
+      "r_mgr": "Gestionnaire de compte dédié",
+      "unlimited": "Illimité"
+    },
+    "faq": {
+      "title": "FAQ Facturation",
+      "q1": "Y a-t-il un essai gratuit ?",
+      "a1": "Oui — chaque plan inclut un essai gratuit de 30 jours avec un accès complet à toutes les fonctionnalités. Aucune carte bancaire n'est requise pour commencer. À la fin de l'essai, choisissez le plan adapté à votre équipe ou annulez sans frais.",
+      "q2": "Puis-je annuler à tout moment ?",
+      "a2": "Absolument. Les plans mensuels peuvent être annulés à tout moment et vous conservez l'accès jusqu'à la fin de votre période de facturation. Les plans annuels sont remboursables dans les 30 premiers jours.",
+      "q3": "Y a-t-il une réduction pour la facturation annuelle ?",
+      "a3": "Oui — payez annuellement et obtenez 2 mois gratuits (soit environ 17 % de réduction). Passez de la facturation mensuelle à annuelle à tout moment depuis les paramètres de votre compte."
+    },
+    "bottom": {
+      "text": "Vous avez encore des questions ?",
+      "link": "Parler à notre équipe →"
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "desc": "Écrivez-nous par e-mail ou connectez-vous avec nous sur LinkedIn — nous vous répondrons rapidement.",
+    "general_label": "Renseignements généraux",
+    "general_sub": "Questions, retours ou autre chose",
+    "sales_label": "Ventes & Démos",
+    "sales_sub": "Réserver une démo ou obtenir un devis",
+    "support_label": "Support",
+    "support_sub": "Aide avec votre compte existant",
+    "linkedin_title": "Suivez-nous sur LinkedIn",
+    "linkedin_desc": "Restez informé des actualités produit et des mises à jour.",
+    "linkedin_cta": "Se connecter"
+  },
+  "footer": {
+    "tagline": "La plateforme GMAO alimentée par l'IA, conçue pour la prochaine ère de la maintenance industrielle.",
+    "platform": "Plateforme",
+    "platform_features": "Fonctionnalités",
+    "platform_pricing": "Tarifs",
+    "platform_integrations": "Intégrations",
+    "platform_changelog": "Journal des modifications",
+    "company": "Entreprise",
+    "company_about": "À propos",
+    "company_contact": "Contact",
+    "company_careers": "Carrières",
+    "company_blog": "Blog",
+    "legal": "Mentions légales",
+    "legal_privacy": "Politique de confidentialité",
+    "legal_terms": "Conditions d'utilisation",
+    "legal_cookie": "Politique des cookies",
+    "copyright": "© 2025 MaintEvo™. Tous droits réservés.",
+    "status": "Tous les systèmes opérationnels"
+  },
+  "workOrders": {
+    "hero": {
+      "eyebrow": "Bons de travail",
+      "h1_1": "Du premier signalement.",
+      "h1_2": "À la",
+      "h1_accent": "clôture finale.",
+      "desc": "Chaque intervention de maintenance mérite un enregistrement clair. MaintEvo vous offre un moyen structuré de créer, affecter, exécuter et clôturer des tâches sans que rien ne passe entre les mailles.",
+      "badge1_title": "Historique complet",
+      "badge1_sub": "sur chaque actif",
+      "badge2_title": "Rapport PDF",
+      "badge2_sub": "à chaque clôture"
+    },
+    "benefits": {
+      "b1_title": "Créer & affecter en quelques secondes",
+      "b1_body": "Enregistrez le problème, décrivez ce qui doit être fait, liez-le au bon actif, définissez une priorité et affectez-le à un technicien. Le tout prend moins d'une minute. Le technicien est notifié immédiatement.",
+      "b2_title": "Tâches & listes de contrôle",
+      "b2_body": "Décomposez chaque tâche en une liste d'étapes. Le technicien les suit sur site et les coche une par une. Rien n'est laissé à l'interprétation — chacun sait à quoi ressemble « terminé » avant de commencer.",
+      "b3_title": "Suivi automatique du temps",
+      "b3_body": "Le technicien démarre un minuteur lorsqu'il commence la tâche. Il tourne en arrière-plan et s'arrête à la clôture. Le temps de réparation est enregistré avec précision — sans estimations ni exercices de mémoire en fin de journée.",
+      "b4_title": "Clôturer avec un rapport PDF",
+      "b4_body": "Quand la tâche est terminée, clôturez-la avec une note de synthèse et générez un rapport PDF signé en un clic. Le rapport inclut les détails de la tâche, le nom du technicien, le temps passé, les pièces utilisées et la liste de contrôle complétée."
+    },
+    "flow": {
+      "title": "Comment un bon de travail progresse dans MaintEvo",
+      "subtitle": "Quatre étapes, entièrement suivies à chaque étape.",
+      "s1_title": "Signalé",
+      "s1_desc": "Quelqu'un repère un problème et le consigne. La tâche est créée avec un lien vers l'actif, une description et un niveau de priorité.",
+      "s2_title": "Affecté",
+      "s2_desc": "Le responsable l'examine, ajoute des tâches et les pièces nécessaires, et l'affecte au bon technicien.",
+      "s3_title": "En cours",
+      "s3_desc": "Le technicien démarre le minuteur, travaille sur la liste de contrôle et consigne les pièces utilisées.",
+      "s4_title": "Clôturé",
+      "s4_desc": "La tâche est terminée, le temps est enregistré et un rapport PDF est généré. Le tableau de bord se met à jour automatiquement."
+    },
+    "cta": {
+      "title": "Prêt à structurer vos interventions de maintenance ?"
+    }
+  },
+  "preventiveMaintenance": {
+    "hero": {
+      "eyebrow": "Maintenance préventive",
+      "h1_1": "Planifiez une fois.",
+      "h1_2": "MaintEvo",
+      "h1_accent": "s'occupe du reste.",
+      "desc": "Configurez des plans de maintenance pour vos équipements et la plateforme se charge de générer les tâches à temps, à chaque fois. Personne n'a besoin de se souvenir. Rien ne passe entre les mailles.",
+      "badge1_title": "Tâches générées automatiquement",
+      "badge1_sub": "sans création manuelle",
+      "badge2_title": "Suivi de conformité PM",
+      "badge2_sub": "visualisez ce qui est à jour"
+    },
+    "benefits": {
+      "b1_title": "Déclencheurs basés sur le temps & l'utilisation",
+      "b1_body": "Définissez des plans déclenchés par date — tous les 30 jours, chaque trimestre, chaque année — ou par seuil d'utilisation, comme toutes les 500 heures de fonctionnement ou tous les 10 000 cycles. La plateforme prend en charge les deux, et vous pouvez les combiner.",
+      "b2_title": "Génération automatique de bons de travail",
+      "b2_body": "Quand la date ou le seuil d'un plan arrive, MaintEvo crée automatiquement le bon de travail — pré-rempli avec les tâches, pièces et technicien affecté que vous avez définis dans le plan. Aucune création manuelle, aucun délai.",
+      "b3_title": "Suivi de conformité",
+      "b3_body": "Voyez en un coup d'œil combien de tâches planifiées ont été réalisées à temps par rapport à celles manquées. La plateforme suit votre taux de conformité PM par actif, par département ou globalement — pour que vous sachiez toujours si votre programme fonctionne.",
+      "b4_title": "Facile à mettre à jour",
+      "b4_body": "Changez la fréquence, mettez à jour la liste des tâches, remplacez le technicien affecté ou mettez un plan en pause — le tout en quelques clics. Les modifications s'appliquent automatiquement à tous les futurs bons de travail générés par ce plan."
+    },
+    "cta": {
+      "title": "Arrêtez de planifier la maintenance à la main."
+    }
+  },
+  "inventory": {
+    "hero": {
+      "eyebrow": "Inventaire & Achats",
+      "h1_1": "Sachez toujours",
+      "h1_2": "ce que vous avez.",
+      "h1_accent": "Commandez ce qu'il vous faut.",
+      "desc": "Gestion des pièces détachées directement connectée à vos tâches. Quand un technicien utilise une pièce, l'inventaire se met à jour. Quand le stock est bas, créez un bon de commande — sans quitter la plateforme.",
+      "bullet1": "Suivi des stocks en temps réel dans tous les entrepôts",
+      "bullet2": "Bons de commande liés aux seuils de stock minimum"
+    },
+    "benefits": {
+      "b1_title": "Catalogue de pièces",
+      "b1_body": "Maintenez un catalogue de chaque pièce de rechange en stock. Chaque pièce a un nom, un numéro de référence, un emplacement de stockage, une quantité disponible et un niveau de stock minimum. Trouver ce dont vous avez besoin prend quelques secondes.",
+      "b2_title": "Lié aux bons de travail",
+      "b2_body": "Quand un technicien utilise des pièces lors d'une tâche, il les enregistre directement dans le bon de travail. Les quantités en stock se mettent à jour automatiquement. Aucun tableur séparé, aucun inventaire manuel en fin de semaine.",
+      "b3_title": "Bons de commande",
+      "b3_body": "Quand le stock passe sous son niveau minimum, créez un bon de commande directement dans MaintEvo. Suivez-le du moment de sa soumission jusqu'à l'arrivée des pièces et leur remise en stock.",
+      "b4_title": "Gestion des fournisseurs",
+      "b4_body": "Enregistrez les coordonnées des fournisseurs — nom, contact, délai, tarification — aux côtés des pièces qu'ils fournissent. Quand vous devez réapprovisionner, tout est déjà là. Plus besoin de fouiller dans les e-mails ou les contacts."
+    },
+    "cta": {
+      "title": "Arrêtez de gérer les pièces dans des tableurs."
+    }
+  },
+  "equipment": {
+    "hero": {
+      "eyebrow": "Hiérarchie des équipements",
+      "h1_1": "Connaissez vos actifs.",
+      "h1_2": "Hiérarchisez ce qui",
+      "h1_accent": "compte.",
+      "desc": "Un registre complet de chaque actif de votre installation — avec des niveaux de criticité, le suivi de localisation et l'historique complet de maintenance de chacun.",
+      "badge1_title": "Registre complet des actifs",
+      "badge1_sub": "chaque détail en un seul endroit",
+      "badge2_title": "Classement par criticité",
+      "badge2_sub": "du Faible au Critique"
+    },
+    "criticality": {
+      "label": "4 niveaux de criticité",
+      "l1_level": "NIVEAU 1",
+      "l1_name": "Faible",
+      "l1_desc": "Maintenance de routine, sans urgence",
+      "l2_level": "NIVEAU 2",
+      "l2_name": "Moyen",
+      "l2_desc": "Suivi étroit, planifié régulièrement",
+      "l3_level": "NIVEAU 3",
+      "l3_name": "Élevé",
+      "l3_desc": "Intervention rapide requise en cas de panne",
+      "l4_level": "NIVEAU 4",
+      "l4_name": "Critique",
+      "l4_desc": "L'activité s'arrête si cela tombe en panne"
+    },
+    "benefits": {
+      "b1_title": "Un profil pour chaque actif",
+      "b1_body": "Chaque actif dans MaintEvo a sa propre fiche : nom, numéro de référence, catégorie, fabricant, date d'achat et spécifications techniques. Tout est en un seul endroit — aucun tableur, aucun dossier papier.",
+      "b2_title": "Suivi localisation & département",
+      "b2_body": "Organisez les actifs par département, bâtiment, étage ou zone. Trouver le bon équipement dans le système est instantané. Quand une tâche est créée, l'emplacement de l'actif est déjà là — personne n'a besoin d'aller le chercher.",
+      "b3_title": "Historique complet de maintenance",
+      "b3_body": "Chaque tâche effectuée sur un actif est enregistrée contre lui. Ouvrez n'importe quel actif et voyez l'historique complet : qui a travaillé dessus, ce qui a été fait, combien de temps cela a pris et quelles pièces ont été utilisées. Utile pour repérer les problèmes récurrents et prendre des décisions de remplacement.",
+      "b4_title": "La criticité guide tout",
+      "b4_body": "Le niveau de criticité que vous attribuez à un actif affecte la façon dont MaintEvo priorise les tâches, la fréquence de déclenchement des plans préventifs et l'urgence avec laquelle les pannes sont escaladées. Définissez-le une fois, et le système s'organise autour de lui automatiquement."
+    },
+    "cta": {
+      "title": "Prêt à mettre de l'ordre dans votre registre d'actifs ?"
+    }
+  },
+  "kpi": {
+    "hero": {
+      "eyebrow": "Tableau de bord KPI",
+      "h1_1": "Vingt indicateurs.",
+      "h1_2": "Zéro travail manuel.",
+      "h1_accent": "Toujours à jour.",
+      "desc": "Chaque KPI dans MaintEvo — sur les bons de travail, la santé des équipements, les coûts et l'inventaire — se met à jour automatiquement au fil du travail de votre équipe.",
+      "bullet1": "4 catégories de métriques, 20 KPIs suivis automatiquement",
+      "bullet2": "Aucun tableur ni saisie manuelle de données",
+      "bullet3": "Mises à jour en temps réel depuis les bons de travail de votre équipe"
+    },
+    "categories": {
+      "badge": "20 indicateurs",
+      "title": "Quatre catégories. Chaque indicateur couvert.",
+      "subtitle": "Sélectionnez une catégorie pour voir ses indicateurs en détail.",
+      "metricsTracked": "indicateurs suivis automatiquement",
+      "fiveMetrics": "5 indicateurs suivis automatiquement",
+      "cat1_label": "Bons de travail & Interventions",
+      "cat1_desc": "Suivez chaque tâche du moment où elle est signalée jusqu'à sa clôture. Sachez qui a répondu, à quelle vitesse et si la réparation a tenu.",
+      "cat1_kpi1_label": "Temps de réponse",
+      "cat1_kpi1_q": "À quelle vitesse votre équipe réagit-elle à un signalement ?",
+      "cat1_kpi1_body": "Délai entre la panne signalée et le début du travail. Révèle les retards dans votre processus d'approbation ou de dispatch.",
+      "cat1_kpi2_label": "MTTR",
+      "cat1_kpi2_q": "Combien de temps dure la réparation moyenne ?",
+      "cat1_kpi2_body": "Temps moyen de réparation — de l'ouverture à la clôture. S'il augmente, les tâches deviennent plus difficiles ou l'équipe est surchargée.",
+      "cat1_kpi3_label": "Taux de première intervention",
+      "cat1_kpi3_q": "Les tâches sont-elles résolues en une seule visite ?",
+      "cat1_kpi3_body": "Pourcentage clôturé sans suivi. Un taux faible indique des pièces manquantes ou des diagnostics incomplets.",
+      "cat1_kpi4_label": "Carnet de commandes",
+      "cat1_kpi4_q": "Combien de tâches ouvertes attendent en ce moment ?",
+      "cat1_kpi4_body": "Total des bons de travail non résolus à n'importe quel moment. Un carnet croissant signifie que la demande dépasse la capacité.",
+      "cat1_kpi5_label": "Achèvement dans les délais",
+      "cat1_kpi5_q": "Les tâches sont-elles clôturées dans leur fenêtre cible ?",
+      "cat1_kpi5_body": "Indique si la planification et la priorisation fonctionnent réellement en pratique.",
+      "cat2_label": "Santé des équipements",
+      "cat2_desc": "Sachez exactement quels actifs sont fiables et lesquels érodent silencieusement votre disponibilité — avant qu'ils ne causent un arrêt.",
+      "cat2_kpi1_label": "Disponibilité",
+      "cat2_kpi1_q": "Quel pourcentage du temps chaque actif fonctionne-t-il ?",
+      "cat2_kpi1_body": "Calculé à partir du temps d'arrêt et du temps de fonctionnement prévu. La mesure unique la plus claire de la fiabilité.",
+      "cat2_kpi2_label": "MTBF",
+      "cat2_kpi2_q": "Combien de temps entre une panne et la suivante ?",
+      "cat2_kpi2_body": "Temps moyen entre pannes. Un MTBF faible signifie des pannes fréquentes — un signal fort pour le remplacement.",
+      "cat2_kpi3_label": "Taux de défaillance",
+      "cat2_kpi3_q": "Combien de pannes par 1 000 heures de fonctionnement ?",
+      "cat2_kpi3_body": "Indicateur normalisé pour comparer la propension aux pannes entre équipements d'âges ou types différents.",
+      "cat2_kpi4_label": "Temps d'arrêt",
+      "cat2_kpi4_q": "Combien de temps chaque actif a-t-il été hors service ?",
+      "cat2_kpi4_body": "Temps d'arrêt cumulé par actif. Identifie quel équipement coûte le plus de temps productif.",
+      "cat2_kpi5_label": "Conformité PM",
+      "cat2_kpi5_q": "Les tâches préventives sont-elles réalisées selon le calendrier ?",
+      "cat2_kpi5_body": "Pourcentage de tâches PM planifiées réalisées à temps. Une mesure directe de la discipline du programme PM.",
+      "cat3_label": "Coûts de maintenance",
+      "cat3_desc": "Arrêtez de deviner où va votre budget de maintenance. Voyez la vue complète des coûts — par tâche, par actif, par équipe.",
+      "cat3_kpi1_label": "Coût par bon de travail",
+      "cat3_kpi1_q": "Quel est le coût réel de la tâche moyenne ?",
+      "cat3_kpi1_body": "Main-d'œuvre + pièces par bon de travail clôturé. Un coût croissant reflète souvent une inefficacité ou un vieillissement des équipements.",
+      "cat3_kpi2_label": "Préventif vs Correctif",
+      "cat3_kpi2_q": "Dépensez-vous en prévention ou en pompiers ?",
+      "cat3_kpi2_body": "Part des dépenses totales allant au travail planifié vs réactif. Un ratio préventif plus élevé → des coûts à long terme plus faibles.",
+      "cat3_kpi3_label": "Coût par actif",
+      "cat3_kpi3_q": "Quels actifs sont les plus coûteux à entretenir ?",
+      "cat3_kpi3_body": "Dépenses totales par actif sur une période. Aide à identifier les machines où le remplacement est moins cher que la réparation.",
+      "cat3_kpi4_label": "Variance budgétaire",
+      "cat3_kpi4_q": "Dans quelle mesure respectez-vous votre budget de maintenance ?",
+      "cat3_kpi4_body": "Dépenses réelles vs prévues. Un dépassement constant dans un domaine signale généralement un problème sous-jacent non résolu.",
+      "cat3_kpi5_label": "Répartition pièces/main-d'œuvre",
+      "cat3_kpi5_q": "Où va l'argent — matériaux ou main-d'œuvre ?",
+      "cat3_kpi5_body": "Ventilation des coûts des pièces vs heures technicien. Utile pour négocier des contrats d'approvisionnement ou les effectifs.",
+      "cat4_label": "Inventaire de pièces",
+      "cat4_desc": "Sachez exactement ce qu'il y a sur l'étagère, quand réapprovisionner et combien votre inventaire vous coûte à maintenir.",
+      "cat4_kpi1_label": "Précision des stocks",
+      "cat4_kpi1_q": "Le système correspond-il à ce qui est sur l'étagère ?",
+      "cat4_kpi1_body": "Dans quelle mesure les enregistrements correspondent-ils aux stocks physiques. Une faible précision signifie que les tâches bloquent sur des pièces qui « existent » mais sont manquantes.",
+      "cat4_kpi2_label": "Taux de disponibilité des pièces",
+      "cat4_kpi2_q": "Les pièces sont-elles en stock quand les tâches en ont besoin ?",
+      "cat4_kpi2_body": "Pourcentage de bons de travail où les pièces requises étaient immédiatement disponibles. Un taux faible prolonge le MTTR.",
+      "cat4_kpi3_label": "Fréquence de réapprovisionnement",
+      "cat4_kpi3_q": "À quelle fréquence chaque pièce déclenche-t-elle un réapprovisionnement ?",
+      "cat4_kpi3_body": "Indicateur de taux de consommation. Aide à définir des points de réapprovisionnement plus intelligents et des niveaux de stock minimum.",
+      "cat4_kpi4_label": "Rotation des stocks",
+      "cat4_kpi4_q": "À quelle vitesse les pièces sont-elles utilisées et remplacées ?",
+      "cat4_kpi4_body": "Une rotation très faible peut signifier que vous détenez des articles obsolètes ou sur-stockés qui immobilisent du capital.",
+      "cat4_kpi5_label": "Coût de possession",
+      "cat4_kpi5_q": "Combien coûte la détention de votre inventaire actuel ?",
+      "cat4_kpi5_body": "Stockage, capital immobilisé, risque d'obsolescence. Souvent sous-estimé jusqu'à un audit approprié."
+    },
+    "cta": {
+      "title": "Arrêtez de calculer les indicateurs à la main."
+    }
+  },
+  "calendar": {
+    "hero": {
+      "eyebrow": "Calendrier de maintenance",
+      "h1_1": "Votre planning complet",
+      "h1_2": "en un coup d'œil.",
+      "h1_accent": "En une seule vue.",
+      "desc": "Tâches planifiées, tâches réactives et maintenance préventive — tout regroupé sur un seul calendrier. Voyez ce qui arrive, repérez les conflits et planifiez la semaine de votre équipe avant qu'elle commence.",
+      "bullet1": "Vues jour, semaine et mois",
+      "bullet2": "Détection des conflits en un coup d'œil",
+      "bullet3": "Planification de capacité plusieurs semaines à l'avance"
+    },
+    "benefits": {
+      "b1_title": "Tout en une seule vue",
+      "b1_body": "Maintenance planifiée, bons de travail actifs et tâches programmées à venir — le tout sur un seul calendrier. Basculez entre les vues jour, semaine et mois selon la distance à laquelle vous souhaitez regarder.",
+      "b2_title": "Repérez les conflits de planning",
+      "b2_body": "Voyez immédiatement quand trop de tâches tombent le même jour, ou quand un technicien est en double réservation. Réorganisez avant que la journée commence — pas pendant.",
+      "b3_title": "Planifiez plusieurs semaines à l'avance",
+      "b3_body": "Regardez plusieurs semaines ou mois dans le futur pour comprendre votre charge de travail à venir. Utile pour planifier la capacité des effectifs, commander des pièces à l'avance et s'assurer que les tâches critiques ne s'accumulent pas de façon inattendue."
+    },
+    "cta": {
+      "title": "Visualisez clairement votre calendrier de maintenance."
+    }
+  },
+  "roles": {
+    "hero": {
+      "eyebrow": "Accès basé sur les rôles",
+      "h1_1": "Chacun obtient ce dont il a besoin.",
+      "h1_accent": "Rien de plus.",
+      "desc": "MaintEvo dispose de trois rôles distincts — chacun avec un espace de travail conçu pour la façon dont cette personne travaille réellement. Les responsables voient tout. Les techniciens voient leurs tâches. Les demandeurs voient leurs soumissions."
+    },
+    "manager": {
+      "role": "RESPONSABLE",
+      "title": "Visibilité & contrôle total",
+      "desc": "Voyez tout ce qui se passe dans l'équipe. Approuvez les demandes, créez et affectez des tâches, suivez le travail ouvert, suivez les KPIs et gérez les actifs, l'inventaire et les plans de maintenance.",
+      "p1": "Examiner & approuver les demandes",
+      "p2": "Créer & affecter des bons de travail",
+      "p3": "Accéder au tableau de bord KPI",
+      "p4": "Gérer les actifs & l'inventaire",
+      "p5": "Configurer les plans PM"
+    },
+    "technician": {
+      "role": "TECHNICIEN",
+      "title": "Concentré sur la tâche en cours",
+      "desc": "Ne voyez que les tâches qui vous sont affectées. Travaillez sur la liste de tâches, démarrez et arrêtez le minuteur, enregistrez les pièces utilisées et clôturez la tâche quand c'est terminé. Simple et sans distraction.",
+      "p1": "Voir les tâches affectées",
+      "p2": "Démarrer/arrêter le minuteur",
+      "p3": "Compléter les listes de contrôle",
+      "p4": "Enregistrer les pièces consommées",
+      "p5": "Clôturer & générer un rapport"
+    },
+    "requester": {
+      "role": "DEMANDEUR",
+      "title": "Signaler des problèmes, suivre l'état",
+      "desc": "N'importe qui dans l'organisation peut soumettre une demande de maintenance. Décrivez le problème, liez-le à l'actif et suivez ce qui se passe — sans accéder aux flux de travail internes ni aux données sensibles.",
+      "p1": "Soumettre des demandes de maintenance",
+      "p2": "Suivre l'état des soumissions",
+      "p3": "Ajouter des descriptions & pièces jointes"
+    },
+    "cta": {
+      "title": "Donnez à toute votre équipe les bons outils."
+    }
+  },
+  "reporting": {
+    "hero": {
+      "eyebrow": "Rapports & Audits",
+      "h1_1": "Votre historique de maintenance,",
+      "h1_accent": "toujours prêt.",
+      "desc": "Chaque bon de travail clôturé, chaque pièce utilisée, chaque évolution de KPI — MaintEvo l'enregistre automatiquement. Quand vous devez rapporter, exporter ou réviser, les données sont déjà là."
+    },
+    "benefits": {
+      "b1_title": "Rapport PDF à chaque clôture",
+      "b1_body": "Quand un technicien clôture un bon de travail, MaintEvo génère automatiquement un rapport PDF. Il inclut ce qui a été fait, qui l'a fait, combien de temps cela a pris et quelles pièces ont été utilisées — prêt à être sauvegardé, partagé ou classé.",
+      "b2_title": "Historique KPI dans le temps",
+      "b2_body": "Vos KPIs ne montrent pas seulement le moment présent — ils construisent un historique au fil du travail de votre équipe. Voyez comment les temps de réparation, la disponibilité et les taux de panne ont évolué sur des semaines et des mois, sans rien compiler manuellement.",
+      "b3_title": "Piste d'audit complète",
+      "b3_body": "Chaque changement de statut, affectation, commentaire et mise à jour est enregistré contre le bon de travail avec un horodatage et le nom de la personne qui l'a effectué. Rien n'est anonyme, rien ne disparaît.",
+      "b4_title": "Exporter à tout moment",
+      "b4_body": "Besoin de partager des données avec la direction, les équipes de conformité ou des auditeurs externes ? Exportez les bons de travail, les historiques de maintenance et les synthèses KPI quand vous en avez besoin — aucune donnée enfermée dans la plateforme."
+    },
+    "audit": {
+      "title": "Ce qui est enregistré — automatiquement",
+      "subtitle": "Vous n'avez rien à consigner manuellement. MaintEvo capture chaque événement au fil du travail de votre équipe.",
+      "e1_title": "Bon de travail créé",
+      "e1_sub": "Qui l'a soumis, quel actif, quel était le problème et quand il est arrivé.",
+      "e2_title": "Affecté à un technicien",
+      "e2_sub": "Quel responsable l'a affecté, à qui et à quelle heure.",
+      "e3_title": "Temps suivi sur la tâche",
+      "e3_sub": "Chaque démarrage et arrêt du minuteur, enregistré contre le technicien qui l'a effectué.",
+      "e4_title": "Pièces consommées",
+      "e4_sub": "Quelles pièces ont été utilisées, combien et l'ajustement de stock qui a suivi.",
+      "e5_title": "Tâche clôturée avec un rapport",
+      "e5_sub": "Notes de clôture, horodatage de clôture et PDF généré automatiquement — tout stocké contre le bon de travail."
+    },
+    "cta": {
+      "title": "Arrêtez de construire des rapports. Commencez à les lire."
+    }
+  }
+}

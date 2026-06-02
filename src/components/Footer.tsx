@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation();
   return (
     <footer style={{background:'#050b16',borderTop:'1px solid rgba(255,255,255,.06)',padding:'64px 0 40px'}}>
       <div className="max-w-7xl mx-auto px-6">
@@ -10,7 +12,7 @@ export default function Footer() {
               <img src="/images/logo-maintevo.png" style={{width:'34px',height:'34px',objectFit:'contain'}} alt="MaintEvo" />
               <span style={{fontSize:'18px',fontWeight:700,color:'#fff'}}>Maint<span style={{color:'#3b82f6'}}>Evo</span></span>
             </Link>
-            <p style={{fontSize:'14px',lineHeight:1.7,maxWidth:'260px',color:'#64748b'}}>The AI-powered CMMS platform built for the next era of industrial maintenance.</p>
+            <p style={{fontSize:'14px',lineHeight:1.7,maxWidth:'260px',color:'#64748b'}}>{t('footer.tagline')}</p>
             <div style={{display:'flex',gap:'12px',marginTop:'16px'}}>
               <a href="#" style={{width:'34px',height:'34px',borderRadius:'8px',background:'rgba(255,255,255,.05)',border:'1px solid rgba(255,255,255,.08)',display:'flex',alignItems:'center',justifyContent:'center',color:'#64748b',transition:'all .2s',textDecoration:'none'}}>
                 <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
@@ -22,38 +24,38 @@ export default function Footer() {
           </div>
 
           <div>
-            <div style={{fontSize:'13px',fontWeight:600,color:'#fff',marginBottom:'16px'}}>Platform</div>
+            <div style={{fontSize:'13px',fontWeight:600,color:'#fff',marginBottom:'16px'}}>{t('footer.platform')}</div>
             <ul style={{display:'flex',flexDirection:'column',gap:'10px',listStyle:'none',padding:0}}>
-              <li><Link to="/features" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">Features</Link></li>
-              <li><Link to="/pricing" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">Pricing</Link></li>
-              <li><a href="#" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">Integrations</a></li>
-              <li><a href="#" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">Changelog</a></li>
+              <li><Link to="/features" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">{t('footer.platform_features')}</Link></li>
+              <li><Link to="/pricing" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">{t('footer.platform_pricing')}</Link></li>
+              <li><a href="#" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">{t('footer.platform_integrations')}</a></li>
+              <li><a href="#" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">{t('footer.platform_changelog')}</a></li>
             </ul>
           </div>
           <div>
-            <div style={{fontSize:'13px',fontWeight:600,color:'#fff',marginBottom:'16px'}}>Company</div>
+            <div style={{fontSize:'13px',fontWeight:600,color:'#fff',marginBottom:'16px'}}>{t('footer.company')}</div>
             <ul style={{display:'flex',flexDirection:'column',gap:'10px',listStyle:'none',padding:0}}>
-              <li><Link to="/about" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">About</Link></li>
-              <li><Link to="/contact" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">Contact</Link></li>
-              <li><a href="#" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">Blog</a></li>
+              <li><Link to="/about" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">{t('footer.company_about')}</Link></li>
+              <li><Link to="/contact" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">{t('footer.company_contact')}</Link></li>
+              <li><a href="#" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">{t('footer.company_careers')}</a></li>
+              <li><a href="#" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">{t('footer.company_blog')}</a></li>
             </ul>
           </div>
           <div>
-            <div style={{fontSize:'13px',fontWeight:600,color:'#fff',marginBottom:'16px'}}>Legal</div>
+            <div style={{fontSize:'13px',fontWeight:600,color:'#fff',marginBottom:'16px'}}>{t('footer.legal')}</div>
             <ul style={{display:'flex',flexDirection:'column',gap:'10px',listStyle:'none',padding:0}}>
-              <li><a href="#" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">Terms of Service</a></li>
-              <li><a href="#" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">Cookie Policy</a></li>
+              <li><a href="#" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">{t('footer.legal_privacy')}</a></li>
+              <li><a href="#" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">{t('footer.legal_terms')}</a></li>
+              <li><a href="#" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">{t('footer.legal_cookie')}</a></li>
             </ul>
           </div>
         </div>
 
         <div style={{borderTop:'1px solid rgba(255,255,255,.06)',paddingTop:'28px',display:'flex',flexWrap:'wrap',justifyContent:'space-between',alignItems:'center',gap:'12px'}}>
-          <p style={{fontSize:'13px',color:'#475569'}}>© 2025 MaintEvo™. All rights reserved.</p>
+          <p style={{fontSize:'13px',color:'#475569'}}>{t('footer.copyright')}</p>
           <div style={{display:'flex',alignItems:'center',gap:'6px'}}>
             <div style={{width:'6px',height:'6px',borderRadius:'50%',background:'#22c55e',animation:'blink 3s ease infinite'}}></div>
-            <span style={{fontSize:'12px',color:'#475569'}}>All systems operational</span>
+            <span style={{fontSize:'12px',color:'#475569'}}>{t('footer.status')}</span>
           </div>
         </div>
       </div>

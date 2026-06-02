@@ -1,34 +1,38 @@
+import { useTranslation } from 'react-i18next';
+
 export default function Contact() {
+  const { t } = useTranslation();
+
   const cards = [
     {
       icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
       stroke: '#60a5fa',
       bg: 'rgba(59,130,246,.08)',
       border: 'rgba(59,130,246,.2)',
-      label: 'General Inquiries',
+      labelKey: 'contact.general_label',
       value: 'your@email.com',
       href: 'mailto:your@email.com',
-      sub: 'Questions, feedback, or anything else',
+      subKey: 'contact.general_sub',
     },
     {
       icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
       stroke: '#22d3ee',
       bg: 'rgba(34,211,238,.06)',
       border: 'rgba(34,211,238,.2)',
-      label: 'Sales & Demos',
+      labelKey: 'contact.sales_label',
       value: 'your@email.com',
       href: 'mailto:your@email.com',
-      sub: 'Book a demo or get a quote',
+      subKey: 'contact.sales_sub',
     },
     {
       icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
       stroke: '#818cf8',
       bg: 'rgba(99,102,241,.08)',
       border: 'rgba(99,102,241,.2)',
-      label: 'Support',
+      labelKey: 'contact.support_label',
       value: 'your@email.com',
       href: 'mailto:your@email.com',
-      sub: 'Help with your existing account',
+      subKey: 'contact.support_sub',
     },
   ];
 
@@ -39,10 +43,10 @@ export default function Contact() {
         {/* Header */}
         <div style={{textAlign:'center',marginBottom:'64px'}}>
           <h1 style={{fontSize:'clamp(2rem,4vw,3rem)',fontWeight:900,letterSpacing:'-.03em',color:'#fff',marginBottom:'16px',lineHeight:1.1}}>
-            Get in touch
+            {t('contact.title')}
           </h1>
           <p style={{color:'#94a3b8',fontSize:'1.05rem',lineHeight:1.7,maxWidth:'480px',margin:'0 auto'}}>
-            Reach out via email or connect with us on LinkedIn — we'll get back to you promptly.
+            {t('contact.desc')}
           </p>
         </div>
 
@@ -75,9 +79,9 @@ export default function Contact() {
                   <path d={c.icon}/>
                 </svg>
               </div>
-              <div style={{fontSize:'11px',fontWeight:700,color:c.stroke,letterSpacing:'.1em',textTransform:'uppercase',marginBottom:'6px'}}>{c.label}</div>
+              <div style={{fontSize:'11px',fontWeight:700,color:c.stroke,letterSpacing:'.1em',textTransform:'uppercase',marginBottom:'6px'}}>{t(c.labelKey)}</div>
               <div style={{fontSize:'14px',fontWeight:600,color:'#e2e8f0',marginBottom:'6px'}}>{c.value}</div>
-              <div style={{fontSize:'12px',color:'#64748b',lineHeight:1.5}}>{c.sub}</div>
+              <div style={{fontSize:'12px',color:'#64748b',lineHeight:1.5}}>{t(c.subKey)}</div>
             </a>
           ))}
         </div>
@@ -98,8 +102,8 @@ export default function Contact() {
             </svg>
           </div>
           <div style={{flex:1}}>
-            <div style={{fontSize:'14px',fontWeight:700,color:'#e2e8f0',marginBottom:'4px'}}>Follow us on LinkedIn</div>
-            <div style={{fontSize:'13px',color:'#64748b'}}>Stay up to date with product news and updates.</div>
+            <div style={{fontSize:'14px',fontWeight:700,color:'#e2e8f0',marginBottom:'4px'}}>{t('contact.linkedin_title')}</div>
+            <div style={{fontSize:'13px',color:'#64748b'}}>{t('contact.linkedin_desc')}</div>
           </div>
           <a
             href="https://www.linkedin.com/company/mainteneat"
@@ -108,7 +112,7 @@ export default function Contact() {
             className="btn-p inline-flex items-center gap-2"
             style={{padding:'10px 22px',fontSize:'13px',whiteSpace:'nowrap',flexShrink:0}}
           >
-            Connect
+            {t('contact.linkedin_cta')}
             <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>

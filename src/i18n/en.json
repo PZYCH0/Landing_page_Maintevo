@@ -1,0 +1,581 @@
+{
+  "nav": {
+    "product": "Product",
+    "industries": "Industries",
+    "enterprise": "Enterprise",
+    "pricing": "Pricing",
+    "resources": "Resources",
+    "login": "Log In",
+    "getStarted": "Get Started",
+    "viewAll": "View all features",
+    "features": {
+      "workOrders": "Work Orders",
+      "equipment": "Equipment Hierarchy",
+      "preventive": "Preventive Maintenance",
+      "inventory": "Inventory & Purchasing",
+      "kpi": "KPI Dashboard",
+      "calendar": "Maintenance Calendar",
+      "roles": "Role-Based Access",
+      "reporting": "Reporting & Audits"
+    }
+  },
+  "common": {
+    "back": "Back to all features",
+    "getStartedFree": "Get started free",
+    "requestDemo": "Request a demo",
+    "seeHowItWorks": "See how it works",
+    "seeAllFeatures": "See all features",
+    "noCard": "Get started with MaintEvo — no credit card required.",
+    "learnMore": "Learn more",
+    "metricsTracked": "metrics tracked automatically",
+    "step": "Step"
+  },
+  "home": {
+    "hero": {
+      "h1_1": "Pilot maintenance.",
+      "h1_2": "Maximize",
+      "h1_accent": "performance.",
+      "desc": "MaintEvo centralizes your operations, anticipates failures and optimizes your assets for maximum reliability and controlled costs.",
+      "watchVideo": "Watch the video"
+    },
+    "features": {
+      "badge": "Platform Capabilities",
+      "h2_1": "Everything your operations need.",
+      "h2_2": "Nothing you don't.",
+      "desc": "Six purpose-built modules, one connected platform — covering every stage of industrial maintenance from request to resolution.",
+      "workOrders_title": "Work Orders",
+      "workOrders_desc": "Log a job, assign it, track time on-site, consume parts, and close with a signed PDF report — start to finish without leaving the platform.",
+      "equipment_title": "Equipment Hierarchy",
+      "equipment_desc": "Classify every asset by criticality (Low to Critical), track its location and department, and keep a full maintenance history — all in one place.",
+      "preventive_title": "Preventive Maintenance",
+      "preventive_desc": "Set maintenance plans by date or usage threshold. They generate work orders automatically on schedule — and the platform tracks whether your team is hitting its targets.",
+      "inventory_title": "Inventory & Purchasing",
+      "inventory_desc": "Multi-warehouse spare parts management with stock movements, purchase orders, and supplier tracking — all linked to work orders.",
+      "kpi_title": "KPI Dashboard",
+      "kpi_desc": "Repair time, machine uptime, maintenance compliance, and failure trends — all calculated automatically as your team works. No formulas, no spreadsheets.",
+      "calendar_title": "Maintenance Calendar",
+      "calendar_desc": "See every planned and active job in one calendar view. Spot scheduling conflicts, plan workloads, and make sure nothing is missed.",
+      "roles_title": "Role-Based Access",
+      "roles_desc": "Dedicated portals for managers, technicians, and requesters — each with exactly the permissions and views they need.",
+      "reporting_title": "Reporting & Audits",
+      "reporting_desc": "Auto-generated performance reports, job history exports, and maintenance compliance audit trails — always ready for review."
+    },
+    "ai": {
+      "badge": "Smart Automation",
+      "h2_1": "Eliminate the admin.",
+      "h2_2": "Focus on the fix.",
+      "desc": "MaintEvo handles the operational overhead — scheduling jobs, updating KPIs, routing requests — so your team spends time on actual maintenance, not on paperwork.",
+      "autoWO_title": "Auto-Generated Work Orders",
+      "autoWO_text": "Preventive maintenance plans create work orders on schedule, automatically. No one has to remember — and no jobs slip through the cracks.",
+      "liveKpi_title": "Live KPI Calculations",
+      "liveKpi_text": "Every time a job opens or closes, MTTR, MTBF, and availability rate update in real time. Your dashboard is always current — no manual entry required.",
+      "priority_title": "Priority-Driven Scheduling",
+      "priority_text": "Asset criticality and maintenance history guide what gets done first. Your team always works on the right jobs, in the right order.",
+      "audit_title": "Full Audit Trail",
+      "audit_text": "Every action is timestamped and attributed — who did what, on which asset, and when. Compliance reviews and incident investigations take minutes, not days."
+    },
+    "metrics": {
+      "badge": "By the Numbers",
+      "h2_1": "A platform built around",
+      "h2_2": "how your team actually works.",
+      "desc": "Every number here reflects what's in the platform — not projections, not benchmarks.",
+      "m1_title": "Metrics tracked for you",
+      "m1_text": "Repair time, machine uptime, maintenance compliance, failure frequency, and more — seven numbers that tell you how your operations are really doing, updated automatically.",
+      "m2_title": "User types, one system",
+      "m2_text": "Your manager reviews and approves jobs. Your technician executes them. Anyone on the team can report a problem. Each person sees exactly what they need — nothing more.",
+      "m3_title": "Priority levels",
+      "m3_text": "Label every asset from low-risk to business-critical. When something breaks, your team already knows how urgent it is and what to do next.",
+      "m4_title": "Automated reporting",
+      "m4_text": "Every time a job closes, the numbers update on their own. No one needs to fill in a report or send an update at the end of the shift."
+    },
+    "how": {
+      "badge": "How It Works",
+      "h2_1": "Request to resolution.",
+      "h2_2": "Every step tracked.",
+      "report_title": "Report",
+      "report_text": "Someone spots a problem and submits it in the app — it takes under a minute. The issue is linked to the right equipment, given a priority, and the manager sees it immediately. Nothing gets lost in a chat thread or an email.",
+      "assign_title": "Assign",
+      "assign_text": "The manager reviews the issue, creates a job, lists what needs to be done, notes the parts required, and assigns it to the right technician. Everything is defined before anyone picks up a tool.",
+      "close_title": "Close & Track",
+      "close_text": "The technician works through the task list on-site. Time is tracked automatically in the background. When the job is closed, the dashboard updates — no report to write, no data to enter by hand."
+    },
+    "testimonials": {
+      "badge": "Customer Stories",
+      "h2_1": "Trusted by maintenance",
+      "h2_2": "leaders worldwide.",
+      "q1": "\"MaintEvo's AI caught a bearing failure on our primary compressor 18 days before it would have caused a full production shutdown. The ROI was immediate and undeniable.\"",
+      "q1_name": "Marcus R.",
+      "q1_role": "VP Operations · Precision Manufacturing AG",
+      "q2": "\"We replaced three separate tools with MaintEvo. Our technicians love the mobile app, and our directors finally have the real-time visibility they've been asking for years.\"",
+      "q2_name": "Sophie L.",
+      "q2_role": "Maintenance Director · EuroPharma Group",
+      "q3": "\"Onboarding 200 technicians across 4 plants took less than a week. The ROI calculation was simple: we saved more in the first month than the annual subscription costs.\"",
+      "q3_name": "James K.",
+      "q3_role": "Head of Reliability · Atlas Energy Corp"
+    },
+    "cta": {
+      "badge": "Transform Your Operations",
+      "h2_1": "Stop losing money",
+      "h2_2": "to unplanned downtime.",
+      "desc": "Join 500+ industrial enterprises that have transformed their maintenance operations with MaintEvo. Setup takes 15 minutes. Results start on day one.",
+      "primary": "Start Free Trial — No Card Needed",
+      "secondary": "Talk to Sales",
+      "fine": "No contracts · Cancel anytime · SOC 2 Type II certified"
+    }
+  },
+  "about": {
+    "mission": {
+      "eyebrow": "Our Mission",
+      "title": "Every maintenance team deserves modern tools.",
+      "p1": "We started MaintEvo because we watched skilled maintenance professionals waste hours fighting spreadsheets, whiteboards, and paper work orders — instead of doing the work they're great at.",
+      "p2": "Our goal is simple: give every maintenance team — from a 3-person shop to a 500-person plant — the same quality of tooling that Fortune 500 companies pay millions for."
+    },
+    "values": {
+      "title": "What we stand for",
+      "reliability_title": "Reliability",
+      "reliability_desc": "We build software that works when your equipment can't afford not to. 99.9% uptime, enterprise-grade security, and data you can always trust.",
+      "simplicity_title": "Simplicity",
+      "simplicity_desc": "Powerful software shouldn't require a consultant to set up. MaintEvo is designed so any technician can learn it in an afternoon — and actually enjoy using it.",
+      "partnership_title": "Partnership",
+      "partnership_desc": "We treat our customers as partners. Your feedback shapes the roadmap, our support team knows your name, and we succeed only when you do."
+    },
+    "team": {
+      "title": "Meet the team",
+      "m1_name": "Alex Rivera",
+      "m1_role": "CEO & Co-Founder",
+      "m1_bio": "10+ years in industrial operations. Former maintenance manager at a Tier 1 automotive supplier.",
+      "m2_name": "Jamie Chen",
+      "m2_role": "CTO & Co-Founder",
+      "m2_bio": "Previously led engineering at two enterprise SaaS companies. Passionate about building tools for the physical world.",
+      "m3_name": "Morgan Osei",
+      "m3_role": "Head of Customer Success",
+      "m3_bio": "Certified reliability engineer. Helps customers get measurable ROI from their MaintEvo deployment in the first 90 days."
+    },
+    "cta": {
+      "title": "Join 5,000+ teams using MaintEvo",
+      "desc": "Start your free trial today — no credit card required.",
+      "button": "Get started free"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Simple, transparent pricing",
+      "desc": "No hidden fees. No surprises. Cancel anytime."
+    },
+    "starter": {
+      "title": "Starter",
+      "desc": "Perfect for small facilities and single-site operations.",
+      "price": "$49",
+      "per": "/month",
+      "f1": "Up to",
+      "f1_val": "3 users",
+      "f2_val": "50 assets",
+      "f3": "Work order management",
+      "f4": "Mobile app access",
+      "f5": "Email support",
+      "cta": "Get started"
+    },
+    "professional": {
+      "badge": "Most Popular",
+      "title": "Professional",
+      "desc": "Ideal for growing teams managing multiple assets and sites.",
+      "price": "$149",
+      "per": "/month",
+      "f1_val": "25 users",
+      "f2_val": "500 assets",
+      "f3": "Preventive maintenance scheduling",
+      "f4": "Inventory & parts tracking",
+      "f5": "Priority support",
+      "cta": "Get started"
+    },
+    "enterprise": {
+      "title": "Enterprise",
+      "desc": "For large-scale operations with multi-site and custom integration needs.",
+      "price": "$499",
+      "per": "/month",
+      "f1": "Unlimited",
+      "f1_label": "users",
+      "f2_label": "assets & sites",
+      "f3": "Custom ERP & third-party integrations",
+      "f4": "Dedicated account manager",
+      "f5": "SLA & 24/7 premium support",
+      "cta": "Contact sales"
+    },
+    "compare": {
+      "title": "Compare plans",
+      "col_feature": "Feature",
+      "col_starter": "Starter",
+      "col_pro": "Professional",
+      "col_ent": "Enterprise",
+      "r_users": "Users",
+      "r_assets": "Assets",
+      "r_wo": "Work Orders",
+      "r_pm": "Preventive Maintenance",
+      "r_inv": "Inventory Management",
+      "r_int": "Custom Integrations",
+      "r_mgr": "Dedicated Account Manager",
+      "unlimited": "Unlimited"
+    },
+    "faq": {
+      "title": "Billing FAQ",
+      "q1": "Is there a free trial?",
+      "a1": "Yes — every plan includes a 30-day free trial with full access to all features. No credit card is required to start. At the end of the trial, choose the plan that fits your team or cancel with no charge.",
+      "q2": "Can I cancel at any time?",
+      "a2": "Absolutely. Monthly plans can be cancelled at any time and you keep access until the end of your billing period. Annual plans are refundable within the first 30 days.",
+      "q3": "Is there a discount for annual billing?",
+      "a3": "Yes — pay annually and get 2 months free (equivalent to ~17% off). Switch between monthly and annual billing any time from your account settings."
+    },
+    "bottom": {
+      "text": "Still have questions?",
+      "link": "Talk to our team →"
+    }
+  },
+  "contact": {
+    "title": "Get in touch",
+    "desc": "Reach out via email or connect with us on LinkedIn — we'll get back to you promptly.",
+    "general_label": "General Inquiries",
+    "general_sub": "Questions, feedback, or anything else",
+    "sales_label": "Sales & Demos",
+    "sales_sub": "Book a demo or get a quote",
+    "support_label": "Support",
+    "support_sub": "Help with your existing account",
+    "linkedin_title": "Follow us on LinkedIn",
+    "linkedin_desc": "Stay up to date with product news and updates.",
+    "linkedin_cta": "Connect"
+  },
+  "footer": {
+    "tagline": "The AI-powered CMMS platform built for the next era of industrial maintenance.",
+    "platform": "Platform",
+    "platform_features": "Features",
+    "platform_pricing": "Pricing",
+    "platform_integrations": "Integrations",
+    "platform_changelog": "Changelog",
+    "company": "Company",
+    "company_about": "About",
+    "company_contact": "Contact",
+    "company_careers": "Careers",
+    "company_blog": "Blog",
+    "legal": "Legal",
+    "legal_privacy": "Privacy Policy",
+    "legal_terms": "Terms of Service",
+    "legal_cookie": "Cookie Policy",
+    "copyright": "© 2025 MaintEvo™. All rights reserved.",
+    "status": "All systems operational"
+  },
+  "workOrders": {
+    "hero": {
+      "eyebrow": "Work Orders",
+      "h1_1": "From the first report.",
+      "h1_2": "To the",
+      "h1_accent": "final close.",
+      "desc": "Every maintenance job deserves a clear record. MaintEvo gives you a structured way to log, assign, execute, and close jobs without anything slipping through the cracks.",
+      "badge1_title": "Full job history",
+      "badge1_sub": "on every asset",
+      "badge2_title": "PDF report",
+      "badge2_sub": "on every close"
+    },
+    "benefits": {
+      "b1_title": "Create & assign in seconds",
+      "b1_body": "Log the issue, describe what needs to be done, link it to the right asset, set a priority, and assign it to a technician. The whole thing takes under a minute. The technician gets notified immediately.",
+      "b2_title": "Tasks & checklists",
+      "b2_body": "Break each job into a list of steps. The technician works through them on-site and checks them off one by one. Nothing is left to interpretation — everyone knows what 'done' looks like before they start.",
+      "b3_title": "Automatic time tracking",
+      "b3_body": "The technician starts a timer when they begin the job. It runs in the background and stops when they close it. Repair time is logged accurately — no estimates, no end-of-day memory exercises.",
+      "b4_title": "Close with a PDF report",
+      "b4_body": "When the job is done, close it with a summary note and generate a signed PDF report in one click. The report includes the job details, the technician's name, time spent, parts used, and the completed checklist."
+    },
+    "flow": {
+      "title": "How a work order moves through MaintEvo",
+      "subtitle": "Four stages, fully tracked at every step.",
+      "s1_title": "Reported",
+      "s1_desc": "Someone spots a problem and logs it. The job is created with an asset link, a description, and a priority level.",
+      "s2_title": "Assigned",
+      "s2_desc": "The manager reviews it, adds tasks and required parts, and assigns it to the right technician.",
+      "s3_title": "In Progress",
+      "s3_desc": "The technician starts the timer, works through the checklist, and logs the parts they consume.",
+      "s4_title": "Closed",
+      "s4_desc": "The job is completed, the time is recorded, and a PDF report is generated. The dashboard updates automatically."
+    },
+    "cta": {
+      "title": "Ready to bring structure to your maintenance jobs?"
+    }
+  },
+  "preventiveMaintenance": {
+    "hero": {
+      "eyebrow": "Preventive Maintenance",
+      "h1_1": "Schedule it once.",
+      "h1_2": "MaintEvo",
+      "h1_accent": "handles the rest.",
+      "desc": "Set up maintenance plans for your equipment and the platform takes care of generating the jobs on time, every time. No one has to remember. Nothing slips through.",
+      "badge1_title": "Auto-generated jobs",
+      "badge1_sub": "no manual creation",
+      "badge2_title": "PM compliance tracking",
+      "badge2_sub": "see what's on time"
+    },
+    "benefits": {
+      "b1_title": "Time-based & usage-based triggers",
+      "b1_body": "Set plans to trigger by date — every 30 days, every quarter, every year — or by usage threshold, like every 500 hours of operation or every 10,000 cycles. The platform supports both, and you can combine them.",
+      "b2_title": "Automatic work order generation",
+      "b2_body": "When a plan's trigger date or threshold arrives, MaintEvo creates the work order automatically — pre-filled with the tasks, parts, and assigned technician you defined in the plan. No manual creation, no delays.",
+      "b3_title": "Compliance tracking",
+      "b3_body": "See at a glance how many planned jobs were completed on time versus missed. The platform tracks your PM compliance rate by asset, by department, or across the board — so you always know if your program is working.",
+      "b4_title": "Easy to update",
+      "b4_body": "Change the frequency, update the task list, swap the assigned technician, or pause a plan entirely — all in a few clicks. Changes apply automatically to all future work orders generated from that plan."
+    },
+    "cta": {
+      "title": "Stop scheduling maintenance by hand."
+    }
+  },
+  "inventory": {
+    "hero": {
+      "eyebrow": "Inventory & Purchasing",
+      "h1_1": "Always know",
+      "h1_2": "what you have.",
+      "h1_accent": "Order what you need.",
+      "desc": "Spare parts management connected directly to your jobs. When a technician uses a part, inventory updates. When stock runs low, create a purchase order — without leaving the platform.",
+      "bullet1": "Real-time stock tracking across all warehouses",
+      "bullet2": "Purchase orders linked to minimum stock thresholds"
+    },
+    "benefits": {
+      "b1_title": "Parts catalog",
+      "b1_body": "Maintain a catalog of every spare part you stock. Each part has a name, reference number, storage location, quantity on hand, and minimum stock level. Finding what you need takes seconds.",
+      "b2_title": "Linked to work orders",
+      "b2_body": "When a technician uses parts during a job, they log them directly in the work order. Stock quantities update automatically. No separate spreadsheet, no manual inventory count at the end of the week.",
+      "b3_title": "Purchase orders",
+      "b3_body": "When stock falls below its minimum level, create a purchase order directly in MaintEvo. Track it from the moment it's submitted to the moment the parts arrive and are added back to stock.",
+      "b4_title": "Supplier management",
+      "b4_body": "Store supplier details — name, contact, lead time, pricing — alongside the parts they supply. When you need to reorder, everything is already there. No digging through emails or contacts."
+    },
+    "cta": {
+      "title": "Stop managing parts in spreadsheets."
+    }
+  },
+  "equipment": {
+    "hero": {
+      "eyebrow": "Equipment Hierarchy",
+      "h1_1": "Know your assets.",
+      "h1_2": "Rank what",
+      "h1_accent": "matters.",
+      "desc": "A complete registry of every asset in your facility — with criticality levels, location tracking, and the full maintenance history of each one.",
+      "badge1_title": "Full asset registry",
+      "badge1_sub": "every detail in one place",
+      "badge2_title": "Criticality ranking",
+      "badge2_sub": "from Low to Critical"
+    },
+    "criticality": {
+      "label": "4 criticality levels",
+      "l1_level": "LEVEL 1",
+      "l1_name": "Low",
+      "l1_desc": "Routine maintenance, no urgency",
+      "l2_level": "LEVEL 2",
+      "l2_name": "Medium",
+      "l2_desc": "Monitored closely, scheduled regularly",
+      "l3_level": "LEVEL 3",
+      "l3_name": "High",
+      "l3_desc": "Fast response required on failure",
+      "l4_level": "LEVEL 4",
+      "l4_name": "Critical",
+      "l4_desc": "Business stops if this goes down"
+    },
+    "benefits": {
+      "b1_title": "A profile for every asset",
+      "b1_body": "Each asset in MaintEvo has its own record: name, reference number, category, manufacturer, purchase date, and technical specifications. Everything is in one place — no spreadsheet, no paper file.",
+      "b2_title": "Location & department tracking",
+      "b2_body": "Organize assets by department, building, floor, or zone. Finding the right equipment in the system is instant. When a job is created, the asset's location is already there — no one has to go look it up.",
+      "b3_title": "Full maintenance history",
+      "b3_body": "Every job ever done on an asset is recorded against it. Open any asset and see the full history: who worked on it, what was done, how long it took, and what parts were used. Useful for spotting recurring problems and making replacement decisions.",
+      "b4_title": "Criticality drives everything",
+      "b4_body": "The criticality level you assign to an asset affects how MaintEvo prioritizes jobs, how frequently preventive plans trigger, and how urgently failures are escalated. Set it once, and the system works around it automatically."
+    },
+    "cta": {
+      "title": "Ready to bring order to your asset registry?"
+    }
+  },
+  "kpi": {
+    "hero": {
+      "eyebrow": "KPI Dashboard",
+      "h1_1": "Twenty metrics.",
+      "h1_2": "Zero manual work.",
+      "h1_accent": "Always up to date.",
+      "desc": "Every KPI in MaintEvo — across work orders, equipment health, costs, and inventory — updates automatically as your team works.",
+      "bullet1": "4 metric categories, 20 KPIs tracked automatically",
+      "bullet2": "No spreadsheets or manual data entry",
+      "bullet3": "Real-time updates from your team's work orders"
+    },
+    "categories": {
+      "badge": "20 Metrics",
+      "title": "Four categories. Every metric covered.",
+      "subtitle": "Select a category to see its metrics in detail.",
+      "metricsTracked": "metrics tracked automatically",
+      "fiveMetrics": "5 metrics tracked automatically",
+      "cat1_label": "Work Orders & Interventions",
+      "cat1_desc": "Track every job from the moment it is reported to the moment it is closed. Know who responded, how fast, and whether the fix stuck.",
+      "cat1_kpi1_label": "Response Time",
+      "cat1_kpi1_q": "How fast does your team react to a report?",
+      "cat1_kpi1_body": "Time between fault reported and work started. Reveals delays in your approval or dispatch process.",
+      "cat1_kpi2_label": "MTTR",
+      "cat1_kpi2_q": "How long does the average repair take?",
+      "cat1_kpi2_body": "Mean Time to Repair — open to closed. If rising, jobs are getting harder or the team is overstretched.",
+      "cat1_kpi3_label": "First-Fix Rate",
+      "cat1_kpi3_q": "Are jobs resolved in a single visit?",
+      "cat1_kpi3_body": "Percentage closed without a follow-up. Low rate points to missing parts or incomplete diagnostics.",
+      "cat1_kpi4_label": "Backlog",
+      "cat1_kpi4_q": "How many open jobs are waiting right now?",
+      "cat1_kpi4_body": "Total unresolved work orders at any point. A rising backlog means demand is outpacing capacity.",
+      "cat1_kpi5_label": "On-Time Completion",
+      "cat1_kpi5_q": "Are jobs closed within their target window?",
+      "cat1_kpi5_body": "Tracks whether scheduling and prioritization are actually working in practice.",
+      "cat2_label": "Equipment Health",
+      "cat2_desc": "Know exactly which assets are reliable and which are quietly eroding your uptime — before they cause a shutdown.",
+      "cat2_kpi1_label": "Availability",
+      "cat2_kpi1_q": "What percentage of the time is each asset running?",
+      "cat2_kpi1_body": "Calculated from downtime and scheduled operating time. The clearest single measure of reliability.",
+      "cat2_kpi2_label": "MTBF",
+      "cat2_kpi2_q": "How long between one failure and the next?",
+      "cat2_kpi2_body": "Mean Time Between Failures. Low MTBF means frequent breakdowns — a strong signal for replacement.",
+      "cat2_kpi3_label": "Failure Rate",
+      "cat2_kpi3_q": "How many failures per 1,000 hours of operation?",
+      "cat2_kpi3_body": "Normalized metric for comparing failure-proneness across equipment of different ages or types.",
+      "cat2_kpi4_label": "Downtime",
+      "cat2_kpi4_q": "How much time has each asset been out of service?",
+      "cat2_kpi4_body": "Cumulative per-asset downtime. Identifies which equipment is costing the most productive time.",
+      "cat2_kpi5_label": "PM Compliance",
+      "cat2_kpi5_q": "Are preventive jobs being done on schedule?",
+      "cat2_kpi5_body": "Percentage of scheduled PM tasks completed on time. A direct measure of PM program discipline.",
+      "cat3_label": "Maintenance Costs",
+      "cat3_desc": "Stop guessing where your maintenance budget goes. See the full cost picture — by job, by asset, by team.",
+      "cat3_kpi1_label": "Cost per Work Order",
+      "cat3_kpi1_q": "What does the average job actually cost?",
+      "cat3_kpi1_body": "Labor + parts per closed work order. Rising cost often reflects inefficiency or aging equipment.",
+      "cat3_kpi2_label": "Preventive vs Corrective",
+      "cat3_kpi2_q": "Are you spending on prevention or firefighting?",
+      "cat3_kpi2_body": "Share of total spend going to planned vs reactive work. Higher preventive ratio → lower long-term costs.",
+      "cat3_kpi3_label": "Cost per Asset",
+      "cat3_kpi3_q": "Which assets are the most expensive to maintain?",
+      "cat3_kpi3_body": "Total spend per asset over a period. Helps identify machines where replacement is cheaper than repair.",
+      "cat3_kpi4_label": "Budget Variance",
+      "cat3_kpi4_q": "How close are you to your maintenance budget?",
+      "cat3_kpi4_body": "Actual vs planned spend. A consistent overrun in one area usually signals an unaddressed root problem.",
+      "cat3_kpi5_label": "Parts vs Labor Split",
+      "cat3_kpi5_q": "Where is the money going — materials or manpower?",
+      "cat3_kpi5_body": "Breakdown of parts costs vs technician hours. Useful for negotiating supply contracts or headcount.",
+      "cat4_label": "Parts Inventory",
+      "cat4_desc": "Know exactly what is on the shelf, when to reorder, and how much your inventory is costing you to hold.",
+      "cat4_kpi1_label": "Stock Accuracy",
+      "cat4_kpi1_q": "Does the system match what is on the shelf?",
+      "cat4_kpi1_body": "How closely records match physical stock. Low accuracy means jobs stall on parts that \"exist\" but are missing.",
+      "cat4_kpi2_label": "Parts Availability Rate",
+      "cat4_kpi2_q": "Are parts in stock when jobs need them?",
+      "cat4_kpi2_body": "Percentage of work orders where required parts were immediately available. Low rate extends MTTR.",
+      "cat4_kpi3_label": "Reorder Frequency",
+      "cat4_kpi3_q": "How often does each part trigger a restock?",
+      "cat4_kpi3_body": "Proxy for consumption rate. Helps set smarter reorder points and minimum stock levels.",
+      "cat4_kpi4_label": "Inventory Turnover",
+      "cat4_kpi4_q": "How quickly are parts being used and replaced?",
+      "cat4_kpi4_body": "Very low turnover may mean you are holding obsolete or over-stocked items tying up capital.",
+      "cat4_kpi5_label": "Carrying Cost",
+      "cat4_kpi5_q": "How much does it cost to hold your current inventory?",
+      "cat4_kpi5_body": "Storage, capital tied up, obsolescence risk. Often underestimated until properly audited."
+    },
+    "cta": {
+      "title": "Stop calculating metrics by hand."
+    }
+  },
+  "calendar": {
+    "hero": {
+      "eyebrow": "Maintenance Calendar",
+      "h1_1": "Your full schedule",
+      "h1_2": "at a glance.",
+      "h1_accent": "In one view.",
+      "desc": "Planned jobs, reactive jobs, and preventive maintenance — all laid out together on a single calendar. See what's coming, spot conflicts, and plan your team's week before it starts.",
+      "bullet1": "Day, week, and month views",
+      "bullet2": "Conflict detection at a glance",
+      "bullet3": "Weeks-ahead capacity planning"
+    },
+    "benefits": {
+      "b1_title": "Everything in one view",
+      "b1_body": "Planned maintenance, active work orders, and upcoming scheduled jobs — all on one calendar. Switch between day, week, and month views depending on how far ahead you want to look.",
+      "b2_title": "Spot scheduling conflicts",
+      "b2_body": "See immediately when too many jobs land on the same day, or when a technician is double-booked. Move things around before the day starts — not during it.",
+      "b3_title": "Plan weeks ahead",
+      "b3_body": "Look weeks or months into the future to understand your upcoming workload. Useful for planning staff capacity, ordering parts in advance, and making sure critical jobs don't pile up unexpectedly."
+    },
+    "cta": {
+      "title": "See your maintenance schedule clearly."
+    }
+  },
+  "roles": {
+    "hero": {
+      "eyebrow": "Role-Based Access",
+      "h1_1": "Everyone gets what they need.",
+      "h1_accent": "Nothing more.",
+      "desc": "MaintEvo has three distinct roles — each with a workspace designed for how that person actually works. Managers see everything. Technicians see their jobs. Requesters see their submissions."
+    },
+    "manager": {
+      "role": "MANAGER",
+      "title": "Full visibility & control",
+      "desc": "See everything happening across the team. Approve requests, create and assign jobs, monitor open work, track KPIs, and manage assets, inventory, and maintenance plans.",
+      "p1": "Review & approve requests",
+      "p2": "Create & assign work orders",
+      "p3": "Access KPI dashboard",
+      "p4": "Manage assets & inventory",
+      "p5": "Configure PM plans"
+    },
+    "technician": {
+      "role": "TECHNICIAN",
+      "title": "Focused on the job at hand",
+      "desc": "See only the jobs assigned to you. Work through the task list, start and stop the timer, log the parts you use, and close the job when it's done. Simple and distraction-free.",
+      "p1": "View assigned jobs",
+      "p2": "Start/stop the job timer",
+      "p3": "Complete task checklists",
+      "p4": "Log parts consumed",
+      "p5": "Close & generate report"
+    },
+    "requester": {
+      "role": "REQUESTER",
+      "title": "Report problems, track status",
+      "desc": "Anyone in the organization can submit a maintenance request. Describe the problem, link it to the asset, and track what's happening — without accessing internal workflows or sensitive data.",
+      "p1": "Submit maintenance requests",
+      "p2": "Track submission status",
+      "p3": "Add descriptions & attachments"
+    },
+    "cta": {
+      "title": "Give your whole team the right tools."
+    }
+  },
+  "reporting": {
+    "hero": {
+      "eyebrow": "Reporting & Audits",
+      "h1_1": "Your maintenance record,",
+      "h1_accent": "always ready.",
+      "desc": "Every work order closed, every part used, every KPI shift — MaintEvo records it automatically. When you need to report, export, or review, the data is already there."
+    },
+    "benefits": {
+      "b1_title": "PDF report on every closed job",
+      "b1_body": "When a technician closes a work order, MaintEvo generates a PDF report automatically. It includes what was done, who did it, how long it took, and which parts were used — ready to save, share, or file.",
+      "b2_title": "KPI history over time",
+      "b2_body": "Your KPIs don't just show the current moment — they build a history as your team works. See how repair times, availability, and failure rates have changed over weeks and months, without compiling anything manually.",
+      "b3_title": "Full audit trail",
+      "b3_body": "Every status change, assignment, comment, and update is logged against the work order with a timestamp and the name of the person who made it. Nothing is anonymous, nothing disappears.",
+      "b4_title": "Export anytime",
+      "b4_body": "Need to share data with management, compliance teams, or external auditors? Export work orders, maintenance histories, and KPI summaries whenever you need them — no data locked inside the platform."
+    },
+    "audit": {
+      "title": "What gets recorded — automatically",
+      "subtitle": "You don't have to log anything manually. MaintEvo captures every event as your team works.",
+      "e1_title": "Work order created",
+      "e1_sub": "Who submitted it, which asset, what the problem was, and when it came in.",
+      "e2_title": "Assigned to a technician",
+      "e2_sub": "Which manager assigned it, to whom, and at what time.",
+      "e3_title": "Time tracked on the job",
+      "e3_sub": "Every start and stop of the timer, logged against the technician who ran it.",
+      "e4_title": "Parts consumed",
+      "e4_sub": "Which parts were used, how many, and the inventory adjustment that followed.",
+      "e5_title": "Job closed with a report",
+      "e5_sub": "Completion notes, closing timestamp, and the auto-generated PDF — all stored against the work order."
+    },
+    "cta": {
+      "title": "Stop building reports. Start reading them."
+    }
+  }
+}
