@@ -81,10 +81,14 @@ export default function Navbar() {
                 </svg>
               </button>
               {langOpen && (
-                <div className="absolute right-0 mt-1 w-36 rounded-lg shadow-lg z-50" style={{background:'rgba(5,11,22,.97)',border:'1px solid rgba(255,255,255,.1)'}}>
-                  <ul className="py-1 text-sm text-white/80">
-                    <li><button onClick={() => setLang('fr')} className="flex items-center gap-2 w-full px-4 py-2 hover:bg-white/10 hover:text-white transition-colors">🇫🇷 Français</button></li>
-                    <li><button onClick={() => setLang('en')} className="flex items-center gap-2 w-full px-4 py-2 hover:bg-white/10 hover:text-white transition-colors">🇬🇧 English</button></li>
+                <div className="absolute right-0 mt-1 w-36 rounded-lg shadow-lg z-50" style={{
+                  background: dark ? 'rgba(5,11,22,.97)' : 'rgba(255,255,255,.98)',
+                  border: dark ? '1px solid rgba(255,255,255,.1)' : '1px solid rgba(59,130,246,.15)',
+                  boxShadow: dark ? '0 8px 32px rgba(0,0,0,.4)' : '0 8px 32px rgba(0,0,0,.12)',
+                }}>
+                  <ul className="py-1 text-sm" style={{color: dark ? 'rgba(255,255,255,.8)' : '#1e293b'}}>
+                    <li><button onClick={() => setLang('fr')} className="flex items-center gap-2 w-full px-4 py-2 transition-colors" onMouseEnter={e => (e.currentTarget.style.background = dark ? 'rgba(255,255,255,.08)' : 'rgba(59,130,246,.06)')} onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>🇫🇷 Français</button></li>
+                    <li><button onClick={() => setLang('en')} className="flex items-center gap-2 w-full px-4 py-2 transition-colors" onMouseEnter={e => (e.currentTarget.style.background = dark ? 'rgba(255,255,255,.08)' : 'rgba(59,130,246,.06)')} onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}>🇬🇧 English</button></li>
                   </ul>
                 </div>
               )}
@@ -196,6 +200,7 @@ export default function Navbar() {
               <li><Link to="/industries" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">{t('nav.industries')}</Link></li>
               <li><Link to="/enterprise" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">{t('nav.enterprise')}</Link></li>
               <li><Link to="/pricing" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">{t('nav.pricing')}</Link></li>
+              <li><Link to="/comparison" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">{t('nav.comparison')}</Link></li>
               <li><Link to="/resources" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">{t('nav.resources')}</Link></li>
               <li className="lg:hidden pt-1">
                 <a href="#" className="flex items-center gap-1.5 text-sm font-medium text-white/80 hover:text-white transition-colors py-2">

@@ -4,6 +4,7 @@
     "industries": "Industries",
     "enterprise": "Entreprise",
     "pricing": "Tarifs",
+    "comparison": "Comparatif",
     "resources": "Ressources",
     "login": "Connexion",
     "getStarted": "Commencer",
@@ -228,6 +229,119 @@
     "bottom": {
       "text": "Vous avez encore des questions ?",
       "link": "Parler à notre équipe →"
+    }
+  },
+  "comparison": {
+    "hero": {
+      "badge": "Forfaits dès 49 $/mois — tarif fixe par entreprise, sans frais par utilisateur",
+      "title": "MaintEvo face à SAP PM, IBM Maximo et UpKeep",
+      "desc": "Un comparatif détaillé des fonctionnalités, des tarifs et de la vocation de chaque plateforme — pour choisir la GMAO adaptée à votre équipe."
+    },
+    "table": {
+      "title": "Comparatif Fonctionnalité par Fonctionnalité",
+      "col_feature": "Fonctionnalité",
+      "col_maintevo": "MaintEvo",
+      "col_sap": "SAP PM",
+      "col_maximo": "IBM Maximo",
+      "col_upkeep": "UpKeep",
+      "sub_maintevo": "49–499 $/mois fixe",
+      "sub_sap": "150–300 $/utilisateur/mois",
+      "sub_maximo": "175–400 $/utilisateur/mois",
+      "sub_upkeep": "35–85 $/utilisateur/mois",
+      "r_wo": "Ordres de travail",
+      "r_assets": "Hiérarchie des équipements / actifs",
+      "r_pm": "Maintenance préventive",
+      "r_inventory": "Inventaire et achats",
+      "r_reporting": "Tableau de bord KPI et rapports",
+      "r_mobile": "Application mobile",
+      "r_api": "API et intégrations",
+      "r_multilingual": "Multilingue (EN/FR)",
+      "r_flatpricing": "Tarif fixe par entreprise",
+      "r_setup": "Délai de mise en place",
+      "r_support": "Support inclus",
+      "val_addon": "Module additionnel",
+      "val_limited": "Limité",
+      "val_days": "Jours",
+      "val_weeks": "Jours à semaines",
+      "val_months": "Mois",
+      "val_extra": "Coût supplémentaire",
+      "val_tiered": "Selon le forfait",
+      "note": "Les informations tarifaires et fonctionnelles reflètent les offres publiques en 2026 et peuvent varier — vérifiez les détails actuels directement auprès de chaque éditeur."
+    },
+    "analysis": {
+      "title": "Analyse Détaillée par Plateforme",
+      "pros_label": "Points forts",
+      "cons_label": "Points faibles",
+      "ideal_label": "Idéal pour",
+      "maintevo": {
+        "name": "MaintEvo",
+        "price": "49–499 $/mois, tarif fixe par entreprise",
+        "p1": "Tarif fixe par entreprise — aucun frais par utilisateur",
+        "p2": "Interface entièrement disponible en français et en anglais",
+        "p3": "Ordres de travail, actifs, maintenance préventive, inventaire et rapports réunis sur une seule plateforme",
+        "p4": "Opérationnel en quelques jours, pas en mois",
+        "p5": "Tarification transparente, sans coûts d'implémentation cachés",
+        "c1": "Plus récent sur le marché que les plateformes historiques",
+        "ideal": "Équipes en croissance et entreprises de taille moyenne qui veulent une GMAO complète sans le prix ni la complexité d'une solution d'entreprise"
+      },
+      "sap": {
+        "name": "SAP PM",
+        "price": "150–300 $/utilisateur/mois",
+        "p1": "Ensemble de fonctionnalités très complet",
+        "p2": "Intégration native à l'ERP SAP",
+        "p3": "Support de niveau entreprise",
+        "c1": "Coûts de licence par utilisateur très élevés",
+        "c2": "Mise en œuvre longue et complexe",
+        "c3": "Formation du personnel conséquente requise",
+        "c4": "Les coûts augmentent rapidement avec la taille de l'équipe",
+        "ideal": "Grandes entreprises déjà sous SAP ERP, avec une équipe IT dédiée et un budget pour des déploiements longs"
+      },
+      "maximo": {
+        "name": "IBM Maximo",
+        "price": "175–400 $/utilisateur/mois",
+        "p1": "Gestion d'actifs puissante pour des parcs complexes",
+        "p2": "Large éventail d'intégrations",
+        "p3": "S'adapte aux très grandes organisations",
+        "c1": "Tarifs prohibitifs pour les petites équipes",
+        "c2": "Courbe d'apprentissage abrupte",
+        "c3": "Délais de mise en œuvre longs",
+        "c4": "Formation continue coûteuse",
+        "ideal": "Grandes opérations industrielles avec des hiérarchies d'actifs complexes et multi-sites"
+      },
+      "upkeep": {
+        "name": "UpKeep",
+        "price": "35–85 $/utilisateur/mois",
+        "p1": "Interface moderne et pensée pour le mobile",
+        "p2": "Prise en main rapide pour les nouveaux utilisateurs",
+        "p3": "Applications natives iOS et Android",
+        "c1": "Le tarif par utilisateur grimpe vite avec la croissance",
+        "c2": "Fonctionnalités principales réparties entre plusieurs forfaits",
+        "c3": "Pas d'interface native en français",
+        "c4": "Coûts additionnels pour les intégrations et l'accès API",
+        "ideal": "Petites équipes anglophones cherchant un outil simple et mobile-first"
+      }
+    },
+    "savings": {
+      "title": "Le Coût Réel pour 10 Utilisateurs — Par An",
+      "desc": "La plupart des GMAO facturent par utilisateur. Le forfait Professional de MaintEvo couvre jusqu'à 25 utilisateurs pour un tarif mensuel fixe unique.",
+      "sap_label": "SAP PM (10 utilisateurs)",
+      "sap_cost": "18 000–36 000 $/an",
+      "sap_note": "+ implémentation et formation",
+      "maximo_label": "IBM Maximo (10 utilisateurs)",
+      "maximo_cost": "21 000–48 000 $/an",
+      "maximo_note": "+ coûts d'intégration",
+      "upkeep_label": "UpKeep (10 utilisateurs)",
+      "upkeep_cost": "4 200–10 200 $/an",
+      "upkeep_note": "+ frais additionnels",
+      "maintevo_label": "MaintEvo Professional (jusqu'à 25 utilisateurs)",
+      "maintevo_cost": "1 788 $/an",
+      "maintevo_note": "tarif fixe — aucun frais par utilisateur",
+      "highlight": "Économisez jusqu'à 34 000 $ par an par rapport à SAP PM — avec de la place pour grandir jusqu'à 25 utilisateurs sans frais supplémentaires.",
+      "cta": "Voir les tarifs MaintEvo"
+    },
+    "cta": {
+      "title": "Prêt à passer à une GMAO adaptée à votre budget ?",
+      "desc": "Rejoignez les équipes qui ont quitté des plateformes coûteuses et complexes — pour une GMAO plus simple et plus rapide, opérationnelle en quelques jours."
     }
   },
   "contact": {

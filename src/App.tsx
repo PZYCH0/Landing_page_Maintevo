@@ -8,6 +8,7 @@ const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
+const Comparison = React.lazy(() => import('./pages/Comparison'));
 const Industries = React.lazy(() => import('./pages/Industries'));
 const Enterprise = React.lazy(() => import('./pages/Enterprise'));
 const Resources = React.lazy(() => import('./pages/Resources'));
@@ -41,6 +42,7 @@ export default function App() {
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/pricing" element={<Pricing />} />
+              <Route path="/comparison" element={<Comparison />} />
               <Route path="/industries" element={<Industries />} />
               <Route path="/enterprise" element={<Enterprise />} />
               <Route path="/resources" element={<Resources />} />

@@ -55,7 +55,7 @@ export default function Pricing() {
                 <li style={{display:'flex',alignItems:'center',gap:'10px',fontSize:'.9rem',color:'#94a3b8'}}><CheckIcon />{t('pricing.starter.f4')}</li>
                 <li style={{display:'flex',alignItems:'center',gap:'10px',fontSize:'.9rem',color:'#94a3b8'}}><CheckIcon />{t('pricing.starter.f5')}</li>
               </ul>
-              <Link to="/contact" className="btn-p" style={{width:'100%',justifyContent:'center',padding:'12px'}}>{t('pricing.starter.cta')}</Link>
+              <Link to="/contact" className="btn-p" style={{width:'100%',justifyContent:'center',padding:'12px',marginTop:'auto'}}>{t('pricing.starter.cta')}</Link>
             </div>
 
             {/* Professional */}
@@ -74,7 +74,7 @@ export default function Pricing() {
                 <li style={{display:'flex',alignItems:'center',gap:'10px',fontSize:'.9rem',color:'#94a3b8'}}><CheckIcon color="#60a5fa" />{t('pricing.professional.f4')}</li>
                 <li style={{display:'flex',alignItems:'center',gap:'10px',fontSize:'.9rem',color:'#94a3b8'}}><CheckIcon color="#60a5fa" />{t('pricing.professional.f5')}</li>
               </ul>
-              <Link to="/contact" className="btn-p" style={{width:'100%',justifyContent:'center',padding:'12px'}}>{t('pricing.professional.cta')}</Link>
+              <Link to="/contact" className="btn-p" style={{width:'100%',justifyContent:'center',padding:'12px',marginTop:'auto'}}>{t('pricing.professional.cta')}</Link>
             </div>
 
             {/* Enterprise */}
@@ -92,7 +92,7 @@ export default function Pricing() {
                 <li style={{display:'flex',alignItems:'center',gap:'10px',fontSize:'.9rem',color:'#94a3b8'}}><CheckIcon />{t('pricing.enterprise.f4')}</li>
                 <li style={{display:'flex',alignItems:'center',gap:'10px',fontSize:'.9rem',color:'#94a3b8'}}><CheckIcon />{t('pricing.enterprise.f5')}</li>
               </ul>
-              <Link to="/contact" className="btn-p" style={{width:'100%',justifyContent:'center',padding:'12px'}}>{t('pricing.enterprise.cta')}</Link>
+              <Link to="/contact" className="btn-p" style={{width:'100%',justifyContent:'center',padding:'12px',marginTop:'auto'}}>{t('pricing.enterprise.cta')}</Link>
             </div>
 
           </div>

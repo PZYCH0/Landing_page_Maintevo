@@ -4,6 +4,7 @@
     "industries": "Industries",
     "enterprise": "Enterprise",
     "pricing": "Pricing",
+    "comparison": "Comparison",
     "resources": "Resources",
     "login": "Log In",
     "getStarted": "Get Started",
@@ -228,6 +229,119 @@
     "bottom": {
       "text": "Still have questions?",
       "link": "Talk to our team →"
+    }
+  },
+  "comparison": {
+    "hero": {
+      "badge": "Plans from $49/month — flat per company, no per-user fees",
+      "title": "MaintEvo vs. SAP PM, IBM Maximo & UpKeep",
+      "desc": "A side-by-side look at features, pricing, and what each platform is really built for — so you can pick the right CMMS for your team."
+    },
+    "table": {
+      "title": "Feature-by-Feature Comparison",
+      "col_feature": "Feature",
+      "col_maintevo": "MaintEvo",
+      "col_sap": "SAP PM",
+      "col_maximo": "IBM Maximo",
+      "col_upkeep": "UpKeep",
+      "sub_maintevo": "$49–499/mo flat",
+      "sub_sap": "$150–300/user/mo",
+      "sub_maximo": "$175–400/user/mo",
+      "sub_upkeep": "$35–85/user/mo",
+      "r_wo": "Work Orders",
+      "r_assets": "Equipment & Asset Hierarchy",
+      "r_pm": "Preventive Maintenance",
+      "r_inventory": "Inventory & Purchasing",
+      "r_reporting": "KPI & Reporting Dashboard",
+      "r_mobile": "Mobile App",
+      "r_api": "API & Integrations",
+      "r_multilingual": "Multilingual (EN/FR)",
+      "r_flatpricing": "Flat Per-Company Pricing",
+      "r_setup": "Typical Setup Time",
+      "r_support": "Support Included",
+      "val_addon": "Add-on",
+      "val_limited": "Limited",
+      "val_days": "Days",
+      "val_weeks": "Days–weeks",
+      "val_months": "Months",
+      "val_extra": "Extra cost",
+      "val_tiered": "Tiered plans",
+      "note": "Pricing and feature information reflects publicly listed plans as of 2026 and may vary — confirm current details directly with each vendor."
+    },
+    "analysis": {
+      "title": "A Closer Look at Each Platform",
+      "pros_label": "Strengths",
+      "cons_label": "Weaknesses",
+      "ideal_label": "Best for",
+      "maintevo": {
+        "name": "MaintEvo",
+        "price": "$49–499/mo flat per company",
+        "p1": "Flat per-company pricing — no per-user fees, ever",
+        "p2": "Full English & French interface throughout",
+        "p3": "Work orders, assets, PM, inventory and reporting in one platform",
+        "p4": "Live in days, not months",
+        "p5": "Transparent pricing, no hidden implementation costs",
+        "c1": "Newer to the market than legacy enterprise platforms",
+        "ideal": "Growing teams and mid-size operations that want enterprise-grade maintenance management without enterprise pricing or complexity"
+      },
+      "sap": {
+        "name": "SAP PM",
+        "price": "$150–300/user/month",
+        "p1": "Extremely comprehensive feature set",
+        "p2": "Native integration with SAP ERP",
+        "p3": "Enterprise-grade support tiers",
+        "c1": "Very high per-user licensing costs",
+        "c2": "Complex, lengthy implementation",
+        "c3": "Requires extensive staff training",
+        "c4": "Costs scale fast as your team grows",
+        "ideal": "Large enterprises already running SAP ERP, with dedicated IT teams and budget for long rollouts"
+      },
+      "maximo": {
+        "name": "IBM Maximo",
+        "price": "$175–400/user/month",
+        "p1": "Powerful asset management for complex fleets",
+        "p2": "Wide range of integrations",
+        "p3": "Scales to very large operations",
+        "c1": "Prohibitive pricing for smaller teams",
+        "c2": "Steep learning curve",
+        "c3": "Long implementation timelines",
+        "c4": "Costly ongoing training",
+        "ideal": "Large industrial operations with complex, multi-site asset hierarchies"
+      },
+      "upkeep": {
+        "name": "UpKeep",
+        "price": "$35–85/user/month",
+        "p1": "Modern, mobile-first interface",
+        "p2": "Easy to onboard new users",
+        "p3": "Native iOS & Android apps",
+        "c1": "Per-user pricing adds up as you grow",
+        "c2": "Core features split across paid tiers",
+        "c3": "No native French interface",
+        "c4": "Add-on costs for integrations & API access",
+        "ideal": "Small, English-speaking teams that want a simple mobile-first tool"
+      }
+    },
+    "savings": {
+      "title": "What 10 Users Actually Cost — Per Year",
+      "desc": "Most CMMS platforms charge per user. MaintEvo's Professional plan covers up to 25 users for one flat monthly price.",
+      "sap_label": "SAP PM (10 users)",
+      "sap_cost": "$18,000–$36,000/yr",
+      "sap_note": "+ implementation & training",
+      "maximo_label": "IBM Maximo (10 users)",
+      "maximo_cost": "$21,000–$48,000/yr",
+      "maximo_note": "+ integration costs",
+      "upkeep_label": "UpKeep (10 users)",
+      "upkeep_cost": "$4,200–$10,200/yr",
+      "upkeep_note": "+ add-on fees",
+      "maintevo_label": "MaintEvo Professional (up to 25 users)",
+      "maintevo_cost": "$1,788/yr",
+      "maintevo_note": "flat — no per-user fees",
+      "highlight": "Save up to $34,000+ a year vs. SAP PM — with room to grow to 25 users at no extra cost.",
+      "cta": "See MaintEvo pricing"
+    },
+    "cta": {
+      "title": "Ready to switch to a CMMS that fits your budget?",
+      "desc": "Join the teams who've moved off expensive, complex platforms — and got a faster, simpler CMMS in days."
     }
   },
   "contact": {

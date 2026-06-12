@@ -88,7 +88,7 @@
 
 /* ── Feature cards ── */
 .feat-card{
-  display:block;text-decoration:none;
+  display:flex;flex-direction:column;text-decoration:none;
   background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);
   border-radius:16px;padding:28px;transition:all .3s;
 }
@@ -98,7 +98,7 @@
   box-shadow:0 20px 60px rgba(0,0,0,.3),0 0 30px rgba(59,130,246,.1);
 }
 .feat-card .learn-more{
-  display:inline-flex;align-items:center;gap:5px;margin-top:16px;
+  display:inline-flex;align-items:center;gap:5px;margin-top:auto;padding-top:16px;
   font-size:12px;font-weight:600;color:#3b82f6;letter-spacing:.02em;
   transition:gap .2s;
 }
@@ -207,7 +207,7 @@
 .benefit-card:hover{border-color:rgba(59,130,246,.3)}
 
 /* ── Price card ── */
-.price-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:32px;transition:all .3s}
+.price-card{display:flex;flex-direction:column;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:32px;transition:all .3s}
 .price-card.featured{background:rgba(59,130,246,.1);border-color:rgba(59,130,246,.4);box-shadow:0 0 40px rgba(59,130,246,.15)}
 
 /* ── FAQ ── */
@@ -456,7 +456,8 @@ html:not(.dark) .btn-s:hover {
 
 html:not(.dark) [style*="background:rgba(255,255,255,.03)"],
 html:not(.dark) [style*="background:rgba(255,255,255, .03)"],
-html:not(.dark) [style*="background:rgba(255,255,255,0.03)"] {
+html:not(.dark) [style*="background:rgba(255,255,255,0.03)"],
+html:not(.dark) [style*="background: rgba(255, 255, 255, 0.03)"] {
   background: rgba(255,255,255,.7) !important;
   border-color: rgba(59,130,246,.12) !important;
 }
@@ -466,7 +467,14 @@ html:not(.dark) [style*="background:rgba(255,255,255,.06)"],
 html:not(.dark) [style*="background:rgba(255,255,255,.07)"],
 html:not(.dark) [style*="background:rgba(255,255,255,.08)"],
 html:not(.dark) [style*="background:rgba(255,255,255,.10)"],
-html:not(.dark) [style*="background:rgba(255,255,255,.12)"] {
+html:not(.dark) [style*="background:rgba(255,255,255,.12)"],
+html:not(.dark) [style*="background: rgba(255, 255, 255, 0.04)"],
+html:not(.dark) [style*="background: rgba(255, 255, 255, 0.05)"],
+html:not(.dark) [style*="background: rgba(255, 255, 255, 0.06)"],
+html:not(.dark) [style*="background: rgba(255, 255, 255, 0.07)"],
+html:not(.dark) [style*="background: rgba(255, 255, 255, 0.08)"],
+html:not(.dark) [style*="background: rgba(255, 255, 255, 0.1)"],
+html:not(.dark) [style*="background: rgba(255, 255, 255, 0.12)"] {
   background: rgba(59,130,246,.06) !important;
 }
 
@@ -477,8 +485,10 @@ html:not(.dark) .ai-node {
 
 html:not(.dark) .hover\:bg-white\/10:hover { background: rgba(0,0,0,.06) !important; }
 
-html:not(.dark) [style*="border:1px solid rgba(255,255,255,"] { border-color: rgba(0,0,0,.08) !important; }
-html:not(.dark) [style*="border-color:rgba(255,255,255,"]    { border-color: rgba(0,0,0,.08) !important; }
+html:not(.dark) [style*="border:1px solid rgba(255,255,255,"],
+html:not(.dark) [style*="border: 1px solid rgba(255, 255, 255,"] { border-color: rgba(0,0,0,.08) !important; }
+html:not(.dark) [style*="border-color:rgba(255,255,255,"],
+html:not(.dark) [style*="border-color: rgba(255, 255, 255,"]    { border-color: rgba(0,0,0,.08) !important; }
 
 /* ── Hero fade ── */
 .hero-fade {
@@ -487,6 +497,61 @@ html:not(.dark) [style*="border-color:rgba(255,255,255,"]    { border-color: rgb
 }
 html:not(.dark) .hero-fade {
   background: linear-gradient(to bottom, transparent 0%, #f1f5f9 100%) !important;
+}
+
+/* ── Benefit card (light mode) ── */
+html:not(.dark) .benefit-card {
+  background: rgba(255,255,255,.75) !important;
+  border-color: rgba(59,130,246,.15) !important;
+  box-shadow: 0 2px 12px rgba(59,130,246,.06);
+}
+html:not(.dark) .benefit-card:hover { border-color: rgba(59,130,246,.3) !important; }
+
+/* ── Price card (light mode) ── */
+html:not(.dark) .price-card {
+  background: rgba(255,255,255,.8) !important;
+  border-color: rgba(59,130,246,.15) !important;
+  box-shadow: 0 2px 12px rgba(59,130,246,.06);
+}
+html:not(.dark) .price-card.featured {
+  background: rgba(59,130,246,.08) !important;
+  border-color: rgba(59,130,246,.4) !important;
+}
+
+/* ── FAQ (light mode) ── */
+html:not(.dark) .faq-btn        { color: #0f172a !important; }
+html:not(.dark) .faq-btn:hover  { color: #3b82f6 !important; }
+html:not(.dark) .faq-body       { color: #475569 !important; }
+html:not(.dark) .faq-item       { border-bottom-color: rgba(0,0,0,.08) !important; }
+
+/* ── Perm / KPI / Audit row dividers (light mode) ── */
+html:not(.dark) .perm-item  { border-bottom-color: rgba(0,0,0,.07) !important; color: #334155 !important; }
+html:not(.dark) .kpi-row    { border-bottom-color: rgba(0,0,0,.08) !important; }
+html:not(.dark) .kpi-label  { color: #2563eb !important; }
+html:not(.dark) .audit-row  { border-bottom-color: rgba(0,0,0,.07) !important; }
+
+/* ── Navbar login button border (light mode) ── */
+html:not(.dark) .border-white\/20  { border-color: rgba(0,0,0,.15) !important; }
+html:not(.dark) .hover\:border-white\/40:hover { border-color: rgba(0,0,0,.25) !important; }
+html:not(.dark) .hover\:bg-white\/5:hover  { background: rgba(0,0,0,.04) !important; }
+
+/* ── Inline border-bottom / border-top with white rgba (light mode) ── */
+html:not(.dark) [style*="border-bottom:1px solid rgba(255,255,255,"],
+html:not(.dark) [style*="border-bottom: 1px solid rgba(255,255,255,"],
+html:not(.dark) [style*="border-bottom: 1px solid rgba(255, 255, 255,"] {
+  border-bottom-color: rgba(0,0,0,.07) !important;
+}
+html:not(.dark) [style*="border-top:1px solid rgba(255,255,255,"],
+html:not(.dark) [style*="border-top: 1px solid rgba(255,255,255,"],
+html:not(.dark) [style*="border-top: 1px solid rgba(255, 255, 255,"] {
+  border-top-color: rgba(0,0,0,.07) !important;
+}
+
+/* ── Table row alternates (light mode) ── */
+html:not(.dark) [style*="background:rgba(255,255,255,.02)"],
+html:not(.dark) [style*="background: rgba(255,255,255,.02)"],
+html:not(.dark) [style*="background: rgba(255, 255, 255, 0.02)"] {
+  background: rgba(59,130,246,.03) !important;
 }
 
 /* ═══════════════════════════════════════════════════════════════

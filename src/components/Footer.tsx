@@ -28,6 +28,7 @@ export default function Footer() {
             <ul style={{display:'flex',flexDirection:'column',gap:'10px',listStyle:'none',padding:0}}>
               <li><Link to="/features" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">{t('footer.platform_features')}</Link></li>
               <li><Link to="/pricing" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">{t('footer.platform_pricing')}</Link></li>
+              <li><Link to="/comparison" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">{t('nav.comparison')}</Link></li>
               <li><a href="#" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">{t('footer.platform_integrations')}</a></li>
               <li><a href="#" style={{fontSize:'13px',textDecoration:'none',color:'#64748b'}} className="hover:text-white transition-colors">{t('footer.platform_changelog')}</a></li>
             </ul>
