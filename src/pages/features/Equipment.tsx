@@ -2,13 +2,17 @@ import { Link } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
 import { useTranslation } from 'react-i18next';
 
-const BenefitCard = ({ iconPath, title, body }: { iconPath: React.ReactNode; title: string; body: string }) => (
+const BenefitCard = ({ iconPath, title, body, img }: { iconPath: React.ReactNode; title: string; body: string; img: string }) => (
   <div className="benefit-card">
-    <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'rgba(59,130,246,.1)',border:'1px solid rgba(59,130,246,.2)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
-      <svg width="22" height="22" fill="none" stroke="#60a5fa" strokeWidth="1.8" viewBox="0 0 24 24">{iconPath}</svg>
+    <div className="absolute inset-0 bg-cover bg-center z-0" style={{backgroundImage:`url('${img}')`}}></div>
+    <div className="feat-overlay absolute inset-0 bg-[#0f172a]/90 z-0"></div>
+    <div className="relative z-10">
+      <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'rgba(59,130,246,.1)',border:'1px solid rgba(59,130,246,.2)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
+        <svg width="22" height="22" fill="none" stroke="#60a5fa" strokeWidth="1.8" viewBox="0 0 24 24">{iconPath}</svg>
+      </div>
+      <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'12px'}}>{title}</h3>
+      <p style={{color:'#94a3b8',lineHeight:1.7,fontSize:'.95rem'}}>{body}</p>
     </div>
-    <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'12px'}}>{title}</h3>
-    <p style={{color:'#94a3b8',lineHeight:1.7,fontSize:'.95rem'}}>{body}</p>
   </div>
 );
 
@@ -98,10 +102,10 @@ export default function Equipment() {
       <section style={{background:'#050b16',padding:'80px 0'}}>
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-6">
-            <BenefitCard iconPath={<path d="M4 7h16M4 12h16M4 17h10"/>} title={t('equipment.benefits.b1_title')} body={t('equipment.benefits.b1_body')} />
-            <BenefitCard iconPath={<><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></>} title={t('equipment.benefits.b2_title')} body={t('equipment.benefits.b2_body')} />
-            <BenefitCard iconPath={<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>} title={t('equipment.benefits.b3_title')} body={t('equipment.benefits.b3_body')} />
-            <BenefitCard iconPath={<path d="M13 10V3L4 14h7v7l9-11h-7z"/>} title={t('equipment.benefits.b4_title')} body={t('equipment.benefits.b4_body')} />
+            <BenefitCard iconPath={<path d="M4 7h16M4 12h16M4 17h10"/>} title={t('equipment.benefits.b1_title')} body={t('equipment.benefits.b1_body')} img="https://images.unsplash.com/photo-1715322506425-2fc19fe0fc5f?w=800&q=80" />
+            <BenefitCard iconPath={<><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></>} title={t('equipment.benefits.b2_title')} body={t('equipment.benefits.b2_body')} img="https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?w=800&q=80" />
+            <BenefitCard iconPath={<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>} title={t('equipment.benefits.b3_title')} body={t('equipment.benefits.b3_body')} img="https://images.unsplash.com/photo-1569235186275-626cb53b83ce?w=800&q=80" />
+            <BenefitCard iconPath={<path d="M13 10V3L4 14h7v7l9-11h-7z"/>} title={t('equipment.benefits.b4_title')} body={t('equipment.benefits.b4_body')} img="https://images.unsplash.com/photo-1629058019123-da19dc3d871a?w=800&q=80" />
           </div>
         </div>
       </section>

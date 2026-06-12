@@ -54,16 +54,20 @@ export default function MaintenanceCalendar() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-6">
             {([
-              { titleKey:'calendar.benefits.b1_title', bodyKey:'calendar.benefits.b1_body', icon:'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' },
-              { titleKey:'calendar.benefits.b2_title', bodyKey:'calendar.benefits.b2_body', icon:'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z' },
-              { titleKey:'calendar.benefits.b3_title', bodyKey:'calendar.benefits.b3_body', icon:'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z' },
+              { titleKey:'calendar.benefits.b1_title', bodyKey:'calendar.benefits.b1_body', icon:'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z', img:'https://images.unsplash.com/photo-1543168256-4ae2229821f1?w=800&q=80' },
+              { titleKey:'calendar.benefits.b2_title', bodyKey:'calendar.benefits.b2_body', icon:'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z', img:'https://images.unsplash.com/photo-1554103210-26d928978fb5?w=800&q=80' },
+              { titleKey:'calendar.benefits.b3_title', bodyKey:'calendar.benefits.b3_body', icon:'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z', img:'https://images.unsplash.com/photo-1620275765334-4ed948bb4502?w=800&q=80' },
             ]).map(card => (
               <div key={card.titleKey} className="benefit-card">
-                <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'rgba(59,130,246,.1)',border:'1px solid rgba(59,130,246,.2)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
-                  <svg width="22" height="22" fill="none" stroke="#60a5fa" strokeWidth="1.8" viewBox="0 0 24 24"><path d={card.icon}/></svg>
+                <div className="absolute inset-0 bg-cover bg-center z-0" style={{backgroundImage:`url('${card.img}')`}}></div>
+                <div className="feat-overlay absolute inset-0 bg-[#0f172a]/90 z-0"></div>
+                <div className="relative z-10">
+                  <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'rgba(59,130,246,.1)',border:'1px solid rgba(59,130,246,.2)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
+                    <svg width="22" height="22" fill="none" stroke="#60a5fa" strokeWidth="1.8" viewBox="0 0 24 24"><path d={card.icon}/></svg>
+                  </div>
+                  <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'12px'}}>{t(card.titleKey)}</h3>
+                  <p style={{color:'#94a3b8',lineHeight:1.7,fontSize:'.95rem'}}>{t(card.bodyKey)}</p>
                 </div>
-                <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'12px'}}>{t(card.titleKey)}</h3>
-                <p style={{color:'#94a3b8',lineHeight:1.7,fontSize:'.95rem'}}>{t(card.bodyKey)}</p>
               </div>
             ))}
           </div>

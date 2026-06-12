@@ -46,32 +46,48 @@ export default function Reporting() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-6">
             <div className="benefit-card">
-              <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'rgba(59,130,246,.1)',border:'1px solid rgba(59,130,246,.2)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
-                <svg width="22" height="22" fill="none" stroke="#60a5fa" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <div className="absolute inset-0 bg-cover bg-center z-0" style={{backgroundImage:`url('https://images.unsplash.com/photo-1671043126373-fd96bd6bf964?w=800&q=80')`}}></div>
+              <div className="feat-overlay absolute inset-0 bg-[#0f172a]/90 z-0"></div>
+              <div className="relative z-10">
+                <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'rgba(59,130,246,.1)',border:'1px solid rgba(59,130,246,.2)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
+                  <svg width="22" height="22" fill="none" stroke="#60a5fa" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                </div>
+                <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'10px'}}>{t('reporting.benefits.b1_title')}</h3>
+                <p style={{color:'#94a3b8',fontSize:'.92rem',lineHeight:1.7}}>{t('reporting.benefits.b1_body')}</p>
               </div>
-              <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'10px'}}>{t('reporting.benefits.b1_title')}</h3>
-              <p style={{color:'#94a3b8',fontSize:'.92rem',lineHeight:1.7}}>{t('reporting.benefits.b1_body')}</p>
             </div>
             <div className="benefit-card">
-              <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'rgba(34,197,94,.08)',border:'1px solid rgba(34,197,94,.18)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
-                <svg width="22" height="22" fill="none" stroke="#4ade80" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              <div className="absolute inset-0 bg-cover bg-center z-0" style={{backgroundImage:`url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80')`}}></div>
+              <div className="feat-overlay absolute inset-0 bg-[#0f172a]/90 z-0"></div>
+              <div className="relative z-10">
+                <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'rgba(34,197,94,.08)',border:'1px solid rgba(34,197,94,.18)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
+                  <svg width="22" height="22" fill="none" stroke="#4ade80" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                </div>
+                <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'10px'}}>{t('reporting.benefits.b2_title')}</h3>
+                <p style={{color:'#94a3b8',fontSize:'.92rem',lineHeight:1.7}}>{t('reporting.benefits.b2_body')}</p>
               </div>
-              <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'10px'}}>{t('reporting.benefits.b2_title')}</h3>
-              <p style={{color:'#94a3b8',fontSize:'.92rem',lineHeight:1.7}}>{t('reporting.benefits.b2_body')}</p>
             </div>
             <div className="benefit-card">
-              <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'rgba(251,191,36,.07)',border:'1px solid rgba(251,191,36,.18)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
-                <svg width="22" height="22" fill="none" stroke="#fbbf24" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+              <div className="absolute inset-0 bg-cover bg-center z-0" style={{backgroundImage:`url('https://images.unsplash.com/photo-1697301439928-7c60326ff1ea?w=800&q=80')`}}></div>
+              <div className="feat-overlay absolute inset-0 bg-[#0f172a]/90 z-0"></div>
+              <div className="relative z-10">
+                <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'rgba(251,191,36,.07)',border:'1px solid rgba(251,191,36,.18)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
+                  <svg width="22" height="22" fill="none" stroke="#fbbf24" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                </div>
+                <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'10px'}}>{t('reporting.benefits.b3_title')}</h3>
+                <p style={{color:'#94a3b8',fontSize:'.92rem',lineHeight:1.7}}>{t('reporting.benefits.b3_body')}</p>
               </div>
-              <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'10px'}}>{t('reporting.benefits.b3_title')}</h3>
-              <p style={{color:'#94a3b8',fontSize:'.92rem',lineHeight:1.7}}>{t('reporting.benefits.b3_body')}</p>
             </div>
             <div className="benefit-card">
-              <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'rgba(168,85,247,.08)',border:'1px solid rgba(168,85,247,.18)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
-                <svg width="22" height="22" fill="none" stroke="#c084fc" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              <div className="absolute inset-0 bg-cover bg-center z-0" style={{backgroundImage:`url('https://images.unsplash.com/photo-1681505093910-73ce4e66e95f?w=800&q=80')`}}></div>
+              <div className="feat-overlay absolute inset-0 bg-[#0f172a]/90 z-0"></div>
+              <div className="relative z-10">
+                <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'rgba(168,85,247,.08)',border:'1px solid rgba(168,85,247,.18)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
+                  <svg width="22" height="22" fill="none" stroke="#c084fc" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                </div>
+                <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'10px'}}>{t('reporting.benefits.b4_title')}</h3>
+                <p style={{color:'#94a3b8',fontSize:'.92rem',lineHeight:1.7}}>{t('reporting.benefits.b4_body')}</p>
               </div>
-              <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'10px'}}>{t('reporting.benefits.b4_title')}</h3>
-              <p style={{color:'#94a3b8',fontSize:'.92rem',lineHeight:1.7}}>{t('reporting.benefits.b4_body')}</p>
             </div>
           </div>
         </div>

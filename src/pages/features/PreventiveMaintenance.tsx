@@ -2,13 +2,17 @@ import { Link } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
 import { useTranslation } from 'react-i18next';
 
-const BenefitCard = ({ iconPath, title, body }: { iconPath: React.ReactNode; title: string; body: string }) => (
+const BenefitCard = ({ iconPath, title, body, img }: { iconPath: React.ReactNode; title: string; body: string; img: string }) => (
   <div className="benefit-card">
-    <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'rgba(59,130,246,.1)',border:'1px solid rgba(59,130,246,.2)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
-      <svg width="22" height="22" fill="none" stroke="#60a5fa" strokeWidth="1.8" viewBox="0 0 24 24">{iconPath}</svg>
+    <div className="absolute inset-0 bg-cover bg-center z-0" style={{backgroundImage:`url('${img}')`}}></div>
+    <div className="feat-overlay absolute inset-0 bg-[#0f172a]/90 z-0"></div>
+    <div className="relative z-10">
+      <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'rgba(59,130,246,.1)',border:'1px solid rgba(59,130,246,.2)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
+        <svg width="22" height="22" fill="none" stroke="#60a5fa" strokeWidth="1.8" viewBox="0 0 24 24">{iconPath}</svg>
+      </div>
+      <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'12px'}}>{title}</h3>
+      <p style={{color:'#94a3b8',lineHeight:1.7,fontSize:'.95rem'}}>{body}</p>
     </div>
-    <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'12px'}}>{title}</h3>
-    <p style={{color:'#94a3b8',lineHeight:1.7,fontSize:'.95rem'}}>{body}</p>
   </div>
 );
 
@@ -79,10 +83,10 @@ export default function PreventiveMaintenance() {
       <section style={{background:'#080f1e',padding:'80px 0'}}>
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-6">
-            <BenefitCard iconPath={<path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>} title={t('preventiveMaintenance.benefits.b1_title')} body={t('preventiveMaintenance.benefits.b1_body')} />
-            <BenefitCard iconPath={<path d="M13 10V3L4 14h7v7l9-11h-7z"/>} title={t('preventiveMaintenance.benefits.b2_title')} body={t('preventiveMaintenance.benefits.b2_body')} />
-            <BenefitCard iconPath={<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>} title={t('preventiveMaintenance.benefits.b3_title')} body={t('preventiveMaintenance.benefits.b3_body')} />
-            <BenefitCard iconPath={<path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>} title={t('preventiveMaintenance.benefits.b4_title')} body={t('preventiveMaintenance.benefits.b4_body')} />
+            <BenefitCard iconPath={<path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>} title={t('preventiveMaintenance.benefits.b1_title')} body={t('preventiveMaintenance.benefits.b1_body')} img="https://images.unsplash.com/photo-1435527173128-983b87201f4d?w=800&q=80" />
+            <BenefitCard iconPath={<path d="M13 10V3L4 14h7v7l9-11h-7z"/>} title={t('preventiveMaintenance.benefits.b2_title')} body={t('preventiveMaintenance.benefits.b2_body')} img="https://images.unsplash.com/photo-1647427060118-4911c9821b82?w=800&q=80" />
+            <BenefitCard iconPath={<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>} title={t('preventiveMaintenance.benefits.b3_title')} body={t('preventiveMaintenance.benefits.b3_body')} img="https://images.unsplash.com/photo-1758599668338-4c55a3bd0ce0?w=800&q=80" />
+            <BenefitCard iconPath={<path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>} title={t('preventiveMaintenance.benefits.b4_title')} body={t('preventiveMaintenance.benefits.b4_body')} img="https://images.unsplash.com/photo-1453928582365-b6ad33cbcf64?w=800&q=80" />
           </div>
         </div>
       </section>

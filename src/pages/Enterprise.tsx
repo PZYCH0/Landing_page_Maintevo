@@ -6,36 +6,42 @@ const features = [
     icon: <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>,
     title: 'Multi-site management',
     desc: 'Run dozens of facilities from one account. Each site has its own assets, teams, and work queues — while you see the full picture from the top.',
+    img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80',
   },
   {
     stroke: '#22d3ee', bg: 'rgba(34,211,238,.08)', border: 'rgba(34,211,238,.2)',
     icon: <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>,
     title: 'SSO & advanced security',
     desc: 'Connect MaintEvo to your existing identity provider via SAML or OIDC. Enforce MFA, manage roles centrally, and meet your security requirements.',
+    img: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80',
   },
   {
     stroke: '#818cf8', bg: 'rgba(99,102,241,.08)', border: 'rgba(99,102,241,.2)',
     icon: <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>,
     title: 'API & integrations',
     desc: 'Connect MaintEvo to your ERP, EAM, or IoT stack via REST API. Push data in, pull data out, and build automated workflows across your systems.',
+    img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80',
   },
   {
     stroke: '#4ade80', bg: 'rgba(34,197,94,.07)', border: 'rgba(34,197,94,.18)',
     icon: <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>,
     title: 'Dedicated success team',
     desc: 'A named account manager and solution engineer who know your setup. Onboarding, training, and ongoing support — not just a ticket queue.',
+    img: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80',
   },
   {
     stroke: '#fbbf24', bg: 'rgba(251,191,36,.07)', border: 'rgba(251,191,36,.18)',
     icon: <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>,
     title: 'Custom contracts & SLAs',
     desc: 'Flexible billing, data residency options, uptime guarantees, and legal terms that work for procurement and legal teams at large organizations.',
+    img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
   },
   {
     stroke: '#c084fc', bg: 'rgba(168,85,247,.08)', border: 'rgba(168,85,247,.18)',
     icon: <path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>,
     title: 'Private cloud deployment',
     desc: 'Need your data in your own environment? MaintEvo can be deployed on your infrastructure or in a dedicated cloud tenancy with full isolation.',
+    img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80',
   },
 ];
 
@@ -70,11 +76,15 @@ export default function Enterprise() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map(f => (
               <div key={f.title} className="benefit-card">
-                <div style={{width:'48px',height:'48px',borderRadius:'12px',background:f.bg,border:`1px solid ${f.border}`,display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
-                  <svg width="22" height="22" fill="none" stroke={f.stroke} strokeWidth="1.8" viewBox="0 0 24 24">{f.icon}</svg>
+                <div className="absolute inset-0 bg-cover bg-center z-0" style={{backgroundImage:`url('${f.img}')`}}></div>
+                <div className="feat-overlay absolute inset-0 bg-[#0f172a]/90 z-0"></div>
+                <div className="relative z-10">
+                  <div style={{width:'48px',height:'48px',borderRadius:'12px',background:f.bg,border:`1px solid ${f.border}`,display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
+                    <svg width="22" height="22" fill="none" stroke={f.stroke} strokeWidth="1.8" viewBox="0 0 24 24">{f.icon}</svg>
+                  </div>
+                  <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'10px'}}>{f.title}</h3>
+                  <p style={{color:'#94a3b8',fontSize:'.92rem',lineHeight:1.7}}>{f.desc}</p>
                 </div>
-                <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'10px'}}>{f.title}</h3>
-                <p style={{color:'#94a3b8',fontSize:'.92rem',lineHeight:1.7}}>{f.desc}</p>
               </div>
             ))}
           </div>

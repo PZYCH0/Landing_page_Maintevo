@@ -2,13 +2,17 @@ import { Link } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
 import { useTranslation } from 'react-i18next';
 
-const BenefitCard = ({ iconPath, title, body }: { iconPath: React.ReactNode; title: string; body: string }) => (
+const BenefitCard = ({ iconPath, title, body, img }: { iconPath: React.ReactNode; title: string; body: string; img: string }) => (
   <div className="benefit-card">
-    <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'rgba(59,130,246,.1)',border:'1px solid rgba(59,130,246,.2)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
-      <svg width="22" height="22" fill="none" stroke="#60a5fa" strokeWidth="1.8" viewBox="0 0 24 24">{iconPath}</svg>
+    <div className="absolute inset-0 bg-cover bg-center z-0" style={{backgroundImage:`url('${img}')`}}></div>
+    <div className="feat-overlay absolute inset-0 bg-[#0f172a]/90 z-0"></div>
+    <div className="relative z-10">
+      <div style={{width:'48px',height:'48px',borderRadius:'12px',background:'rgba(59,130,246,.1)',border:'1px solid rgba(59,130,246,.2)',display:'flex',alignItems:'center',justifyContent:'center',marginBottom:'20px'}}>
+        <svg width="22" height="22" fill="none" stroke="#60a5fa" strokeWidth="1.8" viewBox="0 0 24 24">{iconPath}</svg>
+      </div>
+      <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'12px'}}>{title}</h3>
+      <p style={{color:'#94a3b8',lineHeight:1.7,fontSize:'.95rem'}}>{body}</p>
     </div>
-    <h3 style={{fontSize:'1.1rem',fontWeight:700,color:'#fff',marginBottom:'12px'}}>{title}</h3>
-    <p style={{color:'#94a3b8',lineHeight:1.7,fontSize:'.95rem'}}>{body}</p>
   </div>
 );
 
@@ -63,10 +67,10 @@ export default function Inventory() {
       <section style={{background:'#080f1e',padding:'80px 0'}}>
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-6">
-            <BenefitCard iconPath={<path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>} title={t('inventory.benefits.b1_title')} body={t('inventory.benefits.b1_body')} />
-            <BenefitCard iconPath={<path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>} title={t('inventory.benefits.b2_title')} body={t('inventory.benefits.b2_body')} />
-            <BenefitCard iconPath={<path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>} title={t('inventory.benefits.b3_title')} body={t('inventory.benefits.b3_body')} />
-            <BenefitCard iconPath={<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>} title={t('inventory.benefits.b4_title')} body={t('inventory.benefits.b4_body')} />
+            <BenefitCard iconPath={<path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>} title={t('inventory.benefits.b1_title')} body={t('inventory.benefits.b1_body')} img="https://images.unsplash.com/photo-1631856954913-c751a44490ec?w=800&q=80" />
+            <BenefitCard iconPath={<path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>} title={t('inventory.benefits.b2_title')} body={t('inventory.benefits.b2_body')} img="https://images.unsplash.com/photo-1605701250441-2bfa95839417?w=800&q=80" />
+            <BenefitCard iconPath={<path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>} title={t('inventory.benefits.b3_title')} body={t('inventory.benefits.b3_body')} img="https://images.unsplash.com/photo-1656543802898-41c8c46683a7?w=800&q=80" />
+            <BenefitCard iconPath={<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>} title={t('inventory.benefits.b4_title')} body={t('inventory.benefits.b4_body')} img="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80" />
           </div>
         </div>
       </section>

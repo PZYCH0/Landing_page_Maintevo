@@ -203,7 +203,7 @@
 .sect-div{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent)}
 
 /* ── Benefit card ── */
-.benefit-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:32px;transition:border-color .3s}
+.benefit-card{position:relative;overflow:hidden;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:32px;transition:border-color .3s}
 .benefit-card:hover{border-color:rgba(59,130,246,.3)}
 
 /* ── Price card ── */
@@ -384,7 +384,7 @@ html:not(.dark) .feat-card .icon {
   background: rgba(59,130,246,.08) !important;
   border-color: rgba(59,130,246,.15) !important;
 }
-html:not(.dark) .feat-card .feat-overlay {
+html:not(.dark) .feat-overlay {
   background: rgba(255,255,255,.85) !important;
 }
 
