@@ -384,6 +384,9 @@ html:not(.dark) .feat-card .icon {
   background: rgba(59,130,246,.08) !important;
   border-color: rgba(59,130,246,.15) !important;
 }
+html:not(.dark) .feat-card .feat-overlay {
+  background: rgba(255,255,255,.85) !important;
+}
 
 html:not(.dark) .testi-card {
   background: rgba(255,255,255,.7) !important;
