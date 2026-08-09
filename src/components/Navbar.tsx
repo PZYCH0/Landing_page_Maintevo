@@ -58,7 +58,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src="/images/logo-maintevo.png" style={{width:'44px',height:'44px',objectFit:'contain'}} className="mr-3" alt="MaintEvo" />
+            <img src="/images/logo-maintevo.png" style={{width:'44px',height:'44px',objectFit:'contain'}} className="mr-1" alt="MaintEvo" />
             <span className="self-center text-lg font-bold text-white whitespace-nowrap">Maint<span style={{color:'#3b82f6'}}>Evo</span></span>
           </Link>
 
