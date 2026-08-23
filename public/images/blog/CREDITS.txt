@@ -1,0 +1,31 @@
+Article thumbnails — source and licence
+=======================================
+
+All five photographs come from Unsplash and are used under the Unsplash
+Licence: free for commercial use, no attribution required. This file exists
+so the provenance stays traceable if that is ever queried.
+
+Every image was chosen without an identifiable face in it. The Unsplash
+Licence does not guarantee model or property releases, and a recognisable
+person in commercial marketing is the one place that gap can bite.
+
+  what-is-a-cmms.webp          unsplash.com/photos/…1516937941344-00b4e0337589
+  preventive-vs-reactive.webp  unsplash.com/photos/…1504328345606-18bbc8c9d7d1
+  maintenance-kpis.webp        unsplash.com/photos/…1518186285589-2f7649de83e0
+  from-spreadsheets.webp       unsplash.com/photos/…1454165804606-c3d57bc86b40
+  cmms-cost-morocco.webp       unsplash.com/photos/…1567789884554-0b844b597180
+
+These are editorial illustration for blog articles. They are not, and must
+not be presented as, pictures of the product. PRODUCT.md's rule against
+fabricated product imagery still stands.
+
+
+Page imagery — public/images/pages/
+===================================
+
+Same source and licence as above: Unsplash, free for commercial use, no
+attribution required. Every image was checked before use and none carries an
+identifiable face (the textile shot is cropped to exclude the worker).
+
+These illustrate the pages editorially. They are not product screenshots and
+must never be presented as such.
