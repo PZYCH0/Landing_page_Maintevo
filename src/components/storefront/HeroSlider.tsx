@@ -198,7 +198,7 @@ export default function HeroSlider({ slides, eyebrow }: HeroSliderProps) {
         <div className="hero-scrim-x absolute inset-0" aria-hidden />
         <div className="hero-scrim-y absolute inset-0" aria-hidden />
 
-        <div className="relative z-10 flex h-full flex-col justify-center pb-20 pt-6 sm:pt-8">
+        <div className="hero-copy relative z-10 flex h-full flex-col justify-center pb-20 pt-6 sm:pt-8">
           {/* w-full is load-bearing. .wrap centres itself with `margin: 0 auto`,
               and auto cross-axis margins on a flex item switch off `stretch` —
               without it this shrinks to the width of the copy and drifts into
@@ -221,7 +221,7 @@ export default function HeroSlider({ slides, eyebrow }: HeroSliderProps) {
                   but an outlined box beside a filled one reads as a second
                   primary — and with the navbar's own CTA that made three
                   competing targets above the fold. */}
-              <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6">
+              <div className="hero-cta mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6">
                 <Link
                   to={slide.primaryTo}
                   className="btn-p"
@@ -243,7 +243,7 @@ export default function HeroSlider({ slides, eyebrow }: HeroSliderProps) {
 
         {count > 1 && (
           <div
-            className="absolute inset-x-0 bottom-6 z-20 flex items-center justify-between px-4 sm:bottom-8 sm:px-5 lg:px-6"
+            className="hero-ctls absolute inset-x-0 bottom-6 z-20 flex items-center justify-between px-4 sm:bottom-8 sm:px-5 lg:px-6"
             onMouseEnter={() => setControlsPaused(true)}
             onMouseLeave={() => setControlsPaused(false)}
             onFocusCapture={() => setControlsPaused(true)}

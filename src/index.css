@@ -800,13 +800,72 @@
 /* Reduced motion: the cards still change places, they just do not travel. */
 .hero-deck--still .hero-deck-card { transition: none; }
 
-/* Below the breakpoint the copy sits over the picture and there is no room
-   for a queue beside it, so the deck collapses to the single active card. */
+/* At full width the deck starts at 47%. The copy column has no width of its
+   own -- the h1 would run the width of .wrap and meet the deck wherever the
+   deck happens to begin -- so it gets a ceiling that stops short of it. The
+   min() leaves the 1280+ layout exactly as it was and only bites between
+   1024 and ~1150, which is where the heading was clipping the tablet. */
+@media (min-width: 1024px) {
+  .hero-copy > .wrap > * { max-width: min(42rem, 44%); }
+}
+
+/* Below the breakpoint the hero stops being an overlay. There is not enough
+   width to stand a picture beside a paragraph, and the rule that used to live
+   here moved the deck further *left*, to 42%, which put more of the mockup
+   under the copy rather than less. Stacked instead: copy first, then a
+   smaller centred deck beneath it. */
 @media (max-width: 1023px) {
-  .hero-deck { left: 42%; }
-  .hero-deck-card[data-slot='0'] { width: 100%; top: 8%; height: 84%; }
+  .storefront-hero-height {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 26px;
+  }
+
+  /* The DOM is deck-first, so the copy is pulled ahead visually rather than
+     reordered in the markup -- the reading order there is already right. */
+  .hero-copy {
+    order: -1;
+    height: auto;
+    padding-bottom: 4px;
+  }
+
+  .hero-deck {
+    position: relative;
+    inset: auto;
+    width: min(320px, 74%);
+    margin: 0 auto;
+    /* Load-bearing. Every .hero-deck-card is absolutely positioned, so the
+       deck has no content to take a height from and collapses to zero the
+       moment it stops being stretched by inset-block: 0. */
+    aspect-ratio: 4 / 5;
+  }
+  .hero-deck-card[data-slot='0'] { left: 0; top: 0; width: 100%; height: 100%; }
   .hero-deck-card[data-slot='1'],
   .hero-deck-card[data-slot='2'] { opacity: 0; pointer-events: none; }
+
+  /* Both scrims exist to lift the copy off the picture behind it. Stacked,
+     there is nothing behind the copy, and inset-0 against an auto-height
+     parent would wash a gradient across the whole hero instead. */
+  .hero-scrim-x,
+  .hero-scrim-y { display: none; }
+
+  /* The controls were positioned against the overlay, which left one of them
+     orphaned at the bottom-left. Sit them under the deck instead. */
+  .hero-ctls {
+    position: static;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 14px;
+    padding: 0;
+  }
+}
+
+/* Same 639.98 boundary as the block above: this is exactly the range where
+   .btn-p is stretched to the full column, and a centred link under a centred
+   full-width button reads as one block instead of two left-hung items. */
+@media (max-width: 639.98px) {
+  .hero-cta { align-items: center; width: 100%; }
 }
 
 
@@ -1308,6 +1367,7 @@
   padding: 0;
   font: inherit;
   font-size: 0.9375rem;
+  font-weight: 600;
   cursor: pointer;
 }
 .nav-trigger.is-open { color: var(--ink); }
@@ -1427,6 +1487,10 @@
 
 .nav-link {
   font-size: 0.9375rem;
+  /* The bar's items carry the weight; the demo button stays the only filled
+     control, so it still reads as the primary action rather than one bold
+     thing among six. */
+  font-weight: 600;
   color: var(--ink-muted);
   transition: color .18s ease;
 }
@@ -1455,7 +1519,7 @@
   :root { --pad-lg: 80px; --pad-md: 60px; --pad-sm: 44px; }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 639.98px) {
   :root { --pad-lg: 64px; --pad-md: 48px; --pad-sm: 36px; }
   /* padding-inline, not the shorthand: the shorthand would reset the block
      padding some callers rely on, and it has to beat the clamp above. */
