@@ -4,7 +4,7 @@ import { Link, useCanonicalPath, useLocale } from './LocaleLink';
 import { localePath } from '../seo/site';
 import { findPost, translationOf } from '../content/blog/index';
 import {
-  ArrowRight, BarChart3, BookOpen, Boxes, CalendarDays, ClipboardList, Factory,
+  ArrowRight, BarChart3, BookOpen, Boxes, CalendarDays, ChevronDown, ClipboardList, Factory,
   Gauge, History, ListChecks, MessageSquare, Package, Pen, ShieldCheck, Truck,
   Users, Warehouse,
 } from 'lucide-react';
@@ -162,6 +162,17 @@ export default function Navbar() {
   }, [cancelClose]);
 
   useEffect(() => () => cancelClose(), [cancelClose]);
+
+  /* The drawer is a scrolling sheet of its own. Without this the page behind
+     it scrolls too, so a flick meant for the menu moves the article underneath
+     and the sheet looks frozen. Restores whatever was there rather than
+     assuming '', since the value is not ours to own. */
+  useEffect(() => {
+    if (!menuOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = prev; };
+  }, [menuOpen]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -423,7 +434,10 @@ export default function Navbar() {
         {/* Mobile menu */}
         {menuOpen && (
           <div className="nav-mobile" style={{ borderTop: '1px solid var(--rule)', background: 'var(--bg)' }}>
-            <div className="wrap" style={{ padding: '14px 24px 22px' }}>
+            {/* Block padding only. The inline padding comes from .wrap, so the
+                drawer lines up with every section beneath it instead of
+                sitting on a wider gutter of its own. */}
+            <div className="wrap nav-mobile-inner" style={{ paddingBlock: '14px 0' }}>
               {/* The drawer is a stack, so the panel's two columns collapse to
                   one and only the Product group keeps its per-item
                   descriptions — repeating them for all three would push the
@@ -438,30 +452,44 @@ export default function Navbar() {
                   </span>
                 </Link>
               ))}
+              {/* Collapsed by default. Expanded, the three groups came to
+                  1532px in an 844px viewport; folding the two secondary ones
+                  brings the sheet back to something you can take in at once.
+                  <details> rather than React state: keyboard-accessible, and
+                  it works before hydration. */}
               {MENUS.filter(m => m.id !== 'product').map(m => (
-                <div key={m.id} style={{ borderTop: '1px solid var(--rule)', marginTop: '12px', paddingTop: '8px' }}>
-                  <div className="megamenu-eyebrow" style={{ padding: '4px 0 6px' }}>{t(m.labelKey)}</div>
+                <details key={m.id} className="nav-mobile-group">
+                  <summary className="nav-mobile-summary">
+                    <span className="megamenu-eyebrow">{t(m.labelKey)}</span>
+                    <ChevronDown className="nav-mobile-chev" size={16} strokeWidth={2} aria-hidden />
+                  </summary>
                   {m.groups.flatMap(g => g.items).map(({ titleKey, to }) => (
-                    <Link key={titleKey} to={to} onClick={closeAll} style={{ display: 'block', padding: '8px 0', fontSize: '0.9375rem', color: 'var(--ink-muted)' }}>
+                    <Link key={titleKey} to={to} onClick={closeAll} style={{ display: 'block', padding: '10px 0', fontSize: '0.9375rem', color: 'var(--ink-muted)' }}>
                       {t(titleKey)}
                     </Link>
                   ))}
-                </div>
+                </details>
               ))}
               <div style={{ borderTop: '1px solid var(--rule)', marginTop: '12px', paddingTop: '8px' }}>
-                <Link to="/enterprise" onClick={closeAll} style={{ display: 'block', padding: '8px 0', fontSize: '0.9375rem', color: 'var(--ink)' }}>{t('nav.enterprise')}</Link>
-                <Link to="/pricing" onClick={closeAll} style={{ display: 'block', padding: '8px 0', fontSize: '0.9375rem', color: 'var(--ink)' }}>{t('nav.pricing')}</Link>
-                <Link to="/comparison" onClick={closeAll} style={{ display: 'block', padding: '8px 0', fontSize: '0.9375rem', color: 'var(--ink)' }}>{t('nav.comparison')}</Link>
+                <Link to="/enterprise" onClick={closeAll} style={{ display: 'block', padding: '10px 0', fontSize: '0.9375rem', color: 'var(--ink)' }}>{t('nav.enterprise')}</Link>
+                <Link to="/pricing" onClick={closeAll} style={{ display: 'block', padding: '10px 0', fontSize: '0.9375rem', color: 'var(--ink)' }}>{t('nav.pricing')}</Link>
+                <Link to="/comparison" onClick={closeAll} style={{ display: 'block', padding: '10px 0', fontSize: '0.9375rem', color: 'var(--ink)' }}>{t('nav.comparison')}</Link>
               </div>
-              <Link to="/contact" className="btn-p" onClick={closeAll} style={{ marginTop: '18px', width: '100%', justifyContent: 'center' }}>
-                {t('nav.getStarted')}
-              </Link>
-              <Link to="/signup" className="btn-s" onClick={closeAll} style={{ marginTop: '10px', width: '100%', justifyContent: 'center' }}>
-                {t('nav.signUp')}
-              </Link>
-              <a href={APP_LOGIN_URL} className="nav-link" style={{ display: 'block', textAlign: 'center', padding: '14px 0 4px', fontSize: '0.9375rem' }}>
-                {t('nav.logIn')}
-              </a>
+
+              {/* Sticky, so the three account actions stay reachable however
+                  far the list above has been scrolled. They used to sit at the
+                  end of a 1532px stack that had no way to scroll at all. */}
+              <div className="nav-mobile-cta">
+                <Link to="/contact" className="btn-p" onClick={closeAll} style={{ width: '100%', justifyContent: 'center' }}>
+                  {t('nav.getStarted')}
+                </Link>
+                <Link to="/signup" className="btn-s" onClick={closeAll} style={{ width: '100%', justifyContent: 'center' }}>
+                  {t('nav.signUp')}
+                </Link>
+                <a href={APP_LOGIN_URL} className="nav-link nav-mobile-login">
+                  {t('nav.logIn')}
+                </a>
+              </div>
             </div>
           </div>
         )}
@@ -476,6 +504,84 @@ export default function Navbar() {
           .nav-desktop { display: none !important; }
           .nav-burger  { display: inline-flex !important; }
           .nav-cta     { display: none !important; }
+        }
+
+        /* The drawer is a sheet, not a section of the page. It lives inside a
+           position: sticky header, so anything taller than the viewport used
+           to be simply unreachable -- there is no gesture that scrolls a
+           pinned element. Measured at 1532px in an 844px viewport, which
+           stranded Get started, Sign up and Log in below the fold.
+
+           dvh, not vh: on a phone vh is the tallest the viewport ever gets,
+           so with the browser chrome showing the sheet would run off-screen
+           by exactly the height of that chrome. */
+        .nav-mobile {
+          max-height: calc(100dvh - 64px);
+          overflow-y: auto;
+          overscroll-behavior: contain;
+        }
+        .nav-mobile-inner {
+          display: flex;
+          flex-direction: column;
+          min-height: 0;
+        }
+
+        .nav-mobile-group {
+          border-top: 1px solid var(--rule);
+          margin-top: 12px;
+          padding-top: 4px;
+        }
+        .nav-mobile-summary {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+          padding: 10px 0;
+          cursor: pointer;
+          list-style: none;
+          /* 44px of target from an 18px label. */
+          min-height: 44px;
+        }
+        /* Safari draws its own disclosure triangle from a pseudo-element that
+           list-style alone does not remove. */
+        .nav-mobile-summary::-webkit-details-marker { display: none; }
+        .nav-mobile-chev {
+          color: var(--ink-muted);
+          flex: none;
+          transition: transform .18s ease;
+        }
+        .nav-mobile-group[open] .nav-mobile-chev { transform: rotate(180deg); }
+
+        /* Sticky inside the scroll container, so the account actions ride
+           along at the bottom of the sheet instead of waiting at the end of
+           the list. The negative inline margin lets the backdrop reach the
+           full width of the sheet while the buttons stay on the page column. */
+        .nav-mobile-cta {
+          position: sticky;
+          bottom: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-top: 16px;
+          margin-inline: calc(-1 * var(--nav-sheet-pad, 18px));
+          padding: 14px var(--nav-sheet-pad, 18px) calc(14px + env(safe-area-inset-bottom, 0px));
+          background: var(--bg);
+          border-top: 1px solid var(--rule);
+        }
+        .nav-mobile-login {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 44px;
+          font-size: 0.9375rem;
+        }
+
+        /* Matches .wrap's own gutter at each breakpoint, so the backdrop
+           bleeds edge to edge and the buttons stay aligned with the links
+           above them. */
+        .nav-mobile-inner { --nav-sheet-pad: clamp(24px, 3vw, 40px); }
+        @media (max-width: 639.98px) {
+          .nav-mobile-inner { --nav-sheet-pad: 18px; }
         }
       `}</style>
     </header>

@@ -2,7 +2,7 @@
   "\u0000C:/Users/Zakaria Ghazali/OneDrive/Desktop/Landing_page_Maintevo-master/Landing_page_Maintevo-master/node_modules/prop-types/index.js?commonjs-module": [],
   "\u0000C:/Users/Zakaria Ghazali/OneDrive/Desktop/Landing_page_Maintevo-master/Landing_page_Maintevo-master/node_modules/react-dom/cjs/react-dom.production.min.js?commonjs-exports": [],
   "\u0000C:/Users/Zakaria Ghazali/OneDrive/Desktop/Landing_page_Maintevo-master/Landing_page_Maintevo-master/node_modules/react-dom/client.js?commonjs-exports": [
-    "/assets/client-DYGy8Vk1.js"
+    "/assets/client-D7ir_s4m.js"
   ],
   "\u0000C:/Users/Zakaria Ghazali/OneDrive/Desktop/Landing_page_Maintevo-master/Landing_page_Maintevo-master/node_modules/react-dom/index.js?commonjs-module": [],
   "\u0000C:/Users/Zakaria Ghazali/OneDrive/Desktop/Landing_page_Maintevo-master/Landing_page_Maintevo-master/node_modules/react/cjs/react-jsx-runtime.production.min.js?commonjs-exports": [],
@@ -24,21 +24,19 @@
   "node_modules/lucide-react/dist/esm/createLucideIcon.js": [],
   "node_modules/lucide-react/dist/esm/defaultAttributes.js": [],
   "node_modules/lucide-react/dist/esm/icons/arrow-left.js": [
-    "/assets/BlogPost-dtDiGiuj.js"
+    "/assets/BlogPost-BJm5gj53.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/arrow-right.js": [],
   "node_modules/lucide-react/dist/esm/icons/book-open.js": [],
   "node_modules/lucide-react/dist/esm/icons/boxes.js": [],
   "node_modules/lucide-react/dist/esm/icons/calendar-days.js": [],
   "node_modules/lucide-react/dist/esm/icons/chart-column.js": [],
-  "node_modules/lucide-react/dist/esm/icons/chevron-down.js": [
-    "/assets/Blog-C5K56Id1.js"
-  ],
+  "node_modules/lucide-react/dist/esm/icons/chevron-down.js": [],
   "node_modules/lucide-react/dist/esm/icons/chevron-left.js": [
-    "/assets/Home-CrtNFeDS.js"
+    "/assets/Home-CmmeiG_E.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/chevron-right.js": [
-    "/assets/chevron-right-B6DIzy3F.js"
+    "/assets/chevron-right-B2KfFsFK.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/clipboard-list.js": [],
   "node_modules/lucide-react/dist/esm/icons/factory.js": [],
@@ -49,7 +47,7 @@
   "node_modules/lucide-react/dist/esm/icons/package.js": [],
   "node_modules/lucide-react/dist/esm/icons/pen.js": [],
   "node_modules/lucide-react/dist/esm/icons/search.js": [
-    "/assets/Blog-C5K56Id1.js"
+    "/assets/Blog-DaaJfVsM.js"
   ],
   "node_modules/lucide-react/dist/esm/icons/shield-check.js": [],
   "node_modules/lucide-react/dist/esm/icons/truck.js": [],
@@ -57,14 +55,14 @@
   "node_modules/lucide-react/dist/esm/icons/warehouse.js": [],
   "node_modules/lucide-react/dist/esm/shared/src/utils.js": [],
   "node_modules/marked/lib/marked.esm.js": [
-    "/assets/BlogPost-dtDiGiuj.js"
+    "/assets/BlogPost-BJm5gj53.js"
   ],
   "node_modules/prop-types/factoryWithThrowingShims.js": [],
   "node_modules/prop-types/index.js": [],
   "node_modules/prop-types/lib/ReactPropTypesSecret.js": [],
   "node_modules/react-dom/cjs/react-dom.production.min.js": [],
   "node_modules/react-dom/client.js": [
-    "/assets/client-DYGy8Vk1.js"
+    "/assets/client-D7ir_s4m.js"
   ],
   "node_modules/react-dom/index.js": [],
   "node_modules/react-fast-compare/index.js": [],
@@ -95,26 +93,26 @@
   "node_modules/vite-react-ssg/dist/shared/vite-react-ssg.CjIppNIS.mjs": [],
   "src/Layout.tsx": [],
   "src/components/FeaturePage.tsx": [
-    "/assets/FeaturePage-CUVT0eYR.js"
+    "/assets/FeaturePage-BuGydPcV.js"
   ],
   "src/components/Footer.tsx": [],
   "src/components/LocaleLink.tsx": [],
   "src/components/Navbar.tsx": [],
   "src/components/PageBand.tsx": [
-    "/assets/PageBand-C7oaoYzC.js"
+    "/assets/PageBand-Ci1reX8G.js"
   ],
   "src/components/Reveal.tsx": [
-    "/assets/Home-CrtNFeDS.js"
+    "/assets/Home-CmmeiG_E.js"
   ],
   "src/components/Seo.tsx": [],
   "src/components/Shot.tsx": [
-    "/assets/Home-CrtNFeDS.js"
+    "/assets/Home-CmmeiG_E.js"
   ],
   "src/components/WalkStrip.tsx": [
-    "/assets/Home-CrtNFeDS.js"
+    "/assets/Home-CmmeiG_E.js"
   ],
   "src/components/storefront/HeroSlider.tsx": [
-    "/assets/Home-CrtNFeDS.js"
+    "/assets/Home-CmmeiG_E.js"
   ],
   "src/content/blog/cmms-cost-morocco.en.md?raw": [],
   "src/content/blog/cmms-cost-morocco.fr.md?raw": [],
@@ -133,68 +131,68 @@
   "src/index.css": [],
   "src/main.tsx": [],
   "src/pages/About.tsx": [
-    "/assets/About-CcoYtO4f.js"
+    "/assets/About-CRDfhbtP.js"
   ],
   "src/pages/Blog.tsx": [
-    "/assets/Blog-C5K56Id1.js"
+    "/assets/Blog-DaaJfVsM.js"
   ],
   "src/pages/BlogPost.tsx": [
-    "/assets/BlogPost-dtDiGiuj.js"
+    "/assets/BlogPost-BJm5gj53.js"
   ],
   "src/pages/Comparison.tsx": [
-    "/assets/Comparison-CR8d9eqp.js"
+    "/assets/Comparison-CGlbRdSA.js"
   ],
   "src/pages/Contact.tsx": [
-    "/assets/Contact-C5klV6uq.js"
+    "/assets/Contact-R6hYf1y6.js"
   ],
   "src/pages/Enterprise.tsx": [
-    "/assets/Enterprise-DgL1xvNf.js"
+    "/assets/Enterprise-Br7o-Ego.js"
   ],
   "src/pages/Home.tsx": [
-    "/assets/Home-CrtNFeDS.js"
+    "/assets/Home-CmmeiG_E.js"
   ],
   "src/pages/Industries.tsx": [
-    "/assets/Industries-DJ5RcyEQ.js"
+    "/assets/Industries-CEa8muB3.js"
   ],
   "src/pages/NotFound.tsx": [],
   "src/pages/Pricing.tsx": [
-    "/assets/Pricing-C_W0mnfn.js"
+    "/assets/Pricing-DgqXzhNL.js"
   ],
   "src/pages/Resources.tsx": [
-    "/assets/Resources-Dvn_z34J.js"
+    "/assets/Resources-BDGvVOh1.js"
   ],
   "src/pages/Signup.tsx": [
-    "/assets/Signup-Be4VsEk_.js"
+    "/assets/Signup-DxRZvV-B.js"
   ],
   "src/pages/features/Equipment.tsx": [
-    "/assets/Equipment-BKfrKJzp.js"
+    "/assets/Equipment-Gj4dg81r.js"
   ],
   "src/pages/features/Inventory.tsx": [
-    "/assets/Inventory-BZQZAVr6.js"
+    "/assets/Inventory-DUGmHORX.js"
   ],
   "src/pages/features/KpiDashboard.tsx": [
-    "/assets/KpiDashboard-DkYGIR4U.js"
+    "/assets/KpiDashboard-CI6WtnX6.js"
   ],
   "src/pages/features/MaintenanceCalendar.tsx": [
-    "/assets/MaintenanceCalendar-CFU9Y2wd.js"
+    "/assets/MaintenanceCalendar-BXCEaVPl.js"
   ],
   "src/pages/features/PreventiveMaintenance.tsx": [
-    "/assets/PreventiveMaintenance-CRC2AO-t.js"
+    "/assets/PreventiveMaintenance-MdR656FQ.js"
   ],
   "src/pages/features/Reporting.tsx": [
-    "/assets/Reporting-Dh1bCCj_.js"
+    "/assets/Reporting-BvinO7eZ.js"
   ],
   "src/pages/features/Roles.tsx": [
-    "/assets/Roles-BynpMxVN.js"
+    "/assets/Roles-Cb_GEBEo.js"
   ],
   "src/pages/features/WorkOrders.tsx": [
-    "/assets/WorkOrders-By-Jr4Bk.js"
+    "/assets/WorkOrders-BkfOwVhZ.js"
   ],
   "src/pages/resources/KpiDefinitions.tsx": [
-    "/assets/KpiDefinitions-CLGjUKfS.js"
+    "/assets/KpiDefinitions-CIg_-8_P.js"
   ],
   "src/pages/resources/SetupChecklist.tsx": [
-    "/assets/SetupChecklist-Cz0CAghc.js"
+    "/assets/SetupChecklist-Bj79TkXD.js"
   ],
   "src/routes.tsx": [],
   "src/seo/routes.ts": [],

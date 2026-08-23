@@ -865,7 +865,7 @@
    .btn-p is stretched to the full column, and a centred link under a centred
    full-width button reads as one block instead of two left-hung items. */
 @media (max-width: 639.98px) {
-  .hero-cta { align-items: center; width: 100%; }
+  .hero-cta { align-items: flex-start; width: 100%; }
 }
 
 
@@ -1565,4 +1565,214 @@
 @media (max-width: 720px) {
   .page-band img { aspect-ratio: 16 / 9; }
   .page-band--quiet img { aspect-ratio: 21 / 9; }
+}
+
+
+/* ══ Phone layout ═══════════════════════════════════════════════════
+   Everything below 640px. Appended last so it wins on order against the
+   rules it reverses, none of which need editing in place.
+
+   The boundary is 639.98 rather than 640 for the reason given further up:
+   Tailwind's sm: starts at min-width 640, and at exactly 640 both used to
+   apply at once. */
+@media (max-width: 639.98px) {
+
+  /* ── Alignment ──────────────────────────────────────────────────
+     The section wrappers centre their copy (see the block near the top of
+     this file). At 1440px that is a deliberate look. At 390px it produces
+     paragraphs ragged on both edges, with no fixed margin for the eye to
+     return to, and it is the single thing that made the site read as
+     unfinished on a phone. The article template already opts out, and it
+     was by some distance the best-looking page on a phone.
+
+     Reversing all three rules, not just text-align: margin-inline: auto
+     centres the block itself, which would leave a narrow element floating
+     in the middle of the column even once its text went left. */
+  :is(.hero-pad, .hero-pad-sm, .section-sm, .section-md, .section-lg) > .wrap {
+    text-align: left;
+  }
+  :is(.hero-pad, .hero-pad-sm, .section-sm, .section-md, .section-lg) > .wrap > * {
+    margin-inline: 0;
+  }
+  :is(.hero-pad, .hero-pad-sm, .section-sm, .section-md, .section-lg) > .wrap > .btn-inline-group {
+    justify-content: flex-start;
+  }
+
+  /* Measure caps are all wider than the screen down here, so they do
+     nothing but they also cost nothing. What does help is stopping a
+     heading or a lead from stranding one word on its own last line. */
+  h1, h2, h3, p, li { text-wrap: pretty; }
+
+  /* ── Tables become labelled cards ───────────────────────────────
+     A five-column matrix does not survive 354px of usable width. It did
+     technically scroll -- .tbl-scroll is overflow-x: auto -- but only as a
+     side effect of nowrap on the headers, with no min-width, no fade and
+     no hint, so it read as a table sliced off mid-word.
+
+     Stacked, each row becomes its own block: the first cell is the
+     heading, and every other cell carries its column name from the
+     data-label attribute the markup now supplies. */
+  .tbl-stack thead {
+    /* Not display:none -- the header text is the source of every
+       data-label, and a screen reader should still meet it once. */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .tbl-stack,
+  .tbl-stack tbody,
+  .tbl-stack tr,
+  .tbl-stack td {
+    display: block;
+    width: 100%;
+  }
+  .tbl-stack tr {
+    border-top: 1px solid var(--rule-strong);
+    padding: 16px 0 14px;
+  }
+  .tbl-stack tr:last-child { border-bottom: 1px solid var(--rule-strong); }
+  .tbl-stack td {
+    display: grid;
+    grid-template-columns: minmax(0, 9rem) minmax(0, 1fr);
+    gap: 6px 14px;
+    align-items: baseline;
+    padding: 5px 0;
+    border: 0;
+  }
+  .tbl-stack td::before {
+    content: attr(data-label);
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    color: var(--ink);
+  }
+  /* The row's own name is the card's title, so it takes the full width and
+     drops the label -- it would only repeat the column header above it. */
+  .tbl-stack td:first-child {
+    display: block;
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--ink);
+    padding: 0 0 10px;
+  }
+  .tbl-stack td:first-child::before { content: none; }
+
+  /* A matrix of ticks is a different problem from a table of sentences.
+     Given a row per column, nine capabilities against four roles came to
+     about 2000px of "Responsable / Technicien / Demandeur" repeated down
+     the page -- readable, but a lot of thumb for a permissions grid. So the
+     boolean tables put their marks on one wrapping line instead, mark
+     first, label after: two lines a row rather than five. */
+  .tbl-stack--marks tr {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+  }
+  .tbl-stack--marks td {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 7px;
+    width: auto;
+    padding: 0;
+  }
+  .tbl-stack--marks td:first-child {
+    flex: 0 0 100%;
+    padding-bottom: 4px;
+  }
+  .tbl-stack--marks td::before {
+    /* After the mark, not before it -- the tick is the thing being scanned
+       and the role name is what qualifies it. */
+    order: 2;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: var(--ink-muted);
+  }
+
+  /* With every table on the site stacked there is nothing left to scroll,
+     and leaving the scroller in place only invites a stray 1px drag. */
+  .tbl-scroll { overflow-x: visible; }
+
+  /* ── Remaining controls ────────────────────────────────────────
+     The hero's primary button carries its own inline padding, which set it
+     34px tall -- short for the page's main call to action under a thumb.
+     The bar's language switcher and the blog's filter selects were in the
+     same range. */
+  .hero-cta .btn-p { padding-block: 13px; min-height: 44px; }
+  .navbar button.nav-link { min-height: 44px; min-width: 44px; }
+  .filter-select.filter-select,
+  .filter-input.filter-input { min-height: 44px; }
+  .pager-next.pager-next,
+  .pager-prev.pager-prev { min-height: 44px; }
+
+  /* The hero's second action is a text link by design -- an outlined box
+     beside the filled one would read as a second primary. It still has to
+     be hittable, so it gets the height without gaining a border. */
+  .hero-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  /* Both wordmarks -- the one in the bar and the one in the footer -- are
+     links wrapped tight around their text. :has picks them out by the mark
+     they contain rather than by a class neither of them has. */
+  a:has(> .brand-mark) { min-height: 44px; align-items: center; }
+
+  /* .link is a text link set at 21px tall, which is under the 24px floor
+     even before you aim at it with a thumb. Nearly every one of them is
+     discrete navigation -- a breadcrumb, a contents entry, a footer column,
+     a related-article line -- so those get a real target.
+
+     Deliberately not every .link: the one at the foot of the pricing page
+     sits inside a sentence, and inline links in running text are exempt
+     precisely because padding them out would wreck the line spacing around
+     them. Selecting by container is what keeps that one out. */
+  .crumbs-row .link,
+  li > .link,
+  .post-related .link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .crumbs-row { align-items: center; }
+
+  /* ── The criticality scale ──────────────────────────────────────
+     12px 90px 1fr left about 150px for the description, which set the
+     French copy four lines deep against a two-line name. The swatch keeps
+     its own column; name and description share the second. */
+  .crit-row {
+    grid-template-columns: 12px minmax(0, 1fr);
+    gap: 6px 12px;
+    align-items: start;
+    padding: 14px 0;
+  }
+  .crit-swatch { margin-top: 6px; }
+  .crit-row > :last-child { grid-column: 2; }
+
+  /* ── Touch targets ─────────────────────────────────────────────
+     44px is the floor. These were 30-32px, which is a coin-flip with a
+     thumb. Sizing the box rather than the icon, so nothing is redrawn.
+
+     The doubled class is deliberate. .walk-ctl, .pager-num and .filter-go
+     are declared in their own components' <style> blocks, which the browser
+     sees after this file; at equal specificity those would win on order.
+     Doubling takes the selector to (0,2,0) so the result no longer depends
+     on where the rule happens to sit. */
+  .walk-ctl.walk-ctl { width: 44px; height: 44px; }
+  .pager-num.pager-num { min-width: 40px; min-height: 40px; }
+  .filter-go.filter-go { width: 40px; height: 40px; }
+  /* Declared in this file, above, so order alone settles it. */
+  .hero-ctl { width: 44px; height: 44px; }
+}
+
+/* The small end -- older and smaller handsets. The page is long enough that
+   a little compression here is worth more than the air. */
+@media (max-width: 400px) {
+  :root { --pad-lg: 52px; --pad-md: 40px; --pad-sm: 30px; }
+  .tbl-stack td { grid-template-columns: minmax(0, 7.5rem) minmax(0, 1fr); }
 }

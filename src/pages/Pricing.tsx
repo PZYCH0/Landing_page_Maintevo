@@ -101,7 +101,7 @@ export default function Pricing() {
         <div className="wrap">
           <h2 style={{ marginBottom: '28px' }}>{t('pricing.compare.title')}</h2>
           <div className="tbl-scroll">
-            <table className="tbl">
+            <table className="tbl tbl-stack tbl-stack--marks">
               <thead>
                 <tr>
                   <th style={{ width: '40%' }}>{t('pricing.compare.col_feature')}</th>
@@ -114,8 +114,10 @@ export default function Pricing() {
                 {rows.map(([label, a, b, c]) => (
                   <tr key={label}>
                     <td>{t(label)}</td>
-                    {[a, b, c].map((on, i) => (
-                      <td key={i}>
+                    {([[a, 'col_starter'], [b, 'col_pro'], [c, 'col_ent']] as const).map(([on, col], i) => (
+                      /* data-label is what the row carries into the stacked
+                         card layout on a phone, where the header row is gone. */
+                      <td key={i} data-label={t(`pricing.compare.${col}`)}>
                         {on
                           ? <span className="mark-yes"><Check /></span>
                           : <span className="mark-no" aria-label="No">—</span>}

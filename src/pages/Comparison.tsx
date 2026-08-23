@@ -27,7 +27,7 @@ export default function Comparison() {
         <div className="wrap">
           <h2 style={{ marginBottom: '28px' }}>{t('comparison.table.title')}</h2>
           <div className="tbl-scroll">
-            <table className="tbl">
+            <table className="tbl tbl-stack">
               <thead>
                 <tr>
                   <th style={{ width: '22%' }}>{t('comparison.table.col_solution')}</th>
@@ -44,9 +44,11 @@ export default function Comparison() {
                       <td style={own ? { color: 'var(--accent)', fontWeight: 600 } : { color: 'var(--ink)' }}>
                         {t(`comparison.table.${r}_name`)}
                       </td>
-                      <td>{t(`comparison.table.${r}_cat`)}</td>
-                      <td>{t(`comparison.table.${r}_pro`)}</td>
-                      <td>{t(`comparison.table.${r}_con`)}</td>
+                      {/* data-label carries the column name into the
+                          stacked card layout on a phone. */}
+                      <td data-label={t('comparison.table.col_category')}>{t(`comparison.table.${r}_cat`)}</td>
+                      <td data-label={t('comparison.table.col_strength')}>{t(`comparison.table.${r}_pro`)}</td>
+                      <td data-label={t('comparison.table.col_weakness')}>{t(`comparison.table.${r}_con`)}</td>
                     </tr>
                   );
                 })}

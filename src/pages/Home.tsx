@@ -223,7 +223,7 @@ export default function Home() {
           <p className="measure rv" style={{ marginTop: '12px', marginBottom: '36px' }}>{t('home.roles.lead')}</p>
 
           <div className="tbl-scroll">
-            <table className="tbl">
+            <table className="tbl tbl-stack tbl-stack--marks">
               <thead>
                 <tr className="rv">
                   <th style={{ width: '40%' }}>{t('home.roles.col_capability')}</th>
@@ -237,10 +237,12 @@ export default function Home() {
                 {perms.map(([label, m, tech, r, qr]) => (
                   <tr key={label} className="rv">
                     <td>{t(label)}</td>
-                    <td>{m ? <Yes /> : <No />}</td>
-                    <td>{tech ? <Yes /> : <No />}</td>
-                    <td>{r ? <Yes /> : <No />}</td>
-                    <td>{qr ? <Yes /> : <No />}</td>
+                    {/* data-label carries the column name into the stacked
+                        card layout on a phone, where the header row is gone. */}
+                    <td data-label={t('home.roles.col_manager')}>{m ? <Yes /> : <No />}</td>
+                    <td data-label={t('home.roles.col_technician')}>{tech ? <Yes /> : <No />}</td>
+                    <td data-label={t('home.roles.col_requester')}>{r ? <Yes /> : <No />}</td>
+                    <td data-label={t('home.roles.col_qr')}>{qr ? <Yes /> : <No />}</td>
                   </tr>
                 ))}
               </tbody>
