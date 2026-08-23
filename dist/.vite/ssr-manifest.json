@@ -1,0 +1,202 @@
+{
+  "\u0000C:/Users/Zakaria Ghazali/OneDrive/Desktop/Landing_page_Maintevo-master/Landing_page_Maintevo-master/node_modules/prop-types/index.js?commonjs-module": [],
+  "\u0000C:/Users/Zakaria Ghazali/OneDrive/Desktop/Landing_page_Maintevo-master/Landing_page_Maintevo-master/node_modules/react-dom/cjs/react-dom.production.min.js?commonjs-exports": [],
+  "\u0000C:/Users/Zakaria Ghazali/OneDrive/Desktop/Landing_page_Maintevo-master/Landing_page_Maintevo-master/node_modules/react-dom/client.js?commonjs-exports": [
+    "/assets/client-CCbX_fiJ.js"
+  ],
+  "\u0000C:/Users/Zakaria Ghazali/OneDrive/Desktop/Landing_page_Maintevo-master/Landing_page_Maintevo-master/node_modules/react-dom/index.js?commonjs-module": [],
+  "\u0000C:/Users/Zakaria Ghazali/OneDrive/Desktop/Landing_page_Maintevo-master/Landing_page_Maintevo-master/node_modules/react/cjs/react-jsx-runtime.production.min.js?commonjs-exports": [],
+  "\u0000C:/Users/Zakaria Ghazali/OneDrive/Desktop/Landing_page_Maintevo-master/Landing_page_Maintevo-master/node_modules/react/cjs/react.production.min.js?commonjs-exports": [],
+  "\u0000C:/Users/Zakaria Ghazali/OneDrive/Desktop/Landing_page_Maintevo-master/Landing_page_Maintevo-master/node_modules/react/index.js?commonjs-module": [],
+  "\u0000C:/Users/Zakaria Ghazali/OneDrive/Desktop/Landing_page_Maintevo-master/Landing_page_Maintevo-master/node_modules/react/jsx-runtime.js?commonjs-module": [],
+  "\u0000C:/Users/Zakaria Ghazali/OneDrive/Desktop/Landing_page_Maintevo-master/Landing_page_Maintevo-master/node_modules/scheduler/cjs/scheduler.production.min.js?commonjs-exports": [],
+  "\u0000C:/Users/Zakaria Ghazali/OneDrive/Desktop/Landing_page_Maintevo-master/Landing_page_Maintevo-master/node_modules/scheduler/index.js?commonjs-module": [],
+  "\u0000C:/Users/Zakaria Ghazali/OneDrive/Desktop/Landing_page_Maintevo-master/Landing_page_Maintevo-master/node_modules/use-sync-external-store/cjs/use-sync-external-store-shim.production.js?commonjs-exports": [],
+  "\u0000C:/Users/Zakaria Ghazali/OneDrive/Desktop/Landing_page_Maintevo-master/Landing_page_Maintevo-master/node_modules/use-sync-external-store/shim/index.js?commonjs-module": [],
+  "\u0000commonjsHelpers.js": [],
+  "\u0000vite/modulepreload-polyfill.js": [],
+  "\u0000vite/preload-helper.js": [],
+  "index.html": [],
+  "node_modules/@remix-run/router/dist/router.js": [],
+  "node_modules/i18next/dist/esm/i18next.js": [],
+  "node_modules/invariant/browser.js": [],
+  "node_modules/lucide-react/dist/esm/Icon.js": [],
+  "node_modules/lucide-react/dist/esm/createLucideIcon.js": [],
+  "node_modules/lucide-react/dist/esm/defaultAttributes.js": [],
+  "node_modules/lucide-react/dist/esm/icons/arrow-left.js": [
+    "/assets/BlogPost-DwhCFM5j.js"
+  ],
+  "node_modules/lucide-react/dist/esm/icons/arrow-right.js": [],
+  "node_modules/lucide-react/dist/esm/icons/book-open.js": [],
+  "node_modules/lucide-react/dist/esm/icons/boxes.js": [],
+  "node_modules/lucide-react/dist/esm/icons/calendar-days.js": [],
+  "node_modules/lucide-react/dist/esm/icons/chart-column.js": [],
+  "node_modules/lucide-react/dist/esm/icons/chevron-down.js": [
+    "/assets/Blog-WV02fJl4.js"
+  ],
+  "node_modules/lucide-react/dist/esm/icons/chevron-left.js": [
+    "/assets/Home-CGhZi1FY.js"
+  ],
+  "node_modules/lucide-react/dist/esm/icons/chevron-right.js": [
+    "/assets/chevron-right-CxOW72bD.js"
+  ],
+  "node_modules/lucide-react/dist/esm/icons/clipboard-list.js": [],
+  "node_modules/lucide-react/dist/esm/icons/factory.js": [],
+  "node_modules/lucide-react/dist/esm/icons/gauge.js": [],
+  "node_modules/lucide-react/dist/esm/icons/history.js": [],
+  "node_modules/lucide-react/dist/esm/icons/list-checks.js": [],
+  "node_modules/lucide-react/dist/esm/icons/message-square.js": [],
+  "node_modules/lucide-react/dist/esm/icons/package.js": [],
+  "node_modules/lucide-react/dist/esm/icons/pen.js": [],
+  "node_modules/lucide-react/dist/esm/icons/search.js": [
+    "/assets/Blog-WV02fJl4.js"
+  ],
+  "node_modules/lucide-react/dist/esm/icons/shield-check.js": [],
+  "node_modules/lucide-react/dist/esm/icons/truck.js": [],
+  "node_modules/lucide-react/dist/esm/icons/users.js": [],
+  "node_modules/lucide-react/dist/esm/icons/warehouse.js": [],
+  "node_modules/lucide-react/dist/esm/shared/src/utils.js": [],
+  "node_modules/marked/lib/marked.esm.js": [
+    "/assets/BlogPost-DwhCFM5j.js"
+  ],
+  "node_modules/prop-types/factoryWithThrowingShims.js": [],
+  "node_modules/prop-types/index.js": [],
+  "node_modules/prop-types/lib/ReactPropTypesSecret.js": [],
+  "node_modules/react-dom/cjs/react-dom.production.min.js": [],
+  "node_modules/react-dom/client.js": [
+    "/assets/client-CCbX_fiJ.js"
+  ],
+  "node_modules/react-dom/index.js": [],
+  "node_modules/react-fast-compare/index.js": [],
+  "node_modules/react-helmet-async/lib/index.module.js": [],
+  "node_modules/react-i18next/dist/es/I18nextProvider.js": [],
+  "node_modules/react-i18next/dist/es/context.js": [],
+  "node_modules/react-i18next/dist/es/defaults.js": [],
+  "node_modules/react-i18next/dist/es/i18nInstance.js": [],
+  "node_modules/react-i18next/dist/es/initReactI18next.js": [],
+  "node_modules/react-i18next/dist/es/unescape.js": [],
+  "node_modules/react-i18next/dist/es/useTranslation.js": [],
+  "node_modules/react-i18next/dist/es/utils.js": [],
+  "node_modules/react-router-dom/dist/index.js": [],
+  "node_modules/react-router/dist/index.js": [],
+  "node_modules/react/cjs/react-jsx-runtime.production.min.js": [],
+  "node_modules/react/cjs/react.production.min.js": [],
+  "node_modules/react/index.js": [],
+  "node_modules/react/jsx-runtime.js": [],
+  "node_modules/scheduler/cjs/scheduler.production.min.js": [],
+  "node_modules/scheduler/index.js": [],
+  "node_modules/shallowequal/index.js": [],
+  "node_modules/use-sync-external-store/cjs/use-sync-external-store-shim.production.js": [],
+  "node_modules/use-sync-external-store/shim/index.js": [],
+  "node_modules/vite-react-ssg/dist/index.mjs": [],
+  "node_modules/vite-react-ssg/dist/shared/vite-react-ssg.BxjO14Et.mjs": [],
+  "node_modules/vite-react-ssg/dist/shared/vite-react-ssg.C0y5wbxl.mjs": [],
+  "node_modules/vite-react-ssg/dist/shared/vite-react-ssg.C6pK7rvr.mjs": [],
+  "node_modules/vite-react-ssg/dist/shared/vite-react-ssg.CjIppNIS.mjs": [],
+  "src/Layout.tsx": [],
+  "src/components/FeaturePage.tsx": [
+    "/assets/FeaturePage-DL4pOy-K.js"
+  ],
+  "src/components/Footer.tsx": [],
+  "src/components/LocaleLink.tsx": [],
+  "src/components/Navbar.tsx": [],
+  "src/components/PageBand.tsx": [
+    "/assets/PageBand-Cd4cewcJ.js"
+  ],
+  "src/components/Reveal.tsx": [
+    "/assets/Home-CGhZi1FY.js"
+  ],
+  "src/components/Seo.tsx": [],
+  "src/components/Shot.tsx": [
+    "/assets/Home-CGhZi1FY.js"
+  ],
+  "src/components/WalkStrip.tsx": [
+    "/assets/Home-CGhZi1FY.js"
+  ],
+  "src/components/storefront/HeroSlider.tsx": [
+    "/assets/Home-CGhZi1FY.js"
+  ],
+  "src/content/blog/cmms-cost-morocco.en.md?raw": [],
+  "src/content/blog/cmms-cost-morocco.fr.md?raw": [],
+  "src/content/blog/from-spreadsheets.en.md?raw": [],
+  "src/content/blog/from-spreadsheets.fr.md?raw": [],
+  "src/content/blog/index.ts": [],
+  "src/content/blog/maintenance-kpis.en.md?raw": [],
+  "src/content/blog/maintenance-kpis.fr.md?raw": [],
+  "src/content/blog/preventive-vs-reactive.en.md?raw": [],
+  "src/content/blog/preventive-vs-reactive.fr.md?raw": [],
+  "src/content/blog/what-is-a-cmms.en.md?raw": [],
+  "src/content/blog/what-is-a-cmms.fr.md?raw": [],
+  "src/i18n/en.json": [],
+  "src/i18n/fr.json": [],
+  "src/i18n/index.ts": [],
+  "src/index.css": [],
+  "src/main.tsx": [],
+  "src/pages/About.tsx": [
+    "/assets/About-WVIuAU2V.js"
+  ],
+  "src/pages/Blog.tsx": [
+    "/assets/Blog-WV02fJl4.js"
+  ],
+  "src/pages/BlogPost.tsx": [
+    "/assets/BlogPost-DwhCFM5j.js"
+  ],
+  "src/pages/Comparison.tsx": [
+    "/assets/Comparison-DaJG0IqI.js"
+  ],
+  "src/pages/Contact.tsx": [
+    "/assets/Contact-Gck6q2t7.js"
+  ],
+  "src/pages/Enterprise.tsx": [
+    "/assets/Enterprise-DJhRSpqg.js"
+  ],
+  "src/pages/Home.tsx": [
+    "/assets/Home-CGhZi1FY.js"
+  ],
+  "src/pages/Industries.tsx": [
+    "/assets/Industries-BT9q65cs.js"
+  ],
+  "src/pages/NotFound.tsx": [],
+  "src/pages/Pricing.tsx": [
+    "/assets/Pricing-ZtJmchEF.js"
+  ],
+  "src/pages/Resources.tsx": [
+    "/assets/Resources-BF7w-jVA.js"
+  ],
+  "src/pages/Signup.tsx": [
+    "/assets/Signup-Bzemn5_B.js"
+  ],
+  "src/pages/features/Equipment.tsx": [
+    "/assets/Equipment-DcFf48p-.js"
+  ],
+  "src/pages/features/Inventory.tsx": [
+    "/assets/Inventory-jxobYnDe.js"
+  ],
+  "src/pages/features/KpiDashboard.tsx": [
+    "/assets/KpiDashboard-DErZmIbF.js"
+  ],
+  "src/pages/features/MaintenanceCalendar.tsx": [
+    "/assets/MaintenanceCalendar-cqLli3dh.js"
+  ],
+  "src/pages/features/PreventiveMaintenance.tsx": [
+    "/assets/PreventiveMaintenance-B6KehYZm.js"
+  ],
+  "src/pages/features/Reporting.tsx": [
+    "/assets/Reporting-CmMhcIX8.js"
+  ],
+  "src/pages/features/Roles.tsx": [
+    "/assets/Roles-tLI8mPNR.js"
+  ],
+  "src/pages/features/WorkOrders.tsx": [
+    "/assets/WorkOrders-BVPjyDmZ.js"
+  ],
+  "src/pages/resources/KpiDefinitions.tsx": [
+    "/assets/KpiDefinitions-J0uJEGTR.js"
+  ],
+  "src/pages/resources/SetupChecklist.tsx": [
+    "/assets/SetupChecklist-BtoGRF2-.js"
+  ],
+  "src/routes.tsx": [],
+  "src/seo/routes.ts": [],
+  "src/seo/site.ts": []
+}

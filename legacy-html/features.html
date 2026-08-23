@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <script src="./theme.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features — MainteNeat</title>
+    <meta name="description" content="Explore all the features that make MainteNeat the maintenance management platform of choice for thousands of teams worldwide.">
+    <link rel="icon" type="image/png" href="./images/logo-maintevo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+    <style>
+        *{box-sizing:border-box}
+        html{font-family:'Inter',system-ui,sans-serif;scroll-behavior:smooth}
+        body{background:#050b16;color:#f8fafc;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+        .navbar{background:rgba(2,6,23,.35);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07);transition:all .3s}
+        .navbar.scrolled{background:rgba(2,6,23,.75);border-bottom-color:rgba(59,130,246,.18);box-shadow:0 4px 40px rgba(0,0,0,.6)}
+        .btn-p{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff;border-radius:10px;padding:13px 28px;font-weight:600;font-size:14px;text-decoration:none;box-shadow:0 4px 20px rgba(59,130,246,.4);transition:all .3s}
+        .btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(59,130,246,.55)}
+        #desktop-nav.open{display:flex!important;position:fixed;top:65px;left:0;right:0;background:rgba(5,11,22,.98);border-bottom:1px solid rgba(255,255,255,.08);padding:20px 24px;z-index:48;flex-direction:column;gap:4px}
+        .feat-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;transition:all .3s}
+        .feat-card:hover{background:rgba(59,130,246,.06);border-color:rgba(59,130,246,.25);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.3)}
+    </style>
+    <link rel="stylesheet" href="./theme.css">
+</head>
+<body>
+
+<header class="fixed w-full z-50">
+  <nav class="navbar" id="navbar">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-6 py-3 mx-auto">
+      <a href="./index.html" class="flex items-center">
+        <img src="./images/logo-maintevo.png" style="width:44px;height:44px;object-fit:contain" class="mr-1.5" alt="MainteNeat">
+        <span class="self-center text-lg font-bold text-white whitespace-nowrap">Mainte<span style="color:#3b82f6">Neat</span></span>
+      </a>
+      <div class="flex items-center lg:order-2 gap-1">
+        <a href="tel:8884515787" class="hidden sm:inline-flex items-center text-sm font-medium text-white/70 hover:text-white mr-3 transition-colors">
+          <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          Contact sales: (888) 451-5787
+        </a>
+        <div class="relative mr-1">
+          <button id="lang-toggle" type="button" class="inline-flex items-center gap-1 px-2 py-2 text-sm font-medium text-white/70 rounded-lg hover:bg-white/10 hover:text-white focus:outline-none transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+            <span id="current-lang">🇫🇷</span>
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div id="lang-dropdown" class="hidden absolute right-0 mt-1 w-36 rounded-lg shadow-lg z-50" style="background:rgba(5,11,22,.97);border:1px solid rgba(255,255,255,.1)">
+            <ul class="py-1 text-sm text-white/80">
+              <li><button onclick="setLang('🇫🇷')" class="flex items-center gap-2 w-full px-4 py-2 hover:bg-white/10 hover:text-white transition-colors">🇫🇷 Français</button></li>
+              <li><button onclick="setLang('🇬🇧')" class="flex items-center gap-2 w-full px-4 py-2 hover:bg-white/10 hover:text-white transition-colors">🇬🇧 English</button></li>
+            </ul>
+          </div>
+        </div>
+        <button onclick="toggleTheme()" type="button" id="theme-toggle" class="inline-flex items-center p-2 text-white/70 rounded-lg hover:bg-white/10 hover:text-white focus:outline-none transition-colors" aria-label="Toggle theme"><svg class="theme-sun-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><svg class="theme-moon-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg></button>
+        <a href="./contact.html" class="btn-p" style="padding:9px 20px;font-size:13px">Get Started</a>
+        <button id="hamburger" type="button" class="inline-flex items-center p-2 ml-1 text-white/70 rounded-lg lg:hidden hover:bg-white/10 hover:text-white focus:outline-none transition-colors" aria-label="Menu">
+          <svg id="ham-icon" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/></svg>
+          <svg id="close-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="desktop-nav">
+        <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+          <li><a href="./index.html" class="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">Product</a></li>
+          <li><a href="#" class="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">Industries</a></li>
+          <li><a href="#" class="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">Enterprise</a></li>
+          <li><a href="./pricing.html" class="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">Pricing</a></li>
+          <li><a href="#" class="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section style="background:#050b16;padding-top:112px;padding-bottom:48px">
+    <div class="max-w-screen-xl px-6 mx-auto text-center">
+        <h1 style="font-size:clamp(2rem,4vw,3rem);font-weight:900;letter-spacing:-.03em;color:#fff;margin-bottom:16px;line-height:1.1">Everything your maintenance team needs</h1>
+        <p style="color:#94a3b8;font-size:1.1rem;line-height:1.7;max-width:640px;margin:0 auto">One platform to manage work orders, assets, preventive maintenance, inventory, and your whole team — from the office or the field.</p>
+    </div>
+</section>
+
+<!-- Feature Grid -->
+<section style="background:#080f1e;padding:64px 0">
+    <div class="max-w-screen-xl px-6 mx-auto">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+            <!-- Work Orders -->
+            <div class="feat-card">
+                <div style="display:flex;align-items:center;margin-bottom:16px">
+                    <div style="padding:12px;margin-right:14px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);border-radius:12px">
+                        <svg style="width:22px;height:22px;color:#60a5fa" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h3 style="font-size:1.15rem;font-weight:700;color:#fff">Work Orders</h3>
+                </div>
+                <p style="color:#94a3b8;line-height:1.7;margin-bottom:16px">Create, assign, prioritize, and close work orders in seconds. Track status in real time and maintain a full history for every task.</p>
+                <ul style="display:flex;flex-direction:column;gap:8px">
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Drag-and-drop scheduling board</li>
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Photo & document attachments</li>
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Automated email & SMS notifications</li>
+                </ul>
+            </div>
+
+            <!-- Asset Management -->
+            <div class="feat-card">
+                <div style="display:flex;align-items:center;margin-bottom:16px">
+                    <div style="padding:12px;margin-right:14px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);border-radius:12px">
+                        <svg style="width:22px;height:22px;color:#60a5fa" fill="currentColor" viewBox="0 0 20 20"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
+                    </div>
+                    <h3 style="font-size:1.15rem;font-weight:700;color:#fff">Asset Management</h3>
+                </div>
+                <p style="color:#94a3b8;line-height:1.7;margin-bottom:16px">Track every piece of equipment from purchase to retirement. Store specs, manuals, warranty info, and complete maintenance history in one place.</p>
+                <ul style="display:flex;flex-direction:column;gap:8px">
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>QR code & barcode scanning</li>
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Hierarchical asset trees</li>
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Depreciation & lifecycle tracking</li>
+                </ul>
+            </div>
+
+            <!-- Preventive Maintenance -->
+            <div class="feat-card">
+                <div style="display:flex;align-items:center;margin-bottom:16px">
+                    <div style="padding:12px;margin-right:14px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);border-radius:12px">
+                        <svg style="width:22px;height:22px;color:#60a5fa" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h3 style="font-size:1.15rem;font-weight:700;color:#fff">Preventive Maintenance</h3>
+                </div>
+                <p style="color:#94a3b8;line-height:1.7;margin-bottom:16px">Set up recurring maintenance schedules by date or usage threshold. Work orders are generated automatically, so no job is ever missed or created late.</p>
+                <ul style="display:flex;flex-direction:column;gap:8px">
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Calendar & meter-based triggers</li>
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Auto-generated work orders</li>
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Compliance audit trails</li>
+                </ul>
+            </div>
+
+            <!-- Inventory -->
+            <div class="feat-card">
+                <div style="display:flex;align-items:center;margin-bottom:16px">
+                    <div style="padding:12px;margin-right:14px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);border-radius:12px">
+                        <svg style="width:22px;height:22px;color:#60a5fa" fill="currentColor" viewBox="0 0 20 20"><path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path></svg>
+                    </div>
+                    <h3 style="font-size:1.15rem;font-weight:700;color:#fff">Inventory & Parts</h3>
+                </div>
+                <p style="color:#94a3b8;line-height:1.7;margin-bottom:16px">Know exactly what parts you have, where they are, and when to reorder. Link parts directly to work orders so technicians always have what they need.</p>
+                <ul style="display:flex;flex-direction:column;gap:8px">
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Minimum stock level alerts</li>
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Multi-warehouse support</li>
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Purchase order integration</li>
+                </ul>
+            </div>
+
+            <!-- Reporting -->
+            <div class="feat-card">
+                <div style="display:flex;align-items:center;margin-bottom:16px">
+                    <div style="padding:12px;margin-right:14px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);border-radius:12px">
+                        <svg style="width:22px;height:22px;color:#60a5fa" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11 4a1 1 0 10-2 0v4a1 1 0 102 0V7zm-3 1a1 1 0 10-2 0v3a1 1 0 102 0V8zM8 9a1 1 0 00-2 0v2a1 1 0 102 0V9z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h3 style="font-size:1.15rem;font-weight:700;color:#fff">Reporting & Analytics</h3>
+                </div>
+                <p style="color:#94a3b8;line-height:1.7;margin-bottom:16px">Make data-driven maintenance decisions with real-time dashboards and exportable reports on downtime, MTTR, costs, and technician performance.</p>
+                <ul style="display:flex;flex-direction:column;gap:8px">
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Custom KPI dashboards</li>
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>PDF & CSV exports</li>
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Scheduled automated reports</li>
+                </ul>
+            </div>
+
+            <!-- Mobile App -->
+            <div class="feat-card">
+                <div style="display:flex;align-items:center;margin-bottom:16px">
+                    <div style="padding:12px;margin-right:14px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);border-radius:12px">
+                        <svg style="width:22px;height:22px;color:#60a5fa" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <h3 style="font-size:1.15rem;font-weight:700;color:#fff">Mobile App</h3>
+                </div>
+                <p style="color:#94a3b8;line-height:1.7;margin-bottom:16px">Technicians get full MainteNeat functionality on iOS and Android — including offline mode. Scan assets, log labor, upload photos, and close work orders from anywhere.</p>
+                <ul style="display:flex;flex-direction:column;gap:8px">
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Offline-capable sync</li>
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Push notifications</li>
+                    <li style="display:flex;align-items:center;gap:8px;font-size:.875rem;color:#64748b"><svg style="width:14px;height:14px;color:#3b82f6;flex-shrink:0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Available on iOS & Android</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section style="background:#050b16;padding:80px 0">
+    <div class="max-w-screen-xl px-6 mx-auto text-center">
+        <h2 style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900;letter-spacing:-.03em;color:#fff;margin-bottom:16px">Ready to see it in action?</h2>
+        <p style="color:#94a3b8;font-size:1.05rem;margin-bottom:28px">Start your free 30-day trial. No credit card required.</p>
+        <a href="./contact.html" class="btn-p" style="padding:14px 36px;font-size:15px">Start free trial</a>
+    </div>
+</section>
+
+<footer style="background:#050b16;border-top:1px solid rgba(255,255,255,.06);padding:64px 0 40px">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-5 gap-10 mb-12">
+      <div class="md:col-span-2">
+        <a href="./index.html" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-bottom:16px">
+          <img src="./images/logo-maintevo.png" style="width:34px;height:34px;object-fit:contain" alt="MainteNeat">
+          <span style="font-size:18px;font-weight:700;color:#fff">Mainte<span style="color:#3b82f6">Neat</span></span>
+        </a>
+        <p style="font-size:14px;line-height:1.7;max-width:260px;color:#64748b">The AI-powered CMMS platform built for the next era of industrial maintenance.</p>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:16px">Platform</div>
+        <ul style="display:flex;flex-direction:column;gap:10px;list-style:none;padding:0">
+          <li><a href="./features.html" style="font-size:13px;text-decoration:none;color:#fff" onmouseover="this.style.color='#60a5fa'" onmouseout="this.style.color='#fff'">Features</a></li>
+          <li><a href="./pricing.html" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Pricing</a></li>
+          <li><a href="#" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Integrations</a></li>
+          <li><a href="#" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Changelog</a></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:16px">Company</div>
+        <ul style="display:flex;flex-direction:column;gap:10px;list-style:none;padding:0">
+          <li><a href="./about.html" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">About</a></li>
+          <li><a href="./contact.html" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Contact</a></li>
+          <li><a href="#" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Careers</a></li>
+          <li><a href="#" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:16px">Legal</div>
+        <ul style="display:flex;flex-direction:column;gap:10px;list-style:none;padding:0">
+          <li><a href="#" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Privacy Policy</a></li>
+          <li><a href="#" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Terms of Service</a></li>
+          <li><a href="#" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.06);padding-top:32px;text-align:center">
+      <span style="font-size:13px;color:#475569">© 2024-2025 MainteNeat™. All Rights Reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+    var nav = document.getElementById('navbar');
+    window.addEventListener('scroll', function() { nav.classList.toggle('scrolled', window.scrollY > 20); });
+    var hamburger = document.getElementById('hamburger');
+    var desktopNav = document.getElementById('desktop-nav');
+    var hamIcon = document.getElementById('ham-icon');
+    var closeIcon = document.getElementById('close-icon');
+    hamburger.addEventListener('click', function() {
+        desktopNav.classList.toggle('open');
+        hamIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    });
+    var langToggle = document.getElementById('lang-toggle');
+    var langDropdown = document.getElementById('lang-dropdown');
+    var savedLang = localStorage.getItem('site-lang');
+    if (savedLang) document.getElementById('current-lang').textContent = savedLang;
+    langToggle.addEventListener('click', function(e) { e.stopPropagation(); langDropdown.classList.toggle('hidden'); });
+    document.addEventListener('click', function() { langDropdown.classList.add('hidden'); });
+    function setLang(lang) { document.getElementById('current-lang').textContent = lang; langDropdown.classList.add('hidden'); localStorage.setItem('site-lang', lang); }
+</script>
+</body>
+</html>

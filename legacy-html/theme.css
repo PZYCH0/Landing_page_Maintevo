@@ -1,0 +1,248 @@
+/* ═══════════════════════════════════════════════════════════════
+   THEME TOGGLE ICON DEFAULTS (CSS-driven, no flash)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Dark mode: show sun (click to go light), hide moon */
+html.dark .theme-moon-icon  { display: none; }
+html.dark .theme-sun-icon   { display: block; }
+
+/* Light mode: show moon (click to go dark), hide sun */
+html:not(.dark) .theme-sun-icon  { display: none; }
+html:not(.dark) .theme-moon-icon { display: block; }
+
+/* ═══════════════════════════════════════════════════════════════
+   LIGHT MODE OVERRIDES — applied when <html> lacks .dark class
+   ═══════════════════════════════════════════════════════════════ */
+
+html:not(.dark) { color-scheme: light; }
+
+/* ── Body ── */
+html:not(.dark) body {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+/* ── Scrollbar ── */
+html:not(.dark) ::-webkit-scrollbar-track { background: #f1f5f9 !important; }
+html:not(.dark) ::-webkit-scrollbar-thumb { background: rgba(59,130,246,.35) !important; }
+
+/* ── Section / footer base ── */
+html:not(.dark) section { background: #f1f5f9 !important; }
+html:not(.dark) footer  { background: #e2e8f0 !important; }
+
+/* ── Inline background overrides ── */
+html:not(.dark) [style*="background:#050b16"],
+html:not(.dark) [style*="background: #050b16"] { background: #f1f5f9 !important; }
+
+html:not(.dark) [style*="background:#020617"],
+html:not(.dark) [style*="background: #020617"] { background: #f1f5f9 !important; }
+
+html:not(.dark) [style*="background:#080f1e"],
+html:not(.dark) [style*="background: #080f1e"] { background: #ffffff !important; }
+
+html:not(.dark) [style*="background:#0d1628"],
+html:not(.dark) [style*="background: #0d1628"] { background: #e2e8f0 !important; }
+
+/* ── Navbar ── */
+html:not(.dark) .navbar {
+  background: rgba(248,250,252,.92) !important;
+  border-bottom-color: rgba(0,0,0,.08) !important;
+}
+html:not(.dark) .navbar.scrolled {
+  background: rgba(248,250,252,.97) !important;
+  border-bottom-color: rgba(59,130,246,.18) !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,.08) !important;
+}
+html:not(.dark) #desktop-nav.open {
+  background: rgba(248,250,252,.98) !important;
+  border-bottom-color: rgba(0,0,0,.08) !important;
+}
+
+/* ── Nav links & controls ── */
+html:not(.dark) nav a,
+html:not(.dark) nav span.self-center { color: #334155 !important; }
+html:not(.dark) nav a:hover           { color: #0f172a !important; }
+html:not(.dark) nav .btn-p,
+html:not(.dark) nav .btn-p *          { color: #fff !important; }
+html:not(.dark) #lang-toggle,
+html:not(.dark) #hamburger,
+html:not(.dark) #theme-toggle         { color: #64748b !important; }
+html:not(.dark) #lang-toggle:hover,
+html:not(.dark) #hamburger:hover,
+html:not(.dark) #theme-toggle:hover   { color: #0f172a !important; background: rgba(0,0,0,.05) !important; }
+
+/* ── Language dropdown ── */
+html:not(.dark) #lang-dropdown {
+  background: rgba(248,250,252,.98) !important;
+  border-color: rgba(0,0,0,.1) !important;
+}
+html:not(.dark) #lang-dropdown button         { color: #475569 !important; }
+html:not(.dark) #lang-dropdown button:hover   { background: rgba(0,0,0,.05) !important; color: #0f172a !important; }
+
+/* ── Heading / text inline style overrides ── */
+html:not(.dark) [style*="color:#fff"],
+html:not(.dark) [style*="color: #fff"],
+html:not(.dark) [style*="color:#ffffff"],
+html:not(.dark) [style*="color:#f8fafc"],
+html:not(.dark) [style*="color:#e2e8f0"],
+html:not(.dark) [style*="color:#cbd5e1"] { color: #0f172a !important; }
+
+html:not(.dark) [style*="color:#94a3b8"],
+html:not(.dark) [style*="color:#64748b"] { color: #475569 !important; }
+
+/* Keep white text that lives inside blue/gradient backgrounds */
+html:not(.dark) .btn-p,
+html:not(.dark) .btn-p * { color: #fff !important; }
+
+/* ── Base heading/text defaults (no inline style) ── */
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4 { color: #0f172a; }
+html:not(.dark) p  { color: #475569; }
+
+/* ── Tailwind text utilities ── */
+html:not(.dark) .text-white        { color: #0f172a !important; }
+html:not(.dark) .text-white\/80    { color: #334155 !important; }
+html:not(.dark) .text-white\/70    { color: #64748b !important; }
+html:not(.dark) .text-white\/60    { color: #64748b !important; }
+html:not(.dark) .text-slate-300,
+html:not(.dark) .text-gray-300     { color: #475569 !important; }
+html:not(.dark) .text-slate-400,
+html:not(.dark) .text-gray-400     { color: #64748b !important; }
+
+/* Keep white text on explicit blue/colored bg elements */
+html:not(.dark) .btn-p .text-white { color: #fff !important; }
+
+/* ── Glassmorphism ── */
+html:not(.dark) .glass {
+  background: rgba(255,255,255,.75) !important;
+  border-color: rgba(0,0,0,.07) !important;
+}
+
+/* ── Feature cards ── */
+html:not(.dark) .feat-card {
+  background: rgba(255,255,255,.7) !important;
+  border-color: rgba(52,226,249,.15) !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,.04);
+}
+html:not(.dark) .feat-card:hover {
+  background: rgba(59,130,246,.05) !important;
+  border-color: rgba(59,130,246,.25) !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,.08), 0 0 20px rgba(59,130,246,.07) !important;
+}
+html:not(.dark) .feat-card .icon {
+  background: rgba(59,130,246,.08) !important;
+  border-color: rgba(59,130,246,.15) !important;
+}
+
+/* ── Testimonial / step cards ── */
+html:not(.dark) .testi-card {
+  background: rgba(255,255,255,.7) !important;
+  border-color: rgba(52,226,249,.15) !important;
+}
+html:not(.dark) .testi-card:hover {
+  border-color: rgba(59,130,246,.2) !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,.06) !important;
+}
+html:not(.dark) .step-card {
+  background: rgba(255,255,255,.7) !important;
+  border-color: rgba(52,226,249,.15) !important;
+}
+html:not(.dark) .step-card:hover { border-color: rgba(59,130,246,.25) !important; }
+
+/* ── Dashboard wrapper ── */
+html:not(.dark) .dash-wrap {
+  background: #ffffff !important;
+  border-color: rgba(59,130,246,.18) !important;
+  box-shadow: 0 0 0 1px rgba(59,130,246,.06), 0 24px 60px rgba(0,0,0,.08), 0 0 40px rgba(59,130,246,.04) !important;
+}
+
+/* ── Metric float card ── */
+html:not(.dark) .m-card {
+  background: rgba(255,255,255,.95) !important;
+  border-color: rgba(59,130,246,.15) !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,.07) !important;
+}
+
+/* ── Neon border ── */
+html:not(.dark) .neon-border {
+  background:
+    linear-gradient(#fff,#fff) padding-box,
+    linear-gradient(135deg,rgba(59,130,246,.4),rgba(34,211,238,.2),rgba(59,130,246,.1)) border-box !important;
+}
+
+/* ── Hero badge ── */
+html:not(.dark) .hero-badge {
+  background: rgba(59,130,246,.07) !important;
+  border-color: rgba(59,130,246,.18) !important;
+  color: #2563eb !important;
+}
+
+/* ── Stat bars ── */
+html:not(.dark) .s-bar { background: rgba(0,0,0,.08) !important; }
+
+/* ── CTA section ── */
+html:not(.dark) .cta-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 50%,rgba(59,130,246,.12) 0%,transparent 70%),
+    linear-gradient(180deg,#f1f5f9 0%,#ffffff 50%,#f1f5f9 100%) !important;
+}
+
+/* ── Grid background ── */
+html:not(.dark) .bg-grid {
+  background-image:
+    linear-gradient(rgba(59,130,246,.05) 1px, transparent 1px),
+    linear-gradient(90deg,rgba(59,130,246,.05) 1px, transparent 1px) !important;
+}
+
+/* ── Section divider ── */
+html:not(.dark) .sect-div {
+  background: linear-gradient(90deg,transparent,rgba(0,0,0,.08),transparent) !important;
+}
+
+/* ── Orbs ── */
+html:not(.dark) .orb1 { background: radial-gradient(circle,rgba(59,130,246,.07) 0%,transparent 70%) !important; }
+html:not(.dark) .orb2 { background: radial-gradient(circle,rgba(34,211,238,.04) 0%,transparent 70%) !important; }
+
+/* ── Secondary button ── */
+html:not(.dark) .btn-s {
+  background: rgba(0,0,0,.05) !important;
+  border-color: rgba(0,0,0,.12) !important;
+  color: #1e293b !important;
+}
+html:not(.dark) .btn-s:hover {
+  background: rgba(0,0,0,.08) !important;
+  border-color: rgba(0,0,0,.18) !important;
+}
+
+/* ── Semi-transparent white card backgrounds (inline) ── */
+html:not(.dark) [style*="background:rgba(255,255,255,.03)"],
+html:not(.dark) [style*="background:rgba(255,255,255, .03)"],
+html:not(.dark) [style*="background:rgba(255,255,255,0.03)"] {
+  background: rgba(219,234,254,.7) !important;
+  border-color: rgba(59,130,246,.12) !important;
+}
+html:not(.dark) [style*="background:rgba(255,255,255,.04)"],
+html:not(.dark) [style*="background:rgba(255,255,255,.05)"],
+html:not(.dark) [style*="background:rgba(255,255,255,.06)"],
+html:not(.dark) [style*="background:rgba(255,255,255,.07)"],
+html:not(.dark) [style*="background:rgba(255,255,255,.08)"],
+html:not(.dark) [style*="background:rgba(255,255,255,.10)"],
+html:not(.dark) [style*="background:rgba(255,255,255,.12)"] {
+  background: rgba(0,0,0,.04) !important;
+}
+
+/* ── AI node ── */
+html:not(.dark) .ai-node {
+  border-color: rgba(59,130,246,.2) !important;
+  background: rgba(59,130,246,.04) !important;
+}
+
+/* ── Hover utility classes ── */
+html:not(.dark) .hover\:bg-white\/10:hover { background: rgba(0,0,0,.06) !important; }
+
+/* ── Inline border overrides ── */
+html:not(.dark) [style*="border:1px solid rgba(255,255,255,"] { border-color: rgba(0,0,0,.08) !important; }
+html:not(.dark) [style*="border-color:rgba(255,255,255,"]    { border-color: rgba(0,0,0,.08) !important; }
+

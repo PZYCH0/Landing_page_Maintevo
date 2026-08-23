@@ -1,0 +1,917 @@
+{
+  "nav": {
+    "product": "Product",
+    "industries": "Industries",
+    "enterprise": "Enterprise",
+    "pricing": "Pricing",
+    "comparison": "Comparison",
+    "resources": "Resources",
+    "getStarted": "Schedule Demo",
+    "signUp": "Sign Up",
+    "features": {
+      "workOrders": "Requests & work orders",
+      "equipment": "Equipment & sites",
+      "preventive": "Preventive plans",
+      "inventory": "Stock & purchasing",
+      "kpi": "Reports",
+      "calendar": "Calendar & teams",
+      "roles": "Roles & access",
+      "reporting": "Audit trail"
+    },
+    "featureDesc": {
+      "workOrders": "Two records: what somebody saw, and what the team agreed to do.",
+      "equipment": "Every machine with its history, criticality and QR code.",
+      "preventive": "Plans that fire on a date or a running-hours counter.",
+      "inventory": "Spare parts tied to the jobs that consume them.",
+      "kpi": "Four views built from work the team has already done.",
+      "calendar": "Plans, scheduled jobs and open work orders on one calendar.",
+      "roles": "Three signed-in roles, plus a QR route that needs no account.",
+      "reporting": "Every change stamped with a time and a name."
+    },
+    "industryDesc": {
+      "i1": "High-cycle lines, with plans that trigger on running hours.",
+      "i2": "Large fleets of similar machines, with cost and history per machine.",
+      "i3": "Criticality drives escalation; the status history carries the evidence.",
+      "i4": "Tier suppliers under audit: every closed job leaves a dated record.",
+      "i5": "Equipment across floors and zones, with faults reported by QR.",
+      "i6": "Refrigeration and handling, where critical machines jump the queue."
+    },
+    "resourceItems": {
+      "blog_title": "Blog",
+      "blog_desc": "Articles and insights on maintenance management.",
+      "guides_title": "Guides",
+      "guides_desc": "Running the day to day, written for the people doing it.",
+      "kpi_title": "KPI definitions",
+      "kpi_desc": "What each number means and how it is counted.",
+      "checklist_title": "Setup checklist",
+      "checklist_desc": "What to gather before the first site goes live.",
+      "suggest_title": "Suggest a topic",
+      "suggest_desc": "Tell us what to cover and we will move it up."
+    },
+    "menu": {
+      "productCore": "Core platform",
+      "productOps": "Operations & insights",
+      "productAll": "View all features",
+      "industriesProcess": "Process & production",
+      "industriesSites": "Sites & logistics",
+      "industriesAll": "View all industries",
+      "resourcesLibrary": "Library",
+      "resourcesContact": "Get in touch",
+      "resourcesAll": "View all resources"
+    },
+    "logIn": "Log In"
+  },
+  "common": {
+    "back": "All features",
+    "requestDemo": "Schedule a demo",
+    "seePricing": "See pricing",
+    "seeAllFeatures": "All features",
+    "learnMore": "Read more",
+    "talkToUs": "Talk to us",
+    "quote": "On request"
+  },
+  "home": {
+    "hero": {
+      "h1": "Your technicians will actually use this one.",
+      "lead": "Most maintenance software ends up unused. This one starts at the machine. Someone scans the QR code, says what's wrong, and gets on with their day.",
+      "shotMobile": "Today's jobs, on a phone",
+      "shotJobs": "The job list a technician opens",
+      "shotQr": "What a scan lands on",
+      "s2_title": "The day's work, already on the phone.",
+      "s2_body": "A technician opens the app and sees what is assigned to them, in order, with the checklist and the parts attached. No hunting through a shared drive for last month's plan.",
+      "s2_cta": "See work orders",
+      "s3_title": "A scan is all it takes to report a fault.",
+      "s3_body": "The QR code on the machine opens a short form. No account, no password, nothing to install. The operator who saw the problem is the one who reports it, while they are still standing at the machine.",
+      "s3_cta": "See how access works",
+      "carouselLabel": "Screenshots of MainteNeat",
+      "prev": "Previous slide",
+      "next": "Next slide",
+      "goToSlide": "Go to slide {{n}}: {{title}}",
+      "slideStatus": "Screenshot {{current}} of {{total}}",
+      "status": "Your data stays in Morocco",
+      "stat1_value": "1 000 MAD",
+      "stat1_label": "per month, all in",
+      "stat2_value": "No login",
+      "stat2_label": "to report a fault",
+      "stat3_value": "20",
+      "stat3_label": "places, first group"
+    },
+    "friction": {
+      "h2": "Why this usually goes wrong",
+      "lead": "Paper loses everything the week the person keeping it goes on leave. Big foreign software keeps everything, and nobody on the floor opens it. We built around both.",
+      "adoption_title": "Nobody needs an account",
+      "adoption_text": "The QR code on the machine opens a short form. No login, no password, nothing to set up. So problems get reported when someone sees them, not at the end of the shift.",
+      "budget_title": "It comes out of your running costs",
+      "budget_text": "One price for the whole company, in dirhams, from 1 000 MAD a month. Small enough that you sign it off yourself.",
+      "setup_title": "We do the setting up",
+      "setup_text": "No servers to buy, no six-month project. Send us the files you already keep. We move everything across, set up your machines, and you're running in a week."
+    },
+    "walkthrough": {
+      "h2": "How a repair actually goes",
+      "lead": "Start to finish, here's the whole thing.",
+      "shot_s1": "Reporting a fault at the machine — scan the code, rate the condition, attach a photo.",
+      "shot_s2": "Approving the request. The status change is saved to the history with its note.",
+      "shot_s3": "Finding the fault — one of the steps the work order already lays out.",
+      "shot_s4": "Working the checklist on the phone. Every required step is answered before the job can close.",
+      "stage_label": "Screens this request passes through",
+      "stage_status": "Screen {{current}} of {{total}}",
+      "stage_prev": "Previous screen",
+      "stage_next": "Next screen",
+      "s1_title": "Someone spots a problem",
+      "s1_body": "They scan the code on the machine, say how bad it is, add a photo, send. Half a minute, no account.",
+      "s2_title": "You take a look",
+      "s2_body": "It lands on your screen with the machine attached. Approve, refuse, or leave it for later — your name stays on it.",
+      "s3_title": "The job gets written",
+      "s3_body": "Approving writes the work order, safety steps already in it: isolate, diagnose, access, repair, test, hand back.",
+      "s4_title": "Your technician finishes it",
+      "s4_body": "They tick off each step on the phone and log parts and hours. Stock updates itself, you get a PDF, the machine goes back to available."
+    },
+    "app": {
+      "h2": "What your technician sees",
+      "lead": "A real app, on iPhone and Android. They open it and see their own jobs. Nothing else.",
+      "stores": "On the App Store and Google Play.",
+      "assigned_title": "Just their work",
+      "assigned_text": "Their jobs, most urgent first. Nothing they can't do anything about.",
+      "checklist_title": "Step by step",
+      "checklist_text": "Every job comes with its checklist. They tick things off as they go and add photos from the machine.",
+      "parts_title": "Parts and time",
+      "parts_text": "They note what they used and how long it took, right there at the machine. Nobody types it up again afterwards."
+    },
+    "record": {
+      "h2": "The numbers write themselves",
+      "lead": "You don't fill anything in. Closing jobs does it.",
+      "liveKpi_title": "Your figures stay current",
+      "liveKpi_text": "Uptime, MTBF, MTTR, how long machines sat idle. All of it moves as jobs get closed, so there's no monthly report to put together.",
+      "autoWO_title": "Servicing schedules itself",
+      "autoWO_text": "Tell it a compressor needs looking at every 4 000 hours and it writes that job itself, a few days ahead, every time.",
+      "audit_title": "Nothing gets lost",
+      "audit_text": "Every approval, every change, every closed job keeps the name and the time it happened."
+    },
+    "roles": {
+      "h2": "Everyone sees their own bit",
+      "lead": "A technician never has to walk past a purchasing screen to find their work. The person who reported the fault never needs an account at all.",
+      "col_capability": "Can do",
+      "col_manager": "Manager",
+      "col_technician": "Technician",
+      "col_requester": "Requester",
+      "col_qr": "QR, no account",
+      "r_submit": "Report a fault against a machine",
+      "r_track": "Follow their own requests",
+      "r_approve": "Approve or refuse a request",
+      "r_assign": "Create and assign work orders",
+      "r_execute": "Work the checklist and log hours",
+      "r_parts": "Log parts consumed",
+      "r_kpi": "Open the reports",
+      "r_admin": "Manage equipment, stock and plans"
+    },
+    "sovereign": {
+      "h2": "Things a foreign supplier can't offer",
+      "lead": "Not because their software is worse. Because they aren't here.",
+      "data_title": "Your data stays in Morocco",
+      "data_text": "Not on a server in a country you'd struggle to point to on a map.",
+      "mad_title": "You pay in dirhams",
+      "mad_text": "The same amount every month. No exchange rate, and no extra charge each time you take someone on.",
+      "support_title": "We can come to the plant",
+      "support_text": "Same time zone, French or English, and someone who can stand in front of the machine with you.",
+      "made_title": "Made in Morocco",
+      "made_text": "Local industry, local tools. There are very few of us doing this here."
+    },
+    "early": {
+      "h2": "Our first twenty factories",
+      "p1": "We're looking for twenty plants to run this properly. Send us whatever you keep today — your spreadsheets, your machine list — and we'll do the rest: set it up, print your QR codes, train your team on site.",
+      "p2": "You'll be up and running before you've had to work anything out. All we ask in return is that you tell us honestly how it goes.",
+      "cta": "Talk to us about it"
+    },
+    "cta": {
+      "h2": "Try it on one of your own machines.",
+      "desc": "Give us 30 minutes. Pick a machine and a fault that keeps coming back, and we'll set the whole thing up in front of you.",
+      "primary": "Join the first twenty",
+      "secondary": "See pricing"
+    }
+  },
+  "signup": {
+    "title": "Start with MainteNeat",
+    "desc": "Signing up starts a setup, not a trial you work through on your own. Tell us about the site and we come back with a quote and a date.",
+    "steps_title": "What happens next",
+    "s1_title": "We call you back",
+    "s1_body": "Within one working day, to understand the site: how many machines, how many technicians, and what you use to track work today.",
+    "s2_title": "We load your data",
+    "s2_body": "Your equipment list, parts catalogue and open jobs go in from the spreadsheets you already keep. Nobody retypes anything.",
+    "s3_title": "We train the team in the plant",
+    "s3_body": "On your own machines, with the QR codes already printed. A single site is normally running within a week.",
+    "form_title": "Your details",
+    "form_site": "Site or city",
+    "form_machines": "Roughly how many machines?",
+    "form_role": "Your role",
+    "submit": "Send request",
+    "note": "No password and no payment details at this stage. We use this only to get back to you.",
+    "alt": "Already running MainteNeat?",
+    "alt_link": "Contact support"
+  },
+  "about": {
+    "mission": {
+      "title": "Why we built it",
+      "p1": "Maintenance on Moroccan industrial sites still runs on paper job books, whiteboards and spreadsheets that one person understands. When that person is on leave, the history goes with them.",
+      "p2": "The alternative on offer was worse. Heavy foreign systems, priced per seat, built for back-office staff, that technicians quietly refuse to use. MainteNeat is the version we wanted to find: bilingual from the first screen, priced flat in dirhams, and simple enough that a technician is closing jobs on their first shift."
+    },
+    "values": {
+      "title": "How we build",
+      "reliability_title": "The record has to survive",
+      "reliability_desc": "Work orders, stock movements and status history are the reason a CMMS exists. They are written once, they keep the name of whoever wrote them, and nothing is silently overwritten.",
+      "simplicity_title": "No consultant, no six-month project",
+      "simplicity_desc": "A plant should be running on it inside a week. If a feature needs a training day, the feature is wrong.",
+      "partnership_title": "Built with the plants using it",
+      "partnership_desc": "The roadmap comes from maintenance managers who run the lines, and from what technicians skip when nobody is watching."
+    },
+    "team": {
+      "title": "Team",
+      "m1_name": "Abouseir Youness",
+      "m1_role": "CEO and co-founder",
+      "m1_bio": "State engineer in electrical engineering, embedded systems and industrial computing, and a doctoral researcher in AI and predictive maintenance. Spent his career on maintenance and digital transformation inside industrial operations before starting MainteNeat.",
+      "m2_name": "Achtouk Aadnan",
+      "m2_role": "CTO and co-founder",
+      "m2_bio": "Full-stack developer. Owns the technical implementation and the software architecture of the MainteNeat platform.",
+      "company": "MainteNeat is built by IT NEAT, in formation in Morocco. Negative certificate N° 3250480."
+    },
+    "cta": {
+      "title": "Tell us about your site",
+      "desc": "What you run, how many machines, and how your team logs work today.",
+      "button": "Schedule a demo"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Flat monthly pricing, in dirhams.",
+      "desc": "One price for the whole company. Adding a technician does not change the bill, and there is no licence to buy up front."
+    },
+    "starter": {
+      "title": "Starter",
+      "desc": "One site, a small maintenance team.",
+      "price": "1 000 MAD",
+      "per": "/month",
+      "f1_val": "Equipment register with QR codes",
+      "f2_val": "Requests and work orders",
+      "f3": "Mobile use on the floor",
+      "f4": "Calendar and team planning",
+      "f5": "Support in French and English",
+      "cta": "Schedule a demo"
+    },
+    "professional": {
+      "badge": "Most chosen",
+      "title": "Pro",
+      "desc": "A growing plant, several lines.",
+      "price": "On request",
+      "per": "",
+      "f1_val": "Everything in Starter",
+      "f2_val": "Preventive plans and counters",
+      "f3": "Stock, stores and inventories",
+      "f4": "Purchasing, suppliers and subcontractors",
+      "f5": "Full reports",
+      "cta": "Get a quote"
+    },
+    "enterprise": {
+      "title": "Enterprise",
+      "desc": "Multi-site industrial groups.",
+      "price": "On request",
+      "per": "",
+      "f1_val": "Everything in Pro",
+      "f2_val": "Separate sites with group reporting",
+      "f3": "API integration with SAP, Odoo and Oracle",
+      "f4": "Advanced cloud security",
+      "f5": "A named contact",
+      "cta": "Contact us"
+    },
+    "onboarding": {
+      "title": "Setup is a one-off fee",
+      "desc": "We take your existing spreadsheets, load the equipment, parts and open jobs into MainteNeat, and train the team on site. For the first plants we do the whole configuration ourselves, so day one starts with a system that already has your machines in it.",
+      "note": "Quoted per site, once, on top of the monthly subscription."
+    },
+    "compare": {
+      "title": "What each plan includes",
+      "col_feature": "",
+      "col_starter": "Starter",
+      "col_pro": "Pro",
+      "col_ent": "Enterprise",
+      "r_equip": "Equipment register and QR codes",
+      "r_di": "Intervention requests",
+      "r_wo": "Work orders and checklists",
+      "r_cal": "Calendar and field teams",
+      "r_pm": "Preventive plans and counters",
+      "r_inv": "Stock, stores and inventories",
+      "r_buy": "Purchasing and suppliers",
+      "r_rep": "Reports",
+      "r_multi": "Multiple sites",
+      "r_api": "ERP integration"
+    },
+    "faq": {
+      "title": "Billing questions",
+      "q1": "Are we billed in dirhams?",
+      "a1": "Yes. Invoicing is in MAD, from Morocco, so there is no currency conversion and no foreign payment to arrange with your bank.",
+      "q2": "Does the price change as the team grows?",
+      "a2": "No. The plan covers the company, not the seat. Adding technicians, operators or a second manager costs nothing extra.",
+      "q3": "How long does setup take?",
+      "a3": "A single site is normally running within a week, including loading your equipment list and training the team.",
+      "q4": "Where is our data held?",
+      "a4": "In Morocco. Maintenance records describing a Moroccan plant stay in the country."
+    },
+    "bottom": {
+      "text": "Something not covered here?",
+      "link": "Ask us directly"
+    }
+  },
+  "comparison": {
+    "hero": {
+      "title": "MainteNeat next to what Moroccan plants use today",
+      "desc": "Most maintenance teams here are choosing between a spreadsheet, a foreign ERP module, a heavy imported CMMS, or one of the newer mobile tools priced in dollars. Here is where each of them lands."
+    },
+    "table": {
+      "title": "Where each option fits",
+      "col_solution": "Option",
+      "col_category": "What it is",
+      "col_strength": "Strength",
+      "col_weakness": "Weakness",
+      "r1_name": "Excel, paper, verbal",
+      "r1_cat": "Traditional methods",
+      "r1_pro": "No cost, familiar habits",
+      "r1_con": "Lost records, no traceability, human error",
+      "r2_name": "SAP PM",
+      "r2_cat": "Foreign ERP module",
+      "r2_pro": "Connected to group-wide systems",
+      "r2_con": "Very expensive, rigid, months to integrate",
+      "r3_name": "Odoo Maintenance",
+      "r3_cat": "Foreign ERP module",
+      "r3_pro": "Connected, affordable, flexible",
+      "r3_con": "Too basic for real maintenance work",
+      "r4_name": "Coswin 8i, DIMO Maint, Qb7, Carl Source",
+      "r4_cat": "Heavy imported CMMS",
+      "r4_pro": "Deep features, multinational standard",
+      "r4_con": "Complex, costly, technicians resist it",
+      "r5_name": "OTILA (B-Agile)",
+      "r5_cat": "Local player",
+      "r5_pro": "Knows the market, close at hand",
+      "r5_con": "Dated interface, not built for mobile",
+      "r6_name": "MaintainX, UpKeep",
+      "r6_cat": "Foreign mobile CMMS",
+      "r6_pro": "Modern interface, quick to onboard",
+      "r6_con": "No support in Morocco, priced in dollars",
+      "r7_name": "MainteNeat",
+      "r7_cat": "Moroccan SaaS CMMS",
+      "r7_pro": "Mobile on the floor, flat price in dirhams, local support",
+      "r7_con": "Newer, with a shorter reference list",
+      "note": "Competitor positioning reflects publicly available information as of 2026 and changes often. Confirm current terms with each vendor before deciding."
+    },
+    "local": {
+      "title": "The part a foreign vendor cannot match",
+      "p1_title": "Your data stays in the country",
+      "p1_desc": "Maintenance records describe how your plant runs. They are held in Morocco.",
+      "p2_title": "Invoiced in dirhams",
+      "p2_desc": "No conversion, no dollar price that moves with the exchange rate, no foreign payment to set up.",
+      "p3_title": "Support that can reach the site",
+      "p3_desc": "Questions answered in French or English, in your working hours, by people who can come to the plant.",
+      "p4_title": "Aligned with Made in Morocco",
+      "p4_desc": "The national industrial programme pushes local capability and digital autonomy. A Moroccan CMMS on a Moroccan site counts toward that."
+    },
+    "cta": {
+      "title": "Send us the quote you are weighing up",
+      "desc": "We will tell you honestly whether moving is worth it for a plant your size."
+    }
+  },
+  "contact": {
+    "title": "Get in touch",
+    "desc": "Email reaches us fastest. We answer within one working day, in French or English.",
+    "general_label": "General",
+    "general_sub": "Questions about the product",
+    "sales_label": "Demos and quotes",
+    "sales_sub": "A 30-minute walkthrough on your own equipment",
+    "support_label": "Support",
+    "support_sub": "For plants already running MainteNeat",
+    "form_title": "Or send a message",
+    "form_name": "Name",
+    "form_email": "Email",
+    "form_company": "Company",
+    "form_message": "What would you like to know?",
+    "form_submit": "Send",
+    "form_note": "We use this only to reply to you."
+  },
+  "industries": {
+    "title": "Where MainteNeat is used",
+    "desc": "The product suits sites with a fixed set of machines and a maintenance team on the payroll.",
+    "i1_title": "Food processing and bottling",
+    "i1_desc": "High-cycle lines where a stopped filler costs a shift. Preventive plans trigger on running hours instead of dates, which is what a counter-based plan is for.",
+    "i2_title": "Textiles and garment",
+    "i2_desc": "Large fleets of similar machines. Per-machine history and cost show which ones have stopped being worth repairing.",
+    "i3_title": "Chemicals and plastics",
+    "i3_desc": "Criticality drives how fast a fault escalates, and the status history carries the evidence a compliance review asks for.",
+    "i4_title": "Automotive components",
+    "i4_desc": "Tier suppliers under customer audit. Every closed job leaves a timestamped record with the technician's name on it.",
+    "i5_title": "Buildings and facilities",
+    "i5_desc": "Equipment spread over floors and zones, with faults reported by people outside the maintenance team. QR reporting covers them without creating accounts.",
+    "i6_title": "Logistics and cold chain",
+    "i6_desc": "Refrigeration and handling equipment where an outage spoils stock. Critical machines move to the top of the queue automatically.",
+    "cta_title": "Not on this list?",
+    "cta_desc": "The model fits most sites with a fixed machine base and a maintenance team. Tell us what you run."
+  },
+  "enterprise": {
+    "title": "Multi-site deployment",
+    "desc": "For groups running several plants, or with IT requirements a standard subscription does not cover.",
+    "f1_title": "Sites kept separate, reported together",
+    "f1_desc": "Each plant has its own equipment register, stores and team. Group reporting reads across all of them.",
+    "f2_title": "ERP integration",
+    "f2_desc": "API integration with SAP, Odoo and Oracle, so equipment, stock movements and purchase orders stay in step with the systems finance already uses.",
+    "f3_title": "Advanced cloud security",
+    "f3_desc": "Hardened hosting with the availability and isolation a group IT department will ask about before signing.",
+    "f4_title": "Migration from what you run now",
+    "f4_desc": "Equipment lists, parts catalogues and open jobs imported from spreadsheets or an existing CMMS.",
+    "f5_title": "On-site training",
+    "f5_desc": "We configure the first site with you and train the team in the plant, not over a call.",
+    "f6_title": "A named contact",
+    "f6_desc": "One person who knows your deployment, instead of a general support queue.",
+    "cta_title": "Talk to us about a group rollout",
+    "cta_desc": "Send your site count, user count and IT requirements, and we will come back with a plan."
+  },
+  "resources": {
+    "index_title": "Resources",
+    "index_desc": "Practical material on running maintenance, written for the people doing it.",
+    "kpi_title": "KPI definitions",
+    "kpi_desc": "What each number in the reports means, and how it is counted. Twelve measures, split between equipment health and parts inventory.",
+    "kpi_note": "Every one of these is calculated from jobs already logged. None of them requires separate data entry.",
+    "check_title": "Setup checklist",
+    "check_desc": "What to gather before a first site goes live. Seven items, in the order they matter.",
+    "check_note": "Setup is a one-off fee, quoted per site: we bring across your files, load the equipment and the parts, and train the team on site.",
+    "guides_title": "Guides",
+    "guides_desc": "Longer pieces on CMMS, preventive maintenance, metrics and moving off spreadsheets.",
+    "guides_cta": "Read the articles",
+    "open": "Open",
+    "kpi": {
+      "equip": {
+        "title": "Equipment health",
+        "t1": "Availability",
+        "d1": "The share of a period the machine was usable. This is the one production understands, because it answers “was the machine there when I needed it?”",
+        "t2": "MTBF",
+        "d2": "Mean time between failures: running time divided by the number of failures. It measures the equipment's reliability, not how fast you repair it.",
+        "t3": "MTTR",
+        "d3": "Mean time to repair: total repair time divided by the number of repairs. It measures your responsiveness — part availability, technician availability, documentation.",
+        "t4": "Downtime",
+        "d4": "The total hours the machine was not usable. Worth splitting between planned and unplanned: the two do not cost the same.",
+        "t5": "Failure rate per 1,000 h",
+        "d5": "Failures expressed against 1,000 running hours. It lets you compare two machines that do not run the same number of hours.",
+        "t6": "Asset health score",
+        "d6": "An aggregate score per machine, built from the measures above. Useful for ranking a fleet, not for diagnosing one machine."
+      },
+      "stock": {
+        "title": "Parts inventory",
+        "t1": "Stock value",
+        "d1": "The total value of parts held, at catalogue prices. This is the capital sitting on the shelves.",
+        "t2": "Turnover",
+        "d2": "How many times an item is consumed and replenished over a period. Low turnover marks stock that is sleeping.",
+        "t3": "Dormant stock",
+        "d3": "Items with no movement over a given period. These are the first candidates for a review of minimum levels.",
+        "t4": "Inventory accuracy",
+        "d4": "The gap between the level on screen and the level counted in a physical inventory. Below a certain threshold the numbers stop being usable.",
+        "t5": "Stockouts",
+        "d5": "How often a requested item was not available. Every stockout lengthens the MTTR of the job that needed it.",
+        "t6": "Supplier lead time",
+        "d6": "The time between placing an order and receiving it. This is what determines the minimum level an item has to hold."
+      }
+    },
+    "check": {
+      "t1": "The equipment list",
+      "d1": "Every machine with its model, serial number, location, department and criticality. It is the only thing genuinely required on day one — everything else attaches to it.",
+      "t2": "The labelling plan",
+      "d2": "Where the QR codes go, and who applies them. This is the physical part, the one that takes real time on the floor, and the one that makes reporting possible without an account.",
+      "t3": "Parts and their minimums",
+      "d3": "The items to track, their stores and locations, and a minimum level for each. The minimum is set from the supplier lead time, not from instinct.",
+      "t4": "People and their roles",
+      "d4": "Who is a manager, who is a technician, who is a requester. Operators reporting by QR code need no account, so they need no entry here.",
+      "t5": "Existing preventive plans",
+      "d5": "What is already done on a routine, and on what trigger: a date, a meter, or both. Bring them across as they are — the history will say later what should change.",
+      "t6": "The files to migrate",
+      "d6": "The spreadsheets and notebooks in use. We bring across the equipment and the parts; past history can stay archived rather than be retyped.",
+      "t7": "Site settings",
+      "d7": "Currency, timezone, date format and organisation language. The defaults are dirham, Africa/Casablanca, DD/MM/YYYY, French or English."
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "desc": "Articles and insights on maintenance management.",
+    "empty_title": "No articles yet",
+    "empty_desc": "We're writing our first posts. If there's a topic you'd like us to cover, let us know and we'll prioritize it.",
+    "empty_cta": "Suggest a topic",
+    "minutes": "{{count}} min read",
+    "read_more": "Read more",
+    "related": "Read more about this feature",
+    "breadcrumb": "Breadcrumb",
+    "home": "Home",
+    "toc": "In this article",
+    "other": "More articles",
+    "more": "Article navigation",
+    "prev": "Previous article",
+    "next": "Next article",
+    "cta_title": "See the product",
+    "cta_desc": "A walkthrough on your machines, not on sample data.",
+    "featured": "Featured",
+    "by": "By {{author}}",
+    "filter_label": "Filter your results",
+    "f_categories": "Categories",
+    "f_topics": "Topics",
+    "f_audiences": "Audiences",
+    "search": "Search",
+    "showing": "Showing {{shown}} of {{total}}",
+    "no_results": "No articles match these filters.",
+    "pagination": "Pagination",
+    "next_page": "Next"
+  },
+  "footer": {
+    "tagline": "A bilingual CMMS for maintenance teams on Moroccan industrial sites.",
+    "platform": "Product",
+    "company": "Company",
+    "about": "More",
+    "company_about": "About",
+    "company_contact": "Contact",
+    "copyright": "© 2026 MainteNeat. Built by IT NEAT, Morocco."
+  },
+  "workOrders": {
+    "hero": {
+      "h1": "Requests and work orders",
+      "lead": "Two records, on purpose. A request is what somebody saw. A work order is what the team agreed to do about it. Keeping them apart stops a passing remark from turning into an unplanned intervention."
+    },
+    "benefits": {
+      "b1_title": "Anyone on site can raise a request",
+      "b1_body": "Scanning the QR code on a machine opens the form: equipment, criticality, description, photo. Operators do not need an account, so faults get reported when they are seen.",
+      "b2_title": "The manager decides what happens",
+      "b2_body": "Requests queue as pending, approved, refused or flagged to schedule. Approving one turns it into a work order and links the two records together.",
+      "b3_title": "Sub-tasks and safety checklists",
+      "b3_body": "A work order carries its own steps, from isolation and lockout through diagnosis, repair and return to service. Checklists can require a yes or no answer and a comment before the job closes.",
+      "b4_title": "Hours and parts recorded as they happen",
+      "b4_body": "The technician logs time against the job and the parts pulled from the store. The stock movement is written at the same moment, so the shelf and the system agree."
+    },
+    "flow": {
+      "title": "The states a job passes through",
+      "s1_title": "Request submitted",
+      "s1_desc": "Created against a machine with a criticality and a description. Reference in the DI-2026-###### series.",
+      "s2_title": "Reviewed",
+      "s2_desc": "Approved, refused, or flagged as an intervention to schedule. The decision keeps the reviewer's name.",
+      "s3_title": "Work order open",
+      "s3_desc": "Sub-tasks, checklists, assigned technician and due date. Reference in the OT series.",
+      "s4_title": "Closed",
+      "s4_desc": "Hours logged, parts consumed, PDF produced, machine availability updated."
+    },
+    "cta": {
+      "title": "See a request become a work order"
+    }
+  },
+  "preventiveMaintenance": {
+    "hero": {
+      "h1": "Preventive plans",
+      "lead": "Set the plan once. MainteNeat writes the work order when the date arrives or the counter passes its threshold, with the task template and equipment already attached."
+    },
+    "benefits": {
+      "b1_title": "Calendar, counter, or both together",
+      "b1_body": "A plan runs on a frequency in days, weeks or months, on a meter reading such as 4,000 running hours, or on whichever of the two comes first.",
+      "b2_title": "The work order appears before it is due",
+      "b2_body": "You choose how many days ahead the job is created, so parts can be pulled and a technician booked before the machine is due to stop.",
+      "b3_title": "Reschedule from the closing date",
+      "b3_body": "A plan can count its next run from the day the last job actually closed instead of the day it was created. A service done a week late moves the whole cycle with it.",
+      "b4_title": "Task templates",
+      "b4_body": "The steps for a given service are written once as a template and reused by every plan that needs them. Changing the template changes the jobs that have not opened yet."
+    },
+    "cta": {
+      "title": "Stop planning maintenance by hand"
+    },
+    "detail": {
+      "title": "What triggers a plan",
+      "lead": "A preventive plan is set once. Its trigger rules decide when it writes its work order.",
+      "t1": "By calendar",
+      "d1": "A period: monthly, quarterly. The simplest, and the right choice when wear follows time rather than use.",
+      "t2": "By meter",
+      "d2": "A threshold on a reading — running hours, cycles, kilometres. A machine that is barely used is not serviced for nothing.",
+      "t3": "Both",
+      "d3": "Whichever comes first triggers it. This is the rule for equipment whose wear depends on use without being independent of time.",
+      "t4": "Write ahead",
+      "d4": "The work order is created N days before it is due, so the part can be drawn and the slot booked.",
+      "t5": "Reschedule from closing",
+      "d5": "The next cycle counts from the date the job actually closed, not from when it was created. A monthly plan that slipped three weeks does not ask for the same job again three weeks later."
+    }
+  },
+  "inventory": {
+    "hero": {
+      "h1": "Stock and purchasing",
+      "lead": "Spare parts tied to the jobs that consume them. Levels drop when a technician logs a part, and a purchase order starts when an item falls under its minimum."
+    },
+    "benefits": {
+      "b1_title": "Stores and locations",
+      "b1_body": "Parts live in named stores broken into locations, so a technician is told where to go instead of which shelf to search.",
+      "b2_title": "Movements, not adjustments",
+      "b2_body": "Every consumption, issue and receipt is a movement with its own reference and date. The level is the result of those movements, which is why it can be trusted.",
+      "b3_title": "Alerts before the shelf is empty",
+      "b3_body": "Items show as in stock, low, or out of stock against the minimum you set. The reports flag dormant stock and inventory accuracy as well.",
+      "b4_title": "Suppliers and subcontractors",
+      "b4_body": "Purchase orders, supplier records and the outside firms you send work to, held with the parts and jobs they relate to."
+    },
+    "cta": {
+      "title": "Stop keeping parts in a spreadsheet"
+    },
+    "detail": {
+      "title": "The four stock movements",
+      "lead": "Every change in level carries a type and its own reference. That is what lets you answer “where did that part go” without reconstructing it.",
+      "t1": "Consumption",
+      "d1": "A part logged against a job. The level drops when the technician records it, not at the end of the month.",
+      "t2": "Issue",
+      "d2": "A part leaving the store without being attached to a job — a loan, or a transfer between locations.",
+      "t3": "Receipt",
+      "d3": "An incoming supplier delivery. It reconciles the quantity received against the purchase order that triggered it.",
+      "t4": "Physical inventory",
+      "d4": "The count on site. The gap against the level on screen gives you inventory accuracy, and corrects the stock."
+    }
+  },
+  "equipment": {
+    "hero": {
+      "h1": "Equipment and sites",
+      "lead": "Every machine with its model, serial number, location, department, criticality and the whole history of what has been done to it. Each one carries a QR code that opens its record on a phone."
+    },
+    "criticality": {
+      "title": "Criticality sets the priority",
+      "lead": "The level on a machine decides where its faults sit in the queue and how quickly a failure escalates.",
+      "l1_name": "Low",
+      "l1_desc": "Routine work, no urgency",
+      "l2_name": "Medium",
+      "l2_desc": "Watched, scheduled regularly",
+      "l3_name": "High",
+      "l3_desc": "Fast response needed on failure",
+      "l4_name": "Critical",
+      "l4_desc": "Production stops when this stops"
+    },
+    "benefits": {
+      "b1_title": "A record per machine",
+      "b1_body": "Model, serial number, acquisition date, supplier, department and location. Sub-equipment hangs off the parent, so a line and its components stay related.",
+      "b2_title": "A QR code on the machine",
+      "b2_body": "Scanning it opens the equipment record. From there anyone can raise a request without an account, and signed-in users can open a work order or enter a meter reading.",
+      "b3_title": "Status history and availability",
+      "b3_body": "Online, offline and untracked periods are recorded per machine, with planned and unplanned stops separated. That history is where availability and MTBF come from."
+    },
+    "cta": {
+      "title": "Put your machine list in one place"
+    }
+  },
+  "kpi": {
+    "hero": {
+      "h1": "Reports",
+      "lead": "Four report views built from work the team has already done: jobs, equipment health, maintenance cost and parts inventory. Nothing is typed in twice."
+    },
+    "categories": {
+      "title": "Four views",
+      "lead": "Pick one to see what it covers.",
+      "cat1_label": "Requests and work orders",
+      "cat1_desc": "How much is open, how fast it moves, and whether jobs close inside their window.",
+      "cat1_kpi1_label": "Open, in progress, closed",
+      "cat1_kpi1_body": "The current split across states, so the size of the backlog is visible without counting anything.",
+      "cat1_kpi2_label": "On time against late",
+      "cat1_kpi2_body": "How many jobs closed inside their target window. A steady share of late jobs means the planning is not realistic.",
+      "cat1_kpi3_label": "Priority mix",
+      "cat1_kpi3_body": "Low, medium, high and urgent side by side. A queue that is mostly urgent is a queue nobody is planning.",
+      "cat1_kpi4_label": "Preventive against corrective",
+      "cat1_kpi4_body": "The balance between planned work and reaction. Moving this ratio is the point of a preventive programme.",
+      "cat1_kpi5_label": "Requests awaiting validation",
+      "cat1_kpi5_body": "What operators have reported and nobody has looked at yet.",
+      "cat2_label": "Equipment health",
+      "cat2_desc": "Which machines are reliable and which are quietly eating production time.",
+      "cat2_kpi1_label": "Availability",
+      "cat2_kpi1_body": "The share of scheduled running time a machine was actually online, taken from its status history.",
+      "cat2_kpi2_label": "MTBF",
+      "cat2_kpi2_body": "Mean time between failures. Falling MTBF on an ageing machine is the argument for replacing it.",
+      "cat2_kpi3_label": "MTTR",
+      "cat2_kpi3_body": "Mean time to repair, from opening to closing. Rising MTTR means jobs are getting harder or the team is stretched.",
+      "cat2_kpi4_label": "Failure rate",
+      "cat2_kpi4_body": "Failures per 1,000 running hours, so machines of different ages and duty cycles can be compared.",
+      "cat2_kpi5_label": "Asset health score",
+      "cat2_kpi5_body": "A single figure across the fleet, useful for spotting a direction of travel between reviews.",
+      "cat3_label": "Maintenance cost",
+      "cat3_desc": "Where the budget goes, by job and by machine, in dirhams.",
+      "cat3_kpi1_label": "Cost per work order",
+      "cat3_kpi1_body": "Labour and parts on each closed job. A rising average points at ageing equipment, or at work being done twice.",
+      "cat3_kpi2_label": "Cost per machine",
+      "cat3_kpi2_body": "Total spend on one machine over a period, which is the number a replacement decision needs.",
+      "cat3_kpi3_label": "Parts against labour",
+      "cat3_kpi3_body": "The split between materials and technician hours, useful when negotiating supply contracts or headcount.",
+      "cat3_kpi4_label": "Purchases against consumption",
+      "cat3_kpi4_body": "What was bought next to what was used, month by month. A widening gap means stock is building up.",
+      "cat3_kpi5_label": "Spend over time",
+      "cat3_kpi5_body": "The monthly trend, so an unusual month is visible while you can still ask why.",
+      "cat4_label": "Parts inventory",
+      "cat4_desc": "What is on the shelf, what it is worth, and whether the records match reality.",
+      "cat4_kpi1_label": "Total stock value",
+      "cat4_kpi1_body": "The value held across every store, in dirhams, with the split per store.",
+      "cat4_kpi2_label": "Stock turnover",
+      "cat4_kpi2_body": "How quickly parts are used and replaced. Very low turnover means capital sitting in parts nobody fits.",
+      "cat4_kpi3_label": "Dormant stock",
+      "cat4_kpi3_body": "Value that has not moved in a year, reported separately because it rarely shows up in a headline figure.",
+      "cat4_kpi4_label": "Inventory accuracy",
+      "cat4_kpi4_body": "How closely counted stock matches the system. Low accuracy is why jobs stall on parts the system says exist.",
+      "cat4_kpi5_label": "Stockouts and supplier lead time",
+      "cat4_kpi5_body": "How often you ran out, and how long the replacement actually took to arrive."
+    },
+    "cta": {
+      "title": "Stop assembling reports by hand"
+    }
+  },
+  "calendar": {
+    "hero": {
+      "h1": "Calendar and field teams",
+      "lead": "Preventive plans, scheduled jobs and open work orders on one calendar, in day, week, month or list view, with a workload view per technician."
+    },
+    "benefits": {
+      "b1_title": "Unplanned jobs sit next to the calendar",
+      "b1_body": "Work orders with no date wait in their own tray. Drag one onto a day to schedule it, and the technician's workload updates with it.",
+      "b2_title": "Load per technician",
+      "b2_body": "The team view shows how many jobs each person is carrying. Somebody holding four jobs while a colleague holds none is visible before the shift, not after.",
+      "b3_title": "Filter to what you are planning",
+      "b3_body": "By technician, job type or machine, so a conversation about one line does not require reading the whole month."
+    },
+    "cta": {
+      "title": "See the week before it starts"
+    },
+    "detail": {
+      "title": "Four views, one source",
+      "lead": "Preventive plans, scheduled jobs and open work orders are the same records, looked at from four angles.",
+      "t1": "Day",
+      "d1": "What is due today, by technician. This is the morning view, the one used to hand work out.",
+      "t2": "Week",
+      "d2": "The load across the next seven days. It shows collisions before they happen — two heavy preventive jobs on the same Thursday.",
+      "t3": "Month",
+      "d3": "The planning view. Preventive plans appear on the date they will write their work order.",
+      "t4": "List",
+      "d4": "The same thing without a calendar, filterable and sortable. This is the view you export or print.",
+      "t5": "Workload per technician",
+      "d5": "One lane per person, plus a tray of unplanned jobs. It answers “who can take this”."
+    }
+  },
+  "roles": {
+    "hero": {
+      "h1": "Roles and access",
+      "lead": "Three signed-in roles plus a QR route that needs no account. Each one sees the part of the system its job requires."
+    },
+    "manager": {
+      "role": "Manager",
+      "title": "Plans and approves",
+      "desc": "Reviews requests, creates and assigns work orders, manages equipment, stock and preventive plans, and reads the reports.",
+      "p1": "Approve or refuse requests",
+      "p2": "Create and assign work orders",
+      "p3": "Open the reports",
+      "p4": "Manage equipment and stock",
+      "p5": "Configure preventive plans"
+    },
+    "technician": {
+      "role": "Technician",
+      "title": "Executes",
+      "desc": "Sees the jobs assigned to them. Works the checklist, logs hours and parts, closes the job and produces the report.",
+      "p1": "See assigned work orders",
+      "p2": "Work sub-tasks and checklists",
+      "p3": "Log hours against the job",
+      "p4": "Log parts consumed",
+      "p5": "Close and generate the PDF"
+    },
+    "requester": {
+      "role": "Requester",
+      "title": "Reports and follows",
+      "desc": "Raises a request against a machine and follows what happens to it, without reaching costs or internal planning.",
+      "p1": "Raise a request",
+      "p2": "Follow their own requests",
+      "p3": "Attach photos and descriptions"
+    },
+    "qr": {
+      "role": "QR, no account",
+      "title": "Anyone standing at the machine",
+      "desc": "Scanning the equipment QR code opens a request form with the machine already filled in. This is how an operator on a line reports a fault without being set up as a user first.",
+      "p1": "Report a fault on the spot",
+      "p2": "See the machine's identity card",
+      "p3": "No login and no account needed"
+    },
+    "cta": {
+      "title": "Give each role the screen it needs"
+    }
+  },
+  "reporting": {
+    "hero": {
+      "h1": "Audit trail and documentation",
+      "lead": "Every status change, approval, assignment and edit is stamped with a time and a name. When an auditor asks what happened to a machine, the answer is a query."
+    },
+    "benefits": {
+      "b1_title": "Status history on every record",
+      "b1_body": "Requests and work orders carry their own history: who moved them, from which state to which, and when. The trail stays with the record.",
+      "b2_title": "A PDF on every closed job",
+      "b2_body": "Produced at closing with the work done, the technician, hours logged and parts fitted. Ready to file or hand over.",
+      "b3_title": "Documents against equipment",
+      "b3_body": "Manuals, certificates and photographs stored on the machine record, so the person holding the spanner has them.",
+      "b4_title": "Export what you need",
+      "b4_body": "Work orders, equipment, locations and suppliers export on demand. The data is not locked inside the product."
+    },
+    "audit": {
+      "title": "What is recorded without anyone doing it",
+      "e1_title": "Request submitted",
+      "e1_sub": "Who raised it, against which machine, from a QR scan or an account, and when.",
+      "e2_title": "Approved or refused",
+      "e2_sub": "The decision, the person who made it, and the time it was made.",
+      "e3_title": "Work order opened and assigned",
+      "e3_sub": "Which manager assigned it, to which technician, with what due date.",
+      "e4_title": "Parts consumed",
+      "e4_sub": "Which parts, how many, from which store, and the stock movement that followed.",
+      "e5_title": "Closed",
+      "e5_sub": "Hours logged, closing note, the generated PDF and the availability update on the machine."
+    },
+    "cta": {
+      "title": "Stop assembling evidence after the fact"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "CMMS for Moroccan industrial maintenance teams — MainteNeat",
+      "description": "A bilingual CMMS for Moroccan industrial SMEs: work orders, preventive maintenance, equipment records, stock and reports. Flat monthly pricing."
+    },
+    "about": {
+      "title": "Why we built it — MainteNeat",
+      "description": "The team behind MainteNeat and how the product is built: the record must survive, no consultant, shaped by the plants using it."
+    },
+    "contact": {
+      "title": "Get in touch — MainteNeat",
+      "description": "Email reaches us fastest. We answer within one working day, in French or English. Tell us what you run and how many machines."
+    },
+    "signup": {
+      "title": "Start with MainteNeat",
+      "description": "Signing up starts a setup, not a trial you work through on your own. Tell us about the site and we come back with a quote and a date."
+    },
+    "pricing": {
+      "title": "CMMS pricing in dirhams — MainteNeat",
+      "description": "One price for the whole company, billed in dirhams. Adding a technician does not change the bill, and there is no licence to buy up front."
+    },
+    "comparison": {
+      "title": "CMMS comparison: Excel, ERP or imported tools — MainteNeat",
+      "description": "How MainteNeat sits against a spreadsheet, a foreign ERP module, a heavy imported CMMS, and the newer mobile tools."
+    },
+    "industries": {
+      "title": "Industries and sites served — MainteNeat",
+      "description": "The product suits sites with a fixed set of machines and a maintenance team on the payroll. See whether your operation fits."
+    },
+    "enterprise": {
+      "title": "Multi-site deployment — MainteNeat",
+      "description": "For groups running several plants, or with IT requirements a standard subscription does not cover."
+    },
+    "resources": {
+      "title": "Maintenance resources — MainteNeat",
+      "description": "Practical material on running maintenance, written for the people doing it: guides, KPI definitions and a setup checklist."
+    },
+    "blog": {
+      "title": "Blog — industrial maintenance and CMMS — MainteNeat",
+      "description": "Articles and insights on maintenance management: CMMS, preventive maintenance, KPIs and notes from the shop floor."
+    },
+    "workOrders": {
+      "title": "Requests and work orders — MainteNeat",
+      "description": "Two records, on purpose. A request is what somebody saw. A work order is what the team agreed to do about it."
+    },
+    "equipment": {
+      "title": "Equipment and sites — MainteNeat",
+      "description": "Every machine with its model, serial number, location, department, criticality and the whole history of what has been done to it."
+    },
+    "preventiveMaintenance": {
+      "title": "Preventive maintenance plans — MainteNeat",
+      "description": "Set the plan once. MainteNeat writes the work order when the date arrives or the counter passes its threshold, task template included."
+    },
+    "inventory": {
+      "title": "Spare parts stock and purchasing — MainteNeat",
+      "description": "Spare parts tied to the jobs that consume them. Levels drop when a technician logs a part, and a purchase order starts at the minimum."
+    },
+    "kpiDashboard": {
+      "title": "Maintenance reports: MTBF, MTTR, availability — MainteNeat",
+      "description": "Four report views built from work the team has already done: jobs, equipment health, maintenance cost and parts inventory."
+    },
+    "maintenanceCalendar": {
+      "title": "Maintenance calendar and field teams — MainteNeat",
+      "description": "Preventive plans, scheduled jobs and open work orders on one calendar, in day, week, month or list view, with workload per technician."
+    },
+    "reporting": {
+      "title": "Audit trail and documentation — MainteNeat",
+      "description": "Every status change, approval, assignment and edit is stamped with a time and a name. Enough to answer an auditor."
+    },
+    "roles": {
+      "title": "Roles and access — MainteNeat",
+      "description": "Three signed-in roles plus a QR route that needs no account. Each one sees the part of the system its job requires."
+    },
+    "notFound": {
+      "title": "Page not found — MainteNeat",
+      "description": "The page you asked for does not exist. Head back to the home page or tell us what you were looking for."
+    },
+    "kpiDefinitions": {
+      "title": "Maintenance KPI definitions — MainteNeat",
+      "description": "MTBF, MTTR, availability, failure rate, stock turnover, supplier lead time: what each number in the reports means and how it is counted."
+    },
+    "setupChecklist": {
+      "title": "CMMS setup checklist — MainteNeat",
+      "description": "What to gather before a first site goes live: equipment, QR labelling, parts and minimums, roles, preventive plans and the files to migrate."
+    }
+  },
+  "notFound": {
+    "title": "This page does not exist",
+    "desc": "The link may be old, or the address may have a typo. Head back to the home page, or tell us what you were looking for.",
+    "home": "Back to home",
+    "contact": "Get in touch"
+  }
+}

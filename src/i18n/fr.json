@@ -1,0 +1,917 @@
+{
+  "nav": {
+    "product": "Produit",
+    "industries": "Secteurs",
+    "enterprise": "Entreprise",
+    "pricing": "Tarifs",
+    "comparison": "Comparatif",
+    "resources": "Ressources",
+    "getStarted": "Planifier une démo",
+    "signUp": "S'inscrire",
+    "features": {
+      "workOrders": "Demandes et ordres de travail",
+      "equipment": "Parc et sites",
+      "preventive": "Plans préventifs",
+      "inventory": "Stock et achats",
+      "kpi": "Rapports",
+      "calendar": "Calendrier et équipes",
+      "roles": "Rôles et accès",
+      "reporting": "Traçabilité"
+    },
+    "featureDesc": {
+      "workOrders": "Deux enregistrements : ce qui a été vu, et ce que l'équipe a décidé d'en faire.",
+      "equipment": "Chaque machine avec son historique, sa criticité et son QR code.",
+      "preventive": "Des plans déclenchés par une date ou un compteur d'heures.",
+      "inventory": "Des pièces de rechange liées aux travaux qui les consomment.",
+      "kpi": "Quatre vues construites sur le travail déjà effectué.",
+      "calendar": "Plans, interventions planifiées et OT ouverts sur un seul calendrier.",
+      "roles": "Trois rôles connectés, plus un accès QR sans compte.",
+      "reporting": "Chaque changement horodaté et signé d'un nom."
+    },
+    "industryDesc": {
+      "i1": "Lignes à cadence élevée, avec des plans déclenchés aux heures de marche.",
+      "i2": "Grands parcs de machines semblables, coût et historique par machine.",
+      "i3": "La criticité pilote l'escalade ; l'historique porte la preuve.",
+      "i4": "Sous-traitants audités : chaque travail clos laisse une trace datée.",
+      "i5": "Équipements répartis par étages et zones, signalement par QR code.",
+      "i6": "Froid et manutention, où les machines critiques passent en tête de file."
+    },
+    "resourceItems": {
+      "blog_title": "Blog",
+      "blog_desc": "Articles et éclairages sur la gestion de maintenance.",
+      "guides_title": "Guides",
+      "guides_desc": "La conduite au quotidien, écrite pour ceux qui la font.",
+      "kpi_title": "Définitions d'indicateurs",
+      "kpi_desc": "Ce que chaque chiffre veut dire et comment il est calculé.",
+      "checklist_title": "Check-list de mise en route",
+      "checklist_desc": "Ce qu'il faut réunir avant le démarrage du premier site.",
+      "suggest_title": "Proposer un sujet",
+      "suggest_desc": "Dites-nous quoi traiter et nous le remonterons."
+    },
+    "menu": {
+      "productCore": "Plateforme",
+      "productOps": "Exploitation et analyse",
+      "productAll": "Toutes les fonctionnalités",
+      "industriesProcess": "Procédés et production",
+      "industriesSites": "Sites et logistique",
+      "industriesAll": "Tous les secteurs",
+      "resourcesLibrary": "Bibliothèque",
+      "resourcesContact": "Nous écrire",
+      "resourcesAll": "Toutes les ressources"
+    },
+    "logIn": "Se connecter"
+  },
+  "common": {
+    "back": "Toutes les fonctionnalités",
+    "requestDemo": "Planifier une démo",
+    "seePricing": "Voir les tarifs",
+    "seeAllFeatures": "Toutes les fonctionnalités",
+    "learnMore": "En savoir plus",
+    "talkToUs": "Nous contacter",
+    "quote": "Sur devis"
+  },
+  "home": {
+    "hero": {
+      "h1": "Celle-là, vos techniciens s'en serviront.",
+      "lead": "La plupart des logiciels de maintenance finissent inutilisés. Celui-ci commence à la machine : on scanne le QR code, on dit ce qui ne va pas, et on retourne travailler.",
+      "shotMobile": "Les interventions du jour, sur un téléphone",
+      "shotJobs": "La liste des interventions, côté technicien",
+      "shotQr": "Ce qu'un scan ouvre",
+      "s2_title": "Le travail du jour, déjà sur le téléphone.",
+      "s2_body": "Le technicien ouvre l'application et voit ce qui lui est affecté, dans l'ordre, avec la check-list et les pièces rattachées. Fini de chercher le planning du mois dernier sur un disque partagé.",
+      "s2_cta": "Voir les ordres de travail",
+      "s3_title": "Un scan suffit pour signaler une panne.",
+      "s3_body": "Le QR code sur la machine ouvre un formulaire court. Pas de compte, pas de mot de passe, rien à installer. Celui qui a vu le problème le signale, encore devant la machine.",
+      "s3_cta": "Voir la gestion des accès",
+      "carouselLabel": "Captures d'écran de MainteNeat",
+      "prev": "Slide précédente",
+      "next": "Slide suivante",
+      "goToSlide": "Aller au slide {{n}} : {{title}}",
+      "slideStatus": "Capture {{current}} sur {{total}}",
+      "status": "Vos données restent au Maroc",
+      "stat1_value": "1 000 MAD",
+      "stat1_label": "par mois, tout compris",
+      "stat2_value": "Sans compte",
+      "stat2_label": "pour signaler une panne",
+      "stat3_value": "20",
+      "stat3_label": "places, premier groupe"
+    },
+    "friction": {
+      "h2": "Pourquoi ça rate, d'habitude",
+      "lead": "Le papier perd tout la semaine où celui qui le tient part en congé. Les gros logiciels étrangers gardent tout, et personne sur le terrain ne les ouvre. Nous avons construit autour de ces deux problèmes.",
+      "adoption_title": "Personne n'a besoin de compte",
+      "adoption_text": "Le QR code de la machine ouvre un formulaire court. Pas de connexion, pas de mot de passe, rien à créer. Les pannes sont signalées quand on les voit, pas en fin de poste.",
+      "budget_title": "Ça sort du budget de fonctionnement",
+      "budget_text": "Un seul tarif pour toute l'entreprise, en dirhams, à partir de 1 000 MAD par mois. Assez peu pour que vous le validiez vous-même.",
+      "setup_title": "C'est nous qui installons",
+      "setup_text": "Pas de serveur à acheter, pas de projet sur six mois. Envoyez-nous les fichiers que vous tenez déjà. On reprend tout, on paramètre vos machines, et vous tournez en une semaine."
+    },
+    "walkthrough": {
+      "h2": "Comment une réparation se passe",
+      "lead": "Du début à la fin, voilà tout ce qui se passe.",
+      "shot_s1": "Signaler une panne devant la machine — scanner le code, indiquer l'état, joindre une photo.",
+      "shot_s2": "Validation de la demande. Le changement de statut est enregistré dans l'historique avec sa note.",
+      "shot_s3": "Recherche de la panne — l'une des étapes que l'ordre de travail prévoit déjà.",
+      "shot_s4": "La checklist traitée depuis le téléphone. Chaque étape obligatoire est répondue avant de pouvoir terminer.",
+      "stage_label": "Écrans traversés par cette demande",
+      "stage_status": "Écran {{current}} sur {{total}}",
+      "stage_prev": "Écran précédent",
+      "stage_next": "Écran suivant",
+      "s1_title": "Quelqu'un repère un problème",
+      "s1_body": "Il scanne le code de la machine, indique la gravité, ajoute une photo, envoie. Trente secondes, sans compte.",
+      "s2_title": "Vous y jetez un œil",
+      "s2_body": "Ça arrive sur votre écran, machine déjà rattachée. Vous approuvez, refusez, ou laissez pour plus tard — votre nom reste dessus.",
+      "s3_title": "L'intervention s'écrit",
+      "s3_body": "La validation écrit l'ordre de travail, étapes de sécurité comprises : consigner, diagnostiquer, accéder, réparer, essayer, remettre en service.",
+      "s4_title": "Votre technicien la termine",
+      "s4_body": "Il coche chaque étape sur son téléphone et note pièces et heures. Le stock se met à jour seul, vous récupérez un PDF, la machine repasse en disponible."
+    },
+    "app": {
+      "h2": "Ce que voit votre technicien",
+      "lead": "Une vraie application, sur iPhone et Android. Il l'ouvre et voit ses interventions. Rien d'autre.",
+      "stores": "Sur l'App Store et Google Play.",
+      "assigned_title": "Juste son travail",
+      "assigned_text": "Ses interventions, les plus urgentes en premier. Rien sur quoi il ne peut rien faire.",
+      "checklist_title": "Étape par étape",
+      "checklist_text": "Chaque intervention arrive avec sa check-list. Il coche au fur et à mesure et ajoute des photos prises sur la machine.",
+      "parts_title": "Pièces et temps passé",
+      "parts_text": "Il note ce qu'il a utilisé et le temps que ça a pris, directement devant la machine. Personne ne ressaisit quoi que ce soit ensuite."
+    },
+    "record": {
+      "h2": "Les chiffres s'écrivent tout seuls",
+      "lead": "Vous ne remplissez rien. Ce sont les interventions clôturées qui le font.",
+      "liveKpi_title": "Vos chiffres restent à jour",
+      "liveKpi_text": "Disponibilité, MTBF, MTTR, temps d'arrêt. Tout bouge à mesure que les interventions se clôturent : il n'y a pas de rapport mensuel à monter.",
+      "autoWO_title": "L'entretien se planifie seul",
+      "autoWO_text": "Dites qu'un compresseur se révise toutes les 4 000 heures : il crée l'intervention lui-même, quelques jours à l'avance, à chaque fois.",
+      "audit_title": "Rien ne se perd",
+      "audit_text": "Chaque validation, chaque modification, chaque intervention clôturée garde le nom et l'heure."
+    },
+    "roles": {
+      "h2": "Chacun voit sa partie",
+      "lead": "Un technicien ne traverse jamais un écran d'achats pour trouver son travail. Celui qui a signalé la panne n'a même pas besoin de compte.",
+      "col_capability": "Peut",
+      "col_manager": "Responsable",
+      "col_technician": "Technicien",
+      "col_requester": "Demandeur",
+      "col_qr": "QR, sans compte",
+      "r_submit": "Signaler une panne sur une machine",
+      "r_track": "Suivre ses propres demandes",
+      "r_approve": "Approuver ou refuser une demande",
+      "r_assign": "Créer et affecter des ordres de travail",
+      "r_execute": "Dérouler la check-list et saisir ses heures",
+      "r_parts": "Enregistrer les pièces consommées",
+      "r_kpi": "Ouvrir les rapports",
+      "r_admin": "Gérer équipements, stock et plans"
+    },
+    "sovereign": {
+      "h2": "Ce qu'un éditeur étranger ne peut pas offrir",
+      "lead": "Pas parce que leur logiciel est moins bon. Parce qu'ils ne sont pas ici.",
+      "data_title": "Vos données restent au Maroc",
+      "data_text": "Pas sur un serveur dans un pays que vous auriez du mal à situer sur une carte.",
+      "mad_title": "Vous payez en dirhams",
+      "mad_text": "Le même montant chaque mois. Pas de taux de change, et rien de plus à payer à chaque embauche.",
+      "support_title": "On peut venir à l'usine",
+      "support_text": "Même fuseau horaire, en français ou en anglais, et quelqu'un qui peut se tenir devant la machine avec vous.",
+      "made_title": "Made in Morocco",
+      "made_text": "Industrie locale, outils locaux. Nous sommes très peu à le faire ici."
+    },
+    "early": {
+      "h2": "Nos vingt premières usines",
+      "p1": "Nous cherchons vingt usines pour faire tourner tout ça pour de bon. Envoyez-nous ce que vous tenez aujourd'hui — vos fichiers Excel, votre liste de machines — et on s'occupe du reste : on paramètre, on imprime vos QR codes, on forme votre équipe sur place.",
+      "p2": "Vous tournez avant d'avoir eu à comprendre quoi que ce soit. Tout ce qu'on demande en retour, c'est que vous nous disiez franchement ce que ça donne.",
+      "cta": "Nous en parler"
+    },
+    "cta": {
+      "h2": "Essayez-le sur une de vos machines.",
+      "desc": "Donnez-nous 30 minutes. Choisissez une machine et une panne qui revient, et on installe tout devant vous.",
+      "primary": "Rejoindre les vingt premiers",
+      "secondary": "Voir les tarifs"
+    }
+  },
+  "signup": {
+    "title": "Démarrer avec MainteNeat",
+    "desc": "S'inscrire lance une mise en route, pas un essai que vous menez seul de votre côté. Parlez-nous du site, nous revenons avec un devis et une date.",
+    "steps_title": "Ce qui se passe ensuite",
+    "s1_title": "Nous vous rappelons",
+    "s1_body": "Sous un jour ouvré, pour comprendre le site : combien de machines, combien de techniciens, et avec quoi vous suivez les interventions aujourd'hui.",
+    "s2_title": "Nous chargeons vos données",
+    "s2_body": "Votre parc, votre catalogue de pièces et vos interventions ouvertes entrent depuis les fichiers que vous tenez déjà. Personne ne ressaisit quoi que ce soit.",
+    "s3_title": "Nous formons l'équipe dans l'usine",
+    "s3_body": "Sur vos propres machines, avec les QR codes déjà imprimés. Un site unique tourne normalement en moins d'une semaine.",
+    "form_title": "Vos coordonnées",
+    "form_site": "Site ou ville",
+    "form_machines": "Combien de machines environ ?",
+    "form_role": "Votre fonction",
+    "submit": "Envoyer la demande",
+    "note": "Aucun mot de passe et aucune coordonnée bancaire à ce stade. Ces informations servent uniquement à vous recontacter.",
+    "alt": "Vous utilisez déjà MainteNeat ?",
+    "alt_link": "Contacter le support"
+  },
+  "about": {
+    "mission": {
+      "title": "Pourquoi nous l'avons construit",
+      "p1": "La maintenance sur les sites industriels marocains tourne encore avec des carnets papier, des tableaux blancs et des fichiers Excel qu'une seule personne comprend. Quand cette personne est en congé, l'historique part avec elle.",
+      "p2": "L'alternative proposée était pire. Des systèmes étrangers lourds, facturés au poste, conçus pour les administratifs, que les techniciens refusent discrètement d'utiliser. MainteNeat est la version que nous aurions voulu trouver : bilingue dès le premier écran, à tarif fixe en dirhams, et assez simple pour qu'un technicien clôture ses interventions dès sa première journée."
+    },
+    "values": {
+      "title": "Notre façon de construire",
+      "reliability_title": "La fiche doit survivre",
+      "reliability_desc": "Les ordres de travail, les mouvements de stock et l'historique des statuts sont la raison d'être d'une GMAO. Ils sont écrits une fois, ils gardent le nom de celui qui les a écrits, et rien n'est écrasé en silence.",
+      "simplicity_title": "Sans consultant, sans projet de six mois",
+      "simplicity_desc": "Une usine doit tourner dessus en moins d'une semaine. Si une fonction exige une journée de formation, c'est la fonction qu'il faut revoir.",
+      "partnership_title": "Construit avec les usines qui l'utilisent",
+      "partnership_desc": "La feuille de route vient des responsables maintenance qui font tourner les lignes, et de ce que les techniciens sautent quand personne ne regarde."
+    },
+    "team": {
+      "title": "Équipe",
+      "m1_name": "Abouseir Youness",
+      "m1_role": "CEO et cofondateur",
+      "m1_bio": "Ingénieur d'État en génie électrique, systèmes embarqués et informatique industrielle, et chercheur doctorant en IA et maintenance prédictive. A passé sa carrière sur la maintenance et la transformation numérique en milieu industriel avant de lancer MainteNeat.",
+      "m2_name": "Achtouk Aadnan",
+      "m2_role": "CTO et cofondateur",
+      "m2_bio": "Développeur full-stack. Responsable de l'implémentation technique et de l'architecture logicielle de la plateforme MainteNeat.",
+      "company": "MainteNeat est développé par IT NEAT, société en cours de constitution au Maroc. Certificat négatif N° 3250480."
+    },
+    "cta": {
+      "title": "Parlez-nous de votre site",
+      "desc": "Ce que vous exploitez, combien de machines, et comment votre équipe enregistre ses interventions aujourd'hui.",
+      "button": "Planifier une démo"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Un tarif mensuel fixe, en dirhams.",
+      "desc": "Un prix pour toute l'entreprise. Ajouter un technicien ne change pas la facture, et il n'y a aucune licence à acheter au départ."
+    },
+    "starter": {
+      "title": "Starter",
+      "desc": "Un site, une petite équipe de maintenance.",
+      "price": "1 000 MAD",
+      "per": "/mois",
+      "f1_val": "Parc d'équipements avec QR codes",
+      "f2_val": "Demandes et ordres de travail",
+      "f3": "Usage mobile sur le terrain",
+      "f4": "Calendrier et planification d'équipe",
+      "f5": "Support en français et en anglais",
+      "cta": "Planifier une démo"
+    },
+    "professional": {
+      "badge": "Le plus choisi",
+      "title": "Pro",
+      "desc": "Une usine en croissance, plusieurs lignes.",
+      "price": "Sur devis",
+      "per": "",
+      "f1_val": "Tout le contenu de Starter",
+      "f2_val": "Plans préventifs et compteurs",
+      "f3": "Stock, magasins et inventaires",
+      "f4": "Achats, fournisseurs et sous-traitants",
+      "f5": "Rapports complets",
+      "cta": "Demander un devis"
+    },
+    "enterprise": {
+      "title": "Enterprise",
+      "desc": "Groupes industriels multi-sites.",
+      "price": "Sur devis",
+      "per": "",
+      "f1_val": "Tout le contenu de Pro",
+      "f2_val": "Sites distincts avec reporting groupe",
+      "f3": "Intégration API avec SAP, Odoo et Oracle",
+      "f4": "Sécurité cloud avancée",
+      "f5": "Un interlocuteur nommé",
+      "cta": "Nous contacter"
+    },
+    "onboarding": {
+      "title": "La mise en route est un forfait unique",
+      "desc": "Nous reprenons vos fichiers Excel, chargeons les équipements, les pièces et les interventions ouvertes dans MainteNeat, et formons l'équipe sur site. Pour les premières usines, nous faisons toute la configuration à votre place : le premier jour commence avec un système qui contient déjà vos machines.",
+      "note": "Chiffré par site, une seule fois, en plus de l'abonnement mensuel."
+    },
+    "compare": {
+      "title": "Ce que comprend chaque formule",
+      "col_feature": "",
+      "col_starter": "Starter",
+      "col_pro": "Pro",
+      "col_ent": "Enterprise",
+      "r_equip": "Parc d'équipements et QR codes",
+      "r_di": "Demandes d'intervention",
+      "r_wo": "Ordres de travail et check-lists",
+      "r_cal": "Calendrier et équipes terrain",
+      "r_pm": "Plans préventifs et compteurs",
+      "r_inv": "Stock, magasins et inventaires",
+      "r_buy": "Achats et fournisseurs",
+      "r_rep": "Rapports",
+      "r_multi": "Sites multiples",
+      "r_api": "Intégration ERP"
+    },
+    "faq": {
+      "title": "Questions de facturation",
+      "q1": "Sommes-nous facturés en dirhams ?",
+      "a1": "Oui. La facturation se fait en MAD, depuis le Maroc : aucune conversion de devise et aucun paiement à l'étranger à mettre en place avec votre banque.",
+      "q2": "Le prix change-t-il quand l'équipe grandit ?",
+      "a2": "Non. La formule couvre l'entreprise, pas le poste. Ajouter des techniciens, des opérateurs ou un second responsable ne coûte rien de plus.",
+      "q3": "Combien de temps prend la mise en route ?",
+      "a3": "Un site unique tourne normalement en moins d'une semaine, chargement du parc et formation de l'équipe compris.",
+      "q4": "Où sont hébergées nos données ?",
+      "a4": "Au Maroc. Les données de maintenance qui décrivent une usine marocaine restent dans le pays."
+    },
+    "bottom": {
+      "text": "Une question qui n'est pas traitée ici ?",
+      "link": "Posez-la directement"
+    }
+  },
+  "comparison": {
+    "hero": {
+      "title": "MainteNeat face à ce qu'utilisent les usines marocaines",
+      "desc": "La plupart des équipes de maintenance choisissent aujourd'hui entre un tableur, un module ERP étranger, une GMAO importée lourde, ou l'un des nouveaux outils mobiles facturés en dollars. Voici où se situe chacun."
+    },
+    "table": {
+      "title": "Le terrain de chaque option",
+      "col_solution": "Option",
+      "col_category": "Ce que c'est",
+      "col_strength": "Point fort",
+      "col_weakness": "Point faible",
+      "r1_name": "Excel, papier, verbal",
+      "r1_cat": "Méthodes traditionnelles",
+      "r1_pro": "Aucun coût, habitudes familières",
+      "r1_con": "Perte de données, aucune traçabilité, erreur humaine",
+      "r2_name": "SAP PM",
+      "r2_cat": "Module ERP étranger",
+      "r2_pro": "Connecté aux systèmes du groupe",
+      "r2_con": "Très cher, rigide, des mois d'intégration",
+      "r3_name": "Odoo Maintenance",
+      "r3_cat": "Module ERP étranger",
+      "r3_pro": "Connecté, abordable, flexible",
+      "r3_con": "Trop basique pour les vrais besoins de maintenance",
+      "r4_name": "Coswin 8i, DIMO Maint, Qb7, Carl Source",
+      "r4_cat": "GMAO importée lourde",
+      "r4_pro": "Fonctionnalités approfondies, standard multinational",
+      "r4_con": "Complexe, coûteuse, adoption difficile par les techniciens",
+      "r5_name": "OTILA (B-Agile)",
+      "r5_cat": "Acteur local",
+      "r5_pro": "Connaissance du marché, proximité",
+      "r5_con": "Interface datée, non pensée pour le mobile",
+      "r6_name": "MaintainX, UpKeep",
+      "r6_cat": "GMAO mobile étrangère",
+      "r6_pro": "Interface moderne, prise en main rapide",
+      "r6_con": "Aucun support au Maroc, tarification en dollars",
+      "r7_name": "MainteNeat",
+      "r7_cat": "GMAO SaaS marocaine",
+      "r7_pro": "Mobile sur le terrain, tarif fixe en dirhams, support local",
+      "r7_con": "Plus récente, avec moins de références",
+      "note": "Le positionnement des concurrents reflète les informations publiques disponibles en 2026 et évolue souvent. Vérifiez les conditions en vigueur auprès de chaque éditeur avant de décider."
+    },
+    "local": {
+      "title": "Ce qu'un éditeur étranger ne peut pas égaler",
+      "p1_title": "Vos données restent dans le pays",
+      "p1_desc": "Les fiches de maintenance décrivent le fonctionnement de votre usine. Elles sont hébergées au Maroc.",
+      "p2_title": "Facturé en dirhams",
+      "p2_desc": "Pas de conversion, pas de prix en dollars qui bouge avec le taux de change, aucun paiement à l'étranger à mettre en place.",
+      "p3_title": "Un support qui peut venir sur site",
+      "p3_desc": "Des réponses en français ou en anglais, à vos heures de travail, par des personnes qui peuvent se déplacer à l'usine.",
+      "p4_title": "Aligné avec Made in Morocco",
+      "p4_desc": "Le programme industriel national pousse la capacité locale et l'autonomie numérique. Une GMAO marocaine sur un site marocain y contribue."
+    },
+    "cta": {
+      "title": "Envoyez-nous le devis que vous étudiez",
+      "desc": "Nous vous dirons honnêtement si le changement vaut le coup pour une usine de votre taille."
+    }
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "desc": "L'e-mail est le moyen le plus rapide. Nous répondons sous un jour ouvré, en français ou en anglais.",
+    "general_label": "Général",
+    "general_sub": "Questions sur le produit",
+    "sales_label": "Démos et devis",
+    "sales_sub": "Une présentation de 30 minutes sur vos propres équipements",
+    "support_label": "Support",
+    "support_sub": "Pour les usines déjà sous MainteNeat",
+    "form_title": "Ou envoyez un message",
+    "form_name": "Nom",
+    "form_email": "E-mail",
+    "form_company": "Entreprise",
+    "form_message": "Que souhaitez-vous savoir ?",
+    "form_submit": "Envoyer",
+    "form_note": "Ces informations servent uniquement à vous répondre."
+  },
+  "industries": {
+    "title": "Où MainteNeat est utilisé",
+    "desc": "Le produit convient aux sites avec un parc de machines fixe et une équipe de maintenance salariée.",
+    "i1_title": "Agroalimentaire et embouteillage",
+    "i1_desc": "Lignes à cadence élevée où une soutireuse arrêtée coûte une équipe entière. Les plans préventifs se déclenchent aux heures de fonctionnement plutôt qu'aux dates, ce à quoi sert un plan sur compteur.",
+    "i2_title": "Textile et confection",
+    "i2_desc": "Grands parcs de machines semblables. L'historique et le coût par machine montrent lesquelles ont cessé de valoir une réparation.",
+    "i3_title": "Chimie et plasturgie",
+    "i3_desc": "La criticité pilote la vitesse d'escalade d'une panne, et l'historique des statuts fournit les preuves qu'un audit de conformité réclame.",
+    "i4_title": "Équipementiers automobiles",
+    "i4_desc": "Fournisseurs de rang soumis aux audits clients. Chaque intervention clôturée laisse une fiche horodatée au nom du technicien.",
+    "i5_title": "Bâtiment et services généraux",
+    "i5_desc": "Équipements répartis sur plusieurs étages et zones, avec des pannes signalées par des personnes extérieures à la maintenance. Le signalement par QR les couvre sans créer de comptes.",
+    "i6_title": "Logistique et chaîne du froid",
+    "i6_desc": "Froid et manutention, où un arrêt détruit la marchandise. Les machines critiques remontent automatiquement en haut de la file.",
+    "cta_title": "Votre secteur n'est pas listé ?",
+    "cta_desc": "Le modèle convient à la plupart des sites avec un parc fixe et une équipe de maintenance. Dites-nous ce que vous exploitez."
+  },
+  "enterprise": {
+    "title": "Déploiement multi-sites",
+    "desc": "Pour les groupes exploitant plusieurs usines, ou dont les exigences informatiques dépassent un abonnement standard.",
+    "f1_title": "Des sites séparés, un reporting commun",
+    "f1_desc": "Chaque usine a son propre parc, ses magasins et son équipe. Le reporting groupe lit à travers l'ensemble.",
+    "f2_title": "Intégration ERP",
+    "f2_desc": "Intégration API avec SAP, Odoo et Oracle, pour que les équipements, les mouvements de stock et les commandes restent alignés avec les systèmes que la finance utilise déjà.",
+    "f3_title": "Sécurité cloud avancée",
+    "f3_desc": "Un hébergement durci, avec la disponibilité et l'isolation qu'une DSI groupe demandera avant de signer.",
+    "f4_title": "Reprise de votre système actuel",
+    "f4_desc": "Parcs d'équipements, catalogues de pièces et interventions ouvertes importés depuis Excel ou une GMAO existante.",
+    "f5_title": "Formation sur site",
+    "f5_desc": "Nous configurons le premier site avec vous et formons l'équipe dans l'usine, pas au téléphone.",
+    "f6_title": "Un interlocuteur nommé",
+    "f6_desc": "Une personne qui connaît votre déploiement, au lieu d'une file de support générique.",
+    "cta_title": "Parlons d'un déploiement groupe",
+    "cta_desc": "Envoyez votre nombre de sites, d'utilisateurs et vos contraintes informatiques, nous reviendrons avec un plan."
+  },
+  "resources": {
+    "index_title": "Ressources",
+    "index_desc": "Des contenus pratiques sur la conduite de la maintenance, écrits pour ceux qui la font.",
+    "kpi_title": "Définitions des indicateurs",
+    "kpi_desc": "Ce que chaque chiffre des rapports veut dire, et comment il est compté. Douze indicateurs, répartis entre santé des équipements et inventaire des pièces.",
+    "kpi_note": "Tous ces indicateurs se calculent à partir des interventions déjà saisies. Aucun n'exige une saisie séparée.",
+    "check_title": "Checklist de mise en route",
+    "check_desc": "Ce qu'il faut rassembler avant qu'un premier site démarre. Sept points, dans l'ordre où ils comptent.",
+    "check_note": "La mise en route est un forfait unique, chiffré par site : nous reprenons vos fichiers, chargeons le parc et les pièces, et formons l'équipe sur place.",
+    "guides_title": "Guides",
+    "guides_desc": "Articles de fond sur la GMAO, le préventif, les indicateurs et la migration depuis Excel.",
+    "guides_cta": "Lire les articles",
+    "open": "Ouvrir",
+    "kpi": {
+      "equip": {
+        "title": "Santé des équipements",
+        "t1": "Disponibilité",
+        "d1": "La part du temps où la machine était utilisable, sur une période donnée. C'est l'indicateur que la production comprend, parce qu'il répond à « la machine était-elle là quand j'en avais besoin ? ».",
+        "t2": "MTBF",
+        "d2": "Temps moyen entre pannes : le temps de fonctionnement divisé par le nombre de pannes. Il mesure la fiabilité de l'équipement, pas votre rapidité à le réparer.",
+        "t3": "MTTR",
+        "d3": "Temps moyen de réparation : le temps total de réparation divisé par le nombre de réparations. Il mesure votre réactivité — disponibilité de la pièce, du technicien, de la documentation.",
+        "t4": "Temps d'arrêt",
+        "d4": "Le cumul des heures pendant lesquelles la machine n'était pas utilisable. À séparer entre arrêts planifiés et arrêts subis : les deux ne coûtent pas la même chose.",
+        "t5": "Taux de panne pour 1 000 h",
+        "d5": "Le nombre de pannes rapporté à 1 000 heures de fonctionnement. Il permet de comparer deux machines qui ne tournent pas le même nombre d'heures.",
+        "t6": "Score de santé",
+        "d6": "Une note agrégée par équipement, construite à partir des indicateurs ci-dessus. Utile pour trier un parc, pas pour diagnostiquer une machine."
+      },
+      "stock": {
+        "title": "Inventaire des pièces",
+        "t1": "Valeur du stock",
+        "d1": "La valeur totale des pièces détenues, aux prix du catalogue. C'est le capital immobilisé sur les étagères.",
+        "t2": "Rotation",
+        "d2": "Le nombre de fois qu'un article est consommé et réapprovisionné sur une période. Une rotation faible signale du stock qui dort.",
+        "t3": "Stock dormant",
+        "d3": "Les articles sans mouvement depuis une période donnée. Ce sont les premiers candidats à une révision des minima.",
+        "t4": "Exactitude d'inventaire",
+        "d4": "L'écart entre le stock affiché et le stock compté lors d'un inventaire physique. En dessous d'un certain seuil, les niveaux ne sont plus exploitables.",
+        "t5": "Ruptures",
+        "d5": "Le nombre de fois où un article demandé n'était pas disponible. Chaque rupture allonge le MTTR de l'intervention concernée.",
+        "t6": "Délai fournisseur",
+        "d6": "Le temps écoulé entre la commande et la réception. C'est ce qui détermine le niveau minimum qu'un article doit conserver."
+      }
+    },
+    "check": {
+      "t1": "La liste des équipements",
+      "d1": "Chaque machine avec son modèle, son numéro de série, sa localisation, son service et sa criticité. C'est la seule chose vraiment indispensable au démarrage : tout le reste s'y rattache.",
+      "t2": "Le plan d'étiquetage",
+      "d2": "Où coller les QR codes, et qui s'en charge. C'est la partie physique, celle qui prend du temps sur le terrain — et celle qui rend la déclaration possible sans compte.",
+      "t3": "Les pièces et leurs minima",
+      "d3": "Les articles à suivre, leurs magasins et emplacements, et le niveau minimum de chacun. Le minimum se règle à partir du délai fournisseur, pas d'une intuition.",
+      "t4": "Les personnes et leurs rôles",
+      "d4": "Qui est responsable, qui est technicien, qui est demandeur. Les opérateurs qui signalent par QR code n'ont pas besoin de compte, donc pas besoin d'être listés.",
+      "t5": "Les plans préventifs existants",
+      "d5": "Ce qui est déjà fait régulièrement, et sur quel déclencheur : une date, un compteur, ou les deux. À reprendre tel quel au départ ; l'historique dira plus tard ce qui doit changer.",
+      "t6": "Les fichiers à reprendre",
+      "d6": "Les tableurs et carnets en cours. Nous reprenons le parc et les pièces ; l'historique passé peut rester archivé plutôt que d'être recopié.",
+      "t7": "Les réglages du site",
+      "d7": "Devise, fuseau horaire, format de date et langue de l'organisation. Par défaut : dirham, Africa/Casablanca, JJ/MM/AAAA, français ou anglais."
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "desc": "Articles et éclairages sur la gestion de maintenance.",
+    "empty_title": "Aucun article pour l'instant",
+    "empty_desc": "Nous rédigeons nos premiers articles. Si vous souhaitez que nous traitions un sujet, faites-le-nous savoir et nous le prioriserons.",
+    "empty_cta": "Proposer un sujet",
+    "minutes": "{{count}} min de lecture",
+    "read_more": "Lire la suite",
+    "related": "En savoir plus sur cette fonctionnalité",
+    "breadcrumb": "Fil d'Ariane",
+    "home": "Accueil",
+    "toc": "Dans cet article",
+    "other": "Autres articles",
+    "more": "Navigation entre articles",
+    "prev": "Article précédent",
+    "next": "Article suivant",
+    "cta_title": "Voir le produit",
+    "cta_desc": "Une démonstration sur vos machines, pas sur des données d'exemple.",
+    "featured": "À la une",
+    "by": "Par {{author}}",
+    "filter_label": "Filtrer les résultats",
+    "f_categories": "Catégories",
+    "f_topics": "Sujets",
+    "f_audiences": "Publics",
+    "search": "Rechercher",
+    "showing": "Affichage de {{shown}} sur {{total}}",
+    "no_results": "Aucun article ne correspond à ces filtres.",
+    "pagination": "Pagination",
+    "next_page": "Suivant"
+  },
+  "footer": {
+    "tagline": "Une GMAO bilingue pour les équipes de maintenance des sites industriels marocains.",
+    "platform": "Produit",
+    "company": "Société",
+    "about": "Plus",
+    "company_about": "À propos",
+    "company_contact": "Contact",
+    "copyright": "© 2026 MainteNeat. Développé par IT NEAT, Maroc."
+  },
+  "workOrders": {
+    "hero": {
+      "h1": "Demandes et ordres de travail",
+      "lead": "Deux fiches, volontairement. Une demande, c'est ce que quelqu'un a constaté. Un ordre de travail, c'est ce que l'équipe a décidé d'en faire. Les garder distinctes empêche une remarque de passage de devenir une intervention non planifiée."
+    },
+    "benefits": {
+      "b1_title": "N'importe qui sur le site peut créer une demande",
+      "b1_body": "Scanner le QR code d'une machine ouvre le formulaire : équipement, criticité, description, photo. Les opérateurs n'ont pas besoin de compte, donc les pannes sont signalées au moment où elles sont vues.",
+      "b2_title": "Le responsable décide de la suite",
+      "b2_body": "Les demandes s'empilent en attente, approuvées, refusées ou à prévoir. En approuver une la transforme en ordre de travail et relie les deux fiches.",
+      "b3_title": "Sous-tâches et check-lists de sécurité",
+      "b3_body": "Un ordre de travail porte ses propres étapes, de la consignation au diagnostic, à la réparation et à la remise en service. Une check-list peut exiger une réponse oui ou non et un commentaire avant la clôture.",
+      "b4_title": "Heures et pièces enregistrées au fil de l'eau",
+      "b4_body": "Le technicien saisit son temps sur l'intervention et les pièces sorties du magasin. Le mouvement de stock est écrit au même moment, pour que le rayon et le système soient d'accord."
+    },
+    "flow": {
+      "title": "Les états que traverse une intervention",
+      "s1_title": "Demande soumise",
+      "s1_desc": "Créée sur une machine avec une criticité et une description. Référence de la série DI-2026-######.",
+      "s2_title": "Examinée",
+      "s2_desc": "Approuvée, refusée, ou marquée intervention à prévoir. La décision conserve le nom de son auteur.",
+      "s3_title": "Ordre de travail ouvert",
+      "s3_desc": "Sous-tâches, check-lists, technicien affecté et échéance. Référence de la série OT.",
+      "s4_title": "Clôturé",
+      "s4_desc": "Heures saisies, pièces consommées, PDF produit, disponibilité de la machine mise à jour."
+    },
+    "cta": {
+      "title": "Voir une demande devenir un ordre de travail"
+    }
+  },
+  "preventiveMaintenance": {
+    "hero": {
+      "h1": "Plans préventifs",
+      "lead": "Réglez le plan une fois. MainteNeat écrit l'ordre de travail quand la date arrive ou quand le compteur passe son seuil, avec le modèle de tâches et l'équipement déjà rattachés."
+    },
+    "benefits": {
+      "b1_title": "Calendrier, compteur, ou les deux",
+      "b1_body": "Un plan tourne sur une fréquence en jours, semaines ou mois, sur un relevé comme 4 000 heures de fonctionnement, ou sur celui des deux qui arrive en premier.",
+      "b2_title": "L'ordre de travail apparaît avant l'échéance",
+      "b2_body": "Vous choisissez combien de jours à l'avance l'OT est créé, pour que les pièces soient sorties et un technicien réservé avant l'arrêt de la machine.",
+      "b3_title": "Replanifier depuis la date de clôture",
+      "b3_body": "Un plan peut compter sa prochaine échéance à partir du jour où l'intervention précédente a réellement été clôturée, et non de sa date de création. Un entretien fait avec une semaine de retard décale tout le cycle.",
+      "b4_title": "Modèles de tâches",
+      "b4_body": "Les étapes d'un entretien donné sont écrites une fois comme modèle et réutilisées par tous les plans qui en ont besoin. Modifier le modèle modifie les interventions pas encore ouvertes."
+    },
+    "cta": {
+      "title": "Arrêtez de planifier la maintenance à la main"
+    },
+    "detail": {
+      "title": "Ce qui déclenche un plan",
+      "lead": "Un plan préventif se règle une fois. Ce sont ses règles de déclenchement qui décident quand il écrit son ordre de travail.",
+      "t1": "Par calendrier",
+      "d1": "Une périodicité : tous les mois, tous les trimestres. Le plus simple, et le bon choix quand l'usure suit le temps plutôt que l'usage.",
+      "t2": "Par compteur",
+      "d2": "Un seuil sur un relevé — heures de fonctionnement, cycles, kilomètres. La machine peu utilisée n'est pas révisée pour rien.",
+      "t3": "Les deux",
+      "d3": "Le premier des deux qui tombe déclenche. C'est la règle des équipements dont l'usure dépend de l'usage sans être indépendante du temps.",
+      "t4": "Écrire à l'avance",
+      "d4": "L'ordre de travail est créé N jours avant l'échéance, pour que la pièce puisse être sortie et le créneau réservé.",
+      "t5": "Replanifier depuis la clôture",
+      "d5": "Le cycle suivant repart de la date où l'intervention a réellement été close, pas de sa date de création. Un plan mensuel décalé de trois semaines ne réclame pas la même intervention trois semaines plus tard."
+    }
+  },
+  "inventory": {
+    "hero": {
+      "h1": "Stock et achats",
+      "lead": "Des pièces détachées rattachées aux interventions qui les consomment. Les niveaux baissent quand un technicien enregistre une pièce, et une commande démarre quand un article passe sous son minimum."
+    },
+    "benefits": {
+      "b1_title": "Magasins et emplacements",
+      "b1_body": "Les pièces vivent dans des magasins nommés, découpés en emplacements : on indique au technicien où aller, au lieu du rayon à fouiller.",
+      "b2_title": "Des mouvements, pas des corrections",
+      "b2_body": "Chaque consommation, sortie et entrée est un mouvement avec sa référence et sa date. Le niveau est le résultat de ces mouvements, ce qui explique qu'on puisse s'y fier.",
+      "b3_title": "L'alerte avant le rayon vide",
+      "b3_body": "Les articles apparaissent en stock, en alerte ou en rupture selon le minimum que vous fixez. Les rapports signalent aussi le stock dormant et la précision d'inventaire.",
+      "b4_title": "Fournisseurs et sous-traitants",
+      "b4_body": "Bons de commande, fiches fournisseurs et entreprises extérieures à qui vous confiez des travaux, rattachés aux pièces et aux interventions concernées."
+    },
+    "cta": {
+      "title": "Arrêtez de gérer les pièces sous Excel"
+    },
+    "detail": {
+      "title": "Les quatre mouvements de stock",
+      "lead": "Chaque variation de niveau porte un type et sa propre référence. C'est ce qui permet de répondre à « où est passée cette pièce » sans reconstituer.",
+      "t1": "Consommation",
+      "d1": "Une pièce enregistrée sur une intervention. Le niveau baisse au moment où le technicien la saisit, pas à la clôture du mois.",
+      "t2": "Sortie",
+      "d2": "Une pièce qui quitte le magasin sans être rattachée à une intervention — un prêt, un transfert entre emplacements.",
+      "t3": "Réception",
+      "d3": "L'entrée d'une commande fournisseur. Elle rapproche la quantité reçue de la commande d'achat qui l'a déclenchée.",
+      "t4": "Inventaire physique",
+      "d4": "Le comptage sur site. L'écart avec le niveau affiché donne l'exactitude d'inventaire, et corrige le stock."
+    }
+  },
+  "equipment": {
+    "hero": {
+      "h1": "Parc et sites",
+      "lead": "Chaque machine avec son modèle, son numéro de série, sa localisation, son service, sa criticité et tout l'historique de ce qui lui a été fait. Chacune porte un QR code qui ouvre sa fiche sur un téléphone."
+    },
+    "criticality": {
+      "title": "La criticité fixe la priorité",
+      "lead": "Le niveau attribué à une machine décide de la place de ses pannes dans la file et de la vitesse d'escalade d'une défaillance.",
+      "l1_name": "Faible",
+      "l1_desc": "Travaux de routine, sans urgence",
+      "l2_name": "Moyenne",
+      "l2_desc": "Surveillée, planifiée régulièrement",
+      "l3_name": "Élevée",
+      "l3_desc": "Réponse rapide exigée en cas de panne",
+      "l4_name": "Critique",
+      "l4_desc": "La production s'arrête si elle s'arrête"
+    },
+    "benefits": {
+      "b1_title": "Une fiche par machine",
+      "b1_body": "Modèle, numéro de série, date d'acquisition, fournisseur, service et localisation. Les sous-équipements se rattachent au parent, pour qu'une ligne et ses composants restent liés.",
+      "b2_title": "Un QR code sur la machine",
+      "b2_body": "Le scanner ouvre la fiche équipement. De là, n'importe qui peut créer une demande sans compte, et les utilisateurs connectés peuvent ouvrir un ordre de travail ou saisir un relevé de compteur.",
+      "b3_title": "Historique des statuts et disponibilité",
+      "b3_body": "Les périodes en ligne, hors ligne et non suivies sont enregistrées par machine, en séparant les arrêts planifiés des arrêts non planifiés. C'est de cet historique que viennent la disponibilité et le MTBF."
+    },
+    "cta": {
+      "title": "Rassemblez votre parc au même endroit"
+    }
+  },
+  "kpi": {
+    "hero": {
+      "h1": "Rapports",
+      "lead": "Quatre vues construites à partir du travail déjà réalisé : interventions, santé des équipements, coûts de maintenance et inventaire des pièces. Rien n'est saisi deux fois."
+    },
+    "categories": {
+      "title": "Quatre vues",
+      "lead": "Choisissez-en une pour voir ce qu'elle couvre.",
+      "cat1_label": "Demandes et ordres de travail",
+      "cat1_desc": "Ce qui est ouvert, à quelle vitesse cela avance, et si les interventions se clôturent dans leur fenêtre.",
+      "cat1_kpi1_label": "Ouvert, en cours, clôturé",
+      "cat1_kpi1_body": "La répartition actuelle entre les états, pour voir la taille de l'encours sans rien compter.",
+      "cat1_kpi2_label": "À temps contre en retard",
+      "cat1_kpi2_body": "Combien d'interventions se sont clôturées dans leur fenêtre cible. Une part de retards stable signale une planification irréaliste.",
+      "cat1_kpi3_label": "Répartition par priorité",
+      "cat1_kpi3_body": "Faible, moyenne, élevée et urgente côte à côte. Une file majoritairement urgente est une file que personne ne planifie.",
+      "cat1_kpi4_label": "Préventif contre curatif",
+      "cat1_kpi4_body": "L'équilibre entre travail planifié et réaction. Déplacer ce ratio est tout l'objet d'un programme préventif.",
+      "cat1_kpi5_label": "Demandes en attente de validation",
+      "cat1_kpi5_body": "Ce que les opérateurs ont signalé et que personne n'a encore regardé.",
+      "cat2_label": "Santé des équipements",
+      "cat2_desc": "Quelles machines sont fiables et lesquelles grignotent discrètement du temps de production.",
+      "cat2_kpi1_label": "Disponibilité",
+      "cat2_kpi1_body": "La part du temps d'ouverture pendant laquelle la machine était réellement en ligne, tirée de son historique de statuts.",
+      "cat2_kpi2_label": "MTBF",
+      "cat2_kpi2_body": "Temps moyen entre pannes. Un MTBF qui baisse sur une machine vieillissante est l'argument pour la remplacer.",
+      "cat2_kpi3_label": "MTTR",
+      "cat2_kpi3_body": "Temps moyen de réparation, de l'ouverture à la clôture. Un MTTR qui monte signale des interventions plus lourdes ou une équipe sous tension.",
+      "cat2_kpi4_label": "Taux de panne",
+      "cat2_kpi4_body": "Pannes pour 1 000 heures de fonctionnement, pour comparer des machines d'âges et de régimes différents.",
+      "cat2_kpi5_label": "Score de santé du parc",
+      "cat2_kpi5_body": "Un chiffre unique sur l'ensemble du parc, utile pour repérer une tendance entre deux revues.",
+      "cat3_label": "Coûts de maintenance",
+      "cat3_desc": "Où va le budget, par intervention et par machine, en dirhams.",
+      "cat3_kpi1_label": "Coût par ordre de travail",
+      "cat3_kpi1_body": "Main-d'œuvre et pièces sur chaque intervention clôturée. Une moyenne qui monte pointe un parc vieillissant, ou du travail refait deux fois.",
+      "cat3_kpi2_label": "Coût par machine",
+      "cat3_kpi2_body": "Dépense totale sur une machine pour une période, c'est-à-dire le chiffre dont une décision de remplacement a besoin.",
+      "cat3_kpi3_label": "Pièces contre main-d'œuvre",
+      "cat3_kpi3_body": "La répartition entre matières et heures techniciens, utile pour négocier des contrats d'approvisionnement ou des effectifs.",
+      "cat3_kpi4_label": "Achats contre consommation",
+      "cat3_kpi4_body": "Ce qui a été acheté à côté de ce qui a été consommé, mois par mois. Un écart qui se creuse signifie que le stock gonfle.",
+      "cat3_kpi5_label": "Dépense dans le temps",
+      "cat3_kpi5_body": "La tendance mensuelle, pour qu'un mois inhabituel soit visible pendant qu'on peut encore demander pourquoi.",
+      "cat4_label": "Inventaire des pièces",
+      "cat4_desc": "Ce qui est en rayon, ce que cela vaut, et si les enregistrements correspondent à la réalité.",
+      "cat4_kpi1_label": "Valeur totale du stock",
+      "cat4_kpi1_body": "La valeur détenue sur l'ensemble des magasins, en dirhams, avec la répartition par magasin.",
+      "cat4_kpi2_label": "Rotation du stock",
+      "cat4_kpi2_body": "À quelle vitesse les pièces sont consommées et remplacées. Une rotation très faible immobilise du capital en pièces que personne ne monte.",
+      "cat4_kpi3_label": "Stock dormant",
+      "cat4_kpi3_body": "La valeur qui n'a pas bougé depuis un an, rapportée à part parce qu'elle disparaît dans un chiffre global.",
+      "cat4_kpi4_label": "Précision d'inventaire",
+      "cat4_kpi4_body": "L'écart entre le stock compté et le système. Une faible précision explique les interventions bloquées sur des pièces que le système croit disponibles.",
+      "cat4_kpi5_label": "Ruptures et délai fournisseur",
+      "cat4_kpi5_body": "Combien de fois vous êtes tombé en rupture, et combien de temps le remplacement a réellement mis à arriver."
+    },
+    "cta": {
+      "title": "Arrêtez de compiler vos rapports à la main"
+    }
+  },
+  "calendar": {
+    "hero": {
+      "h1": "Calendrier et équipes terrain",
+      "lead": "Plans préventifs, interventions planifiées et ordres de travail ouverts sur un seul calendrier, en vue jour, semaine, mois ou liste, avec une vue de charge par technicien."
+    },
+    "benefits": {
+      "b1_title": "Les OT non planifiés attendent à côté du calendrier",
+      "b1_body": "Les ordres de travail sans date patientent dans leur propre bac. Déposez-en un sur une journée pour le planifier, et la charge du technicien se met à jour avec.",
+      "b2_title": "La charge par technicien",
+      "b2_body": "La vue équipe montre combien d'interventions chacun porte. Quelqu'un qui en a quatre pendant qu'un collègue n'en a aucune se voit avant le poste, pas après.",
+      "b3_title": "Filtrer sur ce que vous planifiez",
+      "b3_body": "Par technicien, type de travail ou équipement, pour qu'une discussion sur une ligne n'oblige pas à lire tout le mois."
+    },
+    "cta": {
+      "title": "Voyez la semaine avant qu'elle commence"
+    },
+    "detail": {
+      "title": "Quatre vues, une seule source",
+      "lead": "Les plans préventifs, les interventions planifiées et les ordres de travail ouverts sont les mêmes fiches, regardées sous quatre angles.",
+      "t1": "Jour",
+      "d1": "Ce qui est dû aujourd'hui, par technicien. C'est la vue du matin, celle qui sert à distribuer le travail.",
+      "t2": "Semaine",
+      "d2": "La charge des sept jours à venir. Elle montre les collisions avant qu'elles arrivent — deux préventifs lourds le même jeudi.",
+      "t3": "Mois",
+      "d3": "La vue de planification. Les plans préventifs y apparaissent à la date où ils vont écrire leur ordre de travail.",
+      "t4": "Liste",
+      "d4": "La même chose sans calendrier, filtrable et triable. C'est la vue qu'on exporte ou qu'on imprime.",
+      "t5": "Charge par technicien",
+      "d5": "Une bande par personne, plus une corbeille des interventions non planifiées. Elle répond à « qui peut prendre ça »."
+    }
+  },
+  "roles": {
+    "hero": {
+      "h1": "Rôles et accès",
+      "lead": "Trois rôles connectés, plus une entrée par QR code qui ne demande aucun compte. Chacun voit la partie du système dont son métier a besoin."
+    },
+    "manager": {
+      "role": "Responsable",
+      "title": "Planifie et valide",
+      "desc": "Examine les demandes, crée et affecte les ordres de travail, gère les équipements, le stock et les plans préventifs, et lit les rapports.",
+      "p1": "Approuver ou refuser les demandes",
+      "p2": "Créer et affecter des ordres de travail",
+      "p3": "Ouvrir les rapports",
+      "p4": "Gérer équipements et stock",
+      "p5": "Configurer les plans préventifs"
+    },
+    "technician": {
+      "role": "Technicien",
+      "title": "Exécute",
+      "desc": "Voit les interventions qui lui sont affectées. Déroule la check-list, saisit ses heures et ses pièces, clôture et produit le rapport.",
+      "p1": "Voir les OT affectés",
+      "p2": "Dérouler sous-tâches et check-lists",
+      "p3": "Saisir ses heures sur l'intervention",
+      "p4": "Enregistrer les pièces consommées",
+      "p5": "Clôturer et générer le PDF"
+    },
+    "requester": {
+      "role": "Demandeur",
+      "title": "Signale et suit",
+      "desc": "Crée une demande sur une machine et suit ce qu'elle devient, sans accéder aux coûts ni à la planification interne.",
+      "p1": "Créer une demande",
+      "p2": "Suivre ses propres demandes",
+      "p3": "Joindre photos et descriptions"
+    },
+    "qr": {
+      "role": "QR, sans compte",
+      "title": "N'importe qui devant la machine",
+      "desc": "Scanner le QR code de l'équipement ouvre un formulaire de demande avec la machine déjà renseignée. C'est ainsi qu'un opérateur sur une ligne signale une panne sans avoir été créé comme utilisateur.",
+      "p1": "Signaler une panne sur place",
+      "p2": "Voir la fiche d'identité de la machine",
+      "p3": "Aucune connexion, aucun compte"
+    },
+    "cta": {
+      "title": "Donnez à chaque rôle l'écran qu'il lui faut"
+    }
+  },
+  "reporting": {
+    "hero": {
+      "h1": "Traçabilité et documentation",
+      "lead": "Chaque changement de statut, validation, affectation et modification porte une heure et un nom. Quand un auditeur demande ce qui est arrivé à une machine, la réponse est une requête."
+    },
+    "benefits": {
+      "b1_title": "Un historique de statuts sur chaque fiche",
+      "b1_body": "Demandes et ordres de travail portent leur propre historique : qui les a déplacés, de quel état vers quel état, et quand. La piste reste attachée à la fiche.",
+      "b2_title": "Un PDF à chaque clôture",
+      "b2_body": "Produit à la clôture avec le travail réalisé, le technicien, les heures saisies et les pièces montées. Prêt à archiver ou à remettre.",
+      "b3_title": "Des documents rattachés aux équipements",
+      "b3_body": "Notices, certificats et photographies stockés sur la fiche machine, pour que la personne qui tient la clé les ait sous la main.",
+      "b4_title": "Exportez ce dont vous avez besoin",
+      "b4_body": "Ordres de travail, équipements, emplacements et fournisseurs s'exportent à la demande. Les données ne sont pas enfermées dans le produit."
+    },
+    "audit": {
+      "title": "Ce qui est enregistré sans que personne le fasse",
+      "e1_title": "Demande soumise",
+      "e1_sub": "Qui l'a créée, sur quelle machine, depuis un scan QR ou un compte, et quand.",
+      "e2_title": "Approuvée ou refusée",
+      "e2_sub": "La décision, la personne qui l'a prise, et l'heure à laquelle elle a été prise.",
+      "e3_title": "Ordre de travail ouvert et affecté",
+      "e3_sub": "Quel responsable l'a affecté, à quel technicien, avec quelle échéance.",
+      "e4_title": "Pièces consommées",
+      "e4_sub": "Quelles pièces, en quelle quantité, depuis quel magasin, et le mouvement de stock qui a suivi.",
+      "e5_title": "Clôturé",
+      "e5_sub": "Heures saisies, note de clôture, PDF généré et mise à jour de la disponibilité de la machine."
+    },
+    "cta": {
+      "title": "Arrêtez de reconstituer les preuves après coup"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "GMAO pour PME industrielles au Maroc — MainteNeat",
+      "description": "GMAO bilingue pour PME industrielles marocaines : ordres de travail, préventif, parc machines, stock et rapports. Tarif mensuel fixe, sans licence par utilisateur."
+    },
+    "about": {
+      "title": "Pourquoi nous l'avons construit — MainteNeat",
+      "description": "L'équipe derrière MainteNeat et la façon dont le produit est construit : la fiche doit survivre, sans consultant, avec les usines qui l'utilisent."
+    },
+    "contact": {
+      "title": "Nous contacter — MainteNeat",
+      "description": "L'e-mail est le moyen le plus rapide. Nous répondons sous un jour ouvré, en français ou en anglais. Dites-nous ce que vous exploitez."
+    },
+    "signup": {
+      "title": "Démarrer avec MainteNeat",
+      "description": "S'inscrire lance une mise en route, pas un essai que vous menez seul. Parlez-nous du site, nous revenons avec un devis et une date."
+    },
+    "pricing": {
+      "title": "Tarifs GMAO en dirhams — MainteNeat",
+      "description": "Un prix pour toute l'entreprise, facturé en dirhams. Ajouter un technicien ne change pas la facture, et il n'y a aucune licence à acheter au départ."
+    },
+    "comparison": {
+      "title": "Comparatif GMAO : Excel, ERP ou GMAO importée — MainteNeat",
+      "description": "Comment MainteNeat se situe face au tableur, au module ERP étranger, à la GMAO importée lourde et aux outils mobiles récents."
+    },
+    "industries": {
+      "title": "Secteurs et types de sites — MainteNeat",
+      "description": "Le produit convient aux sites avec un parc de machines fixe et une équipe de maintenance salariée. Voyez si votre activité correspond."
+    },
+    "enterprise": {
+      "title": "Déploiement multi-sites — MainteNeat",
+      "description": "Pour les groupes exploitant plusieurs usines, ou dont les exigences informatiques dépassent un abonnement standard."
+    },
+    "resources": {
+      "title": "Ressources maintenance — MainteNeat",
+      "description": "Des contenus pratiques sur la conduite de la maintenance, écrits pour ceux qui la font : guides, définitions d'indicateurs et checklist."
+    },
+    "blog": {
+      "title": "Blog — maintenance industrielle et GMAO — MainteNeat",
+      "description": "Articles et éclairages sur la gestion de maintenance : GMAO, préventif, indicateurs et retours de terrain en milieu industriel."
+    },
+    "workOrders": {
+      "title": "Demandes et ordres de travail — MainteNeat",
+      "description": "Deux fiches, volontairement : une demande est ce que quelqu'un a constaté, un ordre de travail ce que l'équipe a décidé d'en faire."
+    },
+    "equipment": {
+      "title": "Parc machines et sites — MainteNeat",
+      "description": "Chaque machine avec son modèle, son numéro de série, sa localisation, son service, sa criticité et l'historique de ce qui lui a été fait."
+    },
+    "preventiveMaintenance": {
+      "title": "Plans de maintenance préventive — MainteNeat",
+      "description": "Réglez le plan une fois. MainteNeat écrit l'ordre de travail quand la date arrive ou quand le compteur passe son seuil, modèle de tâches inclus."
+    },
+    "inventory": {
+      "title": "Stock de pièces et achats — MainteNeat",
+      "description": "Des pièces détachées rattachées aux interventions qui les consomment. Les niveaux baissent quand un technicien enregistre une pièce."
+    },
+    "kpiDashboard": {
+      "title": "Rapports maintenance : MTBF, MTTR, disponibilité — MainteNeat",
+      "description": "Quatre vues construites à partir du travail déjà réalisé : interventions, santé des équipements, coûts de maintenance et inventaire des pièces."
+    },
+    "maintenanceCalendar": {
+      "title": "Calendrier de maintenance et équipes — MainteNeat",
+      "description": "Plans préventifs, interventions planifiées et ordres de travail ouverts sur un seul calendrier, en vue jour, semaine, mois ou liste."
+    },
+    "reporting": {
+      "title": "Traçabilité et documentation — MainteNeat",
+      "description": "Chaque changement de statut, validation, affectation et modification porte une heure et un nom. De quoi répondre à un auditeur."
+    },
+    "roles": {
+      "title": "Rôles et accès — MainteNeat",
+      "description": "Trois rôles connectés, plus une entrée par QR code qui ne demande aucun compte. Chacun voit la partie du système dont son métier a besoin."
+    },
+    "notFound": {
+      "title": "Page introuvable — MainteNeat",
+      "description": "La page demandée n'existe pas. Revenez à l'accueil ou dites-nous ce que vous cherchiez."
+    },
+    "kpiDefinitions": {
+      "title": "Définitions des indicateurs de maintenance — MainteNeat",
+      "description": "MTBF, MTTR, disponibilité, taux de panne, rotation du stock, délai fournisseur : ce que chaque chiffre des rapports veut dire et comment il est compté."
+    },
+    "setupChecklist": {
+      "title": "Checklist de mise en route d'une GMAO — MainteNeat",
+      "description": "Ce qu'il faut rassembler avant qu'un premier site démarre : parc, étiquetage QR, pièces et minima, rôles, plans préventifs et fichiers à reprendre."
+    }
+  },
+  "notFound": {
+    "title": "Cette page n'existe pas",
+    "desc": "Le lien est peut-être ancien, ou l'adresse comporte une faute. Revenez à l'accueil, ou dites-nous ce que vous cherchiez.",
+    "home": "Retour à l'accueil",
+    "contact": "Nous contacter"
+  }
+}

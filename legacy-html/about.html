@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <script src="./theme.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — MainteNeat</title>
+    <meta name="description" content="Learn about the team behind MainteNeat and our mission to modernize maintenance management worldwide.">
+    <link rel="icon" type="image/png" href="./images/logo-maintevo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}</script>
+    <style>
+        *{box-sizing:border-box}
+        html{font-family:'Inter',system-ui,sans-serif;scroll-behavior:smooth}
+        body{background:#050b16;color:#f8fafc;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+        .navbar{background:rgba(2,6,23,.35);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07);transition:all .3s}
+        .navbar.scrolled{background:rgba(2,6,23,.75);border-bottom-color:rgba(59,130,246,.18);box-shadow:0 4px 40px rgba(0,0,0,.6)}
+        .btn-p{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff;border-radius:10px;padding:13px 28px;font-weight:600;font-size:14px;text-decoration:none;box-shadow:0 4px 20px rgba(59,130,246,.4);transition:all .3s}
+        .btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(59,130,246,.55)}
+        #desktop-nav.open{display:flex!important;position:fixed;top:65px;left:0;right:0;background:rgba(5,11,22,.98);border-bottom:1px solid rgba(255,255,255,.08);padding:20px 24px;z-index:48;flex-direction:column;gap:4px}
+    </style>
+    <link rel="stylesheet" href="./theme.css">
+</head>
+<body>
+
+<header class="fixed w-full z-50">
+  <nav class="navbar" id="navbar">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-6 py-3 mx-auto">
+      <a href="./index.html" class="flex items-center">
+        <img src="./images/logo-maintevo.png" style="width:44px;height:44px;object-fit:contain" class="mr-1.5" alt="MainteNeat">
+        <span class="self-center text-lg font-bold text-white whitespace-nowrap">Mainte<span style="color:#3b82f6">Neat</span></span>
+      </a>
+      <div class="flex items-center lg:order-2 gap-1">
+        <a href="tel:8884515787" class="hidden sm:inline-flex items-center text-sm font-medium text-white/70 hover:text-white mr-3 transition-colors">
+          <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          Contact sales: (888) 451-5787
+        </a>
+        <div class="relative mr-1">
+          <button id="lang-toggle" type="button" class="inline-flex items-center gap-1 px-2 py-2 text-sm font-medium text-white/70 rounded-lg hover:bg-white/10 hover:text-white focus:outline-none transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+            <span id="current-lang">🇫🇷</span>
+            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </button>
+          <div id="lang-dropdown" class="hidden absolute right-0 mt-1 w-36 rounded-lg shadow-lg z-50" style="background:rgba(5,11,22,.97);border:1px solid rgba(255,255,255,.1)">
+            <ul class="py-1 text-sm text-white/80">
+              <li><button onclick="setLang('🇫🇷')" class="flex items-center gap-2 w-full px-4 py-2 hover:bg-white/10 hover:text-white transition-colors">🇫🇷 Français</button></li>
+              <li><button onclick="setLang('🇬🇧')" class="flex items-center gap-2 w-full px-4 py-2 hover:bg-white/10 hover:text-white transition-colors">🇬🇧 English</button></li>
+            </ul>
+          </div>
+        </div>
+        <button onclick="toggleTheme()" type="button" id="theme-toggle" class="inline-flex items-center p-2 text-white/70 rounded-lg hover:bg-white/10 hover:text-white focus:outline-none transition-colors" aria-label="Toggle theme"><svg class="theme-sun-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><svg class="theme-moon-icon w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg></button>
+        <a href="./contact.html" class="btn-p" style="padding:9px 20px;font-size:13px">Get Started</a>
+        <button id="hamburger" type="button" class="inline-flex items-center p-2 ml-1 text-white/70 rounded-lg lg:hidden hover:bg-white/10 hover:text-white focus:outline-none transition-colors" aria-label="Menu">
+          <svg id="ham-icon" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/></svg>
+          <svg id="close-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="desktop-nav">
+        <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+          <li><a href="./index.html" class="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">Product</a></li>
+          <li><a href="#" class="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">Industries</a></li>
+          <li><a href="#" class="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">Enterprise</a></li>
+          <li><a href="./pricing.html" class="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">Pricing</a></li>
+          <li><a href="#" class="text-sm font-medium text-white/80 hover:text-white transition-colors lg:p-0 block py-2">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Mission -->
+<section style="background:#050b16;padding-top:112px;padding-bottom:64px">
+    <div class="max-w-screen-xl px-6 mx-auto lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+        <div>
+            <p style="font-size:.9rem;font-weight:600;color:#3b82f6;margin-bottom:10px;letter-spacing:.06em;text-transform:uppercase">Our Mission</p>
+            <h1 style="font-size:clamp(2rem,4vw,3rem);font-weight:900;letter-spacing:-.03em;color:#fff;margin-bottom:24px;line-height:1.1">Every maintenance team deserves modern tools.</h1>
+            <p style="margin-bottom:16px;color:#94a3b8;font-size:1.05rem;line-height:1.8">We started MainteNeat because we watched skilled maintenance professionals waste hours fighting spreadsheets, whiteboards, and paper work orders — instead of doing the work they're great at.</p>
+            <p style="color:#94a3b8;font-size:1.05rem;line-height:1.8">Our goal is simple: give every maintenance team — from a 3-person shop to a 500-person plant — the same quality of tooling that Fortune 500 companies pay millions for.</p>
+        </div>
+        <div class="hidden lg:flex items-center justify-center mt-8 lg:mt-0">
+            <div style="width:100%;height:320px;background:rgba(59,130,246,.05);border:1px solid rgba(59,130,246,.15);border-radius:20px;display:flex;align-items:center;justify-content:center">
+                <svg style="width:120px;height:120px;color:rgba(59,130,246,.25)" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values -->
+<section style="background:#080f1e;padding:80px 0">
+    <div class="max-w-screen-xl px-6 mx-auto">
+        <h2 style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900;text-align:center;color:#fff;margin-bottom:48px;letter-spacing:-.03em">What we stand for</h2>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div style="padding:28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;text-align:center">
+                <div style="display:flex;justify-content:center;margin-bottom:20px">
+                    <div style="padding:14px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);border-radius:50%">
+                        <svg style="width:28px;height:28px;color:#60a5fa" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    </div>
+                </div>
+                <h3 style="font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:10px">Reliability</h3>
+                <p style="color:#94a3b8;line-height:1.7">We build software that works when your equipment can't afford not to. 99.9% uptime, enterprise-grade security, and data you can always trust.</p>
+            </div>
+            <div style="padding:28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;text-align:center">
+                <div style="display:flex;justify-content:center;margin-bottom:20px">
+                    <div style="padding:14px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);border-radius:50%">
+                        <svg style="width:28px;height:28px;color:#60a5fa" fill="currentColor" viewBox="0 0 20 20"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"></path></svg>
+                    </div>
+                </div>
+                <h3 style="font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:10px">Simplicity</h3>
+                <p style="color:#94a3b8;line-height:1.7">Powerful software shouldn't require a consultant to set up. MainteNeat is designed so any technician can learn it in an afternoon — and actually enjoy using it.</p>
+            </div>
+            <div style="padding:28px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;text-align:center">
+                <div style="display:flex;justify-content:center;margin-bottom:20px">
+                    <div style="padding:14px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);border-radius:50%">
+                        <svg style="width:28px;height:28px;color:#60a5fa" fill="currentColor" viewBox="0 0 20 20"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path></svg>
+                    </div>
+                </div>
+                <h3 style="font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:10px">Partnership</h3>
+                <p style="color:#94a3b8;line-height:1.7">We treat our customers as partners. Your feedback shapes the roadmap, our support team knows your name, and we succeed only when you do.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team -->
+<section style="background:#050b16;padding:80px 0">
+    <div class="max-w-screen-xl px-6 mx-auto">
+        <h2 style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900;text-align:center;color:#fff;margin-bottom:48px;letter-spacing:-.03em">Meet the team</h2>
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div style="text-align:center">
+                <div style="width:88px;height:88px;margin:0 auto 16px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);border-radius:50%;display:flex;align-items:center;justify-content:center">
+                    <svg style="width:44px;height:44px;color:rgba(96,165,250,.4)" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                </div>
+                <h3 style="font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:4px">Alex Rivera</h3>
+                <p style="font-size:.875rem;color:#3b82f6;margin-bottom:8px">CEO & Co-Founder</p>
+                <p style="font-size:.875rem;color:#94a3b8;line-height:1.6">10+ years in industrial operations. Former maintenance manager at a Tier 1 automotive supplier.</p>
+            </div>
+            <div style="text-align:center">
+                <div style="width:88px;height:88px;margin:0 auto 16px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);border-radius:50%;display:flex;align-items:center;justify-content:center">
+                    <svg style="width:44px;height:44px;color:rgba(96,165,250,.4)" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                </div>
+                <h3 style="font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:4px">Jamie Chen</h3>
+                <p style="font-size:.875rem;color:#3b82f6;margin-bottom:8px">CTO & Co-Founder</p>
+                <p style="font-size:.875rem;color:#94a3b8;line-height:1.6">Previously led engineering at two enterprise SaaS companies. Passionate about building tools for the physical world.</p>
+            </div>
+            <div style="text-align:center">
+                <div style="width:88px;height:88px;margin:0 auto 16px;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.2);border-radius:50%;display:flex;align-items:center;justify-content:center">
+                    <svg style="width:44px;height:44px;color:rgba(96,165,250,.4)" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                </div>
+                <h3 style="font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:4px">Morgan Osei</h3>
+                <p style="font-size:.875rem;color:#3b82f6;margin-bottom:8px">Head of Customer Success</p>
+                <p style="font-size:.875rem;color:#94a3b8;line-height:1.6">Certified reliability engineer. Helps customers get measurable ROI from their MainteNeat deployment in the first 90 days.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section style="background:rgba(59,130,246,.08);border-top:1px solid rgba(59,130,246,.15);border-bottom:1px solid rgba(59,130,246,.15);padding:80px 0">
+    <div class="max-w-screen-xl px-6 mx-auto text-center">
+        <h2 style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900;color:#fff;margin-bottom:16px;letter-spacing:-.03em">Join 5,000+ teams using MainteNeat</h2>
+        <p style="margin-bottom:28px;color:#94a3b8;font-size:1.05rem">Start your free trial today — no credit card required.</p>
+        <a href="./contact.html" class="btn-p" style="padding:14px 36px;font-size:15px">Get started free</a>
+    </div>
+</section>
+
+<footer style="background:#050b16;border-top:1px solid rgba(255,255,255,.06);padding:64px 0 40px">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-5 gap-10 mb-12">
+      <div class="md:col-span-2">
+        <a href="./index.html" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-bottom:16px">
+          <img src="./images/logo-maintevo.png" style="width:34px;height:34px;object-fit:contain" alt="MainteNeat">
+          <span style="font-size:18px;font-weight:700;color:#fff">Mainte<span style="color:#3b82f6">Neat</span></span>
+        </a>
+        <p style="font-size:14px;line-height:1.7;max-width:260px;color:#64748b">The AI-powered CMMS platform built for the next era of industrial maintenance.</p>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:16px">Platform</div>
+        <ul style="display:flex;flex-direction:column;gap:10px;list-style:none;padding:0">
+          <li><a href="./features.html" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Features</a></li>
+          <li><a href="./pricing.html" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Pricing</a></li>
+          <li><a href="#" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Integrations</a></li>
+          <li><a href="#" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Changelog</a></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:16px">Company</div>
+        <ul style="display:flex;flex-direction:column;gap:10px;list-style:none;padding:0">
+          <li><a href="./about.html" style="font-size:13px;text-decoration:none;color:#fff" onmouseover="this.style.color='#60a5fa'" onmouseout="this.style.color='#fff'">About</a></li>
+          <li><a href="./contact.html" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Contact</a></li>
+          <li><a href="#" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Careers</a></li>
+          <li><a href="#" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:16px">Legal</div>
+        <ul style="display:flex;flex-direction:column;gap:10px;list-style:none;padding:0">
+          <li><a href="#" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Privacy Policy</a></li>
+          <li><a href="#" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Terms of Service</a></li>
+          <li><a href="#" style="font-size:13px;text-decoration:none;color:#64748b" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#64748b'">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.06);padding-top:32px;text-align:center">
+      <span style="font-size:13px;color:#475569">© 2024-2025 MainteNeat™. All Rights Reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+    var nav = document.getElementById('navbar');
+    window.addEventListener('scroll', function() { nav.classList.toggle('scrolled', window.scrollY > 20); });
+    var hamburger = document.getElementById('hamburger');
+    var desktopNav = document.getElementById('desktop-nav');
+    var hamIcon = document.getElementById('ham-icon');
+    var closeIcon = document.getElementById('close-icon');
+    hamburger.addEventListener('click', function() {
+        desktopNav.classList.toggle('open');
+        hamIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    });
+    var langToggle = document.getElementById('lang-toggle');
+    var langDropdown = document.getElementById('lang-dropdown');
+    var savedLang = localStorage.getItem('site-lang');
+    if (savedLang) document.getElementById('current-lang').textContent = savedLang;
+    langToggle.addEventListener('click', function(e) { e.stopPropagation(); langDropdown.classList.toggle('hidden'); });
+    document.addEventListener('click', function() { langDropdown.classList.add('hidden'); });
+    function setLang(lang) { document.getElementById('current-lang').textContent = lang; langDropdown.classList.add('hidden'); localStorage.setItem('site-lang', lang); }
+</script>
+</body>
+</html>

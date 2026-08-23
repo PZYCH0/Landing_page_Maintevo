@@ -1,0 +1,8 @@
+# MainteNeat — https://mainteneat.com
+# Nothing here is private; the whole marketing site is meant to be indexed.
+
+User-agent: *
+Allow: /
+
+# The Sitemap directive is added once sitemap.xml is generated at build time.
+# Pointing at a file that 404s only earns an error in Search Console.

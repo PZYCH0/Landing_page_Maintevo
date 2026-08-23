@@ -1,0 +1,281 @@
+{
+  "_FeaturePage-DL4pOy-K.js": {
+    "file": "assets/FeaturePage-DL4pOy-K.js",
+    "name": "FeaturePage",
+    "imports": [
+      "index.html",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  },
+  "_PageBand-Cd4cewcJ.js": {
+    "file": "assets/PageBand-Cd4cewcJ.js",
+    "name": "PageBand",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "_chevron-right-CxOW72bD.js": {
+    "file": "assets/chevron-right-CxOW72bD.js",
+    "name": "chevron-right",
+    "imports": [
+      "index.html"
+    ]
+  },
+  "_client-CCbX_fiJ.js": {
+    "file": "assets/client-CCbX_fiJ.js",
+    "name": "client",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
+  "index.html": {
+    "file": "assets/app-DSOES7-R.js",
+    "name": "app",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "_client-CCbX_fiJ.js",
+      "src/pages/About.tsx",
+      "src/pages/Blog.tsx",
+      "src/pages/BlogPost.tsx",
+      "src/pages/Comparison.tsx",
+      "src/pages/Contact.tsx",
+      "src/pages/Enterprise.tsx",
+      "src/pages/Home.tsx",
+      "src/pages/Industries.tsx",
+      "src/pages/Pricing.tsx",
+      "src/pages/Resources.tsx",
+      "src/pages/Signup.tsx",
+      "src/pages/features/Equipment.tsx",
+      "src/pages/features/Inventory.tsx",
+      "src/pages/features/KpiDashboard.tsx",
+      "src/pages/features/MaintenanceCalendar.tsx",
+      "src/pages/features/PreventiveMaintenance.tsx",
+      "src/pages/features/Reporting.tsx",
+      "src/pages/features/Roles.tsx",
+      "src/pages/features/WorkOrders.tsx",
+      "src/pages/resources/KpiDefinitions.tsx",
+      "src/pages/resources/SetupChecklist.tsx"
+    ],
+    "css": [
+      "assets/app-BzvDquL8.css"
+    ]
+  },
+  "src/pages/About.tsx": {
+    "file": "assets/About-WVIuAU2V.js",
+    "name": "About",
+    "src": "src/pages/About.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  },
+  "src/pages/Blog.tsx": {
+    "file": "assets/Blog-WV02fJl4.js",
+    "name": "Blog",
+    "src": "src/pages/Blog.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_chevron-right-CxOW72bD.js"
+    ]
+  },
+  "src/pages/BlogPost.tsx": {
+    "file": "assets/BlogPost-DwhCFM5j.js",
+    "name": "BlogPost",
+    "src": "src/pages/BlogPost.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
+  "src/pages/Comparison.tsx": {
+    "file": "assets/Comparison-DaJG0IqI.js",
+    "name": "Comparison",
+    "src": "src/pages/Comparison.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  },
+  "src/pages/Contact.tsx": {
+    "file": "assets/Contact-Gck6q2t7.js",
+    "name": "Contact",
+    "src": "src/pages/Contact.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  },
+  "src/pages/Enterprise.tsx": {
+    "file": "assets/Enterprise-DJhRSpqg.js",
+    "name": "Enterprise",
+    "src": "src/pages/Enterprise.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  },
+  "src/pages/Home.tsx": {
+    "file": "assets/Home-CGhZi1FY.js",
+    "name": "Home",
+    "src": "src/pages/Home.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_chevron-right-CxOW72bD.js"
+    ]
+  },
+  "src/pages/Industries.tsx": {
+    "file": "assets/Industries-BT9q65cs.js",
+    "name": "Industries",
+    "src": "src/pages/Industries.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
+  "src/pages/Pricing.tsx": {
+    "file": "assets/Pricing-ZtJmchEF.js",
+    "name": "Pricing",
+    "src": "src/pages/Pricing.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  },
+  "src/pages/Resources.tsx": {
+    "file": "assets/Resources-BF7w-jVA.js",
+    "name": "Resources",
+    "src": "src/pages/Resources.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  },
+  "src/pages/Signup.tsx": {
+    "file": "assets/Signup-Bzemn5_B.js",
+    "name": "Signup",
+    "src": "src/pages/Signup.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  },
+  "src/pages/features/Equipment.tsx": {
+    "file": "assets/Equipment-DcFf48p-.js",
+    "name": "Equipment",
+    "src": "src/pages/features/Equipment.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_FeaturePage-DL4pOy-K.js",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  },
+  "src/pages/features/Inventory.tsx": {
+    "file": "assets/Inventory-jxobYnDe.js",
+    "name": "Inventory",
+    "src": "src/pages/features/Inventory.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_FeaturePage-DL4pOy-K.js",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  },
+  "src/pages/features/KpiDashboard.tsx": {
+    "file": "assets/KpiDashboard-DErZmIbF.js",
+    "name": "KpiDashboard",
+    "src": "src/pages/features/KpiDashboard.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_FeaturePage-DL4pOy-K.js",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  },
+  "src/pages/features/MaintenanceCalendar.tsx": {
+    "file": "assets/MaintenanceCalendar-cqLli3dh.js",
+    "name": "MaintenanceCalendar",
+    "src": "src/pages/features/MaintenanceCalendar.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_FeaturePage-DL4pOy-K.js",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  },
+  "src/pages/features/PreventiveMaintenance.tsx": {
+    "file": "assets/PreventiveMaintenance-B6KehYZm.js",
+    "name": "PreventiveMaintenance",
+    "src": "src/pages/features/PreventiveMaintenance.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_FeaturePage-DL4pOy-K.js",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  },
+  "src/pages/features/Reporting.tsx": {
+    "file": "assets/Reporting-CmMhcIX8.js",
+    "name": "Reporting",
+    "src": "src/pages/features/Reporting.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_FeaturePage-DL4pOy-K.js",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  },
+  "src/pages/features/Roles.tsx": {
+    "file": "assets/Roles-tLI8mPNR.js",
+    "name": "Roles",
+    "src": "src/pages/features/Roles.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_FeaturePage-DL4pOy-K.js",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  },
+  "src/pages/features/WorkOrders.tsx": {
+    "file": "assets/WorkOrders-BVPjyDmZ.js",
+    "name": "WorkOrders",
+    "src": "src/pages/features/WorkOrders.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_FeaturePage-DL4pOy-K.js",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  },
+  "src/pages/resources/KpiDefinitions.tsx": {
+    "file": "assets/KpiDefinitions-J0uJEGTR.js",
+    "name": "KpiDefinitions",
+    "src": "src/pages/resources/KpiDefinitions.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  },
+  "src/pages/resources/SetupChecklist.tsx": {
+    "file": "assets/SetupChecklist-BtoGRF2-.js",
+    "name": "SetupChecklist",
+    "src": "src/pages/resources/SetupChecklist.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_PageBand-Cd4cewcJ.js"
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+node_modules/
+
+# ── Excluded imagery ───────────────────────────────────────────────
+# ~156 MB of AI-generated composites that PRODUCT.md rules out of use, held
+# in two byte-identical copies. Nothing in src/ references them. Git history
+# is permanent, so keeping them out keeps every future clone fast.
+# They remain on disk; this only stops them entering the repository.
+images/
+legacy-html/unused-media/
+
+# Generated analysis output, not source.
+graphify-out/
+
+# Loose exports at the repo root — same banned set, same reasoning.
+AssestsHero.png
+PreventiveMaintnanceHero.png
+WorkOrderHero.png
+stockandbillingHero.png
+New logo.png
+Phone Template.jfif
+
+# ── Working files that are not the project ─────────────────────────
+# Screen captures, chat exports, reference images and loose scratch that
+# accumulated at the root. Kept on disk, out of the repository.
+chrome-capture-*.png
+ChatGPT Image *.png
+WhatsApp Image *.jpeg
+Pic1.png
+pic2.png
+pic3.jfif
+13520689da05e77af7ec2c02bf4500c3.jpg
+test.md
+metadata.json
+
+# Vite writes these while resolving the config; they are regenerated.
+vite.config.ts.timestamp-*.mjs

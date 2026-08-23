@@ -1,0 +1,185 @@
+<!DOCTYPE html><html lang="en"><head><title data-rh="true">MTBF, MTTR and availability: what these numbers actually tell you — MainteNeat</title><meta data-rh="true" name="description" content="Three maintenance metrics, how they are calculated, and more importantly what each one hides. How to read them without drawing the wrong conclusion."><meta data-rh="true" property="og:site_name" content="MainteNeat"><meta data-rh="true" property="og:title" content="MTBF, MTTR and availability: what these numbers actually tell you — MainteNeat"><meta data-rh="true" property="og:description" content="Three maintenance metrics, how they are calculated, and more importantly what each one hides. How to read them without drawing the wrong conclusion."><meta data-rh="true" property="og:locale" content="en_US"><meta data-rh="true" property="og:url" content="https://mainteneat.com/en/blog/mtbf-mttr-availability"><meta data-rh="true" property="og:type" content="article"><meta data-rh="true" property="og:locale:alternate" content="fr_MA"><meta data-rh="true" property="og:image" content="https://mainteneat.com/images/logo-maintevo.png"><meta data-rh="true" property="og:image:alt" content="MainteNeat"><meta data-rh="true" name="twitter:card" content="summary"><meta data-rh="true" name="twitter:title" content="MTBF, MTTR and availability: what these numbers actually tell you — MainteNeat"><meta data-rh="true" name="twitter:description" content="Three maintenance metrics, how they are calculated, and more importantly what each one hides. How to read them without drawing the wrong conclusion."><link data-rh="true" rel="canonical" href="https://mainteneat.com/en/blog/mtbf-mttr-availability"><link data-rh="true" rel="alternate" hreflang="fr" href="https://mainteneat.com/blog/mtbf-mttr-disponibilite"><link data-rh="true" rel="alternate" hreflang="en" href="https://mainteneat.com/en/blog/mtbf-mttr-availability"><link data-rh="true" rel="alternate" hreflang="x-default" href="https://mainteneat.com/blog/mtbf-mttr-disponibilite">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- No title or description here on purpose. Every page's real head is
+         written into its own file at build time by src/components/Seo.tsx;
+         anything declared here survives alongside it rather than being
+         replaced, which leaves two of each on all thirty-seven pages. -->
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <script type="module" async="" crossorigin="" src="/assets/app-DSOES7-R.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/assets/app-BzvDquL8.css">
+  </head>
+  <body>
+    <div id="root" data-server-rendered="true"><header style="position:sticky;top:0;z-index:50;background:var(--bg)"><nav class="navbar"><div class="wrap" style="display:flex;align-items:center;justify-content:space-between;height:64px"><a style="display:flex;align-items:center;gap:9px;flex-shrink:0" href="/en"><img src="/images/logo-maintevo.png" width="50" height="50" class="brand-mark" alt=""><span style="font-family:var(--font-head);font-size:1.0625rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink)">Mainte<span style="color:var(--accent-2)">Neat</span></span></a><ul style="display:flex;align-items:center;gap:26px;list-style:none" class="nav-desktop"><li><button id="nav-trigger-product" aria-expanded="false" aria-haspopup="true" aria-controls="nav-megamenu" class="nav-link nav-trigger">Product<svg width="11" height="11" fill="currentColor" viewBox="0 0 20 20" class="nav-caret" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button></li><li><button id="nav-trigger-industries" aria-expanded="false" aria-haspopup="true" aria-controls="nav-megamenu" class="nav-link nav-trigger">Industries<svg width="11" height="11" fill="currentColor" viewBox="0 0 20 20" class="nav-caret" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button></li><li><button id="nav-trigger-resources" aria-expanded="false" aria-haspopup="true" aria-controls="nav-megamenu" class="nav-link nav-trigger">Resources<svg width="11" height="11" fill="currentColor" viewBox="0 0 20 20" class="nav-caret" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button></li><li><a class="nav-link" href="/en/enterprise">Enterprise</a></li><li><a class="nav-link" href="/en/pricing">Pricing</a></li><li><a class="nav-link" href="/en/comparison">Comparison</a></li></ul><div style="display:flex;align-items:center;gap:4px"><div style="position:relative"><button aria-label="Language" aria-expanded="false" class="nav-link" style="background:none;border:none;cursor:pointer;padding:7px 8px;font-size:0.8125rem;font-weight:600;letter-spacing:.04em">EN</button></div><a href="https://app.mainteneat.com/login" class="nav-link nav-cta" style="font-size:0.875rem;padding:9px 10px;margin-left:4px">Log In</a><a class="nav-link nav-cta" style="font-size:0.875rem;padding:9px 10px;margin-left:4px" href="/en/signup">Sign Up</a><a class="btn-p nav-cta" style="padding:9px 16px;font-size:0.875rem;margin-left:6px" href="/en/contact">Schedule Demo</a><button class="nav-link nav-burger" style="background:none;border:none;cursor:pointer;padding:7px;display:none" aria-label="Menu" aria-expanded="false"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18"></path></svg></button></div></div></nav><style>
+        /* Collapses at 1180px, not 1000px. Six links plus four right-hand
+           controls do not fit 1120px once French sets them — &quot;Comparatif&quot;,
+           &quot;Se connecter&quot;, &quot;Planifier une démo&quot; — and the row used to overrun
+           the wordmark before the burger appeared. */
+        @media (max-width: 1180px) {
+          .nav-desktop { display: none !important; }
+          .nav-burger  { display: inline-flex !important; }
+          .nav-cta     { display: none !important; }
+        }
+      </style></header><main><!--$--><nav class="crumbs" aria-label="Breadcrumb"><div class="wrap crumbs-row"><a class="link" href="/en">Home</a><span class="crumbs-sep" aria-hidden="true">/</span><a class="link" href="/en/blog">Blog</a><span class="crumbs-sep" aria-hidden="true">/</span><span aria-current="page">Metrics</span></div></nav><section class="section-md"><div class="wrap post-layout"><article class="post-main"><p class="post-byline"><time datetime="2026-08-07">7 August 2026</time><span aria-hidden="true"> · </span>3 min read<span aria-hidden="true"> · </span><span class="post-topic">Metrics</span></p><h1 class="post-title">MTBF, MTTR and availability: what these numbers actually tell you</h1><p class="post-standfirst">Three maintenance metrics, how they are calculated, and more importantly what each one hides. How to read them without drawing the wrong conclusion.</p><div class="post-body"><p>Three acronyms turn up in every conversation about maintenance performance. They are simple to calculate and easy to misread.</p>
+<h2 id="mtbf-mean-time-between-failures">MTBF — mean time between failures</h2><blockquote>
+<p>MTBF = running time / number of failures</p>
+</blockquote>
+<p>A machine that runs 1,000 hours and fails 5 times has an MTBF of 200 hours.</p>
+<p>MTBF measures <strong>reliability</strong>: how often the equipment lets you down. It rises as failures spread further apart.</p>
+<p><strong>What it hides.</strong> It is an average, so it flattens the extremes. A machine with four inconsequential micro-stops and one catastrophic failure reports the same MTBF as a machine with five moderate ones. Those are not the same situation and they do not call for the same response.</p>
+<p>MTBF also only means anything over a period when the machine actually ran. Equipment idle for three months does not become reliable.</p>
+<h2 id="mttr-mean-time-to-repair">MTTR — mean time to repair</h2><blockquote>
+<p>MTTR = total repair time / number of repairs</p>
+</blockquote>
+<p>MTTR measures <strong>your responsiveness</strong>, not the quality of the equipment. It depends on things you control: was the part in stock, was a technician free, did the documentation exist.</p>
+<p><strong>What it hides.</strong> Everything depends on when you start the clock. At the actual failure? At the moment it was reported? When a technician was assigned? An MTTR measured from assignment ignores the six hours during which nobody reported the machine was down — and that gap is frequently where the real problem lives.</p>
+<p>Which is an argument for starting the clock at the report, and for making reporting easy enough that it happens immediately.</p>
+<h2 id="availability">Availability</h2><blockquote>
+<p>Availability = uptime / (uptime + downtime)</p>
+</blockquote>
+<p>This is the one production understands, because it answers the only question they care about: was the machine there when I needed it?</p>
+<p>It combines the other two. High MTBF with a high MTTR can produce the same availability as low MTBF with fast repairs.</p>
+<p><strong>What it hides.</strong> Planned and unplanned stops do not weigh the same. An overhaul announced three weeks ahead, which production planned around, does not cost what a breakdown on a Tuesday morning costs. Separating the two in your history is not bookkeeping pedantry: without that split the number means nothing.</p>
+<h2 id="the-underlying-mistake">The underlying mistake</h2><p>All three describe the past. None of them tells you what is about to break.</p>
+<p>They are good for two things: spotting machines that consume a disproportionate share of your time, and checking whether a decision made six months ago had the effect you expected. Added a preventive plan to a compressor? Compare its MTBF before and after. That is where these numbers start earning their keep.</p>
+<h2 id="the-precondition">The precondition</h2><p>None of these calculations is better than the data feeding it. If half your jobs are never logged, your MTBF is wrong — and wrong in the flattering direction, which is the worst case.</p>
+<p>That is the main argument for frictionless reporting. A fault reported in thirty seconds from a QR code on the machine enters the calculation; the same fault behind an account and six screens does not.</p>
+<p>In MainteNeat the reports are built from jobs already logged: nobody maintains a metrics spreadsheet alongside the real work. It is the only way to get numbers you can act on.</p>
+</div><p class="post-related"><a class="link" href="/en/features/kpi-dashboard">Read more about this feature</a></p><nav class="post-nav" aria-label="Article navigation"><a class="post-nav-link" href="/en/blog/moving-off-spreadsheets"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg><span><span class="post-nav-label">Previous article</span><span class="post-nav-title">Moving off spreadsheets without losing what you have</span></span></a><a class="post-nav-link post-nav-next" href="/en/blog/preventive-vs-reactive-maintenance"><span><span class="post-nav-label">Next article</span><span class="post-nav-title">Preventive or reactive maintenance: how to split the work</span></span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></nav></article><aside class="post-aside"><div class="aside-block"><h2 class="aside-title">In this article</h2><ol class="aside-list"><li><a href="#mtbf-mean-time-between-failures" class="link">MTBF — mean time between failures</a></li><li><a href="#mttr-mean-time-to-repair" class="link">MTTR — mean time to repair</a></li><li><a href="#availability" class="link">Availability</a></li><li><a href="#the-underlying-mistake" class="link">The underlying mistake</a></li><li><a href="#the-precondition" class="link">The precondition</a></li></ol></div><div class="aside-block"><h2 class="aside-title">More articles</h2><ol class="aside-ranked"><li><span class="aside-rank" aria-hidden="true">1</span><a class="link" href="/en/blog/what-is-a-cmms">What is a CMMS?</a></li><li><span class="aside-rank" aria-hidden="true">2</span><a class="link" href="/en/blog/preventive-vs-reactive-maintenance">Preventive or reactive maintenance: how to split the work</a></li><li><span class="aside-rank" aria-hidden="true">3</span><a class="link" href="/en/blog/moving-off-spreadsheets">Moving off spreadsheets without losing what you have</a></li><li><span class="aside-rank" aria-hidden="true">4</span><a class="link" href="/en/blog/what-a-cmms-costs-in-morocco">What does a CMMS cost in Morocco?</a></li></ol></div><div class="aside-block aside-cta"><h2 class="aside-title">See the product</h2><p class="aside-cta-text">A walkthrough on your machines, not on sample data.</p><a class="btn-p" href="/en/contact">Schedule a demo</a></div></aside></div></section><style>
+        /* ── Two columns, article and sidebar ─────────────────────────── */
+        .post-layout {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+          gap: 56px;
+          align-items: start;
+          text-align: left;
+        }
+        /* The section rule centres everything inside .wrap, and its
+           is(...) &gt; .wrap selector outranks a class placed on .wrap itself.
+           Set it on the columns instead, where it wins by inheritance rather
+           than by specificity. Long-form prose is never centred. */
+        .post-main, .post-aside { text-align: left; }
+        .post-main { min-width: 0; }
+
+        .post-byline { font-size: .8125rem; color: var(--ink-muted); margin: 0 0 14px; }
+        .post-topic { color: var(--accent); font-weight: 600; }
+        .post-title { font-size: clamp(1.75rem, 3.4vw, 2.5rem); max-width: 24ch; }
+        .post-standfirst {
+          font-size: 1.125rem;
+          line-height: 1.6;
+          color: var(--ink-muted);
+          max-width: 62ch;
+          margin: 18px 0 0;
+          padding-bottom: 28px;
+          border-bottom: 1px solid var(--rule);
+        }
+
+        .post-body { max-width: 68ch; margin-top: 28px; }
+        .post-body &gt; * + * { margin-top: 20px; }
+        .post-body h2 {
+          font-size: 1.375rem;
+          margin-top: 44px;
+          padding-top: 20px;
+          border-top: 1px solid var(--rule);
+          scroll-margin-top: 90px;
+        }
+        .post-body h3 { font-size: 1.0625rem; margin-top: 32px; }
+        .post-body p, .post-body li { font-size: 1rem; line-height: 1.7; color: var(--ink-muted); }
+        .post-body strong { color: var(--ink); font-weight: 600; }
+        .post-body ul { padding-left: 20px; }
+        .post-body li + li { margin-top: 8px; }
+        .post-body a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
+        /* The reference design&#x27;s pull quote, as a blockquote. */
+        .post-body blockquote {
+          margin: 32px 0;
+          padding: 4px 0 4px 22px;
+          border-left: 2px solid var(--accent);
+        }
+        .post-body blockquote p {
+          font-family: var(--font-head);
+          font-size: 1.1875rem;
+          line-height: 1.5;
+          color: var(--ink);
+          margin: 0;
+        }
+
+        .post-related { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--rule); }
+
+        /* ── Previous / next ──────────────────────────────────────────── */
+        .post-nav {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+          margin-top: 20px;
+        }
+        .post-nav-link {
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          padding: 16px 18px;
+          border: 1px solid var(--rule);
+          border-radius: var(--r);
+          color: var(--ink);
+          text-decoration: none;
+          transition: border-color .18s ease, color .18s ease;
+        }
+        .post-nav-link:hover { border-color: var(--accent); color: var(--accent); }
+        .post-nav-next { justify-content: flex-end; text-align: right; }
+        .post-nav-label {
+          display: block;
+          font-size: .75rem;
+          color: var(--ink-muted);
+          margin-bottom: 4px;
+        }
+        .post-nav-title { display: block; font-size: .9375rem; font-weight: 600; }
+
+        /* ── Sidebar ──────────────────────────────────────────────────── */
+        .post-aside { position: sticky; top: 96px; display: grid; gap: 20px; }
+        .aside-block {
+          border: 1px solid var(--rule);
+          border-radius: var(--r);
+          padding: 20px;
+          background: var(--bg-sunken);
+        }
+        .aside-title {
+          font-size: .8125rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: .04em;
+          color: var(--ink-muted);
+          margin: 0 0 14px;
+        }
+        .aside-list, .aside-ranked { list-style: none; margin: 0; padding: 0; font-size: .9375rem; }
+        .aside-list li + li,
+        .aside-ranked li + li { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--rule); }
+        .aside-ranked li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; align-items: baseline; }
+        .aside-rank {
+          font-family: var(--font-head);
+          font-weight: 600;
+          color: var(--ink-muted);
+          font-variant-numeric: tabular-nums;
+        }
+        .aside-cta { background: var(--bg); }
+        .aside-cta-text { font-size: .9375rem; color: var(--ink-muted); margin: 0 0 16px; }
+
+        @media (max-width: 900px) {
+          .post-layout { grid-template-columns: 1fr; gap: 44px; }
+          .post-aside { position: static; }
+          .post-nav { grid-template-columns: 1fr; }
+          .post-nav-next { justify-content: flex-start; text-align: left; flex-direction: row-reverse; }
+        }
+      </style><!--/$--></main><footer style="background:var(--bg-sunken);border-top:1px solid var(--rule);padding:64px 0 32px"><div class="wrap"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:40px;margin-bottom:48px"><div><a style="display:inline-flex;align-items:center;gap:9px;margin-bottom:12px" href="/en"><img src="/images/logo-maintevo.png" width="24" height="24" class="brand-mark" alt=""><span style="font-family:var(--font-head);font-size:1rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink)">Mainte<span style="color:var(--accent-2)">Neat</span></span></a><p style="font-size:0.9375rem;line-height:1.6;max-width:30ch">A bilingual CMMS for maintenance teams on Moroccan industrial sites.</p></div><div><div style="font-family:var(--font-head);font-size:0.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin-bottom:14px">Product</div><ul style="display:flex;flex-direction:column;gap:9px;list-style:none"><li><a class="link" style="font-size:0.9375rem;color:var(--ink-muted)" href="/en/features/work-orders">Requests &amp; work orders</a></li><li><a class="link" style="font-size:0.9375rem;color:var(--ink-muted)" href="/en/features/preventive-maintenance">Preventive plans</a></li><li><a class="link" style="font-size:0.9375rem;color:var(--ink-muted)" href="/en/features/equipment">Equipment &amp; sites</a></li><li><a class="link" style="font-size:0.9375rem;color:var(--ink-muted)" href="/en/features/kpi-dashboard">Reports</a></li><li><a class="link" style="font-size:0.9375rem;color:var(--ink-muted)" href="/en/features/inventory">Stock &amp; purchasing</a></li></ul></div><div><div style="font-family:var(--font-head);font-size:0.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin-bottom:14px">Company</div><ul style="display:flex;flex-direction:column;gap:9px;list-style:none"><li><a class="link" style="font-size:0.9375rem;color:var(--ink-muted)" href="/en/pricing">Pricing</a></li><li><a class="link" style="font-size:0.9375rem;color:var(--ink-muted)" href="/en/comparison">Comparison</a></li><li><a class="link" style="font-size:0.9375rem;color:var(--ink-muted)" href="/en/industries">Industries</a></li><li><a class="link" style="font-size:0.9375rem;color:var(--ink-muted)" href="/en/enterprise">Enterprise</a></li><li><a class="link" style="font-size:0.9375rem;color:var(--ink-muted)" href="/en/resources">Resources</a></li></ul></div><div><div style="font-family:var(--font-head);font-size:0.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin-bottom:14px">More</div><ul style="display:flex;flex-direction:column;gap:9px;list-style:none"><li><a class="link" style="font-size:0.9375rem;color:var(--ink-muted)" href="/en/about">About</a></li><li><a class="link" style="font-size:0.9375rem;color:var(--ink-muted)" href="/en/contact">Contact</a></li></ul></div></div><div style="border-top:1px solid var(--rule);padding-top:24px"><p style="font-size:0.875rem">© 2026 MainteNeat. Built by IT NEAT, Morocco.</p></div></div></footer><script>window.__staticRouterHydrationData = JSON.parse("{\"loaderData\":{\"1\":null},\"actionData\":null,\"errors\":null}");</script></div>
+<script>window.__VITE_REACT_SSG_HASH__ = '2k4tk4hpl7'</script>
+  
+
+</body></html>

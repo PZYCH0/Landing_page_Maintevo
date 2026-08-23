@@ -1,0 +1,1 @@
+import{j as a}from"./app-DSOES7-R.js";function d({src:e,quiet:n}){return a.jsx("div",{className:n?"page-band page-band--quiet":"page-band",children:a.jsx("div",{className:"wrap",children:a.jsx("img",{src:e,alt:"",loading:"lazy",decoding:"async"})})})}export{d as P};
